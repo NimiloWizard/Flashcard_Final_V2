@@ -958,7 +958,7 @@ body{
 
     #buttons #prevButton{
         position: absolute;
-        top: 25px;
+        top: 90px;
         left: 70px !important;
         height: 30px;
         width:85px;
@@ -968,7 +968,7 @@ body{
 
     #buttons #revealButton{
         position: absolute;
-        top: 25px;
+        top: 90px;
         left: 165px !important;
         height: 30px;
         width:75px;
@@ -977,7 +977,7 @@ body{
     }
     #buttons #nextButton{
         position: absolute;
-        top: 25px;
+        top: 90px;
         left: 250px !important;
         height: 30px;
         width:85px;
