@@ -1054,7 +1054,7 @@ body{
         margin-left: 35px !important;
         max-height: 50vh !important;
     }
-   .background_image img{
+   .#screen_background_image img{
         width: 150px !important;
         height: 170px !important;
         margin-left: 0px !important;
@@ -1075,8 +1075,8 @@ body{
 	    transform: scale(1.1);
  }
 	
- #screen_back_image#screen #screen_background_image p{
-	    margin-top: 15px;
+ #screen_back_imag e#screen #screen_background_image p{
+	    margin-top: 5px;
 	    padding-left: 10px;
 	    font-weight: bold;
  }
