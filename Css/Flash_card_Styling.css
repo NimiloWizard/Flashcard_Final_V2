@@ -1065,8 +1065,8 @@ body{
     }
 
  #screen_back_image .background_image p{
-	margin-top: 0px;
-	padding-left: 50px;
+	margin-top: -20px;
+	padding-left: 40px;
 	font-weight: bold;
  }
  
@@ -1078,7 +1078,7 @@ body{
 .btn_bg_screen{
 	position: absolute;
 	left: 100px !important;
-	top: 38rem !important;
+	top: 36rem !important;
 }
 
 	  
