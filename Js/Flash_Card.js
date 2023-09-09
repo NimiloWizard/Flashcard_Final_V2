@@ -110,7 +110,7 @@ function open_screenGallery(bg_hide_Image) {
   var elementToShow = document.getElementById(bg_hide_Image);
   elementToShow.classList.add("bg_visible"); // Add visible class to the selected element
 
-  var divElement = document.getElementById("col-3");
+  var divElement = document.getElementById("col-1");
   divElement.style.display = "block";  
 
   var captionElement = document.getElementById("bg_caption");
@@ -156,7 +156,7 @@ if (widthScreen <= 765) {
         document.getElementById("bg_caption").style.display = "none";
         document.getElementById("screen_back_image").style.display = "none";
         document.getElementById("bg_hide_Image").style.display = "none";
-        document.getElementById("col-3").style.display = "none";
+        document.getElementById("col-1").style.display = "none";
 
       
         
@@ -244,7 +244,7 @@ function screen_background6(){
       var elementToShow = document.getElementById(hide_Image);
       elementToShow.classList.add("visible"); // Add visible class to the selected element
 
-      var divElement = document.getElementById("col-1");
+      var divElement = document.getElementById("col-3");
       divElement.style.display = "block";  
       
 
@@ -291,7 +291,7 @@ function screen_background6(){
                         document.getElementById("background_caption").style.display = "none";
                         document.getElementById("card_back_image").style.display = "none";
                         document.getElementById("hide_Image").style.display = "none";
-                        document.getElementById("col-1").style.display = "none";
+                        document.getElementById("col-3").style.display = "none";
 
                        
                         
