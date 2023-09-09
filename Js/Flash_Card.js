@@ -94,6 +94,143 @@ function showNextCard(){
 
 }
 
+  
+
+
+// ----------------- Toggle to Show Image Gallery for screen background change------------------//     
+
+function open_screenGallery(bg_hide_Image) {
+  var x = document.getElementsByClassName("bg_hide_Image");
+  for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("bg_visible"); // Remove the visible class from all elements
+  }
+      
+  
+
+  var elementToShow = document.getElementById(bg_hide_Image);
+  elementToShow.classList.add("bg_visible"); // Add visible class to the selected element
+
+  var divElement = document.getElementById("col-3");
+  divElement.style.display = "block";  
+
+  var captionElement = document.getElementById("bg_caption");
+  captionElement.style.display = "block"; // or "initial" based on your design
+                    
+  var Show_screenImageGallery = document.getElementById("screen_back_image");
+  Show_screenImageGallery.style.display = "grid"; // or "initial" based on your design       
+
+  var close_screenButton = document.getElementById("bg_hide_Image");
+  close_screenButton.style.display = "block";      
+    
+
+  w3_close()  //toggle aup the navbar after making a selection
+}
+
+
+// ----------------------Closing the Screen Image Gallery--------------------------------//
+
+
+let bg_hide_Image = document.querySelector("#bg_hide_Image");
+bg_hide_Image.addEventListener("click", hide_screen_gallery);
+
+function hide_screen_gallery(){
+  document.getElementById("bg_caption").style.display = "none";
+  document.getElementById("screen_back_image").style.display = "none";
+  document.getElementById("bg_hide_Image").style.display = "none";
+
+
+  
+}
+
+let widthScreen = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+if (widthScreen <= 765) {
+
+  
+  
+  let bg_hide_Image = document.querySelector("#bg_hide_Image");
+  bg_hide_Image.addEventListener("click", hide_screen_gallery);
+
+      function hide_screen_gallery(){
+        console.log('It trigger')
+        document.getElementById("bg_caption").style.display = "none";
+        document.getElementById("screen_back_image").style.display = "none";
+        document.getElementById("bg_hide_Image").style.display = "none";
+        document.getElementById("col-3").style.display = "none";
+
+      
+        
+        var x = document.getElementsByClassName("bg_hide_Image");
+      
+      }
+
+        function scrollElementDown(elementId, scrollAmount) {
+        const element = document.getElementById(elementId);
+            if (element) {
+                element.scrollTop = 50;
+            }
+       }
+    
+       // Usage
+         scrollElementDown('card', 300); // Replace 'yo
+
+
+}
+
+
+
+
+// ----------------------setting up Image Gallery for Screen Image change--------------------------------//
+
+
+
+function screen_background1(){
+  
+// Set the background of the screen
+
+    document.querySelector('body').style.background = 'url("Images/BACKGROUND1.png") center center / cover';          
+            
+}
+function screen_background2(){
+  
+// Set the background of the card
+
+    document.querySelector('body').style.background = 'url("Images/BACKGROUND2.png") center center / cover';          
+            
+}
+
+function screen_background3(){
+  
+// Set the background of the card
+
+    document.querySelector('body').style.background = 'url("Images/BACKGROUND3.png") center center / cover';          
+            
+}
+
+function screen_background4(){
+  
+// Set the background of the card
+
+    document.querySelector('body').style.background = 'url("Images/BACKGROUND4.png") center center / cover';          
+            
+}
+
+function screen_background5(){
+  
+// Set the background of the card
+
+    document.querySelector('body').style.background = 'url("Images/BACKGROUND5.png") center center / cover';          
+            
+}
+
+function screen_background6(){
+  
+// Set the background of the card
+
+    document.querySelector('body').style.background = 'url("Images/BACKGROUND6.png") center center / cover';          
+            
+}
+
 
 // ----------------- Toggle to Show Image Gallery for Card background change------------------//     
 
@@ -114,8 +251,8 @@ function showNextCard(){
       var captionElement = document.getElementById("background_caption");
       captionElement.style.display = "block"; // or "initial" based on your design
                         
-      var Show_cardImageGallery = document.getElementById("card_back_image");
-      Show_cardImageGallery.style.display = "grid"; // or "initial" based on your design       
+     var Show_cardImageGallery = document.getElementById("card_back_image");
+     Show_cardImageGallery .style.display = "grid"; // or "initial" based on your design       
 
       var close_cardButton = document.getElementById("hide_Image");
       close_cardButton.style.display = "block";      
@@ -331,141 +468,4 @@ function background6(){
   
 }
 
-
-
-
-
-// ----------------- Toggle to Show Image Gallery for screen background change------------------//     
-
-    function open_screenGallery(bg_hide_Image) {
-          var x = document.getElementsByClassName("bg_hide_Image");
-          for (var i = 0; i < x.length; i++) {
-              x[i].classList.remove("bg_visible"); // Remove the visible class from all elements
-          }
-              
-          
-
-          var elementToShow = document.getElementById(bg_hide_Image);
-          elementToShow.classList.add("bg_visible"); // Add visible class to the selected element
-
-          var divElement = document.getElementById("col-3");
-          divElement.style.display = "block";  
-
-          var captionElement = document.getElementById("bg_caption");
-          captionElement.style.display = "block"; // or "initial" based on your design
-                            
-          var Show_screenImageGallery = document.getElementById("screen_back_image");
-          Show_screenImageGallery.style.display = "grid"; // or "initial" based on your design       
-
-          var close_screenButton = document.getElementById("bg_hide_Image");
-          close_screenButton.style.display = "block";      
-            
-
-          w3_close()  //toggle aup the navbar after making a selection
-    }
-
-     
-// ----------------------Closing the Screen Image Gallery--------------------------------//
-      
-
-        let bg_hide_Image = document.querySelector("#bg_hide_Image");
-        bg_hide_Image.addEventListener("click", hide_screen_gallery);
-
-        function hide_screen_gallery(){
-          document.getElementById("bg_caption").style.display = "none";
-          document.getElementById("screen_back_image").style.display = "none";
-          document.getElementById("bg_hide_Image").style.display = "none";
-
-
-          
-        }
-
-        let widthScreen = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-        if (widthScreen <= 765) {
-        
-          
-          
-          let bg_hide_Image = document.querySelector("#bg_hide_Image");
-          bg_hide_Image.addEventListener("click", hide_screen_gallery);
-
-              function hide_screen_gallery(){
-                console.log('It trigger')
-                document.getElementById("bg_caption").style.display = "none";
-                document.getElementById("screen_back_image").style.display = "none";
-                document.getElementById("bg_hide_Image").style.display = "none";
-                document.getElementById("col-3").style.display = "none";
-
-              
-                
-                var x = document.getElementsByClassName("bg_hide_Image");
-              
-              }
-
-                function scrollElementDown(elementId, scrollAmount) {
-                const element = document.getElementById(elementId);
-                    if (element) {
-                        element.scrollTop = 50;
-                    }
-               }
-            
-               // Usage
-                 scrollElementDown('card', 300); // Replace 'yo
-
-
-        }
-
-       
-
-
-// ----------------------setting up Image Gallery for Screen Image change--------------------------------//
-
-
-
-    function screen_background1(){
-          
-      // Set the background of the screen
-        
-            document.querySelector('body').style.background = 'url("Images/BACKGROUND1.png") center center / cover';          
-                    
-    }
-    function screen_background2(){
-          
-      // Set the background of the card
-        
-            document.querySelector('body').style.background = 'url("Images/BACKGROUND2.png") center center / cover';          
-                    
-    }
-
-    function screen_background3(){
-          
-      // Set the background of the card
-        
-            document.querySelector('body').style.background = 'url("Images/BACKGROUND3.png") center center / cover';          
-                    
-    }
-
-    function screen_background4(){
-          
-      // Set the background of the card
-        
-            document.querySelector('body').style.background = 'url("Images/BACKGROUND4.png") center center / cover';          
-                    
-    }
-
-    function screen_background5(){
-          
-      // Set the background of the card
-        
-            document.querySelector('body').style.background = 'url("Images/BACKGROUND5.png") center center / cover';          
-                    
-    }
-
-    function screen_background6(){
-          
-      // Set the background of the card
-        
-            document.querySelector('body').style.background = 'url("Images/BACKGROUND6.png") center center / cover';          
-                    
-    }
 
