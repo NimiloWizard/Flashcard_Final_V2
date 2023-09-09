@@ -696,6 +696,7 @@ body{
         border-radius: 20px;  
         margin-left: 140px;
         background: url('../Images/BACKGROUND2.png')  ;
+	box-shadow: 0 0px 7px 0 #0a0a0a55,0 0px 5px 0 #42414140; 
         background-size: cover;
         background-attachment: fixed;
         isolation: isolate;
