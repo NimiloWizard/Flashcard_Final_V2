@@ -893,7 +893,7 @@ body{
         grid-template-columns: 150px 150px !important;
         grid-template-rows: 180px 180px !important;
         grid-column-gap: 20px !important;
-        margin-left: 15px !important;
+        margin-left: 25px !important;
         max-height: 50vh !important;
     }
     
