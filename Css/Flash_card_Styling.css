@@ -1075,7 +1075,7 @@ body{
 	    transform: scale(1.1);
  }
 	
- #screen_back_imag e#screen #screen_background_image p{
+ #screen_back_imag #screen_background_image p{
 	    margin-top: 5px;
 	    padding-left: 250px;
 	    font-weight: bold;
