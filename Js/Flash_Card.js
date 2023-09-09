@@ -94,21 +94,54 @@ function showNextCard(){
 
 }
 
-// ---------------------------------- Toggle for Dark/Light Mode ---------------------//
-  
-   document.getElementById('darkmode-toggle').addEventListener('change', function() {
-    document.body.style.background =""
+  // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
+  document.getElementById('darkmode-toggle').addEventListener('change', function() {
+    
     if(this.checked) {
-        document.body.style.backgroundColor = '#242424';
+       
+        document.body.style.backgroundColor = 'rgba(36, 36, 36, 0.85)'; // Dark background color with opacity
         document.getElementById("bg_caption").style.color = "white";
         document.getElementById("background_caption").style.color = "white";
+        
+       // Create a new style element for the body::before pseudo-element
+        var style = document.createElement("style");
+        style.innerHTML = "body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: -1; pointer-events: none; }";
+
+        // Append the style element to the document's head
+        document.head.appendChild(style);
+
     } else {
-        document.body.style.backgroundColor = 'white';
+        document.body.style.backgroundColor = ''; // Reset background color
+        
         document.getElementById("bg_caption").style.color = "black";
         document.getElementById("background_caption").style.color = "black";
+
+            
+        // Remove the style element for body::before if it exists
+        var styleElement = document.querySelector('style');
+        if (styleElement) {
+            styleElement.parentNode.removeChild(styleElement);
+        }
+
     }
-});
- 
+
+ });
+  // ---------------------------------- Toggle for Dark/Light Mode Only/No Image ---------------------//
+  document.getElementById('darkmode-toggle-N0-Image').addEventListener('change', function() {  
+          if(this.checked) {
+            document.body.style.background = "";
+            document.body.style.backgroundColor = '#242424';
+          } else {
+            document.body.style.background = "";
+            document.body.style.backgroundColor =  'white';
+
+            var styleElement = document.querySelector('style');
+            if (styleElement) {
+                styleElement.parentNode.removeChild(styleElement);
+            }
+
+          }
+  });
 
 
 // ----------------- Toggle to Show Image Gallery for screen background change------------------//     
