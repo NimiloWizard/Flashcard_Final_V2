@@ -1055,22 +1055,44 @@ body{
         max-height: 50vh !important;
     }
    .background_image img{
-            width: 150px !important;
-            height: 170px !important;
-            margin-left: 0px !important;
-            padding-right: 10px !important;
+        width: 150px !important;
+        height: 170px !important;
+        margin-left: 0px !important;
+        padding-right: 10px !important;
     }
 
-    .bg_caption{
+   #screen_back_imagee #screen_background_image{
+	    cursor: pointer;
+	    transition: all ease .5s;
+	    display: inline-block; /* Ensure links are treated as blocks */
+	    text-align: center; /* Center the content horizontally */
+	    padding-bottom: 15px;
+	    margin-bottom: -10px;
+	    margin-top: -10px;
+  }
+	
+ #screen_back_image #screen_background_image:hover{
+	    transform: scale(1.1);
+ }
+	
+ #screen_back_image#screen #screen_background_image p{
+	    margin-top: 15px;
+	    padding-left: 10px;
+	    font-weight: bold;
+ }
+ 
+ .bg_caption{
          margin-left: -70px !important;
-	 top: 1rem !important;
-    }
-    .btn_bg_screen{
-        position: absolute;
-        left: 100px !important;
-        top: 39rem !important;
-    }
+	 top: 3rem !important;
+}
+  
+.btn_bg_screen{
+position: absolute;
+left: 100px !important;
+top: 39rem !important;
+}
 
+	  
 }
     
 
