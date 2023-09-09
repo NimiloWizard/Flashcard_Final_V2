@@ -250,7 +250,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    box-shadow: 0 5px 10px 0 #0a0a0a55,0 15px 20px 0 #42414140; 
+    box-shadow: 0 5px 10px 0 #0a0a0a55,0 5px 20px 0 #42414140; 
     transition: transform 200ms;
     background: url('../Images/BACKGROUND2.png'), linear-gradient(#fff0 0%, #fff0  70%, #1d1d1d 100%); 
     background-repeat: no-repeat, no-repeat;
@@ -1049,10 +1049,10 @@ body{
         width: 400px !important; 
         top: 5rem !important;
         grid-template-columns: 150px 150px !important;
-        grid-template-rows: 180px 180px !important;
+        grid-template-rows: 150px 150px !important;
         grid-column-gap: 20px !important;
         margin-left: 35px !important;
-        max-height: 50vh !important;
+        max-height: 60vh !important;
     }
    #screen_back_image  .background_image{
        display: inline block;
@@ -1065,8 +1065,8 @@ body{
     }
 
  #screen_back_image .background_image p{
-	margin-top: 5px;
-	padding-left: 250px;
+	margin-top: 0px;
+	padding-left: 50px;
 	font-weight: bold;
  }
  
