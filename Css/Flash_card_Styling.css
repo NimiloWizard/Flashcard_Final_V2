@@ -877,7 +877,7 @@ body{
         -ms-backface-visibility: hidden;
     }
 
-    .visible{
+    .bg_visible{
         
         display: none;
         -webkit-backface-visibility: hidden;
@@ -885,7 +885,7 @@ body{
         -ms-backface-visibility: hidden;
     }
     
-    .visible {                           
+    .bg_visible {                           
         position: absolute !important;
         display: grid !important; 
         width: 400px !important; 
@@ -1044,7 +1044,7 @@ body{
         z-index: 1;
     }
    
-    .bg_visible {
+    .visible {
         display: grid; 
         top: 120px;
         width: 400px; 
