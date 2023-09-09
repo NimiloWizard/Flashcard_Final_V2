@@ -187,8 +187,9 @@ if (widthScreen <= 765) {
 function screen_background1(){
   
 // Set the background of the screen
-
-    document.querySelector('body').style.background = 'url("Images/BACKGROUND1.png") center center / cover';          
+    
+    document.querySelector('body').style.background = 'url("Images/BACKGROUND1.png") center center / cover';    
+    document.getElementById("bg_caption").style.color = "white";
             
 }
 function screen_background2(){
@@ -196,7 +197,7 @@ function screen_background2(){
 // Set the background of the card
 
     document.querySelector('body').style.background = 'url("Images/BACKGROUND2.png") center center / cover';          
-            
+    document.getElementById("bg_caption").style.color = "white";    
 }
 
 function screen_background3(){
@@ -204,7 +205,7 @@ function screen_background3(){
 // Set the background of the card
 
     document.querySelector('body').style.background = 'url("Images/BACKGROUND3.png") center center / cover';          
-            
+     document.getElementById("bg_caption").style.color = "white";        
 }
 
 function screen_background4(){
@@ -212,7 +213,7 @@ function screen_background4(){
 // Set the background of the card
 
     document.querySelector('body').style.background = 'url("Images/BACKGROUND4.png") center center / cover';          
-            
+     document.getElementById("bg_caption").style.color = "white";         
 }
 
 function screen_background5(){
@@ -220,7 +221,7 @@ function screen_background5(){
 // Set the background of the card
 
     document.querySelector('body').style.background = 'url("Images/BACKGROUND5.png") center center / cover';          
-            
+    document.getElementById("bg_caption").style.color = "white";         
 }
 
 function screen_background6(){
@@ -228,7 +229,7 @@ function screen_background6(){
 // Set the background of the card
 
     document.querySelector('body').style.background = 'url("Images/BACKGROUND6.png") center center / cover';          
-            
+    document.getElementById("bg_caption").style.color = "white";         
 }
 
 
