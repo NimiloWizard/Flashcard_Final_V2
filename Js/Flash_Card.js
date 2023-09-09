@@ -94,7 +94,18 @@ function showNextCard(){
 
 }
 
+// ---------------------------------- Toggle for Dark/Light Mode ---------------------//
   
+    document.getElementById('darkmode-toggle').addEventListener('change', function() {
+      document.body.style.background = "";
+      
+          if(this.checked) {
+              document.body.style.backgroundColor = '#242424';
+          } else {
+              document.body.style.backgroundColor = 'white';
+          }
+    });
+ 
 
 
 // ----------------- Toggle to Show Image Gallery for screen background change------------------//     
