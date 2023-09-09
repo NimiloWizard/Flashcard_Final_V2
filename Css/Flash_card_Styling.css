@@ -69,10 +69,12 @@ body{
     margin-left: 18%;
 }
 
+
 #settings h5{
     font-size: 15px;
+    margin-left: 20px;
 }
-/* ------------------------------------------------------------Dark/light Mode ------------------------------------------*/ 
+/* ------------------------------------Dark/light Mode ----------------------------*/ 
 
 label{
     width: 100px;
@@ -85,6 +87,7 @@ label{
     cursor: pointer;
     transition: 0.3s;
     margin-top: -35px;
+    margin-left: 30px;
 }
 label::after{
    content: "";
@@ -122,6 +125,7 @@ input:checked ~ body {
     background: #242424;
 }
 
+/* ------------------------------------End of Dark/light Mode ----------------------------*/ 
 .Container{
     position: relative;
     transform: translate(); 
