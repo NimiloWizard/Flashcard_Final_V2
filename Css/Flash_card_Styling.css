@@ -1071,13 +1071,13 @@ body{
  }
  
  .bg_caption{
-         margin-left: -40px !important;
+         margin-left: -45px !important;
 	 top: 4rem !important;
 }
   
 .btn_bg_screen{
 	position: absolute;
-	left: 115px !important;
+	left: 105px !important;
 	top: 36rem !important;
 }
 
