@@ -96,15 +96,18 @@ function showNextCard(){
 
 // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
   
-    document.getElementById('darkmode-toggle').addEventListener('change', function() {
-      document.body.style.background = "";
-      
-          if(this.checked) {
-              document.body.style.backgroundColor = '#242424';
-          } else {
-              document.body.style.backgroundColor = 'white';
-          }
-    });
+   document.getElementById('darkmode-toggle').addEventListener('change', function() {
+    document.body.style.background =""
+    if(this.checked) {
+        document.body.style.backgroundColor = '#242424';
+        document.getElementById("bg_caption").style.color = "white";
+        document.getElementById("background_caption").style.color = "white";
+    } else {
+        document.body.style.backgroundColor = 'white';
+        document.getElementById("bg_caption").style.color = "black";
+        document.getElementById("background_caption").style.color = "black";
+    }
+});
  
 
 
