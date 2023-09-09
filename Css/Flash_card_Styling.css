@@ -1066,18 +1066,18 @@ body{
         grid-gap: -10px;
     }
     .screen_back_image img{
-	width: 150px;
+	width: 130px;
 	height: 170px;
 	margin-left: 15px !important;
 	padding-right: 10px !important;
     }
 
     .bg_caption{
-         margin-left: -50px !important;
+         margin-left: -70px !important;
     }
     .btn_bg_screen{
         position: absolute;
-        left: 150px !important;
+        left: 120px !important;
         top: 39rem !important;
     }
 
