@@ -997,6 +997,90 @@ body{
         cursor: pointer;
      }
 
+	  #buttons #prevButton{
+        position: absolute;
+        top: 90px;
+        left: 70px !important;
+        height: 30px;
+        width:85px;
+        border-radius: 10px;
+    
+     }
+
+    #buttons #revealButton{
+        position: absolute;
+        top: 90px;
+        left: 180px !important;
+        height: 30px;
+        width:75px;
+        border-radius: 10px;
+
+    }
+    #buttons #nextButton{
+        position: absolute;
+        top: 90px;
+        left: 280px !important;
+        height: 30px;
+        width:85px;
+        border-radius: 10px;
+    }
+
+    #prevButton:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+     }
+     #revealButton:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+     }
+     #nextButton:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+     }
+  
+    .screen_back_image{
+        position: absolute;
+        isolation: isolate;
+        z-index: 1;
+    }
+     .screen_back_image::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 20px;
+        background: linear-gradient(
+            0deg,
+             rgba(244, 246, 242, .4),
+             rgba(245, 245, 239,  .4)
+        );
+
+     }
+
+     .bg_visible {
+        display: grid; 
+        top: 120px;
+        width: 400px; 
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 190px 190px;
+        grid-gap: -10px;
+    }
+    .screen_back_image img{
+	width: 150px;
+	height: 170px;
+	margin-left: 15px !important;
+	padding-right: 10px !important;
+    }
+
+    .bg_caption{
+         margin-left: -50px !important;
+    }
+    .btn_bg_screen{
+        position: absolute;
+        left: 150px !important;
+        top: 39rem !important;
+    }
+
 }
     
 
