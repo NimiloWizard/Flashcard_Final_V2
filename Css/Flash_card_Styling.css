@@ -1061,21 +1061,7 @@ body{
         padding-right: 10px !important;
     }
 
-   #screen_back_imagee #screen_background_image{
-	    cursor: pointer;
-	    transition: all ease .5s;
-	    display: inline-block; /* Ensure links are treated as blocks */
-	    text-align: center; /* Center the content horizontally */
-	    padding-bottom: 15px;
-	    margin-bottom: -10px;
-	    margin-top: -10px;
-  }
-	
- #screen_back_image #screen_background_image:hover{
-	    transform: scale(1.1);
- }
-	
- #screen_back_imag #screen_background_image p{
+ #screen_back_image #screen_background_image p{
 	    margin-top: 5px;
 	    padding-left: 250px;
 	    font-weight: bold;
