@@ -631,7 +631,7 @@ body{
     }
     .col-3{
         display: none;
-        z-index: 5 !important;
+       
     }
     #card_back_image img{
         width: 150px;
