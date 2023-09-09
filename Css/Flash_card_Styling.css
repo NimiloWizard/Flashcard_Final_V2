@@ -1077,13 +1077,13 @@ body{
 	
  #screen_back_imag e#screen #screen_background_image p{
 	    margin-top: 5px;
-	    padding-left: 10px;
+	    padding-left: 250px;
 	    font-weight: bold;
  }
  
  .bg_caption{
          margin-left: -50px !important;
-	 top: 3rem !important;
+	 top: 4rem !important;
 }
   
 .btn_bg_screen{
