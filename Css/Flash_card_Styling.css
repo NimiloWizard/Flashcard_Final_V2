@@ -877,24 +877,13 @@ body{
         -ms-backface-visibility: hidden;
     }
 
-    .bg_visible{
-        
-        display: none;
-        -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
-        -ms-backface-visibility: hidden;
-    }
-    
-    .bg_visible {                           
-        position: absolute !important;
-        display: grid !important; 
-        width: 400px !important; 
-        top: 7rem !important;
-        grid-template-columns: 150px 150px !important;
-        grid-template-rows: 180px 180px !important;
-        grid-column-gap: 20px !important;
-        margin-left: 35px !important;
-        max-height: 50vh !important;
+    .visible {
+        display: grid; 
+        top: 120px;
+        width: 400px; 
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 190px 190px;
+        grid-gap: -10px;
     }
     
     /*
@@ -1044,13 +1033,26 @@ body{
         z-index: 1;
     }
    
-    .visible {
-        display: grid; 
-        top: 120px;
-        width: 400px; 
-        grid-template-columns: 200px 200px;
-        grid-template-rows: 190px 190px;
-        grid-gap: -10px;
+   
+
+    .bg_visible{
+        
+        display: none;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+    }
+    
+    .bg_visible {                           
+        position: absolute !important;
+        display: grid !important; 
+        width: 400px !important; 
+        top: 5rem !important;
+        grid-template-columns: 150px 150px !important;
+        grid-template-rows: 180px 180px !important;
+        grid-column-gap: 20px !important;
+        margin-left: 35px !important;
+        max-height: 50vh !important;
     }
    .background_image img{
             width: 150px !important;
@@ -1061,6 +1063,7 @@ body{
 
     .bg_caption{
          margin-left: -70px !important;
+	 top: 1rem !important;
     }
     .btn_bg_screen{
         position: absolute;
