@@ -306,6 +306,22 @@ function screen_background6(){
       close_cardButton.style.display = "block";      
 
 
+
+         // Assuming 'element' is the element you want to scroll
+          let element = document.getElementById('card_back_image');
+
+          // Perform your specific action (e.g., after a button click, a timeout, etc.)
+          function performSpecificAction() {
+            // Your specific action here
+
+            // Automatically scroll up
+            element.scrollTop -= 100; // Adjust the value as needed
+          }
+
+          // Call the function when needed
+          performSpecificAction();
+
+
       w3_close()  //toggle aup the navbar after making a selection
 
    }
