@@ -761,7 +761,7 @@ input:checked ~ body {
     #card_back_image img{
         width: 150px;
         height: 170px;
-        margin-left: 20px !important;
+        margin-left: 15px !important;
         padding-right: 10px !important;
         border-radius: 40px;
     }  
@@ -1003,7 +1003,7 @@ input:checked ~ body {
     }
     .visible {
         margin-top: 400px;
-        height: 70vh;
+        height: 68vh;
         padding-top: 0px;
         position: absolute !important;
         display: grid !important; 
@@ -1011,7 +1011,7 @@ input:checked ~ body {
         grid-template-columns: 150px 150px !important;
         grid-template-rows: 160px 160px !important;
         grid-column-gap: 20px !important;
-        margin-left: 35px !important; 
+        margin-left: 30px !important; 
         background: rgba(0, 0, 0, .7);
         border-radius: 20px;
         border-bottom-left-radius: 40px;
