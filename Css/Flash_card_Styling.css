@@ -806,7 +806,7 @@ input:checked ~ body {
         isolation: isolate;
         border-radius: 20px;
         animation-name: slideIn; 
-        z-index: 10;
+       
         
     }
     
