@@ -995,23 +995,22 @@ input:checked ~ body {
         bottom: 0;
         width: 200px; /* Set the width of the scrollable element */
         overflow: auto; /* Enable scrolling */
-        height: 100vh;
         overflow-x: hidden;
         z-index: 999; /* Set a high z-index to make it appear over other elements */
-        margin-top: -90px;
+        margin-top: 0px;
     }
     .visible {
-        
-        padding-top: 900px;
+        height: 120vh;
+        padding-top: 20px;
         position: absolute !important;
         display: grid !important; 
         width: 350px !important; 
         grid-template-columns: 150px 150px !important;
         grid-template-rows: 160px 160px !important;
         grid-column-gap: 20px !important;
-        margin-left: 35px !important;
-       
+        margin-left: 35px !important;   
     }
+	  
    .btn_bg{
         position: absolute;
         top: 92rem !important;
