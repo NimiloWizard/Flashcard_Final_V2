@@ -662,6 +662,14 @@ input:checked ~ body {
        color: rgb(11, 128, 0);
     }
 
+    #settings_caret i{
+        margin-left: 130px;
+        font-weight: bold;
+    }
+    #Japanese_caret i{
+        margin-left: 125px;
+        font-weight: bold;
+    }
     #main {
         margin-top: 5px;
     }
