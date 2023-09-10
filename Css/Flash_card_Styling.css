@@ -998,7 +998,7 @@ input:checked ~ body {
         height: 100vh;
         overflow-x: hidden;
         z-index: 999; /* Set a high z-index to make it appear over other elements */
-        margin-top: -70px;
+        margin-top: -90px;
     }
     .visible {
         
@@ -1014,7 +1014,7 @@ input:checked ~ body {
     }
    .btn_bg{
         position: absolute;
-        top: 88rem !important;
+        top: 92rem !important;
         left: 120px !important;
         margin-bottom: 20px;
     }
