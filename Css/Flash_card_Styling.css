@@ -55,7 +55,7 @@ body{
    margin-bottom: 10px;
 }
 #home{
-    border-top: 2px solid gray;
+    border-top: 1px solid gray;
     padding-top: 50px;
     
 }
@@ -64,8 +64,8 @@ body{
     font-weight: bold;
 }
 #English_Flashcards{
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border-top: 1px solid rgb(36, 34, 34);
+    border-bottom: 1px solid rgb(36, 34, 34);
     margin-top: 70px;
     margin-bottom: 20px;
     padding-top: 20px;
@@ -73,7 +73,7 @@ body{
     
 }
 #Korean_Flashcards{
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(36, 34, 34);
     margin-bottom: 20px;
     padding-top: 0px;
     padding-bottom: 20px;
@@ -663,7 +663,7 @@ input:checked ~ body {
     }
 
     #settings_caret i{
-        margin-left: 130px;
+        margin-left: 133px;
         font-weight: bold;
     }
     #Japanese_caret i{
