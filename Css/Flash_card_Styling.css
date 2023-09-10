@@ -998,11 +998,11 @@ input:checked ~ body {
         height: 100vh;
         overflow-x: hidden;
         z-index: 999; /* Set a high z-index to make it appear over other elements */
-        margin-top: -70px;
+        margin-top: -40px;
     }
     .visible {
         
-        padding-top: 900px;
+        padding-top: 800px;
         position: absolute !important;
         display: grid !important; 
         width: 350px !important; 
@@ -1011,6 +1011,12 @@ input:checked ~ body {
         grid-column-gap: 20px !important;
         margin-left: 35px !important;
        
+    }
+   .btn_bg{
+        position: absolute;
+        top: 86rem !important;
+        left: 120px !important;
+        margin-bottom: 20px;
     }
 	  
    #main{
@@ -1031,15 +1037,6 @@ input:checked ~ body {
         -webkit-backface-visibility: hidden;
         -moz-backface-visibility: hidden;
         -ms-backface-visibility: hidden;
-    }
-
-
-        
-    .btn_bg{
-        position: absolute;
-        top: 92rem !important;
-        left: 120px !important;
-        margin-bottom: 20px;
     }
     
     .btn_bg_screen{
