@@ -226,8 +226,8 @@ input:checked ~ body {
 #bg_caption{
     position: absolute;
     top:-50px;
-    left: 105px;
-    width: 280px; 
+    left: 0px !important;
+    width: 265px; 
     border: 1px solid gray;
     margin-bottom: 20px;
     text-align: center;
