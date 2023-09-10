@@ -50,8 +50,9 @@ body{
    
 }
 
-#button{
-    margin-bottom: 50px;
+#mySidebar #button{
+    
+   margin-bottom: 10px;
 }
 
 #English_Flashcards{
