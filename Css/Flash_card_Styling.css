@@ -1024,7 +1024,7 @@ input:checked ~ body {
     #mySidebar {
         width: 250px !important; /* Adjust the width for smaller screens */
         padding-bottom: 20px;
-        opacity: 95%;
+        opacity: 90%;
     }
     .col-1{
         display: none;
