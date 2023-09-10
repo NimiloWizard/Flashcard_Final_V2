@@ -73,11 +73,11 @@ body{
 }
 #Korean_Flashcards{
     border-bottom: 1px solid rgb(36, 34, 34);
-    margin-bottom: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 #Japanese_caret i{
+    padding-top: 20px;
     margin-left: 220px;
     font-weight: bold;
 }
