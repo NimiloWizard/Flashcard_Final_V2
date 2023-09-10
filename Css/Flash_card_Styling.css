@@ -978,11 +978,11 @@ input:checked ~ body {
         height: 140vh;
         overflow-x: hidden;
         z-index: 999; /* Set a high z-index to make it appear over other elements */
-        margin-top: -290px;
+        margin-top: -320px;
     }
     .visible {
        
-        padding-top: 1000px;
+        padding-top: 1100px;
         display: grid; 
         top: 120px;
         width: 400px; 
