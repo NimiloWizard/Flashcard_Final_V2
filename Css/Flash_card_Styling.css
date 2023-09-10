@@ -968,30 +968,31 @@ input:checked ~ body {
    
   @media (max-width: 765px) { 
 
-   #col-3 {
+     #col-3 {
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
         width: 200px; /* Set the width of the scrollable element */
         overflow: auto; /* Enable scrolling */
-        height: 140vh;
+        height: 100vh;
         overflow-x: hidden;
         z-index: 999; /* Set a high z-index to make it appear over other elements */
-        margin-top: -320px;
+        margin-top: -70px;
     }
     .visible {
-       
-        padding-top: 1100px;
+        
+        padding-top: 900px;
         position: absolute !important;
         display: grid !important; 
         width: 350px !important; 
-        top: 7rem !important;
         grid-template-columns: 150px 150px !important;
-        grid-template-rows: 170px 170px !important;
+        grid-template-rows: 160px 160px !important;
         grid-column-gap: 20px !important;
         margin-left: 35px !important;
+       
     }
+	  
    #main{
         top: 0 !important;
         position: fixed;
@@ -1012,12 +1013,11 @@ input:checked ~ body {
         -ms-backface-visibility: hidden;
     }
 
- 
-	  
-    
+
+        
     .btn_bg{
         position: absolute;
-        top: 35rem !important;
+        top: 92rem !important;
         left: 120px !important;
         margin-bottom: 20px;
     }
