@@ -995,6 +995,7 @@ input:checked ~ body {
         grid-template-columns: 200px 200px;
         grid-template-rows: 190px 190px;
         grid-gap: -10px;
+	z-index: 1;
     }
     
     /*
@@ -1097,7 +1098,7 @@ input:checked ~ body {
         cursor: pointer;
      }
 
-	  #buttons #prevButton{
+     #buttons #prevButton{
         position: absolute;
         top: 90px;
         left: 70px !important;
