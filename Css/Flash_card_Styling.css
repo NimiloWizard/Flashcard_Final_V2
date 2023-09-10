@@ -1003,7 +1003,7 @@ input:checked ~ body {
     }
     .visible {
         margin-top: 400px;
-        height: 72vh;
+        height: 70vh;
         padding-top: 0px;
         position: absolute !important;
         display: grid !important; 
