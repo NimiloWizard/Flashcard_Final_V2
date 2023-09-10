@@ -213,16 +213,7 @@ input:checked ~ body {
     
 }
 
-.card_back_image {
- /*   position: absolute; */
-    display: grid;
-    top: 120px;
-    width: 400px;
-    grid-template-columns: 200px 200px;
-    grid-template-rows: 190px 190px;
-    grid-gap: -10px
-    
-}
+
 #bg_caption{
     position: absolute;
     top: 80px;
@@ -275,7 +266,16 @@ input:checked ~ body {
     grid-gap: -10px;
 }
 
-
+.card_back_image {
+ /*   position: absolute;  */
+    display: grid;
+    top: 120px;
+    width: 400px;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 190px 190px;
+    grid-gap: -10px
+    
+}
 
 #background_caption{
     position: absolute;
@@ -998,17 +998,20 @@ input:checked ~ body {
 	z-index: 1;
     }
     
-    /*
+    
     #card_back_image{
        
-           
-            grid-template-columns: 150px 150px;
-            grid-column-gap: 25px !important;
-            margin-left: 15px;
-            max-height: 50vh !important;
-       
+        display: grid; 
+        top: 120px;
+        width: 400px; 
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 190px 190px;
+        grid-gap: -10px;
+	z-index: 1;
     } 
-    */
+
+	  
+    
     .btn_bg{
         position: absolute;
         top: 35rem !important;
