@@ -280,8 +280,8 @@ input:checked ~ body {
 #background_caption{
     position: absolute;
     top: 80px;
-    left: 30px;
-    width: 280px; 
+    left: 1040px;
+    width: 275px; 
     border: 1px solid gray;
     margin-bottom: 20px;
     text-align: center;
@@ -312,8 +312,8 @@ input:checked ~ body {
 
 .btn_bg{
     position: absolute;
-    top: 600px !important;
-    left: 135px !important;
+    top: 720px !important;
+    left: 1070px !important;
 }
 
 .btn_bg:hover{
