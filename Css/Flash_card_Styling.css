@@ -1018,7 +1018,17 @@ input:checked ~ body {
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;
     }
-
+      #background_caption{
+        position: absolute;
+        top: 480px;
+        left: 25px;
+        width: 350px; 
+        margin-bottom: 20px;
+        text-align: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, .6);
+        color: white;    
+    }
 	  
    .btn_bg{
         position: absolute;
