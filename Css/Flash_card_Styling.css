@@ -968,6 +968,29 @@ input:checked ~ body {
    
   @media (max-width: 765px) { 
 
+    #col-3 {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 200px; /* Set the width of the scrollable element */
+        overflow: auto; /* Enable scrolling */
+        height: 600px;
+        overflow-x: hidden;
+        z-index: 999; /* Set a high z-index to make it appear over other elements */
+        margin-top: 60px;
+    }
+    .visible {
+        padding-top: 20px;
+        display: grid; 
+        top: 120px;
+        width: 400px; 
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 190px 190px;
+        grid-gap: -10px;
+        margin-left: 25px;
+    }
+
    #main{
         top: 0 !important;
         position: fixed;
