@@ -983,13 +983,14 @@ input:checked ~ body {
     .visible {
        
         padding-top: 1100px;
-        display: grid; 
-        top: 120px;
-        width: 400px; 
-        grid-template-columns: 200px 200px;
-        grid-template-rows: 190px 190px;
-        grid-gap: -10px;
-        margin-left: 25px;
+        position: absolute !important;
+        display: grid !important; 
+        width: 350px !important; 
+        top: 7rem !important;
+        grid-template-columns: 150px 150px !important;
+        grid-template-rows: 170px 170px !important;
+        grid-column-gap: 20px !important;
+        margin-left: 35px !important;
     }
    #main{
         top: 0 !important;
