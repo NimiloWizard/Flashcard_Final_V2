@@ -988,28 +988,7 @@ input:checked ~ body {
         -ms-backface-visibility: hidden;
     }
 
-    .visible {
-        display: grid; 
-        top: 120px;
-        width: 400px; 
-        grid-template-columns: 200px 200px;
-        grid-template-rows: 190px 190px;
-        grid-gap: -10px;
-	z-index: 1;
-    }
-    
-    
-    #card_back_image{
-       
-        display: grid; 
-        top: 120px;
-        width: 400px; 
-        grid-template-columns: 200px 200px;
-        grid-template-rows: 190px 190px;
-        grid-gap: -10px;
-	z-index: 1;
-    } 
-
+ 
 	  
     
     .btn_bg{
