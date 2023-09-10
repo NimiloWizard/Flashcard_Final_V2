@@ -1014,7 +1014,6 @@ input:checked ~ body {
         grid-column-gap: 20px !important;
         margin-left: 25px !important; 
         background: rgba(0, 0, 0, .6);
-        border-radius: 20px;
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;
     }
