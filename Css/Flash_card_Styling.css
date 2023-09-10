@@ -226,7 +226,7 @@ input:checked ~ body {
 #bg_caption{
     position: absolute;
     top: 80px;
-    left: 0px !important;
+    left: 50px !important;
     width: 265px; 
     border: 1px solid gray;
     margin-bottom: 20px;
