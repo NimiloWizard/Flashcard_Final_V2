@@ -308,7 +308,7 @@ function screen_background6(){
 
 
          // Assuming 'element' is the element you want to scroll
-          let element = document.getElementsByname('col-3');
+          let element = document.getElementsByname('card_back_image');
 
           // Perform your specific action (e.g., after a button click, a timeout, etc.)
           function performSpecificAction() {
