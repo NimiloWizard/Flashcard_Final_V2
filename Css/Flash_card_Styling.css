@@ -959,6 +959,12 @@ input:checked ~ body {
         background: rgb(245, 245, 76);
         color: red;
       }
+
+	 #bg_caption{
+         margin-left: 65px !important;
+	 top: 4rem !important;
+    }
+  
    
   @media (max-width: 765px) { 
 
