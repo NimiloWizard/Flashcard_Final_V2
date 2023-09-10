@@ -305,7 +305,7 @@ function screen_background6(){
       var close_cardButton = document.getElementById("hide_Image");
       close_cardButton.style.display = "block";      
 
-
+   w3_close() 
 
          // Assuming 'element' is the element you want to scroll
           let element = document.getElementsByname('card_back_image');
@@ -322,7 +322,7 @@ function screen_background6(){
           performSpecificAction();
 
 
-      w3_close()  //toggle aup the navbar after making a selection
+       //toggle aup the navbar after making a selection
 
    }
   
