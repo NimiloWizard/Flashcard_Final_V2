@@ -1167,6 +1167,12 @@ input:checked ~ body {
         transform: scale(1.1);
         cursor: pointer;
      }
+
+     .space{
+         height: 20px;
+         width: 300px;
+         margin-top: 80px;
+      }
   
     .screen_back_image{
         position: absolute;
