@@ -77,14 +77,15 @@ body{
     padding-bottom: 20px;
 }
 #Japanese_caret i{
-    padding-top: 20px;
     margin-left: 220px;
+   
     font-weight: bold;
 }
 #Japanese_Flashcards{
-    margin-bottom: 20px;
-    padding-top: 0px;
-    padding-bottom: 20px;
+    
+    height: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
 #contact{
     border-top: 1px solid gray;
