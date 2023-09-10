@@ -59,6 +59,10 @@ body{
     padding-top: 50px;
     
 }
+#settings_caret i{
+    margin-left: 230px;
+    font-weight: bold;
+}
 #English_Flashcards{
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
@@ -73,6 +77,10 @@ body{
     margin-bottom: 20px;
     padding-top: 0px;
     padding-bottom: 20px;
+}
+#Japanese_caret i{
+    margin-left: 220px;
+    font-weight: bold;
 }
 #Japanese_Flashcards{
     margin-bottom: 20px;
