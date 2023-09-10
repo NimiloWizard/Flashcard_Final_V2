@@ -54,7 +54,11 @@ body{
     
    margin-bottom: 10px;
 }
-
+#home{
+    border-top: 2px solid gray;
+    padding-top: 50px;
+    
+}
 #English_Flashcards{
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
