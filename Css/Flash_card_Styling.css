@@ -246,7 +246,7 @@ input:checked ~ body {
 
 .btn_bg_screen{
     position: absolute;
-    top: 600px !important;
+    top: 720px !important;
     left: 135px !important;
 }
 .btn_bg_screen:hover{
