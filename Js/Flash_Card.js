@@ -115,6 +115,19 @@ function showNextCard(){
               });
 
 
+            
+              var audioElement = document.getElementById('audioPlayerKunyomi');
+
+                if (audioElement) {
+                  // Check if the audio element exists
+                  if (!audioElement.paused) {
+                    // Check if it's not paused before trying to play
+                    audioElement.play();
+                  }
+                } else {
+                  console.error("Audio element not found or is null.");
+                }
+
 
            const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
            const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
