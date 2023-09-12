@@ -1099,7 +1099,7 @@ input:checked ~ body {
         position: absolute;
         top: 70px !important;
         margin-bottom: 10px !important;
-        left: 37px !important;
+        left: 39px !important;
         height: 40px;
         width:115px;
         border-top-left-radius: 10px;
@@ -1121,7 +1121,7 @@ input:checked ~ body {
         position: absolute;
         top: 70px !important;
         margin-bottom: 10px !important;
-        left: 278px !important;
+        left: 276px !important;
         height: 40px;
         width:115px;
         border-top-right-radius: 10px;
