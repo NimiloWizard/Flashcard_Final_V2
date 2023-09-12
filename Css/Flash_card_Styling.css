@@ -1102,10 +1102,16 @@ input:checked ~ body {
         margin-left: 80px !important;
     }
     
-      /* Hide the audio player */
-      #audioPlayer {
+       /* Hide the audio player */
+     #audioPlayerOnyomi {
       display: none;
-    }	  
+    }
+        
+    #audioPlayerKunyomi {
+        display: none;
+
+    }
+    	  
     
      .Usage{
         margin-left: 32px !important;
