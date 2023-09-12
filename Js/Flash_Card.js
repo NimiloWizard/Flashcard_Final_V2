@@ -132,7 +132,9 @@ function showNextCard(){
           //     audioPlayerKunyomi.pause();
               // audioButtonKunyomi.src = 'play-button.png'; // Change the image back to a play button
         //     }
-              
+
+             });
+
 
   // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
   document.getElementById('darkmode-toggle').addEventListener('change', function() {
