@@ -599,7 +599,7 @@ input:checked ~ body {
     color: rgb(254, 251, 251);
     margin-bottom: 30px;
     box-shadow: 1px 0px  15px #10101040,-10px 10px 9px 2px #28282870; 
-    transition: all ease .4s;
+    transition: all ease .3s;
     border: 1px solid rgb(102, 101, 101) ;
     font-weight: bold;
  }
@@ -616,7 +616,7 @@ input:checked ~ body {
     color: rgb(7, 7, 7);
     margin-bottom: 30px;
     box-shadow: 1px 0px  15px #10101040,-10px 10px 9px 2px #28282870; 
-    transition: all ease .4s;
+    transition: all ease .3s;
     border: 1px solid rgb(102, 101, 101) ;
     font-weight: bold;
     
@@ -635,7 +635,7 @@ input:checked ~ body {
     color: rgb(249, 248, 248);
     margin-bottom: 30px;
     box-shadow: 1px 0px  15px #10101040,-10px 10px 9px 2px #28282870; 
-    transition: all ease .4s;
+    transition: all ease .3s;
     border: 1px solid rgb(102, 101, 101) ;
     font-weight: bold;
  }
