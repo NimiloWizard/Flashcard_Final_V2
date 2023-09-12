@@ -1129,15 +1129,15 @@ input:checked ~ body {
         
     }
     #prevButton:hover{
-        transform: scale(1.3);
+        transform: scale(1.03);
         cursor: pointer;
      }
      #revealButton:hover{
-        transform: scale(1.3);
+        transform: scale(1.03);
         cursor: pointer;
      }
      #nextButton:hover{
-        transform: scale(1.3);
+        transform: scale(1.03);
         cursor: pointer;
      }
 
