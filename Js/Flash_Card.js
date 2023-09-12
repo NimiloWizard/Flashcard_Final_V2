@@ -94,6 +94,43 @@ function showNextCard(){
 
 }
 
+
+  // ------------------------------------Audio Playaer ----------------------------------- //
+
+       
+            // Get references to the image and audio elements
+           const audioButtonOnyomi = document.getElementById('audioButtonOnyomi');
+           const audioPlayerOnyomi = document.getElementById('audioPlayerOnyomi');
+          
+            // Add a click event listener to the image
+              audioButtonOnyomi.addEventListener('click', function() {
+                // Check if the audio is paused, if so, play it; otherwise, pause it
+                if (audioPlayerOnyomi.paused) {
+                  audioPlayerOnyomi.play();
+                 // audioButtonOnyomi.src = 'pause-button.png'; // Change the image to a pause button
+                } else {
+                  audioPlayerOnyomi.pause();
+                 // audioButtonOnyomi.src = 'play-button.png'; // Change the image back to a play button
+                }
+              });
+
+
+
+           const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
+           const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
+           // Add a click event listener to the image
+             audioButtonKunyomi.addEventListener('click', function() {
+             // Check if the audio is paused, if so, play it; otherwise, pause it
+             if (audioPlayerKunyomi.paused) {
+               audioPlayerKunyomi.play();
+              // audioButtonKunyomi.src = 'pause-button.png'; // Change the image to a pause button
+             } else {
+               audioPlayerKunyomi.pause();
+              // audioButtonKunyomi.src = 'play-button.png'; // Change the image back to a play button
+             }
+           });
+
+
   // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
   document.getElementById('darkmode-toggle').addEventListener('change', function() {
     
