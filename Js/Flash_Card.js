@@ -383,6 +383,7 @@ function screen_background6(){
 // ----------------------setting up Image Gallery for background change--------------------------------//
 
 
+
 function background1(){
       
    // Set the background of the card
@@ -396,8 +397,9 @@ function background1(){
       const prevButton = document.querySelector('#prevButton');
       const nextButton = document.querySelector('#nextButton');
 
-      revealButton.style.background = 'linear-gradient(to right,  gray, #64350c)';
-      prevButton.style.background =   'linear-gradient(to right,  gray, #64350c)';
+     
+      prevButton.style.background =   'linear-gradient(to right,  #64350c,gray )';
+      revealButton.style.background = 'linear-gradient(to right,  gray, #64350c,  gray)';
       nextButton.style.background =   'linear-gradient(to right, gray, #64350c)';
   
     // set the color of the text of the button
@@ -421,8 +423,9 @@ function background2(){
         const prevButton = document.querySelector('#prevButton');
         const nextButton = document.querySelector('#nextButton');
 
-        revealButton.style.background = 'linear-gradient(to right, white, #78a6f5)';
-        prevButton.style.background =   'linear-gradient(to right, white, #78a6f5)';
+        
+        prevButton.style.background =   'linear-gradient(to right, #78a6f5, white)';
+        revealButton.style.background = 'linear-gradient(to right, white, #78a6f5, white)';
         nextButton.style.background =   'linear-gradient(to right, white, #78a6f5)';
 
         
@@ -446,8 +449,9 @@ function background3(){
    const prevButton = document.querySelector('#prevButton');
    const nextButton = document.querySelector('#nextButton');
 
-   revealButton.style.background = 'linear-gradient(to right, lightblue, gray)';
-   prevButton.style.background =   'linear-gradient(to right, lightblue, gray)';
+   
+   prevButton.style.background =   'linear-gradient(to right, gray, lightblue)';
+   revealButton.style.background = 'linear-gradient(to right, lightblue, gray, lightblue)';
    nextButton.style.background =   'linear-gradient(to right, lightblue, gray)';
 
    // set the color of the text of the button
@@ -471,8 +475,9 @@ function background4(){
       const prevButton = document.querySelector('#prevButton');
       const nextButton = document.querySelector('#nextButton');
 
-      revealButton.style.background = 'linear-gradient(to right, lightblue, gray)';
-      prevButton.style.background =   'linear-gradient(to right, lightblue, gray)';
+      
+      prevButton.style.background =   'linear-gradient(to right, gray, lightblue)';
+      revealButton.style.background = 'linear-gradient(to right, lightblue, gray, lightblue)';
       nextButton.style.background =   'linear-gradient(to right, lightblue, gray)';
 
       // set the color of the text of the button
@@ -496,8 +501,9 @@ function background5(){
         const prevButton = document.querySelector('#prevButton');
         const nextButton = document.querySelector('#nextButton');
   
-        revealButton.style.background = 'linear-gradient(to right, white, green)';
-        prevButton.style.background =   'linear-gradient(to right, white, green)';
+        
+        prevButton.style.background =   'linear-gradient(to right,  green, white)';
+        revealButton.style.background = 'linear-gradient(to right, white, green,white)';
         nextButton.style.background =   'linear-gradient(to right, white, green)';
   
         // set the color of the text of the button
@@ -522,8 +528,9 @@ function background6(){
       const prevButton = document.querySelector('#prevButton');
       const nextButton = document.querySelector('#nextButton');
 
-      revealButton.style.background = 'linear-gradient(to right, lightblue, #64350c)';
-      prevButton.style.background =   'linear-gradient(to right, lightblue, #64350c)';
+      
+      prevButton.style.background =   'linear-gradient(to right, #64350c, lightblue)';
+      revealButton.style.background = 'linear-gradient(to right,lightblue, #64350c,lightblue)';
       nextButton.style.background =   'linear-gradient(to right, lightblue, #64350c)';
 
       // set the color of the text of the button
@@ -532,4 +539,5 @@ function background6(){
       //nextButton.style.color = 'white';
   
 }
+
 
