@@ -106,13 +106,7 @@ function showNextCard(){
               audioButtonOnyomi.addEventListener('click', function() {
                 // Check if the audio is paused, if so, play it; otherwise, pause it
               //  if (audioPlayerOnyomi.paused) {
-                  audioPlayerOnyomi.play();
-                 // audioButtonOnyomi.src = 'pause-button.png'; // Change the image to a pause button
-            //   } else {
-           //       audioPlayerOnyomi.pause();
-                 // audioButtonOnyomi.src = 'play-button.png'; // Change the image back to a play button
-             //  }
-                    var audioElement = document.getElementById('audioPlayerKunyomi');
+                        var audioElement = document.getElementById('audioPlayerOnyomi');
 
                 if (audioElement) {
                   // Check if the audio element exists
@@ -123,6 +117,12 @@ function showNextCard(){
                 } else {
                   console.error("Audio element not found or is null.");
                 }
+                 // audioButtonOnyomi.src = 'pause-button.png'; // Change the image to a pause button
+            //   } else {
+           //       audioPlayerOnyomi.pause();
+                 // audioButtonOnyomi.src = 'play-button.png'; // Change the image back to a play button
+             //  }
+             
               });
 
 
@@ -136,12 +136,6 @@ function showNextCard(){
              audioButtonKunyomi.addEventListener('click', function() {
              // Check if the audio is paused, if so, play it; otherwise, pause it
        //      if (audioPlayerKunyomi.paused) {
-            audioPlayerKunyomi.play();
-              // audioButtonKunyomi.src = 'pause-button.png'; // Change the image to a pause button
-         //    } else {
-       //        audioPlayerKunyomi.pause();
-              // audioButtonKunyomi.src = 'play-button.png'; // Change the image back to a play button
-        //     }
                    var audioElement = document.getElementById('audioPlayerKunyomi');
 
                 if (audioElement) {
@@ -153,6 +147,13 @@ function showNextCard(){
                 } else {
                   console.error("Audio element not found or is null.");
                 }
+      //      audioPlayerKunyomi.play();
+              // audioButtonKunyomi.src = 'pause-button.png'; // Change the image to a pause button
+         //    } else {
+       //        audioPlayerKunyomi.pause();
+              // audioButtonKunyomi.src = 'play-button.png'; // Change the image back to a play button
+        //     }
+               
            });
 
 
