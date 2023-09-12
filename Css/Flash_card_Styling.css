@@ -1086,7 +1086,27 @@ input:checked ~ body {
         align-content: center;
         text-align: center;
     }
-        
+
+    #audioButtonOnyomi{
+        cursor: pointer;
+        width: 35px;
+        height: 60px;
+        margin-bottom: -20px;
+        margin-left: 65px !important;
+    }
+    #audioButtonKunyomi{
+        cursor: pointer;
+        width: 35px;
+        height: 60px;
+        margin-bottom: -20px;
+        margin-left: 80px !important;
+    }
+    
+      /* Hide the audio player */
+      #audioPlayer {
+      display: none;
+    }	  
+    
      .Usage{
         margin-left: 32px !important;
         width: 355px !important;
