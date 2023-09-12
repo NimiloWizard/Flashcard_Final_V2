@@ -112,11 +112,7 @@ function showNextCard(){
            //       audioPlayerOnyomi.pause();
                  // audioButtonOnyomi.src = 'play-button.png'; // Change the image back to a play button
              //  }
-              });
-
-
-            
-              var audioElement = document.getElementById('audioPlayerKunyomi');
+                    var audioElement = document.getElementById('audioPlayerKunyomi');
 
                 if (audioElement) {
                   // Check if the audio element exists
@@ -127,6 +123,11 @@ function showNextCard(){
                 } else {
                   console.error("Audio element not found or is null.");
                 }
+              });
+
+
+            
+          
 
 
            const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
@@ -141,6 +142,17 @@ function showNextCard(){
        //        audioPlayerKunyomi.pause();
               // audioButtonKunyomi.src = 'play-button.png'; // Change the image back to a play button
         //     }
+                   var audioElement = document.getElementById('audioPlayerKunyomi');
+
+                if (audioElement) {
+                  // Check if the audio element exists
+                  if (!audioElement.paused) {
+                    // Check if it's not paused before trying to play
+                    audioElement.play();
+                  }
+                } else {
+                  console.error("Audio element not found or is null.");
+                }
            });
 
 
