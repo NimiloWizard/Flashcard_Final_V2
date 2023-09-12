@@ -1099,7 +1099,7 @@ input:checked ~ body {
         position: absolute;
         top: 70px !important;
         margin-bottom: 10px !important;
-        left: 38px !important;
+        left: 37px !important;
         height: 40px;
         width:115px;
         border-top-left-radius: 10px;
@@ -1111,7 +1111,7 @@ input:checked ~ body {
         position: absolute;
         top: 70px !important;
         margin-bottom: 10px !important;
-        left: 159px !important;
+        left: 158px !important;
         height: 40px;
         width:115px;
         
