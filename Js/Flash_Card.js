@@ -382,6 +382,7 @@ function screen_background6(){
 
 // ----------------------setting up Image Gallery for background change--------------------------------//
 
+
 function background1(){
       
    // Set the background of the card
@@ -395,14 +396,14 @@ function background1(){
       const prevButton = document.querySelector('#prevButton');
       const nextButton = document.querySelector('#nextButton');
 
-      revealButton.style.background = 'linear-gradient(to right, #64350c, gray)';
-      prevButton.style.background =   'linear-gradient(to right, #64350c, gray)';
-      nextButton.style.background =   'linear-gradient(to right, #64350c, gray)';
+      revealButton.style.background = 'linear-gradient(to right,  gray, #64350c)';
+      prevButton.style.background =   'linear-gradient(to right,  gray, #64350c)';
+      nextButton.style.background =   'linear-gradient(to right, gray, #64350c)';
   
     // set the color of the text of the button
-      revealButton.style.color ='black';
-      prevButton.style.color = 'white';
-      nextButton.style.color = 'white';
+    //  revealButton.style.color ='black';
+    //  prevButton.style.color = 'white';
+    //  nextButton.style.color = 'white';
     
 }
 
@@ -420,16 +421,16 @@ function background2(){
         const prevButton = document.querySelector('#prevButton');
         const nextButton = document.querySelector('#nextButton');
 
-        revealButton.style.background = 'linear-gradient(to right, #78a6f5, white)';
-        prevButton.style.background =   'linear-gradient(to right, #78a6f5, white)';
-        nextButton.style.background =   'linear-gradient(to right, #78a6f5, white)';
+        revealButton.style.background = 'linear-gradient(to right, white, #78a6f5)';
+        prevButton.style.background =   'linear-gradient(to right, white, #78a6f5)';
+        nextButton.style.background =   'linear-gradient(to right, white, #78a6f5)';
 
         
 
         // set the color of the text of the button
-        revealButton.style.color ='black';
-        prevButton.style.color = 'white';
-        nextButton.style.color = 'white';
+       // revealButton.style.color ='black';
+       // prevButton.style.color = 'white';
+       // nextButton.style.color = 'white';
 }
 
 
@@ -450,9 +451,9 @@ function background3(){
    nextButton.style.background =   'linear-gradient(to right, lightblue, gray)';
 
    // set the color of the text of the button
-   revealButton.style.color ='black';
-   prevButton.style.color = 'white';
-   nextButton.style.color = 'white';
+  // revealButton.style.color ='black';
+  // prevButton.style.color = 'white';
+   //nextButton.style.color = 'white';
 
 }
 
@@ -475,9 +476,9 @@ function background4(){
       nextButton.style.background =   'linear-gradient(to right, lightblue, gray)';
 
       // set the color of the text of the button
-      revealButton.style.color ='black';
-      prevButton.style.color = 'white';
-      nextButton.style.color = 'white';
+     // revealButton.style.color ='black';
+     // prevButton.style.color = 'white';
+     // nextButton.style.color = 'white';
  
 }
 
@@ -495,14 +496,14 @@ function background5(){
         const prevButton = document.querySelector('#prevButton');
         const nextButton = document.querySelector('#nextButton');
   
-        revealButton.style.background = 'linear-gradient(to right, green, white)';
-        prevButton.style.background =   'linear-gradient(to right, green, white)';
-        nextButton.style.background =   'linear-gradient(to right, green, white)';
+        revealButton.style.background = 'linear-gradient(to right, white, green)';
+        prevButton.style.background =   'linear-gradient(to right, white, green)';
+        nextButton.style.background =   'linear-gradient(to right, white, green)';
   
         // set the color of the text of the button
-        revealButton.style.color ='black';
-        prevButton.style.color = 'white';
-        nextButton.style.color = 'white';
+       // revealButton.style.color ='black';
+       // prevButton.style.color = 'white';
+       // nextButton.style.color = 'white';
    
       
 }
@@ -521,15 +522,14 @@ function background6(){
       const prevButton = document.querySelector('#prevButton');
       const nextButton = document.querySelector('#nextButton');
 
-      revealButton.style.background = 'linear-gradient(to right, #64350c, lightblue)';
-      prevButton.style.background =   'linear-gradient(to right, #64350c, lightblue)';
-      nextButton.style.background =   'linear-gradient(to right, #64350c, lightblue)';
+      revealButton.style.background = 'linear-gradient(to right, lightblue, #64350c)';
+      prevButton.style.background =   'linear-gradient(to right, lightblue, #64350c)';
+      nextButton.style.background =   'linear-gradient(to right, lightblue, #64350c)';
 
       // set the color of the text of the button
-      revealButton.style.color ='black';
-      prevButton.style.color = 'white';
-      nextButton.style.color = 'white';
+     // revealButton.style.color ='black';
+     // prevButton.style.color = 'white';
+      //nextButton.style.color = 'white';
   
 }
-
 
