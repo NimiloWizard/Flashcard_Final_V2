@@ -1100,7 +1100,7 @@ input:checked ~ body {
         top: 70px !important;
         margin-bottom: 10px !important;
         left: 39px !important;
-        height: 40px;
+        height: 38px;
         width:115px;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
@@ -1111,8 +1111,8 @@ input:checked ~ body {
         position: absolute;
         top: 70px !important;
         margin-bottom: 10px !important;
-        left: 157px !important;
-        height: 41px;
+        left: 158px !important;
+        height: 38px;
         width:115px;
         
 
@@ -1122,7 +1122,7 @@ input:checked ~ body {
         top: 70px !important;
         margin-bottom: 10px !important;
         left: 276px !important;
-        height: 40px;
+        height: 38px;
         width:115px;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
