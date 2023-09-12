@@ -594,7 +594,7 @@ input:checked ~ body {
     height: 40px;
     width:147px;
     
-    background: linear-gradient(to right, #2261f6, white);
+    background: linear-gradient(to right, #78a6f5, white);
    /* background: url('../Images/BACKGROUND4.png')  ;*/
     color: rgb(254, 251, 251);
     margin-bottom: 30px;
@@ -611,7 +611,7 @@ input:checked ~ body {
     height: 40px;
     width:155px;
     
-    background: linear-gradient(to right,white, #78a6f5, white);
+    background: linear-gradient(to right, white, #78a6f5, white);
     /*background: url('../Images/BACKGROUND3.png')  ;*/
     color: rgb(7, 7, 7);
     margin-bottom: 30px;
