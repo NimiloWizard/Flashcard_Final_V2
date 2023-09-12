@@ -590,10 +590,10 @@ input:checked ~ body {
  #buttons #prevButton{
     position: absolute;
     top: -10px;
-    left: 100px !important;
-    height: 30px;
-    width:85px;
-    border-radius: 10px;
+    left: 40px !important;
+    height: 40px;
+    width:147px;
+    
     background: linear-gradient(to right, #2261f6, white);
    /* background: url('../Images/BACKGROUND4.png')  ;*/
     color: rgb(254, 251, 251);
@@ -607,10 +607,10 @@ input:checked ~ body {
  #buttons #revealButton{
     position: absolute;
     top: -10px;
-    left: 220px !important;
-    height: 30px;
-    width:75px;
-    border-radius: 10px;
+    left: 188px !important;
+    height: 40px;
+    width:155px;
+    
     background: linear-gradient(to right, #2261f6, white);
     /*background: url('../Images/BACKGROUND3.png')  ;*/
     color: rgb(7, 7, 7);
@@ -626,10 +626,10 @@ input:checked ~ body {
  #buttons #nextButton{
     position: absolute;
     top: -10px;
-    left: 330px !important;
-    height: 30px;
-    width:85px;
-    border-radius: 10px;
+    left: 343px !important;
+    height: 40px;
+    width:147px;
+    
     background: linear-gradient(to right, #2261f6, white);
     /*background: url('../Images/BACKGROUND3.png')  ;*/
     color: rgb(249, 248, 248);
@@ -642,20 +642,18 @@ input:checked ~ body {
 
 
  #prevButton:hover{
-    transform: scale(1.2);
+    transform: scale(1.02);
     cursor: pointer;
  }
  #revealButton:hover{
-    transform: scale(1.2);
+    transform: scale(1.02);
     cursor: pointer;
  }
  #nextButton:hover{
-    transform: scale(1.2);
+    transform: scale(1.02);
     cursor: pointer;
  }
 
-
- 
 
  /* ----------------------------------------------Media Query------------------------------------------------------------*/
 
