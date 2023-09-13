@@ -648,18 +648,20 @@ function draw(e) {
 }
 
 // Function to erase last line as the user clicks the erase button
-function eraseLastLine() {
-    if (drawingCommands.length > 0) {
-        const lastCommand = drawingCommands.pop();
-        erasedCommands.push(lastCommand);
-        redraw(); // Redraw the canvas without the erased line
+function eraseWithEraser(e) {
+    const touch = e.touches[0];
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+    const eraserSize = 20; // Adjust the size of the eraser as needed
 
+    ctx.clearRect(x - eraserSize/2, y - eraserSize/2, eraserSize, eraserSize);
 
-      
-      
-    }
+    // Add the erased area to the history
+    erasedCommands.push({ type: 'erase', x, y, size: eraserSize });
 }
 
+
+drawingArea.addEventListener('touchmove', eraseWithEraser);
 
 // This function should clear the canvas and replay all the remaining drawing commands.
 
@@ -672,24 +674,27 @@ function redraw() {
             ctx.moveTo(command.x1, command.y1);
             ctx.lineTo(command.x2, command.y2);
             ctx.stroke();
+        } else if (command.type === 'erase') {
+            ctx.clearRect(command.x - command.size/2, command.y - command.size/2, command.size, command.size);
         }
     }
-
-    for (const command of erasedCommands) {
-        if (command.type === 'draw') {
-            // Use a wider, transparent line for erasing
-            ctx.globalCompositeOperation = 'destination-out';
-            ctx.lineWidth = 10; // Adjust the line width as needed
-            ctx.strokeStyle = 'rgba(0, 0, 0, 0)'; // Transparent color
-            ctx.beginPath();
-            ctx.moveTo(command.x1, command.y1);
-            ctx.lineTo(command.x2, command.y2);
-            ctx.stroke();
-            ctx.globalCompositeOperation = 'source-over'; // Reset the composite operation
-        }
-    }
-  
 }
+
+
+
+let erasingMode = false;
+
+function toggleMode() {
+    erasingMode = !erasingMode;
+    if (erasingMode) {
+        drawingArea.removeEventListener('touchmove', draw);
+        drawingArea.addEventListener('touchmove', eraseWithEraser);
+    } else {
+        drawingArea.removeEventListener('touchmove', eraseWithEraser);
+        drawingArea.addEventListener('touchmove', draw);
+    }
+}
+
 
 
 
