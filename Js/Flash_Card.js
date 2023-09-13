@@ -661,8 +661,7 @@ function draw(e) {
         var canvas = document.getElementById('drawing-area');
         var ctx = canvas.getContext('2d');
 
-        // Variables to keep track of the last drawn position
-        var lastX, lastY;
+      
 
        function eraseLastLine() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
