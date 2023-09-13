@@ -588,8 +588,11 @@ function background6(){
 
   function SlideOpen() {
     var  drawingarea = document.getElementById('drawing-area');
-    drawingarea.style.left = '400'; // Slide to the right to reveal the element
-   drawingarea.classList.remove('Drawing_SlideOpen'); // Remove the 'hidden' class to show the element
+     drawingarea.style.left = '90%'; // Slide to the right to reveal the element
+     drawingarea.classList.remove('Drawing_SlideOpen'); // Remove the 'hidden' class to show the element
+    var  eraseline = document.getElementById('raser');
+     eraseline.style.left = '25%'; // Slide to the right to reveal the element
+     eraseline.classList.remove('Drawing_SlideOpen'); // Remove the 'hidden' class to show the element
   }
 
 
