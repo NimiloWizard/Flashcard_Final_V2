@@ -663,8 +663,15 @@ function draw(e) {
         var canvas = document.getElementById('drawing-area');          
         var ctxt = canvas.getContext('2d');
       
-       function eraseLastLine() {
+       function eraseLastLine() {                                        // Eraase by eraser
             ctxt.clearRect(0, 0, canvas.width, canvas.height);
         }
 
+       var  canvasDrawing = document.getElementById('drawing-area');      
+       var ctxtDrawing = canvasDrawing.getContext('2d');
+       function  SlideOpen() {                                           //erase upon toggle
+           ctxtDrawing.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+     
       
