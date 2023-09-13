@@ -653,6 +653,10 @@ function eraseLastLine() {
         const lastCommand = drawingCommands.pop();
         erasedCommands.push(lastCommand);
         redraw(); // Redraw the canvas without the erased line
+
+
+      
+      
     }
 }
 
@@ -670,6 +674,21 @@ function redraw() {
             ctx.stroke();
         }
     }
+
+    for (const command of erasedCommands) {
+        if (command.type === 'draw') {
+            // Use a wider, transparent line for erasing
+            ctx.globalCompositeOperation = 'destination-out';
+            ctx.lineWidth = 10; // Adjust the line width as needed
+            ctx.strokeStyle = 'rgba(0, 0, 0, 0)'; // Transparent color
+            ctx.beginPath();
+            ctx.moveTo(command.x1, command.y1);
+            ctx.lineTo(command.x2, command.y2);
+            ctx.stroke();
+            ctx.globalCompositeOperation = 'source-over'; // Reset the composite operation
+        }
+    }
+  
 }
 
 
