@@ -1253,11 +1253,12 @@ input:checked ~ body {
   width: 346px;
   height: 434px;                     /* 222px;    original size*/
   top: -32rem;
-  left: 22px;
+  left: -200px; /* Initially, it's off-screen to the left */
   background: rgb(238, 251, 166);
   border-radius: 18px;
   touch-action: none;
  /* display: none; */
+ transition: left 0.5s ease; /* Smooth transition for left property */
 }
 
 #eraser{
