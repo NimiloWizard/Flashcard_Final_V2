@@ -1264,7 +1264,7 @@ input:checked ~ body {
   width: 346px;
   height: 434px;                     /* 222px;    original size*/
   top: -32rem;
-  left: -400px !important; /* Initially, it's off-screen to the left */
+  left: 22px !important; /* Initially, it's off-screen to the left */
   background: rgb(238, 251, 166);
   border-radius: 18px;
   touch-action: none;
@@ -1275,7 +1275,7 @@ input:checked ~ body {
 #eraser{
   position: absolute;
   top: -120px !important;
-  left: -100px !important;
+  left: 76px !important;
   height: 70px !important;
   width: 70;
   border: 1 px solid gray;
