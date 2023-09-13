@@ -635,6 +635,9 @@ function draw(e) {
     ctx.moveTo(lastX, lastY);
     ctx.lineTo(x, y);
     ctx.stroke();
+  
+ // Add the drawn line to the history
+    drawingCommands.push({ type: 'draw', x1: lastX, y1: lastY, x2: x, y2: y });
 
     lastX = x;
     lastY = y;
