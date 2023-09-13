@@ -1260,6 +1260,14 @@ input:checked ~ body {
  /* display: none; */
 }
 
+#eraser{
+  position: absolute;
+  top: -120px !important;
+  left: 100px !important;
+  height: 70px !important;
+  width: 70;
+  border: 1 px solid gray;
+}
 
 @keyframes swap {
     0% {
