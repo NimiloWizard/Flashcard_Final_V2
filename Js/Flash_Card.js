@@ -590,17 +590,7 @@ function background6(){
 $(document).ready(function() {
   $("#Lefttab").click(function() {
     $("#drawing-area").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
-      if ($("#drawing-area").hasClass("hideDrawing_visible")) {
-
-      } 
-      else{
-         const canvas = document.getElementById("#drawing-area");
-         const ctx = canvas.getContext("2d");
-                // Clear the canvas by filling it with a background color or using clearRect
-         ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-      }
-      $("#eraser").toggleClass("hideDrawing_visible");
+     $("#eraser").toggleClass("hideDrawing_visible");
   });
   
 });
