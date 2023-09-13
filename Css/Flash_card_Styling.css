@@ -1230,7 +1230,35 @@ input:checked ~ body {
 	  
 }
     
+   
+#Feature_Drawing{
+    position: relative;
+}
 
+#Feature_Drawing img{
+    position: absolute;
+    top: -15rem;
+    left: 15px;
+    height: 170px;
+    width: 50px;
+    z-index: 1;
+       
+}
+#Feature_Drawing img:hover{
+   cursor: pointer;
+}
+
+#drawing-area{
+  position: absolute;
+  width: 346px;
+  height: 434px;                     /* 222px;    original size*/
+  top: -32rem;
+  left: 22px;
+  background: white;
+  border-radius: 18px;
+  touch-action: none;
+ /* display: none; */
+}
 
 
 @keyframes swap {
