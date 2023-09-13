@@ -1228,9 +1228,19 @@ input:checked ~ body {
 }
 
 	  
-#Drawing_SlideOpen{
-   display: none;
-}    
+
+
+#Drawing_SlideOpen {
+  display: none;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Show the element by resetting the transform */
+.Drawing_SlideOpenvisible {
+  display: block;
+  transform: translateX(0);
+}
    
 #Feature_Drawing{
     position: relative;
