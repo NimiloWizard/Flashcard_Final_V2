@@ -1237,7 +1237,7 @@ input:checked ~ body {
 }
 
 /* Show the element by resetting the transform */
-.Drawing_SlideOpenvisible {
+.hideDrawing_visible {
   display: block;
   transform: translateX(0);
 }
