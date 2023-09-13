@@ -662,7 +662,7 @@ function draw(e) {
 
       
        function eraseLastLine() {
-            ctxteraser.clearRect(0, 0, canvas.width, canvas.height);
+            ctxt.clearRect(0, 0, canvas.width, canvas.height);
         }
 
       
