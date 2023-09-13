@@ -594,7 +594,7 @@ $(document).ready(function() {
         // If the element is becoming visible, clear its content
         $("#drawing-area").empty();
       }
-   
+      $("#eraser").toggleClass("hideDrawing_visible");
   });
   
 });
