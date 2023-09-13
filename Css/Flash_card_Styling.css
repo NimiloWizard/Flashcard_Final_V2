@@ -1254,7 +1254,7 @@ input:checked ~ body {
   height: 434px;                     /* 222px;    original size*/
   top: -32rem;
   left: 22px;
-  background: white;
+  background: rgb(238, 251, 166);
   border-radius: 18px;
   touch-action: none;
  /* display: none; */
