@@ -658,28 +658,6 @@ function draw(e) {
     lastY = y;
 }
 
-function eraseLastLine() {
-    if (drawingCommands.length > 0) {
-        const lastCommand = drawingCommands.pop();
-        erasedCommands.push(lastCommand);
-        redraw(); // Redraw the canvas without the erased line
-    }
-}
-
-function redraw() {
-    ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
-
-    for (const command of drawingCommands) {
-        if (command.type === 'draw') {
-            ctx.beginPath();
-            ctx.moveTo(command.x1, command.y1);
-            ctx.lineTo(command.x2, command.y2);
-            ctx.stroke();
-        }
-    }
-}
-
-
 
 
 
