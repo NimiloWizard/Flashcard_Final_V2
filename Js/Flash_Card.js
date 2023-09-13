@@ -615,6 +615,11 @@ function startDrawing(e) {
     const touch = e.touches[0];
     lastX = touch.clientX - rect.left;
     lastY = touch.clientY - rect.top;
+
+    // To draw a dot at the starting point:
+    ctx.beginPath();
+    ctx.arc(lastX, lastY, 2, 0, Math.PI * 2);
+    ctx.fill();
 }
 
 
