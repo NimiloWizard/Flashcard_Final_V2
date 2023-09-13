@@ -583,3 +583,56 @@ function background6(){
 }
 
 
+
+// --------------------------------------Drawing Feature ---------------------------------
+
+// Get the drawing area element
+const drawingArea = document.getElementById('drawing-area');
+const ctx = drawingArea.getContext('2d');
+
+// Set up drawing properties
+ctx.lineWidth = 3;
+ctx.strokeStyle = 'black';
+ctx.lineCap = 'round';
+
+let drawing = false; // Indicates whether the user is drawing
+let lastX = 0;
+let lastY = 0;
+
+// Event listeners for touch events
+drawingArea.addEventListener('touchstart', startDrawing);
+drawingArea.addEventListener('touchmove', draw);
+
+// Event listener to stop drawing when the user lifts their finger
+drawingArea.addEventListener('touchend', () => {
+    drawing = false;
+});
+
+// Function to start drawing
+function startDrawing(e) {
+    drawing = true;
+    // Get the initial touch position
+    const touch = e.touches[0];
+    lastX = touch.clientX - drawingArea.getBoundingClientRect().left;
+    lastY = touch.clientY - drawingArea.getBoundingClientRect().top;
+}
+
+// Function to draw lines as the user moves their finger
+function draw(e) {
+    if (!drawing) return;
+
+    const touch = e.touches[0];
+    const x = touch.clientX - drawingArea.getBoundingClientRect().left;
+    const y = touch.clientY - drawingArea.getBoundingClientRect().top;
+
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(x, y);
+    ctx.stroke();
+
+    lastX = x;
+    lastY = y;
+}
+
+
+
