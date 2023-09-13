@@ -592,7 +592,12 @@ $(document).ready(function() {
     $("#drawing-area").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
       if ($("#drawing-area").hasClass("hideDrawing_visible")) {
         // If the element is becoming visible, clear its content
-        $("#drawing-area").empty();
+         const canvas = document.getElementById("#drawing-area");
+         const ctx = canvas.getContext("2d");
+    
+            // Clear the canvas by filling it with a background color or using clearRect
+         ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
       }
       $("#eraser").toggleClass("hideDrawing_visible");
   });
