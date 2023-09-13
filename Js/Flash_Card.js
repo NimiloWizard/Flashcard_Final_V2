@@ -589,8 +589,8 @@ function background6(){
  
 $(document).ready(function() {
   $("#Lefttab").click(function() {
-    $("#drawing-area").toggleClass("Drawing_SlideOpen"); // Toggle the 'visible' class
-    $("#drawing-area").toggleClass("Drawing_SlideOpen");
+    $("#Drawing_SlideOpen").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
+    $("#eraser").toggleClass("hideDrawing_visible");
   });
   
 });
