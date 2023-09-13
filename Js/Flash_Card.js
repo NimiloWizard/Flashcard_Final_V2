@@ -603,6 +603,7 @@ let lastY = 0;
 drawingArea.addEventListener('touchstart', startDrawing);
 drawingArea.addEventListener('touchmove', draw);
 
+
 // Event listener to stop drawing when the user lifts their finger
 drawingArea.addEventListener('touchend', () => {
     drawing = false;
@@ -647,6 +648,9 @@ function draw(e) {
     lastY = y;
 }
 
+
+drawingArea.addEventListener('touchmove', eraseWithEraser);
+
 // Function to erase last line as the user clicks the erase button
 function eraseWithEraser(e) {
     const touch = e.touches[0];
@@ -654,14 +658,16 @@ function eraseWithEraser(e) {
     const y = touch.clientY - rect.top;
     const eraserSize = 20; // Adjust the size of the eraser as needed
 
-    ctx.clearRect(x - eraserSize/2, y - eraserSize/2, eraserSize, eraserSize);
+    ctx.clearRect(x - eraserSize / 2, y - eraserSize / 2, eraserSize, eraserSize);
 
     // Add the erased area to the history
     erasedCommands.push({ type: 'erase', x, y, size: eraserSize });
+
+    // Prevent default touch behavior (e.g., scrolling)
+    e.preventDefault();
 }
 
 
-drawingArea.addEventListener('touchmove', eraseWithEraser);
 
 // This function should clear the canvas and replay all the remaining drawing commands.
 
