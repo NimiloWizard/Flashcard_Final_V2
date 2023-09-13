@@ -663,7 +663,7 @@ function draw(e) {
         var canvas = document.getElementById('drawing-area');          
         var ctxt = canvas.getContext('2d');
       
-       function eraseLastLine() {                                        // Eraase by eraser
+       function EraseAll() {                                        // Eraase by eraser
             ctxt.clearRect(0, 0, canvas.width, canvas.height);
         }
 
