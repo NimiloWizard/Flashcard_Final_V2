@@ -86,8 +86,16 @@ body{
     border-top: 1px solid rgb(189, 188, 188);
     padding-bottom: 10px;
     padding-top: 10px;
+    border-bottom: 1px solid rgb(189, 188, 188);
 }
-
+#Writing{
+    border-top: 1px solid rgb(189, 188, 188);
+    border-bottom: 1px solid rgb(36, 34, 34);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    
+}
 #English_Flashcards{
     border-top: 1px solid rgb(36, 34, 34);
     border-bottom: 1px solid rgb(36, 34, 34);
@@ -113,13 +121,7 @@ body{
     border-bottom: 1px solid rgb(36, 34, 34);
 }
 
-#Writing{
-    border-bottom: 1px solid rgb(36, 34, 34);
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 15px;
-    
-}
+
 #Writing #Activate_Wrting_checkbox{
     height: 20px;
     width: 20px;
