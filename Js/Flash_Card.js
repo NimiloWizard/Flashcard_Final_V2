@@ -658,10 +658,7 @@ function draw(e) {
   
 
   // Get the canvas element and its context
-        var canvas = document.getElementById('drawing-area');
-        var ctxt = canvas.getContext('2d');
-
-      
+        var canvas = document.getElementById('drawing-area');          
 
        function eraseLastLine() {
             ctxt.clearRect(0, 0, canvas.width, canvas.height);
