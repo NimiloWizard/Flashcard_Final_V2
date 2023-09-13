@@ -591,7 +591,8 @@ $(document).ready(function() {
   $("#Lefttab").click(function() {
     $("#drawing-area").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
     const canvas = document.getElementById("myCanvas");
-    canves.style.backgroundColor = "rgb(238, 251, 166)";
+    canvas.style.backgroundColor = "rgb(238, 251, 166)";
+  
      $("#eraser").toggleClass("hideDrawing_visible");
   });
   
