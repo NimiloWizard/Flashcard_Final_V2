@@ -625,10 +625,7 @@ function startDrawing(e) {
 }
 
 
-// Function to draw lines as the user moves their finger
 
-const drawingCommands = []; // Store drawing commands
-const erasedCommands = [];  // Store erased commands
 
 function draw(e) {
     if (!drawing) return;
