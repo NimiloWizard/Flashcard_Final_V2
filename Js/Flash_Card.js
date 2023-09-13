@@ -664,5 +664,7 @@ function draw(e) {
             ctxt.clearRect(0, 0, canvas.width, canvas.height);
         }
 
-
+       function SlideOpen(){
+             ctxt.clearRect(0, 0, canvas.width, canvas.height);
+       }
 
