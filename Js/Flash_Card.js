@@ -587,8 +587,7 @@ function background6(){
 // --------------------------------------Drawing Feature ---------------------------------
 
 // JavaScript code for handling finger drawing
-const drawingCommands = []; // Store drawing commands
-const erasedCommands = [];  // Store erased commands
+
 
 // Get the drawing area element
 const drawingArea = document.getElementById('drawing-area');
@@ -643,7 +642,7 @@ function draw(e) {
     lastX = x;
     lastY = y;
 }
-}
+
 
 
 
