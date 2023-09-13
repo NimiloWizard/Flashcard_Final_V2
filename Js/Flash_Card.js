@@ -589,7 +589,7 @@ function background6(){
  
 $(document).ready(function() {
   $("#Lefttab").click(function() {
-    $("#Drawing_SlideOpen").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
+    $("#drawing-area").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
     $("#eraser").toggleClass("hideDrawing_visible");
   });
   
