@@ -110,6 +110,21 @@ body{
     height: 20px;
     padding-top: 20px;
     padding-bottom: 40px;
+    border-bottom: 1px solid rgb(36, 34, 34);
+}
+
+#Writing{
+    border-bottom: 1px solid rgb(36, 34, 34);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    
+}
+#Writing #Activate_Wrting_checkbox{
+    height: 20px;
+    width: 20px;
+    visibility: visible !important;
+    margin-left: 20px;
 }
 #contact{
     border-top: 1px solid gray;
