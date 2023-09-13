@@ -586,10 +586,11 @@ function background6(){
 
 // --------------------------------------Drawing Feature ---------------------------------
 
-// Get the drawing area element
-const drawingCommands = []; // Store drawing commands
-const erasedCommands = [];  // Store erased commands
+// JavaScript code for handling finger drawing
 
+// Get the drawing area element
+const drawingArea = document.getElementById('drawing-area');
+const ctx = drawingArea.getContext('2d');
 
 // Set up drawing properties
 ctx.lineWidth = 3;
@@ -604,7 +605,6 @@ let lastY = 0;
 drawingArea.addEventListener('touchstart', startDrawing);
 drawingArea.addEventListener('touchmove', draw);
 
-
 // Event listener to stop drawing when the user lifts their finger
 drawingArea.addEventListener('touchend', () => {
     drawing = false;
@@ -613,20 +613,13 @@ drawingArea.addEventListener('touchend', () => {
 // Function to start drawing
 function startDrawing(e) {
     drawing = true;
-    const rect = drawingArea.getBoundingClientRect();
+    // Get the initial touch position
     const touch = e.touches[0];
-    lastX = touch.clientX - rect.left;
-    lastY = touch.clientY - rect.top;
-
-    // To draw a dot at the starting point:
-    ctx.beginPath();
-    ctx.arc(lastX, lastY, 2, 0, Math.PI * 2);
-    ctx.fill();
+    lastX = touch.clientX - drawingArea.getBoundingClientRect().left;
+    lastY = touch.clientY - drawingArea.getBoundingClientRect().top;
 }
 
-
-
-
+// Function to draw lines as the user moves their finger
 function draw(e) {
     if (!drawing) return;
 
@@ -638,36 +631,11 @@ function draw(e) {
     ctx.moveTo(lastX, lastY);
     ctx.lineTo(x, y);
     ctx.stroke();
-  
- // Add the drawn line to the history
-    drawingCommands.push({ type: 'draw', x1: lastX, y1: lastY, x2: x, y2: y });
 
     lastX = x;
     lastY = y;
 }
 
-function eraseLastLine() {
-    if (drawingCommands.length > 0) {
-        const lastCommand = drawingCommands.pop();
-        erasedCommands.push(lastCommand);
-        redraw(); // Redraw the canvas without the erased line
-    }
-}
-
-
-
-function redraw() {
-    ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
-
-    for (const command of drawingCommands) {
-        if (command.type === 'draw') {
-            ctx.beginPath();
-            ctx.moveTo(command.x1, command.y1);
-            ctx.lineTo(command.x2, command.y2);
-            ctx.stroke();
-        }
-    }
-}
 
 
 
