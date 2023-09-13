@@ -1228,8 +1228,9 @@ input:checked ~ body {
 }
 
 	  
-}
-    
+#Drawing_SlideOpen{
+   display: none;
+}    
    
 #Feature_Drawing{
     position: relative;
