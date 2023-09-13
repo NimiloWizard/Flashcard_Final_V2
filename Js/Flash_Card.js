@@ -656,6 +656,9 @@ function eraseLastLine() {
     }
 }
 
+
+// This function should clear the canvas and replay all the remaining drawing commands.
+
 function redraw() {
     ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
 
