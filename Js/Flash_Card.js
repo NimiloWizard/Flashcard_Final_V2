@@ -636,27 +636,17 @@ function draw(e) {
 
     lastX = x;
     lastY = y;
-}
 
-
-function draw(e) {
-    if (!drawing) return;
-
-    const touch = e.touches[0];
-    const x = touch.clientX - rect.left;
-    const y = touch.clientY - rect.top;
-
-    ctx.beginPath();
-    ctx.moveTo(lastX, lastY);
-    ctx.lineTo(x, y);
-    ctx.stroke();
-
-    // Add the drawn line to the history
+      // Add the drawn line to the history
     drawingCommands.push({ type: 'draw', x1: lastX, y1: lastY, x2: x, y2: y });
 
     lastX = x;
     lastY = y;
 }
+}
+
+
+
 
 
 
