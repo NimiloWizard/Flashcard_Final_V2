@@ -590,7 +590,7 @@ function background6(){
 $(document).ready(function() {
   $("#Lefttab").click(function() {
     $("#drawing-area").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
-    
+     ctxt.clearRect(0, 0, canvas.width, canvas.height);
      $("#eraser").toggleClass("hideDrawing_visible");
   });
   
