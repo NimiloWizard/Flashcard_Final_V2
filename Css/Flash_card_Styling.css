@@ -50,6 +50,10 @@ body{
    
 }
 
+#mySidebar{
+   z-index: 10;
+}
+
 #mySidebar #button{
     
    margin-bottom: 10px;
