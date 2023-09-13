@@ -587,6 +587,8 @@ function background6(){
 // --------------------------------------Drawing Feature ---------------------------------
 
 // JavaScript code for handling finger drawing
+const drawingCommands = []; // Store drawing commands
+const erasedCommands = [];  // Store erased commands
 
 // Get the drawing area element
 const drawingArea = document.getElementById('drawing-area');
@@ -634,6 +636,47 @@ function draw(e) {
 
     lastX = x;
     lastY = y;
+}
+
+
+function draw(e) {
+    if (!drawing) return;
+
+    const touch = e.touches[0];
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(x, y);
+    ctx.stroke();
+
+    // Add the drawn line to the history
+    drawingCommands.push({ type: 'draw', x1: lastX, y1: lastY, x2: x, y2: y });
+
+    lastX = x;
+    lastY = y;
+}
+
+function eraseLastLine() {
+    if (drawingCommands.length > 0) {
+        const lastCommand = drawingCommands.pop();
+        erasedCommands.push(lastCommand);
+        redraw(); // Redraw the canvas without the erased line
+    }
+}
+
+function redraw() {
+    ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+
+    for (const command of drawingCommands) {
+        if (command.type === 'draw') {
+            ctx.beginPath();
+            ctx.moveTo(command.x1, command.y1);
+            ctx.lineTo(command.x2, command.y2);
+            ctx.stroke();
+        }
+    }
 }
 
 
