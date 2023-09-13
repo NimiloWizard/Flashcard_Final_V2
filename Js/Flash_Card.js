@@ -587,9 +587,9 @@ function background6(){
 // --------------------------------------Drawing Feature ---------------------------------
 
   function SlideOpen() {
-    var hiddenContent = document.getElementById('drawing-area');
-    drawing-area.style.left = '22'; // Slide to the right to reveal the element
-    drawing-area.classList.remove('element-to-hide'); // Remove the 'hidden' class to show the element
+    var  drawingarea = document.getElementById('drawing-area');
+    drawingarea.style.left = '22'; // Slide to the right to reveal the element
+   drawingarea.classList.remove('element-to-hide'); // Remove the 'hidden' class to show the element
   }
 
 
