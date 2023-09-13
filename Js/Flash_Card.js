@@ -650,18 +650,23 @@ function draw(e) {
     lastX = x;
     lastY = y;
 
-      // Add the drawn line to the history
-    drawingCommands.push({ type: 'draw', x1: lastX, y1: lastY, x2: x, y2: y });
-
-    lastX = x;
-    lastY = y;
+  
 }
 
 
 //------------------------------------------------------ Erase Drawing  ------------------------------------------------------
   
 
+  // Get the canvas element and its context
+        var canvas = document.getElementById('drawing-area');
+        var ctx = canvas.getContext('2d');
 
+        // Variables to keep track of the last drawn position
+        var lastX, lastY;
+
+       function eraseLastLine() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
 
 
 
