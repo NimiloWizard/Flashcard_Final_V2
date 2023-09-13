@@ -647,6 +647,8 @@ function draw(e) {
     ctx.lineTo(x, y);
     ctx.stroke();
 
+    drawingCommands.push({ type: 'draw', x1: lastX, y1: lastY, x2: x, y2: y });
+  
     lastX = x;
     lastY = y;
 
@@ -662,7 +664,7 @@ function draw(e) {
 
       
        function eraseLastLine() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctxt.clearRect(0, 0, canvas.width, canvas.height);
         }
 
       
