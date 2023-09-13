@@ -660,8 +660,12 @@ function draw(e) {
   // Get the canvas element and its context
         var canvas = document.getElementById('drawing-area');          
 
+      
+       function eraseLastLine() {
+            ctxteraser.clearRect(0, 0, canvas.width, canvas.height);
+        }
 
        function SlideOpen(){
-             ctxt.clearRect(0, 0, canvas.width, canvas.height);
+             ctxtdrawing.clearRect(0, 0, canvas.width, canvas.height);
        }
 
