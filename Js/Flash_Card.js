@@ -590,7 +590,10 @@ function background6(){
 $(document).ready(function() {
   $("#Lefttab").click(function() {
     $("#drawing-area").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
-     $("#drawing-area").empty() ; 
+      if ($("#drawing-area").hasClass("hideDrawing_visible")) {
+        // If the element is becoming visible, clear its content
+        $("#drawing-area").empty();
+      }
     $("#eraser").toggleClass("hideDrawing_visible");
   });
   
