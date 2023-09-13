@@ -590,26 +590,12 @@ function background6(){
 $(document).ready(function() {
   $("#Lefttab").click(function() {
     $("#drawing-area").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
-    const canvas = document.getElementById("myCanvas");
-    canvas.style.backgroundColor = "rgb(238, 251, 166)";
-  
+    
      $("#eraser").toggleClass("hideDrawing_visible");
   });
   
 });
 
-
-
-/*  
-  function clearCanvas() {
-    const canvas = document.getElementById("myCanvas");
-    const ctx = canvas.getContext("2d");
-    
-    // Clear the canvas by filling it with a background color or using clearRect
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  }
-});
-*/
 
 
 //---------------------------------------Activate Drawing Feature -------------------------
