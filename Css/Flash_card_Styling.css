@@ -1241,7 +1241,7 @@ input:checked ~ body {
     left: 15px;
     height: 170px;
     width: 50px;
-    z-index: 1;
+  /*  z-index: 1; */
        
 }
 #Feature_Drawing img:hover{
