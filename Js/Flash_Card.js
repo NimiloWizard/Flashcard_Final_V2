@@ -610,12 +610,14 @@ drawingArea.addEventListener('touchend', () => {
 
 // Function to start drawing
 function startDrawing(e) {
-    drawing = true;
-    // Get the initial touch position
-    const touch = e.touches[0];
-    lastX = touch.clientX - drawingArea.getBoundingClientRect().left;
-    lastY = touch.clientY - drawingArea.getBoundingClientRect().top;
+  drawing = true;
+  // Get the initial touch position relative to the canvas
+  const touch = e.touches[0];
+  const rect = drawingArea.getBoundingClientRect(); // Get the canvas's position and dimensions
+  lastX = touch.clientX - rect.left;
+  lastY = touch.clientY - rect.top;
 }
+
 
 // Function to draw lines as the user moves their finger
 function draw(e) {
