@@ -1252,7 +1252,7 @@ input:checked ~ body {
 
 
 .hideDrawing {
-  display: none; 
+  display: none;
   transform: translateX(-100%);
  /* transition: transform 0.3s ease-in-out; */
   opacity: 0; /* Start with 0 opacity (hidden) */
@@ -1269,12 +1269,16 @@ input:checked ~ body {
    
 #Feature_Drawing{
     position: relative;
-    visibility: hidden; 
-	
+    visibility: hidden;  
+   
 }
 
+#Lefttab{
+    top: 260px !important;
+    left: -10px !important;
+}
 #Feature_Drawing img{
-    position: absolute;
+   position: absolute; 
     top: -15rem;
     left: 15px;
     height: 170px;
@@ -1284,19 +1288,48 @@ input:checked ~ body {
 }
 #Feature_Drawing img:hover{
    cursor: pointer;
+   
 }
-
+#DrawingContainer{
+    position: absolute;  
+    width: 346px;
+    height: 434px;                     /* 222px;    original size*/
+    top: -32rem;
+    left: 22px;
+  /*  background: rgb(238, 251, 166);  */
+    background: rgb(230, 228, 228); 
+    border: 2px solid black;
+    border-radius: 18px;
+}	
 #drawing-area{
-  position: absolute;
+ /* position: absolute; */
   width: 346px;
-  height: 434px;                     /* 222px;    original size*/
+  height: 380px;                     /* 222px;    original size*/
   top: -32rem;
   left: 22px !important; /* Initially, it's off-screen to the left */
-  background: rgb(238, 251, 166);
-  border-radius: 18px;
+ /* background: rgb(238, 251, 166); */
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+  
   touch-action: none;
  /* display: none; */
- transition: left 0.3s ease; /* Smooth transition for left property */
+ transition: left 0.5s ease; /* Smooth transition for left property */
+
+}
+#StickyDrawing{
+    /* position: absolute; */
+  width: 300px !important;
+  height: 390px !important;                     /* 222px;    original size*/
+  top: -10px !important;
+  left: 50px !important; /* Initially, it's off-screen to the left */
+ /* background: rgb(238, 251, 166); */
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+  border-bottom: 1px solid #b3b3b3;
+  touch-action: none;
+ /* display: none; */
+ transition: left 0.5s ease; /* Smooth transition for left property */
+
 }
 
 #eraser{
