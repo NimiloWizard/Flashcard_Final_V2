@@ -1335,7 +1335,7 @@ input:checked ~ body {
 
 #eraser{
  /* position: absolute;  */
-  top: 370px !important;
+  top: 350px !important;
   left: 130px !important;
   height: 90px !important;
   width: 80;
@@ -1347,7 +1347,7 @@ input:checked ~ body {
 }
 #undoLast{
   /*  position: absolute; */
-    top: 380px !important;
+    top: 360px !important;
     left: 220px !important;
     height: 80px !important;
      width: 50px !important;
