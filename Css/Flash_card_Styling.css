@@ -1273,10 +1273,10 @@ input:checked ~ body {
    
 }
 
-#Lefttab{
-    top: 260px !important;
-    left: -10px !important;
-}
+ #Lefttab{
+      top: -230px !important;
+      left: 10px !important;
+  }
 #Feature_Drawing img{
    position: absolute; 
     top: -15rem;
