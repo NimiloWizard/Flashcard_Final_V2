@@ -582,9 +582,22 @@ function background6(){
   
 }
 
+// -------------------------------------Activate Drawing Panel --------------------------
 
+document.getElementById('Activate_Wrting_checkbox').addEventListener('change', function() {
+    
+  if(this.checked) {
+     
+      document.getElementById("Feature_Drawing").style.visibility = "visible";
+      
+  } else {
+      document.getElementById("Feature_Drawing").style.visibility = "hidden";
+   
+  }
 
-// --------------------------------------Drawing Feature ---------------------------------
+});
+
+// -------------------------------------- Set Up and Show Drawing Feature ---------------------------------
 
  
 $(document).ready(function() {
@@ -599,7 +612,7 @@ $(document).ready(function() {
 
 
 
-//---------------------------------------Activate Drawing Feature -------------------------
+//--------------------------------------- Drawing Action -------------------------
 
 // JavaScript code for handling finger drawing
 
