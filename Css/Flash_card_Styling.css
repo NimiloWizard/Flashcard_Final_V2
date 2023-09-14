@@ -1325,6 +1325,8 @@ input:checked ~ body {
   cursor:pointer;
   transform: scale(0.8);
 }
+
+}
 @keyframes swap {
     0% {
         /* Initial state */
