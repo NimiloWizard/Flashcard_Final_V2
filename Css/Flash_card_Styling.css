@@ -1252,7 +1252,7 @@ input:checked ~ body {
 
 
 .hideDrawing {
-  display: none;
+/*  display: none; */
   transform: translateX(-100%);
  /* transition: transform 0.3s ease-in-out; */
   opacity: 0; /* Start with 0 opacity (hidden) */
