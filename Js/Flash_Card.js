@@ -623,10 +623,12 @@ document.getElementById('Activate_Wrting_checkbox').addEventListener('change', f
 // -------------------------------------- Set Up and Show Drawing Feature ---------------------------------
 
  
+ 
 $(document).ready(function() {
   $("#Lefttab").click(function() {
-    $("#drawing-area").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
-     
+      $("#DrawingContainer").toggleClass("hideDrawing_visible");
+      $("#drawing-area").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
+    
      $("#eraser").toggleClass("hideDrawing_visible");
      $("#undoLast").toggleClass("hideDrawing_visible");
   });
