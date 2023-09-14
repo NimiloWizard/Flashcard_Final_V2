@@ -1333,9 +1333,9 @@ input:checked ~ body {
 }
 
 #eraser{
-  position: absolute;
-  top: -120px !important;
-  left: 76px !important;
+ /* position: absolute;  */
+  top: 360px !important;
+  left: 150px !important;
   height: 70px !important;
   width: 70;
   border: 1 px solid gray;
@@ -1343,12 +1343,11 @@ input:checked ~ body {
 #eraser:hover{
   cursor:pointer;
   transform: scale(0.8);
-  
 }
 #undoLast{
-    position: absolute;
-    top: -110px !important;
-    left: 145px !important;
+  /*  position: absolute; */
+    top: 370px !important;
+    left: 210px !important;
     height: 60px !important;
     width: 60;
     border: 1 px solid gray;
@@ -1358,6 +1357,7 @@ input:checked ~ body {
   cursor:pointer;
   transform: scale(0.8);
 }
+
 
 }
 @keyframes swap {
