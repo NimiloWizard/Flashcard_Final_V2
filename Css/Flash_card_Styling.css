@@ -840,7 +840,7 @@ input:checked ~ body {
         height: 100%;
         border-radius: 20px;  
         margin-left: 140px;
-        background: url('../Images/BACKGROUND2.png')  ;
+        background: url('../Images/BACKGROUND2.png') center center / cover  ;
 	 box-shadow: 0 0px 1px 0 #fdfcfcfe,0 0px 2px 0 #f8f8f8;
 	 /*   box-shadow: 0 0px 1px 0 #0a0a0a55,0 0px 2px 0 #42414140; */
         background-size: cover;
