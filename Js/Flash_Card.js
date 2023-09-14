@@ -630,9 +630,24 @@ ctx.lineWidth = 3;
 ctx.strokeStyle = 'black';
 ctx.lineCap = 'round';
 
+
 let drawing = false; // Indicates whether the user is drawing
 let lastX = 0;
 let lastY = 0;
+
+
+// Get the background image element
+const backgroundImage = document.getElementById('StickyDrawing');
+
+// Define a function to be called when the image is loaded
+backgroundImage.onload = function() {
+  // Draw the background image onto the canvas
+  ctx.drawImage(backgroundImage, 0, 0, drawingArea.width, drawingArea.height);
+}
+
+// Set the source of the background image
+backgroundImage.src = "Images/StickyPad.png";
+
 
 // Event listeners for touch events
 drawingArea.addEventListener('touchstart', startDrawing);
