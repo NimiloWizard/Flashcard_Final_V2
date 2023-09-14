@@ -1302,7 +1302,11 @@ input:checked ~ body {
     border-radius: 18px;
 }	
 #drawing-area{
- /* position: absolute; */
+  background-image: url('Images/StickyPad.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative; /* Ensure the canvas stays on top */
   width: 346px;
   height: 380px;                     /* 222px;    original size*/
   top: -32rem;
@@ -1315,6 +1319,7 @@ input:checked ~ body {
  /* display: none; */
  transition: left 0.5s ease; /* Smooth transition for left property */
 
+	
 }
 #StickyDrawing{
     /* position: absolute; */
