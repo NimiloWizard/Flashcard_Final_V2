@@ -1350,7 +1350,7 @@ input:checked ~ body {
     top: 370px !important;
     left: 210px !important;
     height: 60px !important;
-    width: 60;
+     width: 40px !important;
     border: 1 px solid gray;
     z-index: 5;
 }
