@@ -1269,7 +1269,7 @@ input:checked ~ body {
    
 #Feature_Drawing{
     position: relative;
-    visibility: hidden;
+  /*  visibility: hidden; */
 }
 
 #Feature_Drawing img{
