@@ -1292,8 +1292,8 @@ input:checked ~ body {
 }
 #DrawingContainer{
     position: absolute;  
-    width: 346px;
-    height: 434px;                     /* 222px;    original size*/
+    width: 346px !important;
+    height: 435px !important;                     /* 222px;    original size*/
     top: -32rem;
     left: 22px;
   /*  background: rgb(238, 251, 166);  */
@@ -1302,16 +1302,19 @@ input:checked ~ body {
     border-radius: 18px;
 }	
 #drawing-area {
-  background: url('../Images/StickyPad.png');
-  width: 346px;
-  height: 380px;
-  top: -32rem;
-  left: 22px !important;
+ 
+  background: url('../Images/StickyPad.png') no-repeat, center center;
+  width: 300px !important;
+  height: 350px !important;
+  margin-top: 20px;
+  margin-left: 23px !important;
   border-top-right-radius: 18px;
   border-top-left-radius: 18px;
   touch-action: none;
   transition: left 0.5s ease; /* Smooth transition for left property */
 }
+	  
+
 	  
 #StickyDrawing{
     /* position: absolute; */
