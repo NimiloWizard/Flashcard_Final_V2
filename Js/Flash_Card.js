@@ -621,7 +621,6 @@ $(document).ready(function() {
 
 // ...
 
-// Get the drawing area element and its context
 const drawingArea = document.getElementById('drawing-area');
 const ctx = drawingArea.getContext('2d');
 
@@ -630,9 +629,13 @@ ctx.lineWidth = 3;
 ctx.strokeStyle = 'black';
 ctx.lineCap = 'round';
 
-let drawing = false; // Indicates whether the user is drawing
+let drawing = false;
 let lastX = 0;
 let lastY = 0;
+
+// Maintain a history of drawing actions
+const history = [];
+let currentStep = -1;
 
 // Event listeners for touch events
 drawingArea.addEventListener('touchstart', startDrawing);
@@ -641,52 +644,68 @@ drawingArea.addEventListener('touchmove', draw);
 // Event listener to stop drawing when the user lifts their finger
 drawingArea.addEventListener('touchend', () => {
     drawing = false;
+    // Save the current state to the history
+    saveDrawingState();
 });
 
 // Function to start drawing
 function startDrawing(e) {
     drawing = true;
-    // Get the initial touch position
     const touch = e.touches[0];
     lastX = touch.clientX - drawingArea.getBoundingClientRect().left;
     lastY = touch.clientY - drawingArea.getBoundingClientRect().top;
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
 }
 
 // Function to draw lines as the user moves their finger
 function draw(e) {
     if (!drawing) return;
-
     const touch = e.touches[0];
     const x = touch.clientX - drawingArea.getBoundingClientRect().left;
     const y = touch.clientY - drawingArea.getBoundingClientRect().top;
-
-    ctx.beginPath();
-    ctx.moveTo(lastX, lastY);
     ctx.lineTo(x, y);
     ctx.stroke();
-
     lastX = x;
     lastY = y;
 }
 
+// Function to save the current drawing state to the history
+function saveDrawingState() {
+    if (currentStep < history.length - 1) {
+        // If we're not at the most recent step, remove all future steps
+        history.splice(currentStep + 1);
+    }
+    // Push a copy of the current canvas data to the history
+    history.push(drawingArea.toDataURL());
+    currentStep = history.length - 1;
+}
 
+// Function to undo the last drawing action
+function undo() {
+    if (currentStep > 0) {
+        currentStep--;
+        const img = new Image();
+        img.src = history[currentStep];
+        img.onload = () => {
+            ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+            ctx.drawImage(img, 0, 0);
+        };
+    }
+}
 
-//------------------------------------------------------ Erase Drawing  ------------------------------------------------------
-  
+// Event listener for the undo button
+const undoButton = document.getElementById('undoButton');
+undoButton.addEventListener('click', undo);
 
-  // Get the canvas element and its context
-        var canvas = document.getElementById('drawing-area');          
-        var ctxt = canvas.getContext('2d');
-      
-       function EraseAll() {                                        // Eraase by eraser
-            ctxt.clearRect(0, 0, canvas.width, canvas.height);
-        }
+// Function to clear the entire canvas
+function eraseAll() {
+    ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+    saveDrawingState(); // Save the cleared state to the history
+}
 
-       var  canvasDrawing = document.getElementById('drawing-area');      
-       var ctxtDrawing = canvasDrawing.getContext('2d');
-       function  SlideOpen() {                                           //erase upon toggle
-           ctxtDrawing.clearRect(0, 0, canvas.width, canvas.height);
-        }
-
+// Event listener for the clear button
+const clearButton = document.getElementById('clearButton');
+clearButton.addEventListener('click', eraseAll);
      
       
