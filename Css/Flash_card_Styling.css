@@ -1022,7 +1022,7 @@ input:checked ~ body {
         width: 200px; /* Set the width of the scrollable element */
         overflow: auto; /* Enable scrolling */
         overflow-x: hidden;
-        z-index: 999; /* Set a high z-index to make it appear over other elements */
+        z-index: 9; /* Set a high z-index to make it appear over other elements */
         margin-top: 0px;
 	height: 700px !important;
     }
