@@ -1322,7 +1322,7 @@ input:checked ~ body {
   width: 300px !important;
   height: 390px !important;                     /* 222px;    original size*/
   top: -10px !important;
-  left: 50px !important; /* Initially, it's off-screen to the left */
+  left: 52px !important; /* Initially, it's off-screen to the left */
  /* background: rgb(238, 251, 166); */
   border-top-right-radius: 18px;
   border-top-left-radius: 18px;
