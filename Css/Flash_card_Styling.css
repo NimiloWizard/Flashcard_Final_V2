@@ -1311,7 +1311,19 @@ input:checked ~ body {
   transform: scale(0.8);
   
 }
-
+#undoLast{
+    position: absolute;
+    top: -110px !important;
+    left: 145px !important;
+    height: 60px !important;
+    width: 60;
+    border: 1 px solid gray;
+    z-index: 5;
+}
+#undoLast:hover{
+  cursor:pointer;
+  transform: scale(0.8);
+}
 @keyframes swap {
     0% {
         /* Initial state */
