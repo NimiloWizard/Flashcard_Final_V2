@@ -1297,22 +1297,23 @@ input:checked ~ body {
     top: -32rem;
     left: 22px;
   /*  background: rgb(238, 251, 166);  */
-    background: rgb(230, 228, 228); 
+    background: rgb(236, 243, 34); 
     border: 2px solid black;
     border-radius: 18px;
 }	
 #drawing-area {
  
-  background: url('../Images/StickyPad.png') no-repeat, center center;
+  background: url('../Images/StickyWhite.png') no-repeat, center center;
   width: 300px !important;
   height: 350px !important;
   margin-top: 20px;
-  margin-left: 23px !important;
+  margin-left: 21px !important;
   border-top-right-radius: 18px;
   border-top-left-radius: 18px;
   touch-action: none;
   transition: left 0.5s ease; /* Smooth transition for left property */
 }
+	  
 	  
 
 	  
