@@ -695,7 +695,7 @@ function undo() {
 }
 
 // Event listener for the undo button
-const undoButton = document.getElementById('undoButton');
+const undoButton = document.getElementById('undoLast');
 undoButton.addEventListener('click', undo);
 
 // Function to clear the entire canvas
@@ -705,7 +705,14 @@ function eraseAll() {
 }
 
 // Event listener for the clear button
-const clearButton = document.getElementById('clearButton');
+const clearButton = document.getElementById('eraser');
 clearButton.addEventListener('click', eraseAll);
+
+var  canvasDrawing = document.getElementById('drawing-area');      
+var ctxtDrawing = canvasDrawing.getContext('2d');
+function  SlideOpen() {                                           //erase upon toggle
+    ctxtDrawing.clearRect(0, 0,  canvasDrawing.width,  canvasDrawing.height);
+}
+
      
       
