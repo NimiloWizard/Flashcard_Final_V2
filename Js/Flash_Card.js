@@ -701,18 +701,19 @@ function saveDrawingState() {
     currentStep = history.length - 1;
 }
 
-// Function to undo the last drawing action
+// Function to undo all drawing actions
 function undo() {
-    if (currentStep > 0) {
-        currentStep--;
+    if (currentStep >= 0) {
         const img = new Image();
         img.src = history[currentStep];
         img.onload = () => {
             ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
             ctx.drawImage(img, 0, 0);
         };
+        currentStep--;
     }
 }
+
 
 // Event listener for the undo button
 const undoButton = document.getElementById('undoLast');
