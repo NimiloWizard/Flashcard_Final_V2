@@ -597,6 +597,29 @@ document.getElementById('Activate_Wrting_checkbox').addEventListener('change', f
 
 });
 
+// -------------------------------------- Set Up Drawing Background -------------------------
+
+     // Get the canvas element and its context
+        const drawingarea= document.getElementById("drawing-area");
+        const context = drawingarea.getContext("2d");
+
+        // Get the background image element
+        const backgroundImage = document.getElementById("StickyDrawing");
+
+        // Define a function to be called when the image is loaded
+        backgroundImage.onload = function() {
+          // Draw the background image onto the canvas
+          context.drawImage(backgroundImage, 120, -100, drawingarea.width, drawingarea.height);
+          context.drawImage(style.top  = "-50");
+          context.left = "150";
+
+          // Now, you can add additional drawings on top of the background image
+          // For example: ctx.fillRect(50, 50, 100, 100);
+        };
+        
+        // Set the source of the background image
+        backgroundImage.src = "Images/StickyPad.png";
+      
 // -------------------------------------- Set Up and Show Drawing Feature ---------------------------------
 
  
