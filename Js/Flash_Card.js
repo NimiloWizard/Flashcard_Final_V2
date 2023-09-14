@@ -592,6 +592,7 @@ $(document).ready(function() {
     $("#drawing-area").toggleClass("hideDrawing_visible"); // Toggle the 'visible' class
      
      $("#eraser").toggleClass("hideDrawing_visible");
+     $("#undoLast").toggleClass("hideDrawing_visible");
   });
   
 });
