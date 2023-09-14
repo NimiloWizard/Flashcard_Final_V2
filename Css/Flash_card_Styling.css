@@ -1301,26 +1301,23 @@ input:checked ~ body {
     border: 2px solid black;
     border-radius: 18px;
 }	
-#drawing-area{
+#drawing-area {
+  /* Add the background image and position it */
   background-image: url('Images/StickyPad.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative; /* Ensure the canvas stays on top */
   width: 346px;
-  height: 380px;                     /* 222px;    original size*/
+  height: 380px;
   top: -32rem;
-  left: 22px !important; /* Initially, it's off-screen to the left */
- /* background: rgb(238, 251, 166); */
+  left: 22px !important;
   border-top-right-radius: 18px;
   border-top-left-radius: 18px;
-  
   touch-action: none;
- /* display: none; */
- transition: left 0.5s ease; /* Smooth transition for left property */
-
-	
+  transition: left 0.5s ease; /* Smooth transition for left property */
 }
+	  
 #StickyDrawing{
     /* position: absolute; */
   width: 300px !important;
