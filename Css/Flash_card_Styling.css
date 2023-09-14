@@ -1336,9 +1336,9 @@ input:checked ~ body {
 #eraser{
  /* position: absolute;  */
   top: 360px !important;
-  left: 150px !important;
-  height: 70px !important;
-  width: 70;
+  left: 130px !important;
+  height: 80px !important;
+  width: 80;
   border: 1 px solid gray;
 }
 #eraser:hover{
@@ -1348,9 +1348,9 @@ input:checked ~ body {
 #undoLast{
   /*  position: absolute; */
     top: 370px !important;
-    left: 210px !important;
-    height: 60px !important;
-     width: 40px !important;
+    left: 220px !important;
+    height: 70px !important;
+     width: 50px !important;
     border: 1 px solid gray;
     z-index: 5;
 }
