@@ -1302,6 +1302,7 @@ input:checked ~ body {
     border-radius: 18px;
 }	
 #drawing-area {
+  background: url('../Images/StickyPad.png');
   width: 346px;
   height: 380px;
   top: -32rem;
