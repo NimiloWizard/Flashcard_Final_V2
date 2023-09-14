@@ -617,11 +617,11 @@ $(document).ready(function() {
 
 
 //--------------------------------------- Drawing Action -------------------------
-
 // JavaScript code for handling finger drawing
 
+// ...
 
-// Get the drawing area element
+// Get the drawing area element and its context
 const drawingArea = document.getElementById('drawing-area');
 const ctx = drawingArea.getContext('2d');
 
@@ -630,11 +630,9 @@ ctx.lineWidth = 3;
 ctx.strokeStyle = 'black';
 ctx.lineCap = 'round';
 
-
 let drawing = false; // Indicates whether the user is drawing
 let lastX = 0;
 let lastY = 0;
-
 
 // Get the background image element
 const backgroundImage = document.getElementById('StickyDrawing');
@@ -643,11 +641,13 @@ const backgroundImage = document.getElementById('StickyDrawing');
 backgroundImage.onload = function() {
   // Draw the background image onto the canvas
   ctx.drawImage(backgroundImage, 0, 0, drawingArea.width, drawingArea.height);
-}
+
+  // Now, you can add additional drawings on top of the background image
+  // For example: ctx.fillRect(50, 50, 100, 100);
+};
 
 // Set the source of the background image
 backgroundImage.src = "Images/StickyPad.png";
-
 
 // Event listeners for touch events
 drawingArea.addEventListener('touchstart', startDrawing);
@@ -680,22 +680,10 @@ function draw(e) {
     ctx.lineTo(x, y);
     ctx.stroke();
 
-  //  drawingCommands.push({ type: 'draw', x1: lastX, y1: lastY, x2: x, y2: y });
-  
     lastX = x;
     lastY = y;
-
-  
 }
 
-// ------------------------Set the background image of the canvas----------------------------
-
-    const backgroundImage = document.getElementById('StickyDrawing');
-    backgroundImage.onload = function() {
-        ctx.drawImage(backgroundImage, 0, 0, drawingArea.width, drawingArea.height);
-    };
-
-    backgroundImage.src = "Images/StickyPad.png";
 
 //------------------------------------------------------ Erase Drawing  ------------------------------------------------------
   
