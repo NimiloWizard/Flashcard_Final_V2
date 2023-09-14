@@ -582,6 +582,26 @@ function background6(){
   
 }
 
+//  ------------------------------------ Default Card background color ------------------
+     
+     function open_Defaultbackground() {
+
+      const elements = document.querySelectorAll('.backgoundeffect');
+      elements.forEach(function(element) {
+          element.style.background = 'linear-gradient(245.59deg, #e9e9e7 0%, #a1a19e 28.53%, #747373 75.52%)';
+     
+          w3_close()
+        });
+
+        const prevButton = document.querySelector('#prevButton');
+        prevButton.style.background =   'linear-gradient(245.59deg, #e9e9e7 0%, #a1a19e 28.53%, #747373 75.52%)';
+        const revealButton = document.querySelector('#revealButton');
+        revealButton.style.background =   'linear-gradient(245.59deg, #e9e9e7 0%, #a1a19e 28.53%, #747373 75.52%)';
+        const nextButton = document.querySelector('#nextButton');
+        nextButton.style.background =   'linear-gradient(245.59deg, #e9e9e7 0%, #a1a19e 28.53%, #747373 75.52%)';
+        
+        
+    }
 // -------------------------------------Activate Drawing Panel --------------------------
 
 document.getElementById('Activate_Wrting_checkbox').addEventListener('change', function() {
