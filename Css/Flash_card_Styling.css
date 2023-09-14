@@ -1297,8 +1297,8 @@ input:checked ~ body {
     top: -32rem;
     left: 22px;
   /*  background: rgb(238, 251, 166);  */
-     background: linear-gradient(245.59deg, #f1dfad 0%, #f1e647 28.53%, #f1aa0f 75.52%); 
-    border: 2px solid black;
+    background: linear-gradient(245.59deg, #f1dfad 0%, #f1e647 28.53%, #f1aa0f 75.52%); 
+    border: 1px solid rgb(228, 225, 225);
     border-radius: 18px;
 }	
 #drawing-area {
@@ -1335,7 +1335,7 @@ input:checked ~ body {
 
 #eraser{
  /* position: absolute;  */
-  top: 340px !important;
+  top: 345px !important;
   left: 130px !important;
   height: 90px !important;
   width: 80;
@@ -1347,7 +1347,7 @@ input:checked ~ body {
 }
 #undoLast{
   /*  position: absolute; */
-    top: 345px !important;
+    top: 352px !important;
     left: 220px !important;
     height: 80px !important;
      width: 50px !important;
