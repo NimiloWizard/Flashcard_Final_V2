@@ -841,7 +841,8 @@ input:checked ~ body {
         border-radius: 20px;  
         margin-left: 140px;
         background: url('../Images/BACKGROUND2.png')  ;
-	box-shadow: 0 0px 1px 0 #0a0a0a55,0 0px 2px 0 #42414140; 
+	box-shadow: 0 0px 1px 0 #e0dfdf55,0 0px 2px 0 #b4b3b340;
+	 /*   box-shadow: 0 0px 1px 0 #0a0a0a55,0 0px 2px 0 #42414140; */
         background-size: cover;
         background-attachment: fixed;
         isolation: isolate;
