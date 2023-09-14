@@ -1302,12 +1302,6 @@ input:checked ~ body {
     border-radius: 18px;
 }	
 #drawing-area {
-  /* Add the background image and position it */
-  background-image: url('Images/StickyPad.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative; /* Ensure the canvas stays on top */
   width: 346px;
   height: 380px;
   top: -32rem;
