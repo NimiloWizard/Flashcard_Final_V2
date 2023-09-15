@@ -572,12 +572,15 @@ function background6(){
 
 document.getElementById('Activate_Wrting_checkbox').addEventListener('change', function() {
   if (!this.checked) {
-      // If the checkbox is not checked, hide the feature and trigger a click on #Lefttab
+      // If the checkbox is not checked, hide the feature
       document.getElementById("Feature_Drawing").style.visibility = "hidden";
       w3_close();
 
-      // Trigger a click event on #Lefttab
-      $("#Lefttab").click();
+      // Check if certain elements are visible before triggering #Lefttab click
+      if ($("#DrawingContainer").is(":visible") && $("#drawing-area").is(":visible") && $("#eraser").is(":visible") && $("#undoLast").is(":visible") && $("#color-picker").is(":visible")) {
+          // Trigger a click event on #Lefttab
+          $("#Lefttab").click();
+      }
   } else {
       // If the checkbox is checked, show the feature and close the menu
       document.getElementById("Feature_Drawing").style.visibility = "visible";
