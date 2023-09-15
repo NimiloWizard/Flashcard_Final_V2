@@ -253,15 +253,7 @@ if (widthScreen <= 765) {
       
       }
 
-        function scrollElementDown(elementId, scrollAmount) {
-        const element = document.getElementById(elementId);
-            if (element) {
-                element.scrollTop = 50;
-            }
-       }
-    
-       // Usage
-         scrollElementDown('card', 300); // Replace 'yo
+     
 
 
 }
