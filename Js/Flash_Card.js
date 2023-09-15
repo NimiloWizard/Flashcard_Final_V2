@@ -703,7 +703,7 @@ function saveDrawingState() {
 
 // Function to undo all drawing actions
 function undo() {
-  if (currentStep >= 0) {
+  if (currentStep > 0) {
         currentStep--;
         const img = new Image();
         img.src = history[currentStep];
@@ -712,7 +712,7 @@ function undo() {
             ctx.drawImage(img, 0, 0);
         };
   }
-  else if (currentStep < 0){
+  else if (currentStep <= 0){
         currentStep--;
        
             ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
