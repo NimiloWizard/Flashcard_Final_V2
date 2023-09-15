@@ -710,7 +710,7 @@ function undo() {
                   ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
                   ctx.drawImage(img, 0, 0);
               };
-          }
+          
         
         // Redraw the history up to the current step
         for (let i = 0; i <= currentStep - 1; i++) {
