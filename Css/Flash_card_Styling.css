@@ -1030,13 +1030,14 @@ input:checked ~ body {
         margin-top: 400px;
         height: 68vh;
         padding-top: 0px;
+	padding-left: 4px;
         position: absolute !important;
         display: grid !important; 
         width: 350px !important; 
         grid-template-columns: 150px 150px !important;
         grid-template-rows: 160px 160px !important;
         grid-column-gap: 20px !important;
-        margin-left: 25px !important; 
+        margin-left: 28px !important; 
         background: rgba(0, 0, 0, .6);
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;
@@ -1044,7 +1045,7 @@ input:checked ~ body {
       #background_caption{
         position: absolute;
         top: 480px;
-        left: 25px;
+        left: 28px;
         width: 350px; 
         margin-bottom: 20px;
         text-align: center;
