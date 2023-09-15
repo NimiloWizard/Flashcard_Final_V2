@@ -717,7 +717,7 @@ function undo() {
        
             ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
            
-        };
+        
   }
 
     
