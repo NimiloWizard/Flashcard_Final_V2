@@ -630,7 +630,7 @@ $(document).ready(function() {
       $("#eraser").toggleClass("hideDrawing_visible");
       $("#undoLast").toggleClass("hideDrawing_visible");
       $("#color-picker").toggleClass("hideDrawing_visible");
-  }
+   });
   
 });
 
