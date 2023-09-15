@@ -714,11 +714,9 @@ function undo() {
   }
   else if (currentStep < 0){
         currentStep--;
-        const img = new Image();
-        img.src = history[currentStep];
-        img.onload = () => {
+       
             ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
-            ctx.drawImage(img, 0, 0);
+           
         };
   }
 
