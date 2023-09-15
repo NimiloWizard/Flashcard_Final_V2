@@ -745,5 +745,23 @@ function  SlideOpen() {                                           //erase upon t
     ctxtDrawing.clearRect(0, 0,  canvasDrawing.width,  canvasDrawing.height);
 }
 
-     
+
+// Function to undo all drawing actions
+function undo() {
+    if (currentStep >= 0) {
+        // Clear the canvas
+        ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+        
+        // Redraw the history up to the current step
+        for (let i = 0; i <= currentStep - 1; i++) {
+            const img = new Image();
+            img.src = history[i];
+            ctx.drawImage(img, 0, 0);
+        }
+        
+        // Update the current step
+        currentStep--;
+    }
+}
+
       
