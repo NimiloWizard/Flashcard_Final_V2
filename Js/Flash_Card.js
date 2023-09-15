@@ -74,6 +74,11 @@ function showNextCard(){
 
     let card = document.querySelector(".card:last-child");
    
+    let elementsToHide = document.querySelectorAll(".element-to-hide");
+    elementsToHide.forEach(element => {
+      element.style.display = "none";
+    });
+    
     card.style.animation = "swap 500ms forwards"; 
   
   
@@ -83,10 +88,7 @@ function showNextCard(){
 
      
        // Hide the elements after the card swap
-       let elementsToHide = document.querySelectorAll(".element-to-hide");
-       elementsToHide.forEach(element => {
-         element.style.display = "none";
-       });
+      
        areElementsHidden = true;
        previousCard = card;
 
