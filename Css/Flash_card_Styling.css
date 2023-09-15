@@ -453,14 +453,15 @@ input:checked ~ body {
 
 .container img{
     margin-bottom: 20px;
-    margin-top: -30px;
+    margin-top: -45px;
     padding-top: 30px;
     padding-bottom: 20px;
     align-items: center;
     align-content: center;
     text-align: center;
-    height: 270px;
-    width: 270px;
+    height: 295px;
+    width: 300px;
+    margin-left: -40px;
 }
 
  .imgbox{
@@ -1195,20 +1196,24 @@ input:checked ~ body {
         text-align: center;
     }
 
+ 
     #audioButtonOnyomi{
         cursor: pointer;
         width: 35px;
-        height: 60px;
+        height: 70px;
         margin-bottom: -20px;
         margin-left: 65px !important;
+        margin-top: 20px;
     }
     #audioButtonKunyomi{
         cursor: pointer;
         width: 35px;
-        height: 60px;
+        height: 70px;
         margin-bottom: -20px;
         margin-left: 80px !important;
+        margin-top: 20px;
     }
+    
     
        /* Hide the audio player */
      #audioPlayerOnyomi {
