@@ -575,10 +575,10 @@ document.getElementById('Activate_Wrting_checkbox').addEventListener('change', f
   if(this.checked) {
      
       document.getElementById("Feature_Drawing").style.visibility = "visible";
-      
+      w3_close()
   } else {
       document.getElementById("Feature_Drawing").style.visibility = "hidden";
-   
+     w3_close()
   }
 
 });
