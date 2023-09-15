@@ -459,8 +459,8 @@ input:checked ~ body {
     align-items: center;
     align-content: center;
     text-align: center;
-    height: 250px;
-    width: 250px;
+    height: 270px;
+    width: 270px;
 }
 
  .imgbox{
@@ -468,7 +468,7 @@ input:checked ~ body {
     transition: all ease .5s;
 }
  .imgbox:hover{
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 .English_Def{
