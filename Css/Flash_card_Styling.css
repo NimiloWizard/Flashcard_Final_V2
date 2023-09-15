@@ -453,7 +453,7 @@ input:checked ~ body {
 
 .container img{
     margin-bottom: 20px;
-    margin-top: -45px;
+    margin-top: -50px;
     padding-top: 30px;
     padding-bottom: 20px;
     align-items: center;
@@ -1368,10 +1368,12 @@ input:checked ~ body {
    
 }
 
+
  #Lefttab{
-      top: -230px !important;
-      left: 10px !important;
+      top: -200px !important;
+      left: 20px !important;
   }
+	  
 #Feature_Drawing img{
    position: absolute; 
     top: -15rem;
