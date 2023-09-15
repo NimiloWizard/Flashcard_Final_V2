@@ -704,8 +704,7 @@ function saveDrawingState() {
 // Function to undo all drawing actions
 function undo() {
     if (currentStep >= 0) {
-        // Clear the canvas
-         currentStep--;
+        
         const img = new Image();
         img.src = history[currentStep];
         img.onload = () => {
