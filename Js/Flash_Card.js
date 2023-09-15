@@ -226,7 +226,7 @@ function hide_screen_gallery(){
   document.getElementById("bg_caption").style.display = "none";
   document.getElementById("screen_back_image").style.display = "none";
   document.getElementById("bg_hide_Image").style.display = "none";
-
+  document.getElementById("col-1").style.display = "none";
 
   
 }
