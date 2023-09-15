@@ -703,24 +703,26 @@ function saveDrawingState() {
 
 // Function to undo all drawing actions
 function undo() {
-    if (currentStep >= 0) {
-      
-           
-          
-        
-        // Redraw the history up to the current step
-        for (let i = 0; i <= currentStep - 1; i++) {
-            const img = new Image();
-            img.src = history[i];
-           img.onload = () => {
-                  ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
-                  ctx.drawImage(img, 0, 0);
-              };
-        }
-        
-        // Update the current step
+  if (currentStep >= 0) {
         currentStep--;
-    }
+        const img = new Image();
+        img.src = history[currentStep];
+        img.onload = () => {
+            ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+            ctx.drawImage(img, 0, 0);
+        };
+  }
+  else if (currentStep < 0){
+        currentStep--;
+        const img = new Image();
+        img.src = history[currentStep];
+        img.onload = () => {
+            ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+            ctx.drawImage(img, 0, 0);
+        };
+  }
+
+    
 }
 
 
