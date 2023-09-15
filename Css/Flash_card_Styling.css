@@ -1055,12 +1055,51 @@ input:checked ~ body {
         color: white;    
     }
 	  
-   .btn_bg{
+    .btn_bg{
         position: absolute;
+        height: 40px;
+        width: 150px;
         top: 33rem !important;
         left: 120px !important;
+        padding-left: -100px;
+        margin-left: -20px;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #fff;
+        background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #04194f);
+        animation: glowcard_Close_button 8s linear infinite;
+        background-size: 400%;
         margin-bottom: 20px;
     }
+    .btn_bg:hover{
+        background-size: 400%;
+        z-index: 1;
+       
+    }
+     .btn_bg::before{
+        content: "";
+        position: absolute;
+        background: inherit;
+        top: -5px;
+        right: -5px;
+        bottom: -5px;
+        left: -5px;
+        border-radius: 50px;
+        filter: blur(20px);
+        opacity: 0;
+        transition: opacity 0.5s;
+     }
+     
+    .btn_bg:hover:before{
+       opacity: 1;
+    }
+    
+     @keyframes glowcard_Close_button{
+        0%{ background-position: 0%;}
+        100%{ background-position: 400%;}
+     }
 	  
    #main{
         top: 0 !important;
