@@ -1269,7 +1269,7 @@ input:checked ~ body {
   display: block;
   transform: translateX(0);
   opacity: 1; /* When the class is toggled, set opacity to 1 (visible) */
-
+ visibility: visible;
 }
    
 #Feature_Drawing{
