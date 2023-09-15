@@ -275,7 +275,7 @@ input:checked ~ body {
     grid-template-rows: 190px 190px;
     grid-gap: -10px;
 }
-
+/*
 .btn_bg_screen{
     position: absolute;
     top: 720px !important;
@@ -289,7 +289,8 @@ input:checked ~ body {
     transform: scale(1.1);
     cursor: pointer;
 }
-  
+*/
+
 .hidden{
     display: none;
     -webkit-backface-visibility: hidden;
@@ -1081,11 +1082,52 @@ input:checked ~ body {
         -ms-backface-visibility: hidden;
     }
     
+ 
     .btn_bg_screen{
         position: absolute;
+        height: 40px;
+        width: 150px;
         left: 100px !important;
         top: 39rem !important;
+        padding-left: -100px;
+        margin-left: -20px;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #fff;
+        background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #04194f);
+        animation: glow 8s linear infinite;
+        background-size: 400%;
     }
+    .btn_bg_screen:hover{
+        background-size: 400%;
+        z-index: 1;
+       
+    }
+     .btn_bg_screen::before{
+        content: "";
+        position: absolute;
+        background: inherit;
+        top: -5px;
+        right: -5px;
+        bottom: -5px;
+        left: -5px;
+        border-radius: 50px;
+        filter: blur(20px);
+        opacity: 0;
+        transition: opacity 0.5s;
+     }
+     
+    .btn_bg_screen:hover:before{
+       opacity: 1;
+    }
+    
+     @keyframes glow{
+        0%{ background-position: 0%;}
+        100%{ background-position: 400%;}
+     }
+
 
     .reading_container{
         width: 360px !important;
