@@ -571,24 +571,19 @@ function background6(){
 // -------------------------------------Activate Drawing Panel --------------------------
 
 document.getElementById('Activate_Wrting_checkbox').addEventListener('change', function() {
-    
-  if(this.checked) {
-     
-      document.getElementById("Feature_Drawing").style.visibility = "visible";
-      w3_close()
-      
-  } else {
+  if (!this.checked) {
+      // If the checkbox is not checked, hide the feature and trigger a click on #Lefttab
       document.getElementById("Feature_Drawing").style.visibility = "hidden";
-      document.getElementById("DrawingContainer").style.visibility = "hidden";
-      document.getElementById("drawing-area").style.visibility = "hidden";
-      document.getElementById("eraser").style.visibility = "hidden";
-      document.getElementById("undoLast").style.visibility = "hidden";
-      document.getElementById("color-picker").style.visibility = "hidden";
-      w3_close()
+      w3_close();
+
+      // Trigger a click event on #Lefttab
+      $("#Lefttab").click();
+  } else {
+      // If the checkbox is checked, show the feature and close the menu
+      document.getElementById("Feature_Drawing").style.visibility = "visible";
+      w3_close();
   }
-
 });
-
 
       
 // -------------------------------------- Set Up and Show Drawing Feature ---------------------------------
