@@ -576,9 +576,15 @@ document.getElementById('Activate_Wrting_checkbox').addEventListener('change', f
      
       document.getElementById("Feature_Drawing").style.visibility = "visible";
       w3_close()
+      
   } else {
       document.getElementById("Feature_Drawing").style.visibility = "hidden";
-     w3_close()
+      document.getElementById("DrawingContainer").style.visibility = "hidden";
+      document.getElementById("drawing-area").style.visibility = "hidden";
+      document.getElementById("eraser").style.visibility = "hidden";
+      document.getElementById("undoLast").style.visibility = "hidden";
+      document.getElementById("color-picker").style.visibility = "hidden";
+      w3_close()
   }
 
 });
