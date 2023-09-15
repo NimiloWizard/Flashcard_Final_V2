@@ -30,7 +30,12 @@ document.getElementById("revealButton").addEventListener("click", revealElements
 
 function revealElements() {
   if (areElementsHidden) {
-
+        const audioButtonreveal = document.getElementById('revealButton');
+      const audioPlayerreveal = document.getElementById('audiorevealButton');
+      // Add a click event listener to the image
+      audioButtonreveal.addEventListener('click', function() {
+           audioPlayerreveal.play();
+      });
       let elementsToReveal = document.querySelectorAll(".element-to-hide");
       elementsToReveal.forEach(element => {
          
@@ -48,7 +53,10 @@ prevButton.addEventListener("click", showPreviousCard);
 
 
 function showPreviousCard() {
+    
   if (previousCard) {
+
+    
       previousCard.style.animation = "slideIn";
       
       setTimeout(() => {
