@@ -231,32 +231,6 @@ function hide_screen_gallery(){
   
 }
 
-let widthScreen = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-if (widthScreen <= 765) {
-
-  
-  
-  let bg_hide_Image = document.querySelector("#bg_hide_Image");
-  bg_hide_Image.addEventListener("click", hide_screen_gallery);
-
-      function hide_screen_gallery(){
-        console.log('It trigger')
-        document.getElementById("bg_caption").style.display = "none";
-        document.getElementById("screen_back_image").style.display = "none";
-        document.getElementById("bg_hide_Image").style.display = "none";
-        document.getElementById("col-1").style.display = "none";
-
-      
-        
-        var x = document.getElementsByClassName("bg_hide_Image");
-      
-      }
-
-     
-
-
-}
 
 
 
