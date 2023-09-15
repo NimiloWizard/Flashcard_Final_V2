@@ -1197,21 +1197,21 @@ input:checked ~ body {
     }
 
  
-    #audioButtonOnyomi{
+   #audioButtonOnyomi{
         cursor: pointer;
         width: 35px;
         height: 70px;
-        margin-bottom: -20px;
+        margin-bottom: 0px;
         margin-left: 65px !important;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     #audioButtonKunyomi{
         cursor: pointer;
         width: 35px;
         height: 70px;
-        margin-bottom: -20px;
+        margin-bottom: 0px;
         margin-left: 80px !important;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     
     
@@ -1226,12 +1226,15 @@ input:checked ~ body {
     }
     	  
     
+     
      .Usage{
         margin-left: 32px !important;
         width: 355px !important;
-        margin-top: 30px;
+        margin-top: 0px !important;
+        margin-bottom: 20px !important;
             
     }
+    
     
 
    #buttons #prevButton{
