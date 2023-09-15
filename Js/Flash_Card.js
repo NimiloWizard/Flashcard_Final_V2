@@ -554,7 +554,7 @@ function background6(){
 
       const elements = document.querySelectorAll('.backgoundeffect');
       elements.forEach(function(element) {
-          element.style.background = 'linear-gradient(245.59deg, #e9e9e7 0%, #a1a19e 28.53%, #747373 75.52%)';
+          element.style.background = 'linear-gradient(245.59deg, #070707 0%, #fcfbfb 50.53%, #0f0f0f 75.52%)';
      
           w3_close()
         });
