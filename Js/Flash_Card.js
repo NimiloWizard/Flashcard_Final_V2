@@ -644,10 +644,21 @@ $(document).ready(function() {
 const drawingArea = document.getElementById('drawing-area');
 const ctx = drawingArea.getContext('2d');
 
+
+// Get the color picker input element
+const colorPicker = document.getElementById('color-picker');
+
 // Set up drawing properties
 ctx.lineWidth = 3;
+ctx.strokeStyle = colorPicker.value; // Initialize the stroke color
 ctx.strokeStyle = 'black';
+ctx.strokeStyle = colorPicker.value; // Initialize the stroke color
 ctx.lineCap = 'round';
+
+// Event listener to update the stroke color when the color picker value changes
+colorPicker.addEventListener('input', () => {
+    ctx.strokeStyle = colorPicker.value;
+});
 
 let drawing = false;
 let lastX = 0;
