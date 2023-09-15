@@ -705,7 +705,7 @@ function saveDrawingState() {
 function undo() {
     if (currentStep >= 0) {
         // Clear the canvas
-        ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+        
         
         // Redraw the history up to the current step
         for (let i = 0; i <= currentStep - 1; i++) {
