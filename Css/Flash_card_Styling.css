@@ -793,13 +793,13 @@ input:checked ~ body {
         margin-left: 20px !important;
     }
 	    */
-    div.col-2 {
+ /*   div.col-2 {
 	    position: -webkit-sticky;
 	    position: sticky;
 	    top: 0;
 
      }
-	 
+*/	 
     .stack
     {
         width: 400px;
