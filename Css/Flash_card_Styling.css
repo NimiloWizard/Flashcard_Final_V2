@@ -128,6 +128,23 @@ body{
     visibility: visible !important;
     margin-left: 20px;
 }
+
+#ClickSound {
+    border-top: 1px solid rgb(189, 188, 188);
+    border-bottom: 1px solid rgb(36, 34, 34);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
+#ClickSound #Activate_ClickSound_checkbox{
+    height: 20px;
+    width: 20px;
+    visibility: visible !important;
+    margin-left: 20px;
+    border-bottom: 1px solid gray;
+}
+
 #contact{
     border-top: 1px solid gray;
     margin-top: 120px;
