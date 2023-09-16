@@ -1,0 +1,2465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="Css/Kanji.css">
+    <link rel="stylesheet" href="Css/leave-message.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Flash Cards</title>
+
+    <script>
+        // Check if the browser supports the Fullscreen API
+        if (document.documentElement.requestFullscreen) {
+            // Trigger fullscreen mode
+            document.documentElement.requestFullscreen();
+        }
+    </script>
+
+</head>
+
+<body >
+ 
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left  w3-black w3-xlarge" 
+         style="display:none" id="mySidebar">
+
+        <button class="w3-bar-item w3-button "
+                onclick="w3_close()" id="button">X</button>
+
+        <div class="menu_options" >
+            
+            <!-- <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>-->
+             <!--  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>  -->
+            
+            <a href="#" class="w3-bar-item w3-button" id="home"><i class="fa fa-home"></i><span>  </span>  Home </a> 
+           
+            
+         
+            <div class="w3-dropdown-hover" id="settings_caret">
+                <button class="w3-button" >Settings <i class="fa fa-caret-down"></i></button>
+                 <div class="w3-dropdown-content w3-bar-block" id="settings">
+                     
+                    <div id="DarkMode"><h5>Light/Dark Mode Only </h5></div>
+                        <input type="checkbox" id="darkmode-toggle-N0-Image">
+                        <label for="darkmode-toggle-N0-Image"></label>
+                                     
+                    <div id="Screen_BG_Option"><a href="#" class="w3-bar-item w3-button" onclick="open_screenGallery('screen_back_image')"  id="change_screen_background"> Theme Screen Background</a></div>
+                                      
+                    <div id="Card_BG_Option"><a href="#screen_back_image" class="w3-bar-item w3-button" onclick="open_cardGallery('card_back_image')"  id="change_card_background"> Theme Card Background</a></div>
+
+                    <div id="Default_Card_Option"><a href="#Default_cardbackground" class="w3-bar-item w3-button" onclick="open_Defaultbackground()"  id="SetDefaultBackground"> Deafult Card Background</a></div>
+
+                      <div id="DarkMode_BG"><h5>Dark Mode Screen Background</h5> </div>
+                        <input type="checkbox" id="darkmode-toggle">
+                        <label for="darkmode-toggle"></label>
+                     
+                     <div class="Writing" id="Writing"> <input type="checkbox" id="Activate_Wrting_checkbox">   Activate Writing Panel</div>
+                    
+                     <div class="ClickSound" id="ClickSound"> <input type="checkbox" id="Activate_ClickSound_checkbox">    Activate Click Sound</div>
+                    
+                </div>
+            </div>  
+                    
+           <div class="w3-dropdown-hover" id="Japanese_caret">
+                <button class="w3-button" id="Japanese_Flashcards">Japanese <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block">
+                    <a href="#" class="w3-bar-item w3-button" id="Hiragana_Flashcards"> Hiragana Flashcards</a>
+                    <a href="#" class="w3-bar-item w3-button" id="Katakana_Flashcard"> Katakana Flashcards</a>
+              <!--  <a href="#" class="w3-bar-item w3-button" id="Kanji_Flashcards"> Kanji Flashcards</a>  -->    
+                </div>
+            </div> 
+
+            
+     
+             <a href="#" class="w3-bar-item w3-button" id="contact"><i class="fa fa-envelope"></i>  Contact</a> 
+  
+        </div>      
+
+    </div>
+        
+    <div id="main">
+        
+                <div class="intro w3-gray" id="intro">
+
+                    <button id="openNav" class="w3-button  w3-xlarge" 
+                            onclick="w3_open()" id="button" >&#9776;</button>
+
+                    <div class="w3-container">
+                        <h1> Welcome to <span>KANJI</span> e-Flash Card Reviewer</h1>
+                    </div>
+
+                </div>
+    </div>  
+ 
+    <!------------------------------leave message ------------------>
+    
+        <div id="leaveMessage">
+            <p id="messageText">Do you want to leave this page?</p>
+            <div class="button-container">
+                <button class="button" id="leaveButton">Leave</button>
+                <button class="button" id="stayButton">Stay</button>
+            </div>
+        </div>
+    
+   <!---------------------------------------------------------------->
+
+<section class="container">
+        
+  <div class="row">          <!--------------------start of Row------------------------->
+
+ <div class="col col-1" id="col-1">
+        <div class="bg_caption " id="bg_caption"> click the Image below in order to Set the backgound of your screen</div>
+    
+    <div id="screen_back_image" class="bg_hide_Image hidden" >
+    
+        <div class="background_image " id ="background_image1 " onclick="screen_background1()">
+            <a href="#card" > <img  id="screen_background_image" src="Images/BACKGROUND1.png" alt="Background Image"></a>  
+        </div>
+        <div class="background_image " id ="background_image2 " onclick="screen_background2()">
+            <a href="#card" >  <img  id="screen_background_image" src="Images/BACKGROUND2.png" alt="Background Image"></a>  
+        </div> 
+        <div class="background_image " id ="background_image3 " onclick="screen_background3()">
+            <a href="#card" >   <img  id="screen_background_image" src="Images/BACKGROUND3.png" alt="Background Image"></a>
+        </div>  
+        <div class="background_image " id ="background_image4 " onclick="screen_background4()">
+            <a href="#card" >   <img id="screen_background_image" src="Images/BACKGROUND4.png" alt="Ba3kground Image"></a>
+        </div>
+        <div class="background_image " id ="background_image5 " onclick="screen_background5()">
+            <a href="#card" >   <img id="screen_background_image" src="Images/BACKGROUND5.png" alt="Background Image"></a> 
+        </div>
+        <div class="background_image " id ="background_image6 " onclick="screen_background6()">
+            <a href="#card" >    <img id="screen_background_image" src="Images/BACKGROUND6.png" alt="Background Image"></a>
+        </div>
+    
+        <button  class="btn_bg_screen hidden" onclick="hide_screen_gallery()" id="bg_hide_Image">Close Gallery</button> 
+       
+              
+    </div>                 
+
+    </div>    <!--------------End of Col-1----------------------->
+
+
+
+
+   
+    <div class="col col-2" id="col-2">  <!--------------Start of Col-2----------------------->
+    <div class="stack" id="stack">       <!-- handles the cards on deck  -->
+
+  <!-----------------------------------------Cards Starting Point-------------------->
+    
+        <div class="card backgoundeffect"  id="card" >
+           
+
+                    <div class="imgbox">                               <!-- kanji pictures-->
+                        <img  src="Images/11ushiro.png">
+                    </div>
+                        <div class="English_Def" id="English_Def">     <!--english definition-->
+                             <p class="element-to-hide"> behind, back, later</p>
+                        </div>
+                    <div class="Details" id="Details">                   <!-- kanji Description-->  
+                         <div class="reading_container" id="left_container">
+
+                                <div class="Onyomi" id="Onyomi">Onyomi</div>
+                
+                                <div class = "hiragana" id ="hiragana">                                
+                                        <p class="element-to-hide">ゴ, コウ </p>                                      
+                                </div>
+                                <div class = "equivalent" id ="equivalent">                                
+                                    <p class="element-to-hide"> go, kou</p>                                      
+                                </div>
+
+                               <img class="element-to-hide" id="audioButtonOnyomi" src="Images/AudioButtonOnyomi.png" alt="Play Button">
+                                    <audio id="audioPlayerOnyomi">
+                                        <source src="MP3/Ushiro_go_kou.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                             
+                         </div>
+                         <div class="reading_container" id="right_container">
+
+                                <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                                <div class = "hiragana" id ="hiragana"> 
+                                    <p class="element-to-hide"> のち 、 <span>    </span>  うし（ろ）、あと</p>  
+                                </div>
+                                <div class = "equivalent" id ="equivalent">                                
+                                    <p class="element-to-hide"> nochi, ushi(ro), ato</p>                                      
+                                </div>
+
+                                
+                                <img class="element-to-hide" id="audioButtonKunyomi" src="Images/AudioButtonKunyomi.png" alt="Play Button">
+                                    <audio id="audioPlayerKunyomi">
+                                        <source src="MP3/Ushiro_nochi_ushiro_ato.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                             
+                         </div>
+                    </div>
+
+                     <div class="Usage" id="Usage">Example Usages</div>
+
+                     <div class="QuestionHide" id="Question"> </div>
+
+                    <div class="Example" id="Example">     <!-- Example sentence-->
+                        <div > 
+                          <p class="element-to-hide"> 午 <span>後</span> [ ごご ]    afternoon, p.m.</p>
+                        </div> 
+                      
+                        <div > 
+                           <p class="element-to-hide"> <span>後</span>ろ  [うしろ] back, behind </p>
+                         </div> 
+                    </div>
+                    
+            
+        </div>
+
+ <!-----------------------------------------Next Card------Naka-------------------->
+    
+        
+        <div class="card backgoundeffect" id="card">
+                
+
+                        <div class="imgbox">                               <!-- kanji pictures-->
+                            <img id="kanji_img" src="Images/12naka.png">
+                        </div>
+                            <div class="English_Def" id="English_Def">     <!--english definition-->
+                                    <p class="element-to-hide"> in, inside, middle, mean, center</p>
+                            </div>
+                        <div class="Details" id="Details">                   <!-- kanji Description-->  
+                                <div class="reading_container" id="left_container">
+
+                                    <div class="Onyomi" id="Onyomi">Onyomi</div>
+                    
+                                    <div class = "hiragana" id ="hiragana">                                
+                                            <p class="element-to-hide">チュウ </p>                                      
+                                    </div>
+                                    <div class = "equivalent" id ="equivalent">                                
+                                        <p class="element-to-hide"> chuu</p>                                      
+                                    </div>
+                                </div>
+                                <div class="reading_container" id="right_container">
+
+                                    <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                                    <div class = "hiragana" id ="hiragana"> 
+                                        <p class="element-to-hide">  なか、 うち、 あた(る)</p>  
+                                    </div>
+                                    <div class = "equivalent" id ="equivalent">                                
+                                        <p class="element-to-hide"> naka, uchi, ata(ru)</p>                                      
+                                    </div>
+                                </div>
+                        </div>
+
+                            <div class="Usage" id="Usage">Example Usages</div>
+
+                        <div class="Example" id="Example">     <!-- Example sentence-->
+                            <div > 
+                                <p class="element-to-hide" id="change_color"> <span>中 </span>心	[ちゅうしん]  center, heart</p>
+                            </div> 
+                            
+                            <div > 
+                                <p class="element-to-hide" id="change_color"> <span>中 </span>身	[なかみ]  contents</p>
+                            </div> 
+
+                              
+                        </div>
+                        
+              
+    
+        </div>
+
+    
+<!-----------------------------------------Next Card------13Nichi-------------------->
+        <div class="card backgoundeffect" id="card">
+            
+    
+                    <div class="imgbox">                               <!-- kanji pictures-->
+                        <img  src="Images/13nichi.png">
+                    </div>
+                        <div class="English_Def" id="English_Def">     <!--english definition-->
+                                <p class="element-to-hide"> day, sun, Japan, counter for days</p>
+                        </div>
+                    <div class="Details" id="Details">                   <!-- kanji Description-->  
+                            <div class="reading_container" id="left_container">
+    
+                                <div class="Onyomi" id="Onyomi">Onyomi</div>
+                
+                                <div class = "hiragana" id ="hiragana">                                
+                                        <p class="element-to-hide">ニチ, ジツ </p>                                      
+                                </div>
+                                <div class = "equivalent" id ="equivalent">                                
+                                    <p class="element-to-hide"> nichi, jitsu</p>                                      
+                                </div>
+                            </div>
+                            <div class="reading_container" id="right_container">
+    
+                                <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+    
+                                <div class = "hiragana" id ="hiragana"> 
+                                    <p class="element-to-hide">  ひ, -び, -か</p>  
+                                </div>
+                                <div class = "equivalent" id ="equivalent">                                
+                                    <p class="element-to-hide"> hi, -bi, -ka</p>                                      
+                                </div>
+                            </div>
+                    </div>
+    
+                        <div class="Usage" id="Usage">Example Usages</div>
+    
+                    <div class="Example" id="Example">     <!-- Example sentence-->
+                        <div > 
+                            <p class="element-to-hide"> 毎 <span>日</span> [まいにち]  everyday</p>
+                        </div> 
+                        
+                        <div > 
+                            <p class="element-to-hide"> <span>日 </span> [ひ]  day, days</p>
+                        </div> 
+                        
+                        <div>
+                            <p class="element-to-hide"> <span>日 </span>  本語	[にほんご]  nihongo</p>
+                        </div>
+                    </div>
+                    
+        </div>
+       
+    
+<!-----------------------------------------Next Card--------Dai------------------->
+       <div class="card backgoundeffect" id="card" >
+           
+
+                    <div class="imgbox">                               <!-- kanji pictures-->
+                        <img  src="Images/14dai.png">
+                    </div>
+                        <div class="English_Def" id="English_Def">     <!--english definition-->
+                             <p class="element-to-hide"> large, big</p>
+                        </div>
+                    <div class="Details" id="Details">                   <!-- kanji Description-->  
+                         <div class="reading_container" id="left_container">
+
+                                <div class="Onyomi" id="Onyomi">Onyomi</div>
+                
+                                <div class = "hiragana" id ="hiragana">                                
+                                        <p class="element-to-hide">ダイ、 タイ </p>                                      
+                                </div>
+                                <div class = "equivalent" id ="equivalent">                                
+                                    <p class="element-to-hide"> dai, tai</p>                                      
+                                </div>
+                         </div>
+                         <div class="reading_container" id="right_container">
+
+                                <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                                <div class = "hiragana" id ="hiragana"> 
+                                    <p class="element-to-hide">おお <span>    </span>  (きい)</p>  
+                                </div>
+                                <div class = "equivalent" id ="equivalent">                                
+                                    <p class="element-to-hide"> oo(kii)</p>                                      
+                                </div>
+                         </div>
+                    </div>
+
+                     <div class="Usage" id="Usage">Example Usages</div>
+
+                    <div class="Example" id="Example">     <!-- Example sentence-->
+                        <div > 
+                          <p class="element-to-hide">  <span> 大</span>好き	[だいすき]     very likeable</p>
+                        </div> 
+                      
+                        <div > 
+                           <p class="element-to-hide"> <span>大</span>きい	[おおきい] big, large</p>
+                         </div> 
+                    </div>
+                    
+            
+        </div>
+
+<!-----------------------------------------Next Card----------koku----------------->
+        <div class="card backgoundeffect" id="card" >
+                    
+
+                <div class="imgbox">                               <!-- kanji pictures-->
+                    <img  src="Images/15koku.png">
+                </div>
+                    <div class="English_Def" id="English_Def">     <!--english definition-->
+                        <p class="element-to-hide"> country</p>
+                    </div>
+                <div class="Details" id="Details">                   <!-- kanji Description-->  
+                    <div class="reading_container" id="left_container">
+
+                            <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                            <div class = "hiragana" id ="hiragana">                                
+                                    <p class="element-to-hide">コク </p>                                      
+                            </div>
+                            <div class = "equivalent" id ="equivalent">                                
+                                <p class="element-to-hide"> koku</p>                                      
+                            </div>
+                    </div>
+                    <div class="reading_container" id="right_container">
+
+                            <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                            <div class = "hiragana" id ="hiragana"> 
+                                <p class="element-to-hide">くに <span>    </span>  </p>  
+                            </div>
+                            <div class = "equivalent" id ="equivalent">                                
+                                <p class="element-to-hide"> kuni</p>                                      
+                            </div>
+                    </div>
+                </div>
+
+                <div class="Usage" id="Usage">Example Usages</div>
+
+                <div class="Example" id="Example">     <!-- Example sentence-->
+                    <div > 
+                    <p class="element-to-hide">  <span> 国</span>際	[こくさい]    international</p>
+                    </div> 
+                
+                    <div > 
+                    <p class="element-to-hide"> <span>国</span>	[くに国] country, state</p>
+                    </div> 
+                </div>
+                
+
+        </div>
+
+ <!-----------------------------------------Next Card------Jin--------------------->
+        <div class="card backgoundeffect" id="card" >
+                
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/16jin.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> person</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ジン、 ニン </p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> jin, nin</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  ひと</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> hito</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                <p class="element-to-hide"> <span>人</span> 間	[にんげん]   human being</p>
+                </div> 
+            
+                <div > 
+                <p class="element-to-hide"> いい<span>人</span>	[いいひと] good person </p>
+                </div> 
+            </div>
+            
+
+        </div>
+
+ <!-----------------------------------------Next Card-------Nen--------------------->
+        <div class="card backgoundeffect" id="card" >
+                        
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/17nen.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> year, counter for years</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ネン </p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> nen</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  とし</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> toshi</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                <p class="element-to-hide">去 <span>年</span>	[きょねん]   last year</p>
+                </div> 
+            
+                <div > 
+                <p class="element-to-hide">今<span>年</span>	[ことし] this year </p>
+                </div> 
+            </div>
+            
+
+        </div> 
+ 
+ <!-----------------------------------------Next Card----hon------------------------>
+        <div class="card backgoundeffect" id="card" >
+                                
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/18hon.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> book, present, true</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ホン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> hon</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  もと</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> moto</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                <p class="element-to-hide">日<span>本</span> [にほん]   Japan</p>
+                </div> 
+            
+                <div > 
+                <p class="element-to-hide">大<span>本</span> [おおもと] root, origin, </p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">                          source </p>
+                    </div> 
+            </div>
+            
+
+        </div> 
+
+        
+ <!-----------------------------------------Next Card--------chou-------------------->
+       <div class="card backgoundeffect" id="card" >
+                                        
+
+            <div class="imgbox">                               
+                <img  src="Images/19chou.png">
+            </div>
+                <div class="English_Def" id="English_Def">     
+                    <p class="element-to-hide"> long, leader, superior, senior</p>
+                </div>
+            <div class="Details" id="Details">                   
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">チョウ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> chou</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  なが(い)、 おさ</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> naga(i), osa</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">    
+                <div > 
+                <p class="element-to-hide"><span>長</span> 男	[ちょうなん]   eldest son</p>
+                </div> 
+            
+                <div > 
+                <p class="element-to-hide"><span>長</span> い	[ながい] long (distance) </p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"><span>長</span> い	[ながい] long (length) </p>
+                    </div> 
+            </div>
+            
+
+        </div> 
+ 
+       
+ <!-----------------------------------------Next Card--------shutsu-------------------->
+      <div class="card backgoundeffect" id="card" >
+                                                
+
+            <div class="imgbox">                              
+             <img  src="Images/20shutsu.png">                        
+            </div>
+                <div class="English_Def" id="English_Def">     
+                 <p class="element-to-hide"> exit, leave, go out</p>
+                </div>
+            <div class="Details" id="Details">                   
+               <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">シュツ、 スイ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> shutsu, sui</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  で(る)、 だ(す)、 い(でる)</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> de(ru), da(su), i(deru)</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">    
+                <div > 
+             <p class="element-to-hide"><span>出</span>生	[しゅっしょう]  birth</p>
+                </div> 
+            
+                <div > 
+                <p class="element-to-hide"><span>出</span> 社	[しゅっしゃ] going to work </p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"><span>出</span> 口	[でぐち] exit, gateway </p>
+                    </div> 
+            </div>
+            
+
+        </div> 
+    
+
+ <!-----------------------------------------Next Card--------Ji-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                        
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/21ji.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> time, hour</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ジ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> ji</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  とき、 -どき</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> toki, doki</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                <p class="element-to-hide"><span>時</span>間	[じかん]  time, hour</p>
+                </div> 
+            
+                <div > 
+                <p class="element-to-hide"><span>時</span> 々	[ときどき] sometimes</p>
+                </div> 
+                 
+            </div>
+            
+
+        </div> 
+
+ <!-----------------------------------------Next Card--------Kou-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/22kou.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> going, journey, carry out, row</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">コウ、ギョウ、アン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> kou, gyou, an</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>   い(く)、ゆ(く)</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> i(ku), yu(ku)</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                      <p class="element-to-hide">旅<span> 行</span>	[りょこう]  travel, trip</p>
+                </div> 
+            
+                <div > 
+                     <p class="element-to-hide">銀 <span> 行</span> 	[ぎんこう] bank</p>
+                </div> 
+                <div > 
+                     <p class="element-to-hide"><span>行 </span> く先	[ゆくさき] destination</p>
+                 </div> 
+                
+            </div>
+            
+
+        </div> 
+
+ <!-----------------------------------------Next Card--------Ken-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                        
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/23ken.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> see, hopes, chances, look at</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ケン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> ken</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  み(る)、 み(せる)</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> mi(ru), mi(seru)</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"><span> 一見 </span>		[いっけん] look, glimpse </p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide"> <span> 見</span> 	る	[みる] to see, to look</p>
+                </div> 
+                
+            </div>
+            
+
+        </div> 
+
+ <!-----------------------------------------Next Card--------Getsu-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/24getsu.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> month, moon</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ゲツ、 ガツ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> getsu, gatsu</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  つき</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> tsuki</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> 今<span> 月 </span>			[こんげつ] this month </p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide">来 <span> 月</span> 		[らいげつ] next month</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"> <span> 一月</span> 		[ひとつき] one month</p>
+                </div> 
+            </div>
+            
+
+        </div> 
+        
+ <!-----------------------------------------Next Card--------25Bun-------------------->
+      <div class="card backgoundeffect" id="card" >
+                                                                                        
+
+            <div class="imgbox">                              
+                <img  src="Images/25bun.png">
+            </div>
+                <div class="English_Def" id="English_Def">    
+                    <p class="element-to-hide"> part, minute of time, understand</p>
+                </div>
+            <div class="Details" id="Details">                    
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ブン、 フン、 ブ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> bun, fun, bu</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  わ(ける)</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> wa(keru)</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     
+                <div > 
+                    <p class="element-to-hide"> 気<span> 分 </span>		[きぶん] feeling, mood </p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide">半 <span> 分</span> 		[はんぶん] half</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"> <span> 分</span> かる	[わかる] to understand</p>
+                </div> 
+            </div>
+            
+
+        </div> 
+   
+      
+ <!-----------------------------------------Next Card--------26Zen-------------------->
+      <div class="card backgoundeffect" id="card" >
+                                                                                                
+
+            <div class="imgbox">                               
+                <img  src="Images/26zen.png">
+            </div>
+                <div class="English_Def" id="English_Def">    
+                    <p class="element-to-hide"> in front, before</p>
+                </div>
+            <div class="Details" id="Details">                   
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ゼ ン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> zen</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  まえ</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> mae</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">    
+                <div > 
+                    <p class="element-to-hide"> 午<span> 前 </span>	 [ごぜん] morning, a.m. </p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide">名 <span> 前</span> 		[なまえ] name</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">駅 <span> 前</span> 	[えきまえ] in front </p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">                      of station</p>
+                </div> 
+            </div>
+            
+
+        </div> 
+    
+ <!-----------------------------------------Next Card--------Sei-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                        
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/27sei.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> life, genuine, birth</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">セイ、 ショウ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> sei, shou</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  い(きる)、う(む)、 お(う)</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> i(kiru), u(mu), o(u)</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> 人<span> 生 </span>	 	[じんせい] (human) life </p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide">先 <span> 生</span> 		[せんせい] teacher</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"> <span> 生 </span> 	きる	[いきる] to live, to exist </p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+
+
+ <!-----------------------------------------Next Card--------Kan-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/28kan.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> interval, space</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">カン、 ケン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> kan, ken</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  あいだ、 ま、 あい</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> aida, ma, ai</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> 人<span> 間 </span>		[にんげん] human being</p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide">空 <span> 間	</span> 	[くうかん] space, room</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">昼 <span> 間 </span> 		[ひるま] during the day</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+
+ <!-----------------------------------------Next Card--------Jou-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                        
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/29jou.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> above, up</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ジョウ、ショウ、シャン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> jou, shou, shan</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  うえ, あ(げる), のぼ(る) </p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> ue, a(geru), nobo(ru)</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span> 上</span>	下	[じょうげ] top an bottom</p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide"><span> 上	</span> げる [あげる] to raise,</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">                       to elevate</p>
+                </div> 
+               
+                
+            </div>
+            
+
+        </div>
+        
+ <!-----------------------------------------Next Card--------Kon---------Latest card----------->  
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/30kon.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> now, the present</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">コン、 キン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> kon, kin</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  いま</p>  
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> ima</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span> 今</span>	日	[こんじつ]  today, this day</p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide"><span> 今 </span> 更	[いまさら] this late hour</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">     <span> 今 </span> 日	[きょう] today, this day</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">     <span> 今 </span> 朝	[けさ] this morning</p>
+                </div> 
+            
+                
+            </div>
+            
+          
+        </div>
+               
+ <!-----------------------------------------Next Card--------Kin-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                
+
+            <div class="imgbox">                               
+                <img  src="Images/31kin.png">
+            </div>
+                <div class="English_Def" id="English_Def">     
+                    <p class="element-to-hide"> gold</p>
+                </div>
+            <div class="Details" id="Details">                    
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">キン、 コン、 ゴン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> kin, kon, gonn</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  いまかね、 かな-、 -がね</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> kane, kana, gane</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     
+                <div > 
+                    <p class="element-to-hide"> <span> 金</span>	 【きん】 gold</p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide">現<span> 金 </span>  【げんきん】cash</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  料   <span> 金 </span>  【りょうきん】fee, charge</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">     <span> 金 </span>  【かね】 money, metal
+                    </p>
+                </div> 
+            
+                
+            </div>
+            
+
+        </div>
+              
+ <!-----------------------------------------Next Card--------Nyuu-------------------->
+        <div class="card  backgoundeffect" id="card" >
+                                                                                                                                                        
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/32nyuu.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> enter, insert</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ニュウ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> nyuu</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  い(る)、はい(る)</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> i(ru), hai(ru)</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span> 入</span> 学 【にゅうがく】entry to school</p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide"><span> 入 </span> る【いる】 to get in, to go in</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">    <span> 入</span>  れる 【いれる】 to put in, let in</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">     <span> 入 </span>  社 【にゅうしゃ】join compny
+                    </p>
+                </div> 
+            
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Gaku-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                            
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/33gaku.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> study, learning, science</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ガク</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> gaku</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  まな(ぶ)</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> mana(bu)</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span> 学</span>【がく】learning, education, study</p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide"><span> 学 </span> 生 【がくせい】student</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">    <span> 学</span>  習 【がくしゅう】study, learning</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">   入  <span> 学 </span>   【にゅうがく】 enter school
+                    </p>
+                </div> 
+            
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------34Takai-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                    
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/takai.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> tall, high, expensive</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">コウ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> kou</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  たか(い)</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> taka(i)</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span> 高</span> 価 【こうか】high price</p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide"><span> 高 </span> 校 【こうこう】high school</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">    <span> 高</span>  い 【たかい】 high, tall, expensive</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">   <span>  高 </span> まる 【たかまる】to rise, promoted </p>
+                </div> 
+            
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------En-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                            
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/35en.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> circle, yen, round</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">エン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> en</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  まる(い)</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> maru(i)</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span> 円</span>  【えん】 yen </p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide">千<span> 円 </span> 札 【せんえんさつ】 1k yen bill</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">    <span> 円</span>  滑 【えんかつ】 smooth</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">   <span>  一円 </span>  【いちえん】 one yen </p>
+                </div> 
+            
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Shi-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                    
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/36shi.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> child</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">シ、 ス、 ツ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> shi, su, tsu</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  こ、 ね</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> ko, ne</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span> 子</span>   息 【しそく】 son </p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide">女<span> 子 </span>  【じょし】 woman, girl</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"> 椅   <span> 子</span>  【いす】 chair, stool</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">   <span>  子 </span> 供 【こども】 child, children </p>
+                </div> 
+            
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Gai-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                    
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/37gai.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> outside</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ガイ、 ゲ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> gai, ge</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  そと、ほか、はず(す)</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> soto, hoka, hazu-</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span>  外 </span>  【がい】 outside of </p>
+                </div> 
+            
+                <div > 
+                    <p class="element-to-hide"><span> 外 </span> 国 【がいこく】foreign country</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">   <span> 外 </span>  【そと】 outside, exterior</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  この <span>  外 </span> 【このほか】moreover, addition </p>
+                </div> 
+            
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Ka-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                            
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/38ka.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> below, down, descend, give, low</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">カ、 ゲ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> ka, ge</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  した、しも、もと, さ(げる)</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> shita, shimo, moto</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span>  下 </span>   【か】 under </p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">   <span> 下  </span>  【した】 below, down</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">   <span>  下 </span> げる 【さがる】to hang </p>
+                </div> 
+            
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------39Rai-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                    
+
+            <div class="imgbox">                               
+                <img  src="Images/rai.png">
+            </div>
+                <div class="English_Def" id="English_Def">     
+                    <p class="element-to-hide"> come, next, cause, become</p>
+                </div>
+            <div class="Details" id="Details">                  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ライ、 タイ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> rai, tai</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  く.る、 きた.る、き、こ</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> kuru, kitaru, ki, ko</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     
+                <div > 
+                    <p class="element-to-hide"> <span>  来 </span>  【らい】 next (year, etc.) </p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  未 <span> 来   </span>  【みらい】the future</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">   <span>  来 </span> る 【くる】 to come, to approach</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  出 <span>  来 </span> る 【できる】to be able to do</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>  
+<!-----------------------------------------Next Card--------Ki-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                            
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/40ki.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> spirit, mind, air, mood</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">キ、 ケ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> ki, ke</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  いき</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> iki</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span>  気 </span>  【き】spirit, mind, heart </p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span> 気   </span> 分【きぶん】feeling, mood</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"> 水 <span>  気 </span> 【みずけ】water content</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"> 眠 <span>  気 </span> 【ねむけ】sleepiness</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Shou-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                            
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/41shou.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> slittle, small</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ショウ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> shou</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  ちい(さい)、こ-、お-、さ-</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> chii(sai), ko-, o-, sa-</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span>  少 </span> 々 【しょうしょう】just a minute</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span> 少   </span> 女 【しょうじょ】 little girl, maiden</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"><span>  小 </span> 学校 【しょうがっこう】elem. school</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span>  小 </span> さい 【ちいさい】small, little</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------San-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                                    
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/42san.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> mountain</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">サン、 セン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> san, sen</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  やま</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> yama</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span>  山  </span> 【さん】 Mt., Mount</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  火<span> 山   </span>  【かざん】volcano</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"><span>  山  </span> 【やま】 mountain, hill</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span>  山</span> 登り【やまのぼり】mt. climbing</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------43Wa-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                                    
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/wa.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> tale, talk</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ワ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> wa</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  はな(す)、 はなし</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> hana(su), hanashi</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span>  話  </span>  【わ】 counter for stories</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span> 話   </span>  題 【わだい】 topic, subject</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"><span>  話す  </span>  【はなす】 to talk, to speak</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span>  話</span> し合い 【はなしあい】 discussion</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Jo-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                                            
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/44jo.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> woman, female</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ジョ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> jo</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  おんな、 め</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> onnna, me</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span>  女  </span>   【じょ】 woman, girl, daughter</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"> 彼 <span> 女   </span>  【かのじょ】 she, her, girlfriend</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">長<span> 女  </span>   【ちょうじょ】 eldest daughter</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span>  女</span>  【おんな】 female, woman</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Go-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                                                    
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/45go.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> noon, sign of the horse</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ゴ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> go</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  うま</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> uma</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span>  午 </span>   前 【ごぜん】 morning, a.m.</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span> 午  </span>  後 【ごご】 afternoon, p.m.</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">正<span> 午  </span>    【しょうご】 noon; midday</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span>   午</span> 年 【うまどし】 year of the horse</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Hyaku-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                                                            
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/46hyaku.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> hundred</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ヒャク、 ビャク</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> hyaku, byaku</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  もも</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> momo</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span>  百 </span>    【ひゃく】 100, hundred</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">何  <span> 百 </span>  【なんびゃく】 hundreds</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"><span> 百 </span>  円玉 【ひゃくえんだま】 100 yen coin</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span>   百</span> 姓 【ひゃくしょう】 farmer; peasant</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Sho-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                                                            
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/47sho.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> write</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">ショ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> sho</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  か(く)</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> kaku</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span>   書  </span> 【ショ】 book, document</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">辞  <span> 書 </span>  【じしょ】dictionary</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"><span> 書 </span>  く 【かく】 to write, to compose</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  所 <span>   書</span>き 【ところがき】address</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Sen-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                                                            
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/48sen.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> before, ahead, previous, future</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">セン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> sen</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  さき、 ま(ず)</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> saki, ma(zu)</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"> <span>   先   </span>【せん】 former, previous</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"> <span> 先 </span>  生 【せんせい】teacher, doctor</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"><span>  先 </span> 【さき】 previous, prio</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span>   先</span>程 【さきほど】 some time ago</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Mei-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                                                            
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/49mei.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> name, noted, reputation</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">メイ、 ミョウ</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> mei, myou</p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span>  な</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> na</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide" id="change_color">有 <span>   名   </span> 【ゆうめい】famous, fame</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"> <span> 名</span> 刺 【めいし】business card</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"><span>  名 </span> 字 【みょうじ】surname</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide">  <span>   名</span>前 【なまえ】name, full name</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+<!-----------------------------------------Next Card--------Kawa-------------------->
+        <div class="card backgoundeffect" id="card" >
+                                                                                                                                                                                                                                                    
+
+            <div class="imgbox">                               <!-- kanji pictures-->
+                <img  src="Images/50kawa.png">
+            </div>
+                <div class="English_Def" id="English_Def">     <!--english definition-->
+                    <p class="element-to-hide"> river, stream</p>
+                </div>
+            <div class="Details" id="Details">                   <!-- kanji Description-->  
+                <div class="reading_container" id="left_container">
+
+                        <div class="Onyomi" id="Onyomi">Onyomi</div>
+
+                        <div class = "hiragana" id ="hiragana">                                
+                                <p class="element-to-hide">セン</p>                                      
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> sen/p>                                      
+                        </div>
+                </div>
+                <div class="reading_container" id="right_container">
+
+                        <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
+
+                        <div class = "hiragana" id ="hiragana"> 
+                            <p class="element-to-hide">  <span>    </span> かわ</p>
+                        </div>
+                        <div class = "equivalent" id ="equivalent">                                
+                            <p class="element-to-hide"> kawa</p>                                      
+                        </div>
+                </div>
+            </div>
+
+            <div class="Usage" id="Usage">Example Usages</div>
+
+            <div class="Example" id="Example">     <!-- Example sentence-->
+                <div > 
+                    <p class="element-to-hide"><span>   川   </span>  【かわ】 river, stream</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"> <span> 川</span>崎 【かわさき】 Kawasaki (city)</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"><span>   川</span>岸 【かわぎし】riverbank, riverside</p>
+                </div> 
+                <div > 
+                    <p class="element-to-hide"> 小 <span>   川 </span>【おがわ】 stream</p>
+                </div> 
+                
+            </div>
+            
+
+        </div>
+
+
+     
+
+
+    </div> 
+          
+            <section class="buttons" id="buttons">    
+
+               
+                <audio id="audiorevealButton">
+                    <source src="MP3/Rifle_Reveal.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+                <audio id="audioprevButton">
+                    <source src="MP3/Rifle_Prev.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+             
+                <audio id="audionextButton">
+                    <source src="MP3/Rifle_Next.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+                
+                <button class="function_button"   onclick="revealElements()"   id="revealButton"><i  id="eyeIcon" class="fa fa-eye-slash fa-1x "></i></button>  <!-- Closed eye icon -->                        
+                <button class="function_button"   onclick="showPreviousCard()" id="prevButton"> <i class="fa fa-chevron-left fa-2x " ></i> </button>
+                <button class="function_button"   onclick="showNextCard()"     id="nextButton"> <i class="fa fa-chevron-right fa-2x "></i> </button>
+            
+            </section> 
+        
+            <div class="space"></div>
+
+    </div>  <!--------------End of Col-2----------------------->
+    
+       
+    
+
+    <div class="col col-1" id="col-3">
+       
+       <div class="background_caption " id="background_caption"> click the Image below in order to Set the backgound of your card</div>
+        
+        <div id="card_back_image" class="hide_Image hidden">
+    
+                    <div class="background_image " id ="background_image1 " onclick="background1()">
+                        <a href="#card" ><img  id="background_image" src="Images/BACKGROUND1.png"  alt="Background Image"></a>  
+                    </div>
+                    <div class="background_image " id ="background_image2 " onclick="background2()">
+                        <a href="#card" >  <img  id="background_image" src="Images/BACKGROUND2.png"  alt="Background Image"></a> 
+                    </div> 
+                    <div class="background_image " id ="background_image3 " onclick="background3()">
+                        <a href="#card" >   <img  id="background_image" src="Images/BACKGROUND3.png"  alt="Background Image"></a>
+                    </div>  
+                    <div class="background_image " id ="background_image4 " onclick="background4()">
+                        <a href="#card" >   <img id="background_image" src="Images/BACKGROUND4.png"  alt="Ba3kground Image"></a>
+                    </div>
+                    <div class="background_image " id ="background_image5 " onclick="background5()">
+                        <a href="#card" >   <img id="background_image" src="Images/BACKGROUND5.png"  alt="Background Image"></a> 
+                    </div>
+                    <div class="background_image " id ="background_image6 " onclick="background6()">
+                        <a href="#card" >    <img id="background_image" src="Images/BACKGROUND6.png"  alt="Background Image"></a>
+                    </div>
+            
+                    
+          <button  class="btn_bg hidden" onclick="hide_card_gallery()" id="hide_Image">Close Gallery</button> 
+               
+        </div>
+        
+
+  
+    </div>  <!--------------End of Col-3----------------------->
+    
+  </div>  <!--end of row -->
+
+    
+  <!---------------------------------------------------Practice Drawing feature-------------------------------------------------> 
+    
+  <div class="Feature_Drawing" id="Feature_Drawing">
+
+    <img  id="Lefttab" src="Images/LeftTab.png"  onclick="SlideOpen()">   <!-- Left Tab Folder-->
+
+    <div class= "hideDrawing" class= "DrawingContainer" id="DrawingContainer">
+               
+         <canvas class= "hideDrawing"  id="drawing-area" width="300" height="350"> </canvas>
+    
+         <img class= "hideDrawing"  id="eraser" src="Images/eraser.png" onclick="EraseAll()">
+
+         <img class= "hideDrawing"  id="undoLast" src="Images/Undo.png" onclick="EraseLastAction()">     
+
+         <div class="color-palette">
+                  <input class= "hideDrawing"  type="color" id="color-picker" value="#000000">
+        </div>
+    </div>  
+    
+    
+
+
+
+
+
+
+    
+</section>   
+
+  
+   <!-------------------------------------Scripting------------------------------------>
+       <!--      <script src="vanilla-tilt.min.js"></script>   -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="Js/Kanji.js" defer></script>
+            <script src="Js/leave-message.js"></script>
+
+ </div>        
+</body>
+</html>
