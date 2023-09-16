@@ -623,6 +623,62 @@ document.getElementById('Activate_Wrting_checkbox').addEventListener('change', f
   }
 });
 
+// -----------------------  Toggle to Activate/Deactivae Click Sound --------------------
+    
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the checkbox element
+  const myCheckbox = document.getElementById("Activate_ClickSound_checkbox");
+
+  // Set it as checked
+  myCheckbox.checked = true;
+});
+
+document.getElementById('Activate_ClickSound_checkbox').addEventListener('change', function() {
+ 
+      // Get the audio element by its ID for REVEAL BUTTON
+ const audioPlayerRevealMute_Unmute = document.getElementById("audiorevealButton");
+ const audioPlayerPrevMute_Unmute = document.getElementById("audioprevButton");
+ const audioPlayerNextMute_Unmute = document.getElementById("audionextButton");
+
+  if (!this.checked) {
+       // If the checkbox is not checked, Deactivate CLICK SOUND
+       // Function to mute the audio
+       function muteAudioreveal() {
+            audioPlayerRevealMute_Unmute.muted = true;
+       }
+       function muteAudioprev() {
+        audioPlayerPrevMute_Unmute.muted = true;
+      }
+      function muteAudionext() {
+        audioPlayerNextMute_Unmute.muted = true;
+      }
+      // Mute the audio
+        muteAudioreveal();      
+        muteAudioprev(); 
+        muteAudionext(); 
+
+  } else {
+
+      // If the checkbox is  checked, Activate CLICK SOUND
+       // Function to unmute the audio
+       function unmuteAudioreveal() {
+        audioPlayerRevealMute_Unmute.muted = false;
+      }
+      function unmuteAudioprev() {
+        audioPlayerPrevMute_Unmute.muted = false;
+      }
+      function unmuteAudionext() {
+        audioPlayerNextMute_Unmute.muted = false;
+      }
+
+
+      // Unmute the audio
+      unmuteAudioreveal();
+      unmuteAudioprev();
+      unmuteAudionext();
+  }
+});
+
       
 // -------------------------------------- Set Up and Show Drawing Feature ---------------------------------
 
