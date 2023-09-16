@@ -1,0 +1,43 @@
+#leaveMessage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Style for the message text */
+#messageText {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style for the buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Style for the "Leave" button */
+#leaveButton {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+/* Style for the "Stay" button */
+#stayButton {
+    background-color: #2ecc71;
+    color: #fff;
+}
