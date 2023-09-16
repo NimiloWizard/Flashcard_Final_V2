@@ -25,17 +25,21 @@ let currentCardIndex = 0;
 [...stack.children].reverse().forEach(card => stack.append(card));
 
 
+// -----------------------------  Reveal Element Button --------------------------------//
+
 document.getElementById("revealButton").addEventListener("click", revealElements);
-  
+
+const audiorevealButton = document.getElementById('revealButton');
+const audioPlayerreveal = document.getElementById('audiorevealButton');
+// Add a click event listener to the button
+audiorevealButton.addEventListener('click', function() {
+     audioPlayerreveal.play();
+});
 
 function revealElements() {
+
   if (areElementsHidden) {
-        const audioButtonreveal = document.getElementById('revealButton');
-      const audioPlayerreveal = document.getElementById('audiorevealButton');
-      // Add a click event listener to the image
-      audioButtonreveal.addEventListener('click', function() {
-           audioPlayerreveal.play();
-      });
+
       let elementsToReveal = document.querySelectorAll(".element-to-hide");
       elementsToReveal.forEach(element => {
          
@@ -47,17 +51,27 @@ function revealElements() {
       
   }
 }
+ 
+// -----------------------------   Previous Element Button --------------------------------//
+document.addEventListener('DOMContentLoaded', function() {
+  const audioprevButton = document.getElementById('prevButton');
+  const audioPlayerprev = document.getElementById('audioprevButton');
+  // Add a click event listener to the button
+  audioprevButton.addEventListener('click', function() {
+       audioPlayerprev.play();
+  });
+  
+});
 
 let prevButton = document.querySelector("#prevButton");
 prevButton.addEventListener("click", showPreviousCard);
 
 
 function showPreviousCard() {
-    
-  if (previousCard) {
 
+  if (previousCard) {
     
-      previousCard.style.animation = "slideIn";
+       previousCard.style.animation = "slideIn";
       
       setTimeout(() => {
         
@@ -75,8 +89,20 @@ function showPreviousCard() {
   }
 }
 
+
+
+// -----------------------------  NExt Element Button --------------------------------//
+
 let nextButton = document.querySelector("#nextButton")
 nextButton.addEventListener("click", showNextCard);
+
+
+const audionextButton = document.getElementById('nextButton');
+const audioPlayernext = document.getElementById('audionextButton');
+// Add a click event listener to the button
+audionextButton.addEventListener('click', function() {
+  audioPlayernext.play();
+});
 
 function showNextCard(){
 
@@ -86,7 +112,7 @@ function showNextCard(){
     elementsToHide.forEach(element => {
       element.style.display = "none";
     });
-    
+
     card.style.animation = "swap 500ms forwards"; 
   
   
@@ -103,7 +129,6 @@ function showNextCard(){
     }, 500);
 
 }
-
 
   // ------------------------------------Audio Playaer ----------------------------------- //
 
