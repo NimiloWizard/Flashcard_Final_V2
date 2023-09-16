@@ -2458,6 +2458,27 @@
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="Js/Flash_Card.js" defer></script>
             
-         
+            <script>
+        // Function to request fullscreen
+        function requestFullscreen() {
+            const element = document.documentElement;
+
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) { // Firefox
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) { // IE/Edge
+                element.msRequestFullscreen();
+            }
+        }
+
+        // Call the requestFullscreen function immediately during onload
+        window.addEventListener('load', function() {
+            requestFullscreen();
+        });
+    </script>
+    
 </body>
 </html>
