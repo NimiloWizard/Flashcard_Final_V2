@@ -1085,6 +1085,8 @@ input:checked ~ body {
         justify-content: center;
         background: rgba(0, 0, 0, .6);
         color: white;    
+        height: 35px;
+        padding-top: 5px;
     }
 	  
     .btn_bg{
