@@ -939,7 +939,7 @@ input:checked ~ body {
           transform: translateY(0); /* Initial position */
         }
         to {
-          transform: translateY(50px); /* Desired position after animation */
+          transform: translateY(300px); /* Desired position after animation */
         }
       }
 
