@@ -378,6 +378,10 @@ function screen_background6(){
       var close_cardButton = document.getElementById("hide_Image");
       close_cardButton.style.display = "block";      
 
+      const overlay = document.querySelector('.overlayCardscreen');   //card screen overlay
+      overlay.style.display = 'block';
+
+        
    w3_close() 
 
          // Assuming 'element' is the element you want to scroll
@@ -394,7 +398,7 @@ function screen_background6(){
           // Call the function when needed
           performSpecificAction();
 
-
+    
        //toggle aup the navbar after making a selection
 
    }
@@ -410,7 +414,8 @@ function screen_background6(){
                   document.getElementById("card_back_image").style.display = "none";
                   document.getElementById("hide_Image").style.display = "none";
                 
-             
+                  const overlay = document.querySelector('.overlayCardscreen');   //card screen overlay
+                  overlay.style.display = 'none';
                   
               }
               
