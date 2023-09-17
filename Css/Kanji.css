@@ -435,11 +435,14 @@ input:checked ~ body {
     inset: 0;
     z-index: -1;
     border-radius: 20px;
-    background: linear-gradient(
+  /*  background: linear-gradient(
         0deg,
          rgba(244, 246, 242, .4),
          rgba(245, 245, 239, .4)
     );
+    
+    */
+    backdrop-filter: blur(2px); 
 }
 
 .card:nth-last-child(n+4){
