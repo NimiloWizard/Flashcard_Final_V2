@@ -451,11 +451,7 @@ function screen_background6(){
                   customAlert.style.display = 'block';
               }
             });
-            myButton.addEventListener('touchend', function() {
-              if (myButton.disabled) {
-                  customAlert.style.display = 'none';
-              }
-            });
+           
 
 
 
