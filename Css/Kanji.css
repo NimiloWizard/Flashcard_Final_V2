@@ -1239,7 +1239,11 @@ input:checked ~ body {
         margin-top: 10px;
 	user-select: none;
     }
-	  
+
+     #audioButtonOnyomi:active {
+	  background-color: transparent; /* Remove background color */
+	  outline: none; /* Remove outline */
+	}
     #audioButtonKunyomi{
         cursor: pointer;
         width: 35px;
@@ -1249,7 +1253,10 @@ input:checked ~ body {
         margin-top: 10px;
 	user-select: none;
     }
-    
+    #audioButtonKunyomi:active {
+	  background-color: transparent; /* Remove background color */
+	  outline: none; /* Remove outline */
+	}
     
        /* Hide the audio player */
      #audioPlayerOnyomi {
