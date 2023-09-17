@@ -318,7 +318,7 @@ function open_screenGallery(bg_hide_Image) {
    } 
 
         const change_screen_backgroundanimate = document.getElementById('change_screen_background');
-        const elementToAnimate = document.getElementById('stack');
+        const elementToAnimate = document.getElementById('card');
         const elementToAnimatereveal =  document.getElementById('revealButton');
         const elementToAnimateprev = document.getElementById('prevButton');
         const elementToAnimatenext = document.getElementById('nextButton');
