@@ -271,8 +271,8 @@ function open_screenGallery(bg_hide_Image) {
   var captionElement = document.getElementById("bg_caption");
   captionElement.style.display = "block"; // or "initial" based on your design
                     
-  var Show_screenImageGallery = document.getElementById("screen_back_image");
-  Show_screenImageGallery.style.display = "grid"; // or "initial" based on your design       
+ // var Show_screenImageGallery = document.getElementById("screen_back_image");
+//  Show_screenImageGallery.style.display = "grid"; // or "initial" based on your design       
 
   var close_screenButton = document.getElementById("bg_hide_Image");
   close_screenButton.style.display = "block";      
