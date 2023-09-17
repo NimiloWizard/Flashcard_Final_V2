@@ -383,7 +383,35 @@ function screen_background6(){
 
         
    w3_close() 
+              function disableElement() {
+                    
+          const elementToDisablerevealButton = document.getElementById('revealButton');
+          const elementToDisableprevButton = document.getElementById('prevButton');
+          const elementToDisablenextButton = document.getElementById('nextButton');
+          elementToDisablerevealButton.disabled = true; // Disable the element
+          elementToDisableprevButton.disabled = true; // Disable the element
+          elementToDisablenextButton.disabled = true; // Disable the element
 
+          elementToDisablerevealButton.style.cursor = 'not-allowed'; // Disable the element
+          elementToDisableprevButton.style.cursor = 'not-allowed';  // Disable the element
+          elementToDisablenextButton.style.cursor = 'not-allowed';  // Disable the element
+
+          const audioPlayer1 = document.getElementById('audioButtonOnyomi');
+          const audioPlayer2 = document.getElementById('audioButtonKunyomi');
+
+          audioPlayer1.style.display = 'none';
+          audioPlayer2.style.display = 'none';
+
+
+        } 
+        
+  
+          const disableButtons = document.getElementById('change_screen_background');
+          disableButtons.addEventListener('click', disableElement);
+
+
+
+        
          // Assuming 'element' is the element you want to scroll
           let element = document.getElementsByname('card_back_image');
 
