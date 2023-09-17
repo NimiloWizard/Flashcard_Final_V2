@@ -279,6 +279,53 @@ function open_screenGallery(bg_hide_Image) {
 
   w3_close()  //toggle aup the navbar after making a selection
 }
+   function disableElement() {
+                    
+          const elementToDisablerevealButton = document.getElementById('revealButton');
+          const elementToDisableprevButton = document.getElementById('prevButton');
+          const elementToDisablenextButton = document.getElementById('nextButton');
+          elementToDisablerevealButton.disabled = true; // Disable the element
+          elementToDisableprevButton.disabled = true; // Disable the element
+          elementToDisablenextButton.disabled = true; // Disable the element
+
+          elementToDisablerevealButton.style.cursor = 'not-allowed'; // Disable the element
+          elementToDisableprevButton.style.cursor = 'not-allowed';  // Disable the element
+          elementToDisablenextButton.style.cursor = 'not-allowed';  // Disable the element
+
+          const audioPlayer1 = document.getElementById('audioButtonOnyomi');
+          const audioPlayer2 = document.getElementById('audioButtonKunyomi');
+
+          audioPlayer1.style.display = 'none';
+          audioPlayer2.style.display = 'none';
+
+
+        } 
+        
+  
+          const disableButtons = document.getElementById('change_screen_background');
+          disableButtons.addEventListener('click', disableElement);
+
+
+           const myButton = document.getElementById('revealButton');
+            const customAlert = document.getElementById('customAlert');
+    
+            myButton.addEventListener('mouseenter', function() {
+                if (myButton.disabled) {
+                    customAlert.style.display = 'block';
+                }
+            });
+            myButton.addEventListener('mouseleave', function() {
+              if (myButton.disabled) {
+                  customAlert.style.display = 'none';
+              }
+            });
+            myButton.addEventListener('click', function() {
+              if (myButton.disabled) {
+                  customAlert.style.display = 'block';
+              }
+            });
+           
+
 
 
 // ----------------------Closing the Screen Image Gallery--------------------------------//
@@ -293,6 +340,24 @@ function hide_screen_gallery(){
   document.getElementById("bg_hide_Image").style.display = "none";
   document.getElementById("col-1").style.display = "none";
 
+   const elementToDisablerevealButton = document.getElementById('revealButton');
+  const elementToDisableprevButton = document.getElementById('prevButton');
+  const elementToDisablenextButton = document.getElementById('nextButton');
+  elementToDisablerevealButton.disabled = false; // Disable the element
+  elementToDisableprevButton.disabled = false; // Disable the element
+  elementToDisablenextButton.disabled = false; // Disable the element
+
+  elementToDisablerevealButton.style.cursor = 'pointer'; // Disable the element
+  elementToDisableprevButton.style.cursor = 'pointer';  // Disable the element
+  elementToDisablenextButton.style.cursor = 'pointer';  // Disable the element
+
+  const audioPlayer1 = document.getElementById('audioButtonOnyomi');
+  const audioPlayer2 = document.getElementById('audioButtonKunyomi');
+
+  audioPlayer1.style.display = 'block';
+  audioPlayer2.style.display = 'block';
+
+  customAlertRemove.style.display = 'none';
   
 }
 
@@ -406,54 +471,7 @@ function screen_background6(){
        //toggle aup the navbar after making a selection
 
    }
-        function disableElement() {
-                    
-          const elementToDisablerevealButton = document.getElementById('revealButton');
-          const elementToDisableprevButton = document.getElementById('prevButton');
-          const elementToDisablenextButton = document.getElementById('nextButton');
-          elementToDisablerevealButton.disabled = true; // Disable the element
-          elementToDisableprevButton.disabled = true; // Disable the element
-          elementToDisablenextButton.disabled = true; // Disable the element
-
-          elementToDisablerevealButton.style.cursor = 'not-allowed'; // Disable the element
-          elementToDisableprevButton.style.cursor = 'not-allowed';  // Disable the element
-          elementToDisablenextButton.style.cursor = 'not-allowed';  // Disable the element
-
-          const audioPlayer1 = document.getElementById('audioButtonOnyomi');
-          const audioPlayer2 = document.getElementById('audioButtonKunyomi');
-
-          audioPlayer1.style.display = 'none';
-          audioPlayer2.style.display = 'none';
-
-
-        } 
-        
-  
-          const disableButtons = document.getElementById('change_screen_background');
-          disableButtons.addEventListener('click', disableElement);
-
-
-           const myButton = document.getElementById('revealButton');
-            const customAlert = document.getElementById('customAlert');
-    
-            myButton.addEventListener('mouseenter', function() {
-                if (myButton.disabled) {
-                    customAlert.style.display = 'block';
-                }
-            });
-            myButton.addEventListener('mouseleave', function() {
-              if (myButton.disabled) {
-                  customAlert.style.display = 'none';
-              }
-            });
-            myButton.addEventListener('click', function() {
-              if (myButton.disabled) {
-                  customAlert.style.display = 'block';
-              }
-            });
-           
-
-
+     
 
 // ----------------------Closing the Card Image Gallery--------------------------------//
       
