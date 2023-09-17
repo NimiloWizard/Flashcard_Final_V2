@@ -163,8 +163,8 @@ function showNextCard(){
  //  ----------------------------------------Settings ---------------------------------------
     const Buttonsettings = document.getElementById('settings')
     Buttonsettings.addEventListener('click', function(){
-      document.getElementById("stack").style.marginTop = '30%';
-      document.getElementById("card").style.marginTop = '30%';
+      document.getElementById("stack").style.marginTop = '20%';
+      document.getElementById("card").style.marginTop = '20%';
     });
 
   // ------------------------------------Audio Playaer ----------------------------------- //
