@@ -2,7 +2,7 @@
     display: none;
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 8%;
     transform: translate(-50%, -50%);
     background-color: white;
     border: 1px solid #ccc;
@@ -50,7 +50,7 @@
     display: none;
     position: fixed;
     top: 50%;
-    left: 49%;
+    left: 11%;
     transform: translate(-50%, -50%);
     background: linear-gradient(245.59deg, #f1dfad 0%, #f1e647 28.53%, #f1aa0f 75.52%); 
     padding: 20px;
