@@ -309,7 +309,7 @@ function open_screenGallery(bg_hide_Image) {
             audioPlayerKunyomi.pause();
           });
           audioButtonKunyomi.style.cursor = 'not-allowed';
-
+         
    } 
         
   
@@ -370,9 +370,24 @@ function hide_screen_gallery(){
   const audioPlayer1 = document.getElementById('audioButtonOnyomi');
   const audioPlayer2 = document.getElementById('audioButtonKunyomi');
 
-  audioPlayer1.style.display = 'block';
-  audioPlayer2.style.display = 'block';
+       
+  const audioButtonOnyomi = document.getElementById('audioButtonOnyomi');
+  const audioPlayerOnyomi = document.getElementById('audioPlayerOnyomi');
+   // Add a click event listener to the image
+    audioButtonOnyomi.addEventListener('click', function() {
+        audioPlayerOnyomi.play();
+    });
+    audioButtonOnyomi.style.cursor = 'pointer';
 
+
+  const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
+  const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
+  // Add a click event listener to the image
+  audioButtonKunyomi.addEventListener('click', function() {
+    audioPlayerKunyomi.play();
+  });
+  audioButtonKunyomi.style.cursor = 'pointer';
+ 
   customAlertRemove.style.display = 'none';
   
 }
