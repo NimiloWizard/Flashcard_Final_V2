@@ -1266,7 +1266,19 @@ input:checked ~ body {
             
     }
     
-    
+     .custom-alert {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 2px solid #f0ecec;
+        box-shadow: 0 0x 10px rgba(245, 5, 5, 0.1);
+        width:  280px;
+        border-radius: 20px;
+    }
 
    #buttons #prevButton{
         position: absolute;
