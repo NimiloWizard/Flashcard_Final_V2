@@ -928,6 +928,22 @@ input:checked ~ body {
              rgba(245, 245, 239,  .4)
         );
     }
+
+       #stack {
+        animation: none; /* Initially no animation */
+        /* Other styles for your element */
+      }
+
+    @keyframes moveDown {
+        from {
+          transform: translateY(0); /* Initial position */
+        }
+        to {
+          transform: translateY(50px); /* Desired position after animation */
+        }
+      }
+
+	 
     .English_Def{
        width: 355px;
         margin-left: 32px;
