@@ -939,10 +939,18 @@ input:checked ~ body {
           transform: translateY(0); /* Initial position */
         }
         to {
-          transform: translateY(300px); /* Desired position after animation */
+          transform: translateY(100px); /* Desired position after animation */
         }
       }
-
+    
+      @keyframes moveDownButtons {
+        from {
+          transform: translateY(0); /* Initial position */
+        }
+        to {
+          transform: translateY(200px); /* Desired position after animation */
+        }
+      }
 	 
     .English_Def{
        width: 355px;
