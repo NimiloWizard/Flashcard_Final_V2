@@ -266,6 +266,7 @@ function open_screenGallery(bg_hide_Image) {
 
   var divElement = document.getElementById("col-1");
   divElement.style.display = "block";  
+  divElement.style.marginBottom = "300px"; 
 
   var captionElement = document.getElementById("bg_caption");
   captionElement.style.display = "block"; // or "initial" based on your design
