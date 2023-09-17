@@ -160,6 +160,13 @@ function showNextCard(){
 
 }
 
+ //  ----------------------------------------Settings ---------------------------------------
+    const Buttonsettings = document.getElementById('settings')
+    Buttonsettings.addEventListener('hover', function(){
+      document.getElementById("stack").style.marginTop = '30%';
+      document.getElementById("card").style.marginTop = '30%';
+    });
+
   // ------------------------------------Audio Playaer ----------------------------------- //
 
        
