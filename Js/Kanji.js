@@ -325,7 +325,12 @@ function open_screenGallery(bg_hide_Image) {
               }
             });
            
-
+            myButton.addEventListener('touchend', function() {
+            if (myButton.disabled) {
+                customAlert.style.display = 'none';
+            }
+            });
+  
 
 
 // ----------------------Closing the Screen Image Gallery--------------------------------//
