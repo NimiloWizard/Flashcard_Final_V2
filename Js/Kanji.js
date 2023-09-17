@@ -292,14 +292,25 @@ function open_screenGallery(bg_hide_Image) {
           elementToDisableprevButton.style.cursor = 'not-allowed';  // Disable the element
           elementToDisablenextButton.style.cursor = 'not-allowed';  // Disable the element
 
-          const audioPlayer1 = document.getElementById('audioButtonOnyomi');
-          const audioPlayer2 = document.getElementById('audioButtonKunyomi');
+                             
+          const audioButtonOnyomi = document.getElementById('audioButtonOnyomi');
+          const audioPlayerOnyomi = document.getElementById('audioPlayerOnyomi');
+           // Add a click event listener to the image
+            audioButtonOnyomi.addEventListener('click', function() {
+                audioPlayerOnyomi.pause();
+            });
+            audioButtonOnyomi.style.cursor = 'not-allowed';
+        
+        
+          const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
+          const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
+          // Add a click event listener to the image
+          audioButtonKunyomi.addEventListener('click', function() {
+            audioPlayerKunyomi.pause();
+          });
+          audioButtonKunyomi.style.cursor = 'not-allowed';
 
-          audioPlayer1.style.display = 'none';
-          audioPlayer2.style.display = 'none';
-
-
-        } 
+   } 
         
   
           const disableButtons = document.getElementById('change_screen_background');
