@@ -277,7 +277,7 @@ function open_screenGallery(bg_hide_Image) {
   close_screenButton.style.display = "block";      
     
  const cardOnscreen = document.getElementById("stack");
-  cardOnscreen.style.transform = "translateY(1%)";
+  cardOnscreen.style.transform = "translateY(2%)";
   
   w3_close()  //toggle aup the navbar after making a selection
 
