@@ -316,7 +316,14 @@ function open_screenGallery(bg_hide_Image) {
           audioButtonKunyomi.style.cursor = 'not-allowed';
          
    } 
-        
+
+          const change_screen_backgroundanimate = document.getElementById('change_screen_background');
+          const elementToAnimate = document.getElementById('stack');
+          
+          change_screen_backgroundanimate.addEventListener('click', () => {
+            elementToAnimate.style.animation = 'moveDown .3s forwards'; // Apply the animation
+          });
+
   
           const disableButtons = document.getElementById('change_screen_background');
           disableButtons.addEventListener('click', disableElement);
