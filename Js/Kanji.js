@@ -278,6 +278,11 @@ function open_screenGallery(bg_hide_Image) {
     
 
   w3_close()  //toggle aup the navbar after making a selection
+
+  
+  const cardOnscreen = document.getElementById("card");
+  cardOnscreen.style.transform = "translateY(100%)";
+
 }
    function disableElement() {
                     
