@@ -1276,7 +1276,7 @@ input:checked ~ body {
         padding: 20px;
         border: 2px solid #f0ecec;
         box-shadow: 0 0x 10px rgba(245, 5, 5, 0.1);
-        width:  280px;
+        width:  300px;
         border-radius: 20px;
     }
 
