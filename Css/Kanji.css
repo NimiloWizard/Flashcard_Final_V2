@@ -1270,11 +1270,11 @@ input:checked ~ body {
         display: none;
         position: fixed;
         top: 50%;
-        left: 50%;
+        left: 49%;
         transform: translate(-50%, -50%);
         background: linear-gradient(245.59deg, #f1dfad 0%, #f1e647 28.53%, #f1aa0f 75.52%); 
         padding: 20px;
-        border: 2px solid #f70707;
+        border: 0px solid #f70707;
         box-shadow: 0 0x 10px rgba(245, 5, 5, 0.1);
         width:  300px;
         border-radius: 20px;
