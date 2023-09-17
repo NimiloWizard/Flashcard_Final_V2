@@ -433,6 +433,32 @@ function screen_background6(){
           disableButtons.addEventListener('click', disableElement);
 
 
+           const myButton = document.getElementById('revealButton');
+            const customAlert = document.getElementById('customAlert');
+    
+            myButton.addEventListener('mouseenter', function() {
+                if (myButton.disabled) {
+                    customAlert.style.display = 'block';
+                }
+            });
+            myButton.addEventListener('mouseleave', function() {
+              if (myButton.disabled) {
+                  customAlert.style.display = 'none';
+              }
+            });
+            myButton.addEventListener('click', function() {
+              if (myButton.disabled) {
+                  customAlert.style.display = 'block';
+              }
+            });
+            myButton.addEventListener('touchend', function() {
+              if (myButton.disabled) {
+                  customAlert.style.display = 'none';
+              }
+            });
+
+
+
 // ----------------------Closing the Card Image Gallery--------------------------------//
       
 
