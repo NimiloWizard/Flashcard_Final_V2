@@ -369,7 +369,10 @@ function open_screenGallery(bg_hide_Image) {
             }
             });
   
-
+          const OkButton = document.getElementById('ok')
+           OkButton.addEventListener('click', function(){
+             customAlert.style.display = 'none';
+           });
 
 // ----------------------Closing the Screen Image Gallery--------------------------------//
 
