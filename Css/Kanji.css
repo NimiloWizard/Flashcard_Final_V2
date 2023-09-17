@@ -1284,7 +1284,7 @@ input:checked ~ body {
 
    #buttons #prevButton{
         position: absolute;
-        top: 80px !important;
+        top: 75px !important;
         margin-bottom: 10px !important;
         left: 39px !important;
         height: 36px;
@@ -1296,7 +1296,7 @@ input:checked ~ body {
 
     #buttons #revealButton{
         position: absolute;
-        top: 80px !important;
+        top: 75px !important;
         margin-bottom: 10px !important;
         left: 157px !important;
         height: 36px;
@@ -1306,7 +1306,7 @@ input:checked ~ body {
     }
     #buttons #nextButton{
         position: absolute;
-        top: 80px !important;
+        top: 75px !important;
         margin-bottom: 10px !important;
         left: 276px !important;
         height: 36px;
