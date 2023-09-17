@@ -317,18 +317,26 @@ function open_screenGallery(bg_hide_Image) {
          
    } 
 
-        const change_screen_backgroundanimate = document.getElementById('change_screen_background');
-        const elementToAnimate = document.getElementById('card');
-        const elementToAnimatereveal =  document.getElementById('revealButton');
-        const elementToAnimateprev = document.getElementById('prevButton');
-        const elementToAnimatenext = document.getElementById('nextButton');
-        
-        change_screen_backgroundanimate.addEventListener('click', () => {
-          elementToAnimate.style.animation = 'moveDown .3s forwards'; // Apply the animation
-          elementToAnimatereveal.animation = 'moveDown .3s forwards';
-          elementToAnimateprev.animation = 'moveDown .3s forwards';
-          elementToAnimatenext.animation = 'moveDown .3s forwards';
-        });
+     const change_screen_backgroundanimate = document.getElementById('change_screen_background');
+     const elementToAnimate = document.getElementById('stack');
+      
+      change_screen_backgroundanimate.addEventListener('click', () => {
+        elementToAnimate.style.animation = 'moveDown .3s forwards'; // Apply the animation
+       
+      });
+      
+      const ButtonsAnimate = document.getElementById('change_screen_background');  // Apply the animation
+      
+      const elementToAnimatereveal =  document.getElementById('revealButton');
+      const elementToAnimateprev = document.getElementById('prevButton');
+      const elementToAnimatenext = document.getElementById('nextButton');
+      
+      ButtonsAnimate.addEventListener('click', () => {
+        elementToAnimatereveal.animation = 'moveDownButtons  .3s forwards';
+        elementToAnimateprev.animation = 'moveDownButtons  .3s forwards';
+        elementToAnimatenext.animation = 'moveDownButtons  .3s forwards';
+      });
+
 
 
   
