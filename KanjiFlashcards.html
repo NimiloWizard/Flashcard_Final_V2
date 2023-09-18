@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https:for practicehomebutton//fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,400;1,700&display=swap" rel="stylesheet">
     <title>Flash Cards</title>
 
@@ -23,8 +23,7 @@
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left  w3-black w3-xlarge" 
          style="display:none" id="mySidebar">
 
-        <button class="w3-bar-item w3-button "
-                onclick="w3_close()" id="button">X</button>
+        <button class="w3-bar-item w3-button "  onclick="w3_close()" id="button">X</button>
 
         <div class="menu_options" >
             
@@ -65,7 +64,7 @@
                 <div class="w3-dropdown-content w3-bar-block">
                     <a href="#" class="w3-bar-item w3-button" id="Hiragana_Flashcards"> Hiragana Flashcards</a>
                     <a href="#" class="w3-bar-item w3-button" id="Katakana_Flashcard"> Katakana Flashcards</a>
-              <!--  <a href="#" class="w3-bar-item w3-button" id="Kanji_Flashcards"> Kanji Flashcards</a>  -->    
+                    <a href="#" class="w3-bar-item w3-button" id="Kanji_Flashcards"> Kanji Flashcards</a>    
                 </div>
             </div> 
 
@@ -138,18 +137,21 @@
 
     </div>    <!--------------End of Col-1----------------------->
 
-  
-    <div class="col col-2" id="col-2">  <!--------------Start of Col-2----------------------->
 
-              <div class="overlayCardscreen"></div>
-        
+
+
+   
+    <div class="col col-2" id="col-2">  <!--------------Start of Col-2----------------------->
+        <div class="overlayCardscreen"></div>
     <div class="stack" id="stack">       <!-- handles the cards on deck  -->
 
   <!-----------------------------------------Cards Starting Point-------------------->
+ 
     
         <div class="card backgoundeffect"  id="card" >
            
 
+          
                     <div class="imgbox">                               <!-- kanji pictures-->
                         <img  src="Images/11ushiro.png">
                     </div>
@@ -2371,12 +2373,12 @@
                 <button class="function_button"   onclick="revealElements()"   id="revealButton"><i  id="eyeIcon" class="fa fa-eye-slash fa-1x "></i></button>  <!-- Closed eye icon -->                        
                 <button class="function_button"   onclick="showPreviousCard()" id="prevButton"> <i class="fa fa-chevron-left fa-2x " ></i> </button>
                 <button class="function_button"   onclick="showNextCard()"     id="nextButton"> <i class="fa fa-chevron-right fa-2x "></i> </button>
-
-               <div class="custom-alert" id="customAlert">
+                
+                <div class="custom-alert" id="customAlert">
                     PLEASE CLOSE THE GALLERY FIRST
-                       Swipe your card down and
-                        Click the close button
-                       <button id="ok">Ok</button>
+                    Swipe your card down and
+                     Click the Close Button
+                     <button id="ok">Ok</button>
                 </div>
                 
             </section> 
@@ -2389,27 +2391,27 @@
     
 
     <div class="col col-1" id="col-3">
-       
-       <div class="background_caption " id="background_caption">  Click the Image below to apply the Theme!</div>
+        
+       <div class="background_caption " id="background_caption"> Click the Image below to apply the Theme!</div>
         
         <div id="card_back_image" class="hide_Image hidden">
     
-                    <div class="background_image " id ="background_image1 " onclick="background1()">
+                    <div class="background_image " id ="background_image1" onclick="changeCardBackground()">
                         <a href="#card" ><img  id="background_image" src="Images/BACKGROUND1.png"  alt="Background Image"></a>  
                     </div>
-                    <div class="background_image " id ="background_image2 " onclick="background2()">
+                    <div class="background_image " id ="background_image2" onclick="changeCardBackground()">
                         <a href="#card" >  <img  id="background_image" src="Images/BACKGROUND2.png"  alt="Background Image"></a> 
                     </div> 
-                    <div class="background_image " id ="background_image3 " onclick="background3()">
+                    <div class="background_image " id ="background_image3" onclick="changeCardBackground()">
                         <a href="#card" >   <img  id="background_image" src="Images/BACKGROUND3.png"  alt="Background Image"></a>
                     </div>  
-                    <div class="background_image " id ="background_image4 " onclick="background4()">
+                    <div class="background_image " id ="background_image4" onclick="changeCardBackground()">
                         <a href="#card" >   <img id="background_image" src="Images/BACKGROUND4.png"  alt="Ba3kground Image"></a>
                     </div>
-                    <div class="background_image " id ="background_image5 " onclick="background5()">
+                    <div class="background_image " id ="background_image5" onclick="changeCardBackground()">
                         <a href="#card" >   <img id="background_image" src="Images/BACKGROUND5.png"  alt="Background Image"></a> 
                     </div>
-                    <div class="background_image " id ="background_image6 " onclick="background6()">
+                    <div class="background_image " id ="background_image6" onclick="changeCardBackground()">
                         <a href="#card" >    <img id="background_image" src="Images/BACKGROUND6.png"  alt="Background Image"></a>
                     </div>
             
@@ -2454,12 +2456,13 @@
     
 </section>   
 
+  
    <!-------------------------------------Scripting------------------------------------>
        <!--      <script src="vanilla-tilt.min.js"></script>   -->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="Js/Kanji.js"></script>
             <script src="Js/leave-message.js"></script>
-           <script>
+            <script>
                                 
                 const homebutton = document.getElementById('home');
                 homebutton.addEventListener('click', function() {
@@ -2491,16 +2494,16 @@
                     }
                    });
 
-                     // Retrieve and apply the card background image from local storage on page load
-                     document.addEventListener('DOMContentLoaded', function() {
+                  // Retrieve and apply the card background image from local storage on page load
+                    document.addEventListener('DOMContentLoaded', function() {
                         const cardBackgroundImageUrl = localStorage.getItem('cardbackground');
                         if (cardBackgroundImageUrl) {
                             changeCardBackground(cardBackgroundImageUrl);
                                                }
                     });
+                    
 
             </script>
-
 
  </div>        
 </body>
