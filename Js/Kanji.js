@@ -496,69 +496,58 @@ function open_screenGallery(bg_hide_Image) {
      
 
 // ----------------------setting up Image Gallery for background change--------------------------------//
+// Function to change the background image based on the option clicked
 
-
-
-function background1(){
-      
-   // Set the background of the card
-      const elements = document.querySelectorAll('.backgoundeffect'); 
-       elements.forEach(function(element) {
-          element.style.background = 'url("Images/BACKGROUND1.png") center center / cover';
-      });
-    
-    // set the background color of the button
-      const revealButton = document.querySelector('#revealButton');
-      const prevButton = document.querySelector('#prevButton');
-      const nextButton = document.querySelector('#nextButton');
-
-     
-      prevButton.style.background =   'linear-gradient(to right,  #64350c,gray )';
-      revealButton.style.background = 'linear-gradient(to right,  gray, #64350c,  gray)';
-      nextButton.style.background =   'linear-gradient(to right, gray, #64350c)';
-  
-    // set the color of the text of the button
-    //  revealButton.style.color ='black';
-    //  prevButton.style.color = 'white';
-    //  nextButton.style.color = 'white';
-    
-}
-
-
-function background2(){
-
-        // Set the background of the card
-        const elements = document.querySelectorAll('.backgoundeffect');
-        elements.forEach(function(element) {
-            element.style.background = 'url("Images/BACKGROUND2.png") center center / cover';
-        });
-
-        // set the background color of the button
-        const revealButton = document.querySelector('#revealButton');
-        const prevButton = document.querySelector('#prevButton');
-        const nextButton = document.querySelector('#nextButton');
-
-        
-        prevButton.style.background =   'linear-gradient(to right, #78a6f5, white)';
-        revealButton.style.background = 'linear-gradient(to right, white, #78a6f5, white)';
-        nextButton.style.background =   'linear-gradient(to right, white, #78a6f5)';
-
-        
-
-        // set the color of the text of the button
-       // revealButton.style.color ='black';
-       // prevButton.style.color = 'white';
-       // nextButton.style.color = 'white';
-}
-
-
-function background3(){
-  // Set the background of the card
+function changeCardBackground(newCardBackgroundImageUrl) {
+ 
+  // Set the background for all cards in the stack
   const elements = document.querySelectorAll('.backgoundeffect');
   elements.forEach(function(element) {
-      element.style.background = 'url("Images/BACKGROUND3.png") center center / cover';
+      element.style.background = `url("${newCardBackgroundImageUrl}") center center / cover`;
   });
+
+  // Store the selected background image URL in local storage
+  localStorage.setItem('cardbackground', newCardBackgroundImageUrl);
+}
+  
+
+// Example usage with onclick events on 6 images
+  document.getElementById('background_image1').onclick = function() {
+  const backgroundOption1 = 'Images/BACKGROUND1.png'; // Replace with the actual URL
+  changeCardBackground(backgroundOption1);
+
+  const revealButton = document.querySelector('#revealButton');
+  const prevButton = document.querySelector('#prevButton');
+  const nextButton = document.querySelector('#nextButton');
  
+  prevButton.style.background =   'linear-gradient(to right,  #64350c,gray )';
+  revealButton.style.background = 'linear-gradient(to right,  gray, #64350c,  gray)';
+  nextButton.style.background =   'linear-gradient(to right, gray, #64350c)';
+
+};
+
+
+document.getElementById('background_image2').onclick = function() {
+  const backgroundOption2 = 'Images/BACKGROUND2.png'; // Replace with the actual URL
+  changeCardBackground(backgroundOption2);
+
+
+    // set the background color of the button
+    const revealButton = document.querySelector('#revealButton');
+    const prevButton = document.querySelector('#prevButton');
+    const nextButton = document.querySelector('#nextButton');
+
+    
+    prevButton.style.background =   'linear-gradient(to right, #78a6f5, white)';
+    revealButton.style.background = 'linear-gradient(to right, white, #78a6f5, white)';
+    nextButton.style.background =   'linear-gradient(to right, white, #78a6f5)';
+
+};
+document.getElementById('background_image3').onclick = function() {
+  const backgroundOption3 = 'Images/BACKGROUND3.png'; // Replace with the actual URL
+  changeCardBackground(backgroundOption3);
+  
+
    // set the background color of the button
    const revealButton = document.querySelector('#revealButton');
    const prevButton = document.querySelector('#prevButton');
@@ -569,91 +558,59 @@ function background3(){
    revealButton.style.background = 'linear-gradient(to right, lightblue, gray, lightblue)';
    nextButton.style.background =   'linear-gradient(to right, lightblue, gray)';
 
-   // set the color of the text of the button
-  // revealButton.style.color ='black';
-  // prevButton.style.color = 'white';
-   //nextButton.style.color = 'white';
+};
 
-}
-
-
-function background4(){
-       
-  // Set the background of the card
-      const elements = document.querySelectorAll('.backgoundeffect');
-      elements.forEach(function(element) {
-          element.style.background = 'url("Images/BACKGROUND4.png") center center / cover';
-      });
-
-          // set the background color of the button
-      const revealButton = document.querySelector('#revealButton');
-      const prevButton = document.querySelector('#prevButton');
-      const nextButton = document.querySelector('#nextButton');
-
-      
-      prevButton.style.background =   'linear-gradient(to right, gray, lightblue)';
-      revealButton.style.background = 'linear-gradient(to right, lightblue, gray, lightblue)';
-      nextButton.style.background =   'linear-gradient(to right, lightblue, gray)';
-
-      // set the color of the text of the button
-     // revealButton.style.color ='black';
-     // prevButton.style.color = 'white';
-     // nextButton.style.color = 'white';
+document.getElementById('background_image4').onclick = function() {
+  const backgroundOption4 = 'Images/BACKGROUND4.png'; // Replace with the actual URL
+  changeCardBackground(backgroundOption4);
  
-}
 
+  // set the background color of the button
+  const revealButton = document.querySelector('#revealButton');
+  const prevButton = document.querySelector('#prevButton');
+  const nextButton = document.querySelector('#nextButton');
 
-function background5(){
   
-      // Set the background of the card
-      const elements = document.querySelectorAll('.backgoundeffect');
-      elements.forEach(function(element) {
-          element.style.background = 'url("Images/BACKGROUND5.png") center center / cover';
-      });
+  prevButton.style.background =   'linear-gradient(to right, gray, lightblue)';
+  revealButton.style.background = 'linear-gradient(to right, lightblue, gray, lightblue)';
+  nextButton.style.background =   'linear-gradient(to right, lightblue, gray)';
 
-        // set the background color of the button
-        const revealButton = document.querySelector('#revealButton');
-        const prevButton = document.querySelector('#prevButton');
-        const nextButton = document.querySelector('#nextButton');
+};
+document.getElementById('background_image5').onclick = function() {
+  const backgroundOption5 = 'Images/BACKGROUND5.png'; // Replace with the actual URL
+  changeCardBackground(backgroundOption5);
   
-        
-        prevButton.style.background =   'linear-gradient(to right,  green, white)';
-        revealButton.style.background = 'linear-gradient(to right, white, green,white)';
-        nextButton.style.background =   'linear-gradient(to right, white, green)';
-  
-        // set the color of the text of the button
-       // revealButton.style.color ='black';
-       // prevButton.style.color = 'white';
-       // nextButton.style.color = 'white';
+
+   // set the background color of the button
+   const revealButton = document.querySelector('#revealButton');
+   const prevButton = document.querySelector('#prevButton');
+   const nextButton = document.querySelector('#nextButton');
+
    
-      
-}
+   prevButton.style.background =   'linear-gradient(to right,  green, white)';
+   revealButton.style.background = 'linear-gradient(to right, white, green,white)';
+   nextButton.style.background =   'linear-gradient(to right, white, green)';
 
-
-function background6(){
-      
-      // Set the background of the card
-      const elements = document.querySelectorAll('.backgoundeffect');
-      elements.forEach(function(element) {
-          element.style.background = 'url("Images/BACKGROUND6.png") center center / cover';
-      });
-
-      // set the background color of the button
-      const revealButton = document.querySelector('#revealButton');
-      const prevButton = document.querySelector('#prevButton');
-      const nextButton = document.querySelector('#nextButton');
-
-      
-      prevButton.style.background =   'linear-gradient(to right, #64350c, lightblue)';
-      revealButton.style.background = 'linear-gradient(to right,lightblue, #64350c,lightblue)';
-      nextButton.style.background =   'linear-gradient(to right, lightblue, #64350c)';
-
-      // set the color of the text of the button
-     // revealButton.style.color ='black';
-     // prevButton.style.color = 'white';
-      //nextButton.style.color = 'white';
+};
+document.getElementById('background_image6').onclick = function() {
+  const backgroundOption6 = 'Images/BACKGROUND6.png'; // Replace with the actual URL
+  changeCardBackground(backgroundOption6);
   
-}
+
+    // set the background color of the button
+    const revealButton = document.querySelector('#revealButton');
+    const prevButton = document.querySelector('#prevButton');
+    const nextButton = document.querySelector('#nextButton');
+
+    
+    prevButton.style.background =   'linear-gradient(to right, #64350c, lightblue)';
+    revealButton.style.background = 'linear-gradient(to right,lightblue, #64350c,lightblue)';
+    nextButton.style.background =   'linear-gradient(to right, lightblue, #64350c)';
+
+
+};
+
+  
 
 //  ------------------------------------ Default Card background color ------------------
      
@@ -939,4 +896,164 @@ function hide_screen_gallery(){
   customAlertRemove.style.display = 'none';
   
 }
+*/
+
+/*
+
+function background1(){
+      
+   // Set the background of the card
+      const elements = document.querySelectorAll('.backgoundeffect'); 
+       elements.forEach(function(element) {
+          element.style.background = 'url("Images/BACKGROUND1.png") center center / cover';
+      });
+    
+    // set the background color of the button
+      const revealButton = document.querySelector('#revealButton');
+      const prevButton = document.querySelector('#prevButton');
+      const nextButton = document.querySelector('#nextButton');
+
+     
+      prevButton.style.background =   'linear-gradient(to right,  #64350c,gray )';
+      revealButton.style.background = 'linear-gradient(to right,  gray, #64350c,  gray)';
+      nextButton.style.background =   'linear-gradient(to right, gray, #64350c)';
+  
+    // set the color of the text of the button
+    //  revealButton.style.color ='black';
+    //  prevButton.style.color = 'white';
+    //  nextButton.style.color = 'white';
+    
+}
+
+
+function background2(){
+
+        // Set the background of the card
+        const elements = document.querySelectorAll('.backgoundeffect');
+        elements.forEach(function(element) {
+            element.style.background = 'url("Images/BACKGROUND2.png") center center / cover';
+        });
+
+        // set the background color of the button
+        const revealButton = document.querySelector('#revealButton');
+        const prevButton = document.querySelector('#prevButton');
+        const nextButton = document.querySelector('#nextButton');
+
+        
+        prevButton.style.background =   'linear-gradient(to right, #78a6f5, white)';
+        revealButton.style.background = 'linear-gradient(to right, white, #78a6f5, white)';
+        nextButton.style.background =   'linear-gradient(to right, white, #78a6f5)';
+
+        
+
+        // set the color of the text of the button
+       // revealButton.style.color ='black';
+       // prevButton.style.color = 'white';
+       // nextButton.style.color = 'white';
+}
+
+
+function background3(){
+  // Set the background of the card
+  const elements = document.querySelectorAll('.backgoundeffect');
+  elements.forEach(function(element) {
+      element.style.background = 'url("Images/BACKGROUND3.png") center center / cover';
+  });
+ 
+   // set the background color of the button
+   const revealButton = document.querySelector('#revealButton');
+   const prevButton = document.querySelector('#prevButton');
+   const nextButton = document.querySelector('#nextButton');
+
+   
+   prevButton.style.background =   'linear-gradient(to right, gray, lightblue)';
+   revealButton.style.background = 'linear-gradient(to right, lightblue, gray, lightblue)';
+   nextButton.style.background =   'linear-gradient(to right, lightblue, gray)';
+
+   // set the color of the text of the button
+  // revealButton.style.color ='black';
+  // prevButton.style.color = 'white';
+   //nextButton.style.color = 'white';
+
+}
+
+
+function background4(){
+       
+  // Set the background of the card
+      const elements = document.querySelectorAll('.backgoundeffect');
+      elements.forEach(function(element) {
+          element.style.background = 'url("Images/BACKGROUND4.png") center center / cover';
+      });
+
+          // set the background color of the button
+      const revealButton = document.querySelector('#revealButton');
+      const prevButton = document.querySelector('#prevButton');
+      const nextButton = document.querySelector('#nextButton');
+
+      
+      prevButton.style.background =   'linear-gradient(to right, gray, lightblue)';
+      revealButton.style.background = 'linear-gradient(to right, lightblue, gray, lightblue)';
+      nextButton.style.background =   'linear-gradient(to right, lightblue, gray)';
+
+      // set the color of the text of the button
+     // revealButton.style.color ='black';
+     // prevButton.style.color = 'white';
+     // nextButton.style.color = 'white';
+ 
+}
+
+
+function background5(){
+  
+      // Set the background of the card
+      const elements = document.querySelectorAll('.backgoundeffect');
+      elements.forEach(function(element) {
+          element.style.background = 'url("Images/BACKGROUND5.png") center center / cover';
+      });
+
+        // set the background color of the button
+        const revealButton = document.querySelector('#revealButton');
+        const prevButton = document.querySelector('#prevButton');
+        const nextButton = document.querySelector('#nextButton');
+  
+        
+        prevButton.style.background =   'linear-gradient(to right,  green, white)';
+        revealButton.style.background = 'linear-gradient(to right, white, green,white)';
+        nextButton.style.background =   'linear-gradient(to right, white, green)';
+  
+        // set the color of the text of the button
+       // revealButton.style.color ='black';
+       // prevButton.style.color = 'white';
+       // nextButton.style.color = 'white';
+   
+      
+}
+
+
+function background6(){
+      
+      // Set the background of the card
+      const elements = document.querySelectorAll('.backgoundeffect');
+      elements.forEach(function(element) {
+          element.style.background = 'url("Images/BACKGROUND6.png") center center / cover';
+      });
+
+      // set the background color of the button
+      const revealButton = document.querySelector('#revealButton');
+      const prevButton = document.querySelector('#prevButton');
+      const nextButton = document.querySelector('#nextButton');
+
+      
+      prevButton.style.background =   'linear-gradient(to right, #64350c, lightblue)';
+      revealButton.style.background = 'linear-gradient(to right,lightblue, #64350c,lightblue)';
+      nextButton.style.background =   'linear-gradient(to right, lightblue, #64350c)';
+
+      // set the color of the text of the button
+     // revealButton.style.color ='black';
+     // prevButton.style.color = 'white';
+      //nextButton.style.color = 'white';
+  
+}
+
 */
