@@ -421,7 +421,7 @@ function open_screenGallery(bg_hide_Image) {
 
         
          // Assuming 'element' is the element you want to scroll
-          let element = document.getElementsByname('card_back_image');
+          let element = document.getElementsByName('card_back_image');
 
           // Perform your specific action (e.g., after a button click, a timeout, etc.)
           function performSpecificAction() {
@@ -496,6 +496,7 @@ function open_screenGallery(bg_hide_Image) {
      
 
 // ----------------------setting up Image Gallery for background change--------------------------------//
+
 // Function to change the background image based on the option clicked
 
 function changeCardBackground(newCardBackgroundImageUrl) {
@@ -611,6 +612,7 @@ document.getElementById('background_image6').onclick = function() {
 };
 
   
+
 
 //  ------------------------------------ Default Card background color ------------------
      
@@ -897,8 +899,8 @@ function hide_screen_gallery(){
   
 }
 */
-
 /*
+
 
 function background1(){
       
@@ -924,7 +926,6 @@ function background1(){
     //  nextButton.style.color = 'white';
     
 }
-
 
 function background2(){
 
@@ -1055,5 +1056,4 @@ function background6(){
       //nextButton.style.color = 'white';
   
 }
-
 */
