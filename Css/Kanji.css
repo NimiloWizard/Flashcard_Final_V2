@@ -10,6 +10,8 @@ body{
     width: 100%;
     scroll-behavior: smooth;
     overscroll-behavior-y: none; /* Disable overscroll behavior */
+    background: linear-gradient(245.59deg, #070707 0%, #fcfbfbf7 50.53%, #0f0f0f 90.52%);
+
 }
 body{
     
