@@ -2454,14 +2454,45 @@
     
 </section>   
 
-  
    <!-------------------------------------Scripting------------------------------------>
        <!--      <script src="vanilla-tilt.min.js"></script>   -->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="Js/Kanji.js" defer></script>
+            <script src="Js/Kanji.js"></script>
             <script src="Js/leave-message.js"></script>
+            <script>
+                                
+                const homebutton = document.getElementById('home');
+                homebutton.addEventListener('click', function() {
+                    w3_close();
+                    leaveMessage.style.display = 'block';
+                    setupLeaveMessage();
+                });
+  
+                const backgroundImageUrl = localStorage.getItem('background');
 
-         
+                // Check if backgroundImageUrl is not null or undefined
+                if (backgroundImageUrl) {
+                    // Format the background property with center center / cover
+                    document.body.style.background = `url("${backgroundImageUrl}") center center / cover`;
+                }
+                         
+                  // Retrieve the background image URL from localStorage
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Retrieve the background image URL from localStorage
+                    const backgroundImageUrl = localStorage.getItem('background');
+
+                    // Check if backgroundImageUrl is not null or undefined
+                    if (backgroundImageUrl) {
+                        // Apply background image using individual properties
+                        document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
+                        document.body.style.backgroundPosition = 'center center';
+                        document.body.style.backgroundSize = 'cover';
+                        document.body.style.backgroundRepeat = 'no-repeat';
+                    }
+                   });
+
+            </script>
+
 
  </div>        
 </body>
