@@ -254,40 +254,6 @@ function showNextCard(){
   });
 
 
-// ----------------- Toggle to Show Image Gallery for screen background change------------------//     
-
-function open_screenGallery(bg_hide_Image) {
-  var x = document.getElementsByClassName("bg_hide_Image");
-  for (var i = 0; i < x.length; i++) {
-      x[i].classList.remove("bg_visible"); // Remove the visible class from all elements
-  }
-      
-  
-
-  var elementToShow = document.getElementById(bg_hide_Image);
-  elementToShow.classList.add("bg_visible"); // Add visible class to the selected element
-
-  var divElement = document.getElementById("col-1");
-  divElement.style.display = "block";  
-  divElement.style.marginBottom = "300px"; 
-
-  var captionElement = document.getElementById("bg_caption");
-  captionElement.style.display = "block"; // or "initial" based on your design
-                    
- // var Show_screenImageGallery = document.getElementById("screen_back_image");
-//  Show_screenImageGallery.style.display = "grid"; // or "initial" based on your design       
-
-  var close_screenButton = document.getElementById("bg_hide_Image");
-  close_screenButton.style.display = "block";      
-    
-
-  
-  w3_close()  //toggle aup the navbar after making a selection
-
-  
- 
-
-}
    function disableElement() {
                     
           const elementToDisablerevealButton = document.getElementById('revealButton');
@@ -321,63 +287,8 @@ function open_screenGallery(bg_hide_Image) {
          
    } 
 
-     const change_screen_backgroundanimate = document.getElementById('change_screen_background');
-     const elementToAnimate = document.getElementById('stack');
-      
-      change_screen_backgroundanimate.addEventListener('click', () => {
-        elementToAnimate.style.animation = 'moveDown .3s forwards'; // Apply the animation
-       
-      });
-      
-      const ButtonsAnimate = document.getElementById('change_screen_background');  // Apply the animation
-      
-      const elementToAnimatereveal =  document.getElementById('revealButton');
-      const elementToAnimateprev = document.getElementById('prevButton');
-      const elementToAnimatenext = document.getElementById('nextButton');
-      
-      ButtonsAnimate.addEventListener('click', () => {
-        elementToAnimatereveal.animation = 'moveDownButtons  .3s forwards';
-        elementToAnimateprev.animation = 'moveDownButtons  .3s forwards';
-        elementToAnimatenext.animation = 'moveDownButtons  .3s forwards';
-      });
-
-
-
   
-          const disableButtons = document.getElementById('change_screen_background');
-          disableButtons.addEventListener('click', disableElement);
-
-
-           const myButton = document.getElementById('revealButton');
-            const customAlert = document.getElementById('customAlert');
-    
-            myButton.addEventListener('mouseenter', function() {
-                if (myButton.disabled) {
-                    customAlert.style.display = 'block';
-                }
-            });
-            myButton.addEventListener('mouseleave', function() {
-              if (myButton.disabled) {
-                  customAlert.style.display = 'none';
-              }
-            });
-            myButton.addEventListener('click', function() {
-              if (myButton.disabled) {
-                  customAlert.style.display = 'block';
-              }
-            });
-           
-            myButton.addEventListener('touchend', function() {
-            if (myButton.disabled) {
-                customAlert.style.display = 'none';
-            }
-            });
-  
-          const OkButton = document.getElementById('ok')
-           OkButton.addEventListener('click', function(){
-             customAlert.style.display = 'none';
-           });
-
+   
 
 
 
@@ -495,7 +406,7 @@ function open_screenGallery(bg_hide_Image) {
         
      
 
-// ----------------------setting up Image Gallery for background change--------------------------------//
+// ----------------------setting up Image Gallery for  Card background change--------------------------------//
 
 // Function to change the background image based on the option clicked
 
@@ -1056,4 +967,91 @@ function background6(){
       //nextButton.style.color = 'white';
   
 }
+*/
+
+/*
+// ----------------- Toggle to Show Image Gallery for screen background change------------------//     
+
+function open_screenGallery(bg_hide_Image) {
+  var x = document.getElementsByClassName("bg_hide_Image");
+  for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("bg_visible"); // Remove the visible class from all elements
+  }
+      
+  
+
+  var elementToShow = document.getElementById(bg_hide_Image);
+  elementToShow.classList.add("bg_visible"); // Add visible class to the selected element
+
+  var divElement = document.getElementById("col-1");
+  divElement.style.display = "block";  
+  divElement.style.marginBottom = "300px"; 
+
+  var captionElement = document.getElementById("bg_caption");
+  captionElement.style.display = "block"; // or "initial" based on your design
+                    
+ // var Show_screenImageGallery = document.getElementById("screen_back_image");
+//  Show_screenImageGallery.style.display = "grid"; // or "initial" based on your design       
+
+  var close_screenButton = document.getElementById("bg_hide_Image");
+  close_screenButton.style.display = "block";      
+    
+
+  
+  w3_close()  //toggle aup the navbar after making a selection
+
+  
+ 
+
+}
+*/
+   /*
+      const ButtonsAnimate = document.getElementById('change_screen_background');  // Apply the animation
+      
+      const elementToAnimatereveal =  document.getElementById('revealButton');
+      const elementToAnimateprev = document.getElementById('prevButton');
+      const elementToAnimatenext = document.getElementById('nextButton');
+      
+      ButtonsAnimate.addEventListener('click', () => {
+        elementToAnimatereveal.animation = 'moveDownButtons  .3s forwards';
+        elementToAnimateprev.animation = 'moveDownButtons  .3s forwards';
+        elementToAnimatenext.animation = 'moveDownButtons  .3s forwards';
+      });
+*/
+/*
+  
+          const disableButtons = document.getElementById('change_screen_background');
+          disableButtons.addEventListener('click', disableElement);
+
+
+           const myButton = document.getElementById('revealButton');
+            const customAlert = document.getElementById('customAlert');
+    
+            myButton.addEventListener('mouseenter', function() {
+                if (myButton.disabled) {
+                    customAlert.style.display = 'block';
+                }
+            });
+            myButton.addEventListener('mouseleave', function() {
+              if (myButton.disabled) {
+                  customAlert.style.display = 'none';
+              }
+            });
+            myButton.addEventListener('click', function() {
+              if (myButton.disabled) {
+                  customAlert.style.display = 'block';
+              }
+            });
+           
+            myButton.addEventListener('touchend', function() {
+            if (myButton.disabled) {
+                customAlert.style.display = 'none';
+            }
+            });
+  
+          const OkButton = document.getElementById('ok')
+           OkButton.addEventListener('click', function(){
+             customAlert.style.display = 'none';
+           });
+
 */
