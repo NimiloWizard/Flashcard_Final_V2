@@ -26,15 +26,11 @@ let currentCardIndex = 0;
 
 // ----------------------------- Home Scree --------------------------------------------//
 
-const homebutton = document.getElementById('home');
-homebutton.addEventListener('click', function() {
-  w3_close();
- 
-    leaveMessage.style.display = 'block';
-    setupLeaveMessage();
 
-  
-});
+
+
+
+
 
 /*
 const homebutton = document.getElementById('home');
@@ -382,109 +378,11 @@ function open_screenGallery(bg_hide_Image) {
              customAlert.style.display = 'none';
            });
 
-// ----------------------Closing the Screen Image Gallery--------------------------------//
-
-
-let bg_hide_Image = document.querySelector("#bg_hide_Image");
-bg_hide_Image.addEventListener("click", hide_screen_gallery);
-
-function hide_screen_gallery(){
-  document.getElementById("bg_caption").style.display = "none";
-  document.getElementById("screen_back_image").style.display = "none";
-  document.getElementById("bg_hide_Image").style.display = "none";
-  document.getElementById("col-1").style.display = "none";
-
-   const elementToDisablerevealButton = document.getElementById('revealButton');
-  const elementToDisableprevButton = document.getElementById('prevButton');
-  const elementToDisablenextButton = document.getElementById('nextButton');
-  elementToDisablerevealButton.disabled = false; // Disable the element
-  elementToDisableprevButton.disabled = false; // Disable the element
-  elementToDisablenextButton.disabled = false; // Disable the element
-
-  elementToDisablerevealButton.style.cursor = 'pointer'; // Disable the element
-  elementToDisableprevButton.style.cursor = 'pointer';  // Disable the element
-  elementToDisablenextButton.style.cursor = 'pointer';  // Disable the element
-
-  const audioPlayer1 = document.getElementById('audioButtonOnyomi');
-  const audioPlayer2 = document.getElementById('audioButtonKunyomi');
-
-       
-  const audioButtonOnyomi = document.getElementById('audioButtonOnyomi');
-  const audioPlayerOnyomi = document.getElementById('audioPlayerOnyomi');
-   // Add a click event listener to the image
-    audioButtonOnyomi.addEventListener('click', function() {
-        audioPlayerOnyomi.play();
-    });
-    audioButtonOnyomi.style.cursor = 'pointer';
-
-
-  const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
-  const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
-  // Add a click event listener to the image
-  audioButtonKunyomi.addEventListener('click', function() {
-    audioPlayerKunyomi.play();
-  });
-  audioButtonKunyomi.style.cursor = 'pointer';
- 
-  customAlertRemove.style.display = 'none';
-  
-}
-
-
 
 
 
 // ----------------------setting up Image Gallery for Screen Image change--------------------------------//
 
-
-
-function screen_background1(){
-  
-// Set the background of the screen
-    
-    document.querySelector('body').style.background = 'url("Images/BACKGROUND1.png") center center / cover';    
-    document.getElementById("bg_caption").style.color = "white";
-            
-}
-function screen_background2(){
-  
-// Set the background of the card
-
-    document.querySelector('body').style.background = 'url("Images/BACKGROUND2.png") center center / cover';          
-    document.getElementById("bg_caption").style.color = "white";    
-}
-
-function screen_background3(){
-  
-// Set the background of the card
-
-    document.querySelector('body').style.background = 'url("Images/BACKGROUND3.png") center center / cover';          
-     document.getElementById("bg_caption").style.color = "white";        
-}
-
-function screen_background4(){
-  
-// Set the background of the card
-
-    document.querySelector('body').style.background = 'url("Images/BACKGROUND4.png") center center / cover';          
-     document.getElementById("bg_caption").style.color = "white";         
-}
-
-function screen_background5(){
-  
-// Set the background of the card
-
-    document.querySelector('body').style.background = 'url("Images/BACKGROUND5.png") center center / cover';          
-    document.getElementById("bg_caption").style.color = "white";         
-}
-
-function screen_background6(){
-  
-// Set the background of the card
-
-    document.querySelector('body').style.background = 'url("Images/BACKGROUND6.png") center center / cover';          
-    document.getElementById("bg_caption").style.color = "white";         
-}
 
 
 // ----------------- Toggle to Show Image Gallery for Card background change------------------//     
@@ -992,5 +890,53 @@ function  SlideOpen() {                                           //erase upon t
 }
 
 
-
+/*
       
+// ----------------------Closing the Screen Image Gallery--------------------------------//
+
+
+let bg_hide_Image = document.querySelector("#bg_hide_Image");
+bg_hide_Image.addEventListener("click", hide_screen_gallery);
+
+function hide_screen_gallery(){
+  document.getElementById("bg_caption").style.display = "none";
+  document.getElementById("screen_back_image").style.display = "none";
+  document.getElementById("bg_hide_Image").style.display = "none";
+  document.getElementById("col-1").style.display = "none";
+
+   const elementToDisablerevealButton = document.getElementById('revealButton');
+  const elementToDisableprevButton = document.getElementById('prevButton');
+  const elementToDisablenextButton = document.getElementById('nextButton');
+  elementToDisablerevealButton.disabled = false; // Disable the element
+  elementToDisableprevButton.disabled = false; // Disable the element
+  elementToDisablenextButton.disabled = false; // Disable the element
+
+  elementToDisablerevealButton.style.cursor = 'pointer'; // Disable the element
+  elementToDisableprevButton.style.cursor = 'pointer';  // Disable the element
+  elementToDisablenextButton.style.cursor = 'pointer';  // Disable the element
+
+  const audioPlayer1 = document.getElementById('audioButtonOnyomi');
+  const audioPlayer2 = document.getElementById('audioButtonKunyomi');
+
+       
+  const audioButtonOnyomi = document.getElementById('audioButtonOnyomi');
+  const audioPlayerOnyomi = document.getElementById('audioPlayerOnyomi');
+   // Add a click event listener to the image
+    audioButtonOnyomi.addEventListener('click', function() {
+        audioPlayerOnyomi.play();
+    });
+    audioButtonOnyomi.style.cursor = 'pointer';
+
+
+  const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
+  const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
+  // Add a click event listener to the image
+  audioButtonKunyomi.addEventListener('click', function() {
+    audioPlayerKunyomi.play();
+  });
+  audioButtonKunyomi.style.cursor = 'pointer';
+ 
+  customAlertRemove.style.display = 'none';
+  
+}
+*/
