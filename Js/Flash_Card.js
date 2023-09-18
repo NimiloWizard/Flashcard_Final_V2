@@ -14,160 +14,13 @@ function w3_close() {
   
 }
 
+let Delete = document.querySelector('#reset');
+Delete.addEventListener('click', clear);
 
-
-let previousCard = null;
-let areElementsHidden = true; // Track the elements' hidden state
-
-let stack = document.querySelector(".stack");
-let cards = document.querySelectorAll(".card");
-let currentCardIndex = 0;
-
-[...stack.children].reverse().forEach(card => stack.append(card));
-
-
-// -----------------------------  Reveal Element Button --------------------------------//
-
-document.getElementById("revealButton").addEventListener("click", revealElements);
-
-const audiorevealButton = document.getElementById('revealButton');
-const audioPlayerreveal = document.getElementById('audiorevealButton');
-// Add a click event listener to the button
-audiorevealButton.addEventListener('click', function() {
-     audioPlayerreveal.play();
-});
-
-function revealElements() {
-
-  if (areElementsHidden) {
-
-      let elementsToReveal = document.querySelectorAll(".element-to-hide");
-      elementsToReveal.forEach(element => {
-         
-          element.style.display = "block"; 
-         
-      });
-
-      areElementsHidden = false;
-      
-  }
+function clear() {
+    localStorage.clear();
+    alert("Data has been cleared.");
 }
- 
-// -----------------------------   Previous Element Button --------------------------------//
-document.addEventListener('DOMContentLoaded', function() {
-  const audioprevButton = document.getElementById('prevButton');
-  const audioPlayerprev = document.getElementById('audioprevButton');
-  // Add a click event listener to the button
-  audioprevButton.addEventListener('click', function() {
-       audioPlayerprev.play();
-  });
-  
-});
-
-let prevButton = document.querySelector("#prevButton");
-prevButton.addEventListener("click", showPreviousCard);
-
-
-function showPreviousCard() {
-
-  if (previousCard) {
-    
-       previousCard.style.animation = "slideIn";
-      
-      setTimeout(() => {
-        
-          previousCard.style.animation = " ";
-          stack.appendChild(previousCard); // Append the previous card back
-         
-          // Hide the elements after the card swap
-          let elementsToHide = document.querySelectorAll(".element-to-hide");
-          elementsToHide.forEach(element => {
-            element.style.display = "none";
-            });
-
-      }, 200);
-      areElementsHidden = true;
-  }
-}
-
-
-
-// -----------------------------  NExt Element Button --------------------------------//
-
-let nextButton = document.querySelector("#nextButton")
-nextButton.addEventListener("click", showNextCard);
-
-
-const audionextButton = document.getElementById('nextButton');
-const audioPlayernext = document.getElementById('audionextButton');
-// Add a click event listener to the button
-audionextButton.addEventListener('click', function() {
-  audioPlayernext.play();
-});
-
-function showNextCard(){
-
-    let card = document.querySelector(".card:last-child");
-   
-    let elementsToHide = document.querySelectorAll(".element-to-hide");
-    elementsToHide.forEach(element => {
-      element.style.display = "none";
-    });
-
-    card.style.animation = "swap 500ms forwards"; 
-  
-  
-    setTimeout(() => {
-      card.style.animation = "";
-      stack.prepend(card);
-
-     
-       // Hide the elements after the card swap
-      
-       areElementsHidden = true;
-       previousCard = card;
-
-    }, 500);
-
-}
-
-  // ------------------------------------Audio Player ----------------------------------- //
-
-       
-               // Get references to the image and audio elements
-           const audioButtonOnyomi = document.getElementById('audioButtonOnyomi');
-           const audioPlayerOnyomi = document.getElementById('audioPlayerOnyomi');
-          
-            // Add a click event listener to the image
-              audioButtonOnyomi.addEventListener('click', function() {
-                // Check if the audio is paused, if so, play it; otherwise, pause it
-           //     if (audioPlayerOnyomi.paused) {
-                  audioPlayerOnyomi.play();
-                 // audioButtonOnyomi.src = 'pause-button.png'; // Change the image to a pause button
-           //     } else {
-            //      audioPlayerOnyomi.pause();
-                 // audioButtonOnyomi.src = 'play-button.png'; // Change the image back to a play button
-           //     }
-           
-        
-              });
-
-           const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
-           const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
-           // Add a click event listener to the image
-             audioButtonKunyomi.addEventListener('click', function() {
-             // Check if the audio is paused, if so, play it; otherwise, pause it
-           //  if (audioPlayerKunyomi.paused) {
-               audioPlayerKunyomi.play();
-              // audioButtonKunyomi.src = 'pause-button.png'; // Change the image to a pause button
-           //  } else {
-          //     audioPlayerKunyomi.pause();
-              // audioButtonKunyomi.src = 'play-button.png'; // Change the image back to a play button
-        //     }
-
-             });
-
-
 
 
   // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
@@ -272,21 +125,144 @@ function hide_screen_gallery(){
 // ----------------------setting up Image Gallery for Screen Image change--------------------------------//
 
 
+// Function to change the background image based on the option clicked
+function changeBackgroundImage(newBackgroundImageUrl) {
+  // Set the background image on the page
+  document.body.style.background = `url("${newBackgroundImageUrl}")`;
 
-function screen_background1(){
+  // Store the new background image URL in localStorage
+  localStorage.setItem('background', newBackgroundImageUrl);
+
+ 
+}
+
+
+// Example usage with onclick events on 6 images
+document.getElementById('background_image1').onclick = function() {
+  const backgroundOption1 = 'Images/BACKGROUND1.png'; // Replace with the actual URL
+  changeBackgroundImage(backgroundOption1);
+  body.style.backgroundImage = 'url("Images/BACKGROUND1.png")';
+  body.style.backgroundPosition = 'center center';
+  body.style.backgroundSize = 'cover';
+
+};
+
+document.getElementById('background_image2').onclick = function() {
+  const backgroundOption2 = 'Images/BACKGROUND2.png'; // Replace with the actual URL
+  changeBackgroundImage(backgroundOption2);
+  body.style.backgroundImage = 'url("Images/BACKGROUND2.png")';
+  body.style.backgroundPosition = 'center center';
+  body.style.backgroundSize = 'cover';
+
+};
+
+document.getElementById('background_image3').onclick = function() {
+  const backgroundOption3 = 'Images/BACKGROUND3.png'; // Replace with the actual URL
+  changeBackgroundImage(backgroundOption3);
+  body.style.backgroundImage = 'url("Images/BACKGROUND3.png")';
+  body.style.backgroundPosition = 'center center';
+  body.style.backgroundSize = 'cover';
+
+};
+
+
+document.getElementById('background_image4').onclick = function() {
+  const backgroundOption4 = 'Images/BACKGROUND4.png'; // Replace with the actual URL
+  changeBackgroundImage(backgroundOption4);
+  body.style.backgroundImage = 'url("Images/BACKGROUND4.png")';
+  body.style.backgroundPosition = 'center center';
+  body.style.backgroundSize = 'cover';
+
+}
+
+
+document.getElementById('background_image5').onclick = function() {
+  const backgroundOption5 = 'Images/BACKGROUND5.png'; // Replace with the actual URL
+  changeBackgroundImage(backgroundOption5);
+  body.style.backgroundImage = 'url("Images/BACKGROUND5.png")';
+  body.style.backgroundPosition = 'center center';
+  body.style.backgroundSize = 'cover';
+
+};
+
+
+document.getElementById('background_imag6').onclick = function() {
+  const backgroundOption6 = 'Images/BACKGROUND6.png'; // Replace with the actual URL
+  changeBackgroundImage(backgroundOption6);
+  body.style.backgroundImage = 'url("Images/BACKGROUND6.png")';
+  body.style.backgroundPosition = 'center center';
+  body.style.backgroundSize = 'cover';
+
+};
+
+/*
+function screen_background1(newBackgroundImageUrl){
   
 // Set the background of the screen
     
-    document.querySelector('body').style.background = 'url("Images/BACKGROUND1.png") center center / cover';    
+  // document.querySelector('body').style.background = 'url("Images/Homepagebg.png") center center / cover';    
     document.getElementById("bg_caption").style.color = "white";
+
+  
+   const backgroundImageUrl = 'Images/BACKGROUND1.png';
+  
+  
+   document.body.style.background = `url("${backgroundImageUrl}")`;
+
+   // Store the background image URL in localStorage
+   localStorage.setItem('background', backgroundImageUrl);
+
+   const body = document.body;
+
+   // Set the background image using JavaScript
+  // body.style.backgroundImage = 'url("Images/BACKGROUND1.png")';
+   body.style.backgroundPosition = 'center center';
+   body.style.backgroundSize = 'cover';
+
+      // Update the background image
+    document.body.style.backgroundImage = `url("${newBackgroundImageUrl}")`;
+
+    // Update localStorage with the new background URL
+    localStorage.setItem('background', newBackgroundImageUrl);
+
+
             
 }
+
+
+
+
+
+
+
+
+
 function screen_background2(){
   
 // Set the background of the card
 
-    document.querySelector('body').style.background = 'url("Images/BACKGROUND2.png") center center / cover';          
+   // document.querySelector('body').style.background = 'url("Images/BACKGROUND2.png") center center / cover';          
     document.getElementById("bg_caption").style.color = "white";    
+
+
+    document.getElementById("bg_caption").style.color = "white";
+
+    // Set the background image URL
+    const backgroundImageUrl = 'Images/BACKGROUND1.png';
+   
+    // Set the background image using CSS
+    document.body.style.background = `url("${backgroundImageUrl}")`;
+ 
+    // Store the background image URL in localStorage
+    localStorage.setItem('background', backgroundImageUrl);
+ 
+    const body = document.body;
+ 
+    // Set the background image using JavaScript
+    body.style.backgroundImage = 'url("Images/BACKGROUND2.png")';
+    body.style.backgroundPosition = 'center center';
+    body.style.backgroundSize = 'cover';
+ 
 }
 
 function screen_background3(){
@@ -320,3 +296,5 @@ function screen_background6(){
     document.querySelector('body').style.background = 'url("Images/BACKGROUND6.png") center center / cover';          
     document.getElementById("bg_caption").style.color = "white";         
 }
+
+*/
