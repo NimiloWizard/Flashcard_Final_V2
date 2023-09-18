@@ -43,13 +43,12 @@
                                      
                     <div id="Screen_BG_Option"><a href="#" class="w3-bar-item w3-button" onclick="open_screenGallery('screen_back_image')"  id="change_screen_background"> Theme Screen Background</a></div>
                                       
-                  
+              
                       <div id="DarkMode_BG"><h5>Dark Mode Screen Background</h5> </div>
                         <input type="checkbox" id="darkmode-toggle">
-                        <label for="darkmode-toggle"></label>
-
-                      <a href="#" class="w3-bar-item w3-button" id="reset">Reset (Clear Data)</a>
-                                        
+                        <label id="line" for="darkmode-toggle"></label>
+                     
+                        <a href="#" class="w3-bar-item w3-button" id="reset">Reset (Clear Data)</a>                    
                 </div>
             </div>  
           
@@ -62,13 +61,13 @@
                     <a href="HiraganaFlashcards.html" class="w3-bar-item w3-button" id="Hiragana_Flashcards"> Hiragana Flashcards</a>
                     <a href="KatakanaFlashcards.html" class="w3-bar-item w3-button" id="Katakana_Flashcard"> Katakana Flashcards</a>
                     <a href="KanjiFlashcards.html" class="w3-bar-item w3-button"  id="Kanji_Flashcards"> Kanji Flashcards</a>
+                
                 </div>
             </div> 
+             
+            <a href="#" class="w3-bar-item w3-button" id="contact"><i class="fa fa-envelope"></i>  Contact</a> 
+             
 
-            
-     
-             <a href="#" class="w3-bar-item w3-button" id="contact"><i class="fa fa-envelope"></i>  Contact</a> 
-  
         </div>      
 
     </div>
@@ -95,7 +94,7 @@
         <div class="bg_caption " id="bg_caption"> click the Image below in order to Set the backgound of your screen</div>
     
     <div id="screen_back_image" class="bg_hide_Image hidden" >
-    
+
         <div class="background_image" id="background_image1" onclick="changeBackgroundImage('Images/BACKGROUND1.png')">
             <a href="#card"><img id="background_option1" src="Images/BACKGROUND1.png" alt="Background Image"></a>
         </div>
@@ -114,7 +113,8 @@
         <div class="background_image" id="background_imag6" onclick="changeBackgroundImage('Images/BACKGROUND6.png')">
             <a href="#card"><img id="background_option6" src="Images/BACKGROUND6.png" alt="Background Image"></a>
         </div>
-    
+
+      
         <button  class="btn_bg_screen hidden" onclick="hide_screen_gallery()" id="bg_hide_Image">Close Gallery</button> 
        
               
@@ -122,11 +122,18 @@
 
     </div>    <!--------------End of Col-1----------------------->
 
-       
+
+
+           
     
   </div>  <!--end of row -->
 
-   
+
+
+
+
+
+    
 </section>   
 
   
@@ -135,11 +142,12 @@
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="Js/Flash_Card.js" defer></script>
 
-              <script>
+            <script>
                 // Disable pull-to-refresh
                 document.addEventListener('touchmove', function(event) {
                     event.preventDefault();
                 }, { passive: false });
+
 
                  document.addEventListener('DOMContentLoaded', function() {
                     const backgroundImageUrl = localStorage.getItem('background');
@@ -149,7 +157,7 @@
                     }
                    
                 });
-             </script>
+            </script>
      
 </body>
 </html>
