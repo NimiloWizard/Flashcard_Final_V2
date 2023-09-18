@@ -15,6 +15,8 @@ body{
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(245.59deg, #070707 0%, #fcfbfbf7 50.53%, #0f0f0f 90.52%);
+
 }
  body::after {
         
