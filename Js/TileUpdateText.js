@@ -109,13 +109,13 @@ function UpdateTileText(){
     }
 
     function shuffleTiles() {
-        const container = document.querySelector('.tilecontainer');
+        const tilecontainer = document.querySelector('.tilecontainer');
         const tilesArray = Array.from(tiles);
 
         tilesArray.sort(() => Math.random() - 0.5);
 
         tilesArray.forEach(tile => {
-            container.appendChild(tile);
+            tilecontainer.appendChild(tile);
         });
     
     }
