@@ -1,8 +1,4 @@
-
-
-
-function UpdateTileText(){
-    
+function UpdateTileText() {
     let matchedTiles = 0;
     let mismatchedTiles = 0;
     const tiles = document.querySelectorAll('.tile');
@@ -11,26 +7,14 @@ function UpdateTileText(){
     const Incorrectmessage = document.getElementById('Incorrectmessage');
     const shuffleButton = document.getElementById('shuffleButton');
     
-   // var tile1text = document.getElementById("tile1");
-   // var tile2text = document.getElementById("tile2");
-    var tile1 = document.getElementById('tile1');
-    var tile2 = document.getElementById('tile2');
-
     let draggedTile = null;
 
-      //update the text of the button
-     // tile1.textContent = updatedOnyomi.textContent;
-     // tile2.textContent = updatedKunyomi.textContent;
-
-     tiles.forEach(tile => {
-        tile.addEventListener('dragstart', dragStart);
-        tile.addEventListener('dragend', dragEnd);
+    tiles.forEach(tile => {
         tile.addEventListener('touchstart', touchStart);
         tile.addEventListener('touchmove', touchMove);
         tile.addEventListener('touchend', touchEnd);
     });
 
-    // Add event listeners for drop zones
     dropZones.forEach(dropZone => {
         dropZone.addEventListener('dragover', dragOver);
         dropZone.addEventListener('dragenter', dragEnter);
@@ -38,51 +22,7 @@ function UpdateTileText(){
         dropZone.addEventListener('drop', dragDrop);
     });
 
-    // Shuffle tiles when the "Shuffle Tiles" button is clicked
     shuffleButton.addEventListener('click', shuffleTiles);
-
-    function dragStart(event) {
-        draggedTile = this;
-        event.dataTransfer.setData('text/plain', ''); // Required for Firefox
-    }
-
-    function dragEnd() {
-    
-    }
-
-    function dragOver(event) {
-        event.preventDefault();
-    }
-
-    function dragEnter(event) {
-        event.preventDefault();
-        this.classList.add('hovered');
-        
-    }
-
-    function dragLeave() {
-        this.classList.remove('hovered');
-    }
-
-    function dragDrop(event) {
-        event.preventDefault();
-        const target = this;
-
-        if (draggedTile.getAttribute('data-match') === target.getAttribute('data-target')) {
-            draggedTile.style.visibility = 'hidden';
-            target.style.backgroundColor = 'green';
-            matchedTiles++;
-
-            if (matchedTiles === tiles.length) {
-                message.style.display = 'block';
-            }
-            else if (!mismatchedTiles > 0){
-                Incorrectmessage.textContent = 'block';
-            }
-        }
-
-        this.classList.remove('hovered');
-    }
 
     function touchStart(event) {
         draggedTile = this;
@@ -104,8 +44,37 @@ function UpdateTileText(){
         event.preventDefault();
     }
 
-    function touchEnd() {
+    function touchEnd(event) {
+        if (!draggedTile) return;
+        const dropZone = findDropZone(event.changedTouches[0]);
+        
+        if (dropZone && draggedTile.getAttribute('data-match') === dropZone.getAttribute('data-target')) {
+            draggedTile.style.visibility = 'hidden';
+            dropZone.style.backgroundColor = 'green';
+            matchedTiles++;
+
+            if (matchedTiles === tiles.length) {
+                message.style.display = 'block';
+            } else if (mismatchedTiles === 0) {
+                Incorrectmessage.style.display = 'block';
+            }
+        }
+
         draggedTile = null;
+    }
+
+    function findDropZone(touch) {
+        const x = touch.clientX;
+        const y = touch.clientY;
+
+        for (const dropZone of dropZones) {
+            const rect = dropZone.getBoundingClientRect();
+            if (x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) {
+                return dropZone;
+            }
+        }
+
+        return null;
     }
 
     function shuffleTiles() {
@@ -117,28 +86,22 @@ function UpdateTileText(){
         tilesArray.forEach(tile => {
             tilecontainer.appendChild(tile);
         });
-    
     }
 
-    // Reset game when "Shuffle Tiles" button is clicked
     shuffleButton.addEventListener('click', function () {
         matchedTiles = 0;
-        tiles.forEach(tile => {                         
-            
-            tile.style.visibility = 'visible';
-            tile.style.backgroundColor = '#3498db';               
+        mismatchedTiles = 0;
 
+        tiles.forEach(tile => {
+            tile.style.visibility = 'visible';
+            tile.style.backgroundColor = '#3498db';
         });
+
         dropZones.forEach(dropZone => {
             dropZone.style.backgroundColor = '';
         });
+
         message.style.display = 'none';
         Incorrectmessage.style.display = 'none';
-
-        
-        
     });
-              
-              
-   
 }
