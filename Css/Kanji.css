@@ -1528,12 +1528,32 @@ margin-left: 20px;
 margin-top: 10px;
 }
     
+            
+}
+@keyframes swap {
+    0% {
+        /* Initial state */
+        transform: translateX(0);
+    }
+   100% {
+        /* Final state */
+        transform: translateX(100%);
+    }
+}
+
+
+
+
+
+
+
+
  
 /* -----------------------------------simple matching game ------------------------------- */
 
 
                  
-        #kanjiquizholder{
+ /*       #kanjiquizholder{
             position: absolute;
             padding-top: 10px;
             top: 220px;
@@ -1590,22 +1610,22 @@ margin-top: 10px;
                     
                     line-height: 50px;
                     width: 100px; /* Adjust the width as needed */
-                    height: 50px; /* Adjust the height as needed */
-                    background-color: #3498db;
-                    color: #fff;
+  /*                  height: 50px; /* Adjust the height as needed */
+  /*                 background-color: #3498db;
+  /*                  color: #fff;
                     font-size: 18px;
                     cursor: pointer;
                     border: none;
                     border-radius: 20px;
                     
-                    /*       user-drag: none; /* Disable default drag behavior on touch screens */
+                           user-drag: none; /* Disable default drag behavior on touch screens 
                 }
            
                 #tile2 {
                     
                     line-height: 50px;
-                    width: 100px; /* Adjust the width as needed */
-                    height: 50px; /* Adjust the height as needed */
+                    width: 100px; 
+                    height: 50px; 
                     background-color: #3498db;
                     color: #fff;
                     font-size: 18px;
@@ -1615,7 +1635,7 @@ margin-top: 10px;
                     
                        
                     
-                    /*       user-drag: none; /* Disable default drag behavior on touch screens */
+                    /      user-drag: none; /* Disable default drag behavior on touch screens 
                 }
  
                 #ZonePosition {
@@ -1666,15 +1686,4 @@ margin-top: 10px;
                     font-size: 24px;
                     color: rgb(128, 45, 0);
                 }
-            
-}
-@keyframes swap {
-    0% {
-        /* Initial state */
-        transform: translateX(0);
-    }
-   100% {
-        /* Final state */
-        transform: translateX(100%);
-    }
-}
+*/
