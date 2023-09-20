@@ -890,7 +890,7 @@ input:checked ~ body {
         animation-name: slideIn; 
         margin-top: 100px;
         margin-bottom: 10rem;
-        
+         margin-top: auto ;
     }
     
      .backgoundeffect{
