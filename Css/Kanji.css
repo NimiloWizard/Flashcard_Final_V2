@@ -1083,7 +1083,7 @@ input:checked ~ body {
 	height: 700px !important;
     }
     .visible {
-        margin-top: 200px;
+        margin-top: 400px;
         height: 68vh;
         padding-top: 0px;
 	padding-left: 4px;
