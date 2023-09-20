@@ -839,7 +839,7 @@ input:checked ~ body {
         width: 400px;
         height: 100vh;
         display: flex;
-        margin-top: 11rem;
+        margin-top: 5rem;
         margin-left: -55px;
         align-content: center;
         align-items: center; 
