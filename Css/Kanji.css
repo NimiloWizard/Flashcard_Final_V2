@@ -809,10 +809,10 @@ input:checked ~ body {
     .col-1{
         display: none;
     }
-    .col-3{
+  .col-3{
         display: none;
         height: 100vh;
-	margin-top: -150rem;
+	   
     }
 	 
     #card_back_image img{
@@ -834,12 +834,12 @@ input:checked ~ body {
 
      }
 */	 
-    .stack
+  .stack
     {
         width: 400px;
         height: 100vh;
         display: flex;
-        margin-top: 1rem;
+      /*  margin-top: 1rem; */
         margin-left: -55px;
         align-content: center;
         align-items: center; 
