@@ -76,18 +76,21 @@ body{
     margin-top: -10px;
 }
 #buttonSettings{
+    padding-top: 22px;
     height: 80px; 
 }
 #settings_caret img{
     height: 80px; 
     width: 90px; 
     margin-left: -25px;
-    margin-top: -10px;
+    margin-top: -15px;
+    padding-bottom: 10px;
 }
 #settings_caret span{
     margin-left: -15px !important;
     margin-right: 70px;
     font-weight: bold;
+    font-size: 18px;
 }
 #settings label{
      margin-bottom: 10px;
