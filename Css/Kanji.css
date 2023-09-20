@@ -65,9 +65,17 @@ body{
 #home{
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 50px;
+    align-content: center;
+    align-items: center;
     
+}
+#home #HomeIcon{
+    height: 80px; 
+    width: 60px; 
+    margin-left: 0px;
+    margin-top: -10px;
 }
 #settings_caret i{
     margin-left: 230px;
