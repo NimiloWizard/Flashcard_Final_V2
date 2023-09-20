@@ -834,11 +834,12 @@ input:checked ~ body {
 
      }
 */	 
-  .stack
+ .stack
     {
+        margin-top: 8rem;
         width: 400px;
-        height: 100vh;
-        display: flex;
+        height: 90vh;
+     /*   display: flex;
       /*  margin-top: 1rem; */
         margin-left: -55px;
         align-content: center;
@@ -1304,8 +1305,8 @@ input:checked ~ body {
 
 
    #buttons #prevButton{
-        position: absolute;
-        top: -30px !important;
+     /*   position: absolute; */
+         top: -55px !important;
         margin-bottom: 10px !important;
         left: 39px !important;
         height: 36px;
@@ -1316,8 +1317,8 @@ input:checked ~ body {
      }
 
     #buttons #revealButton{
-        position: absolute;
-        top: -30px !important;
+      /*  position: absolute; */
+        top: -55px !important;
         margin-bottom: 10px !important;
         left: 157px !important;
         height: 36px;
@@ -1326,16 +1327,16 @@ input:checked ~ body {
 
     }
     #buttons #nextButton{
-        position: absolute;
-        top: -30px !important;
+     /*   position: absolute;  */
+        top: -55px !important;
         margin-bottom: 10px !important;
         left: 276px !important;
         height: 36px;
         width:115px;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
-        
     }
+    
     #prevButton:hover{
         transform: scale(0.9);
         cursor: pointer;
