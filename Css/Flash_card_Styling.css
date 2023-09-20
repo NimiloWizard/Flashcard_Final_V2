@@ -72,16 +72,31 @@ body{
 #home #HomeIcon{
     height: 80px; 
     width: 60px; 
-    margin-left: 0px;
+    margin-left: -8px;
     margin-top: -10px;
 }
-#settings_caret i{
-    margin-left: 230px;
+#buttonSettings{
+    height: 80px; 
+}
+#settings_caret img{
+    height: 80px; 
+    width: 90px; 
+    margin-left: -25px;
+    margin-top: -10px;
+}
+#settings_caret span{
+    margin-left: -15px !important;
+    margin-right: 70px;
     font-weight: bold;
 }
 #settings label{
      margin-bottom: 10px;
      margin-left: 60px;
+}
+
+#settings h5{
+    font-size: 15px;
+    margin-left: 20px;
 }
 #DarkMode_BG{
    border-top: 1px solid rgb(189, 188, 188);
@@ -188,10 +203,7 @@ body{
 }
 
 
-#settings h5{
-    font-size: 15px;
-    margin-left: 20px;
-}
+
 /* ------------------------------------Dark/light Mode ----------------------------*/ 
 
 label{
