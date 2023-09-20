@@ -812,7 +812,7 @@ input:checked ~ body {
     .col-3{
         display: none;
         height: 100vh;
-	margin-top: -60rem;
+	margin-top: -100rem;
     }
 	 
     #card_back_image img{
