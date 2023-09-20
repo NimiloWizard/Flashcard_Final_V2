@@ -888,7 +888,7 @@ input:checked ~ body {
         isolation: isolate;
         border-radius: 20px;
         animation-name: slideIn; 
-       
+        margin-bottom: 15rem;
         
     }
     
@@ -1306,7 +1306,7 @@ input:checked ~ body {
 
    #buttons #prevButton{
      /*   position: absolute; */
-         top: -55px !important;
+        top: -11rem !important;
         margin-bottom: 10px !important;
         left: 39px !important;
         height: 36px;
@@ -1318,7 +1318,7 @@ input:checked ~ body {
 
     #buttons #revealButton{
       /*  position: absolute; */
-        top: -55px !important;
+        top: -11rem !important;
         margin-bottom: 10px !important;
         left: 157px !important;
         height: 36px;
@@ -1328,7 +1328,7 @@ input:checked ~ body {
     }
     #buttons #nextButton{
      /*   position: absolute;  */
-        top: -55px !important;
+        top: -11rem !important;
         margin-bottom: 10px !important;
         left: 276px !important;
         height: 36px;
@@ -1336,6 +1336,7 @@ input:checked ~ body {
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
     }
+
     
     #prevButton:hover{
         transform: scale(0.9);
