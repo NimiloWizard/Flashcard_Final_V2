@@ -809,9 +809,9 @@ input:checked ~ body {
     .col-1{
         display: none;
     }
-  .col-3{
+ .col-3{
         display: none;
-        height: 100vh;
+     /*   height: 100vh; */
 	   
     }
 	 
@@ -834,11 +834,11 @@ input:checked ~ body {
 
      }
 */	 
- .stack
+.stack
     {
         margin-top: 8rem;
         width: 400px;
-        height: 90vh;
+      /*  height: 90vh;
      /*   display: flex;
       /*  margin-top: 1rem; */
         margin-left: -55px;
