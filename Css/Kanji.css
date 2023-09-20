@@ -1305,7 +1305,7 @@ input:checked ~ body {
 
    #buttons #prevButton{
         position: absolute;
-        top: 73px !important;
+        top: 100px !important;
         margin-bottom: 10px !important;
         left: 39px !important;
         height: 36px;
