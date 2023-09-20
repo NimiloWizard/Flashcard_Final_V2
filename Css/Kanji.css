@@ -1580,7 +1580,9 @@ margin-top: 10px;
                     align-content: center;
                     z-index: 7;
                     gap: 40px;
-                    gap: 20px
+                    -webkit-user-drag: none;
+	            -moz-user-drag: none;
+	            user-drag: none;
                 }
 
 
