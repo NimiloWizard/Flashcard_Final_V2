@@ -153,8 +153,7 @@ function showNextCard(){
        previousCard = card;
 
     }, 500);
-  
-/*    shuffleButton.click();      */
+
 }
 
  //  ----------------------------------------Settings ---------------------------------------
