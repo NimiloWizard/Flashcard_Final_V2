@@ -811,7 +811,8 @@ input:checked ~ body {
     }
     .col-3{
         display: none;
-         height: 100vh;
+        height: 100vh;
+	margin-top: -100px;
     }
 	 
     #card_back_image img{
