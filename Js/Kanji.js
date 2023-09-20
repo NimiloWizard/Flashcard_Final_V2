@@ -154,7 +154,7 @@ function showNextCard(){
 
     }, 500);
   
-    shuffleButton.click();      
+/*    shuffleButton.click();      */
 }
 
  //  ----------------------------------------Settings ---------------------------------------
