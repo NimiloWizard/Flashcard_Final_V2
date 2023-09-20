@@ -889,8 +889,8 @@ input:checked ~ body {
         border-radius: 20px;
         animation-name: slideIn; 
         margin-top: 100px;
-        margin-bottom: 11rem;
-        margin-top: auto ;
+        margin-bottom: 5rem;
+     
     }
     
      .backgoundeffect{
