@@ -108,23 +108,43 @@ body{
     
 
    
-}
-#buttonSettings{
-    padding-top: 22px;
+}#buttonSettings{
+    padding-top: -30px;
     height: 80px; 
+    padding-left: 35px;
+    align-content: center !important;
+    align-items: center !important;
 }
+#settingsBgDesign{
+    display: flex;
+    height: 50px;
+    padding-top: -40px !important;
+    padding-bottom: 45px !important;
+    background: linear-gradient(180deg,#9cb3f3,#1705a3);
+    width: 200px;
+    border:  1px solid rgb(250, 249, 249);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  
+}
+
 #settings_caret img{
-    height: 90px; 
-    width: 90px; 
-    margin-left: -25px;
-    margin-top: -15px;
-    padding-bottom: 10px;
+    height: 130px; 
+    width: 100px; 
+    margin-left: -50px;
+    margin-top: -40px;
+    padding-bottom: 30px;
 }
 #settings_caret span{
-    margin-left: -15px !important;
-    margin-right: 70px;
+    margin-left: 10px !important;
+    margin-right: 10px;
+    margin-top: 10px;
     font-weight: bold;
     font-size: 18px;
+}
+#settings_caret #fa-caret{
+    margin-top: 20px;
+    margin-left: 10px !important;
 }
 #settings label{
      margin-bottom: 10px;
