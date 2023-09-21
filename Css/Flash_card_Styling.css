@@ -73,7 +73,7 @@ body{
 }
 
 #home #HomeIcon{
-    height: 80px; 
+    height: 90px; 
     width: 60px; 
     margin-left: -8px;
     margin-top: -10px;
@@ -84,7 +84,7 @@ body{
     height: 80px; 
 }
 #settings_caret img{
-    height: 80px; 
+    height: 90px; 
     width: 90px; 
     margin-left: -25px;
     margin-top: -15px;
