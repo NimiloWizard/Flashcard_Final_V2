@@ -1308,10 +1308,10 @@ input:checked ~ body {
 
    #buttons #prevButton{
      /*   position: absolute; */
-	position: fixed;
-        top:  -0.225rem !important;
+        position: fixed;
+        margin-top: 47rem !important;
         margin-bottom: 10px !important;
-        left: 39px !important;
+        left: 15px !important;
         height: 36px;
         width:115px;
         border-top-left-radius: 10px;
@@ -1321,10 +1321,10 @@ input:checked ~ body {
 
     #buttons #revealButton{
       /*  position: absolute; */
-	position: fixed;
-        top:  -0.225rem !important;
+       position: fixed;
+       margin-top: 47rem !important;
         margin-bottom: 10px !important;
-        left: 157px !important;
+        left: 132px !important;
         height: 36px;
         width:116px;
         
@@ -1332,16 +1332,15 @@ input:checked ~ body {
     }
     #buttons #nextButton{
      /*   position: absolute;  */
-	position: fixed;
-        top: -0.225rem !important;
+        position: fixed;
+        margin-top: 47rem !important;
         margin-bottom: 10px !important;
-        left: 276px !important;
+        left: 250px !important;
         height: 36px;
         width:115px;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
     }
-
     
     #prevButton:hover{
         transform: scale(0.9);
