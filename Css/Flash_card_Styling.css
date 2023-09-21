@@ -99,16 +99,14 @@ body{
     margin-bottom: 10px;
 }
 #home #HomeIcon{
-    
     height: 90px; 
-    width: 60px; 
-    margin-left: -28px;
+    width: 65px; 
+    margin-left: -33px;
     margin-top: -10px;
     margin-bottom: 20px;
-    
+}
 
-   
-}#buttonSettings{
+#buttonSettings{
     padding-top: -30px;
     height: 80px; 
     padding-left: 35px;
