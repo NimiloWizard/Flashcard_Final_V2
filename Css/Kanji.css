@@ -1311,7 +1311,7 @@ input:checked ~ body {
         position: fixed;
         margin-top: 47rem !important;
         margin-bottom: 10px !important;
-        left: 15px !important;
+        left: 16px !important;
         height: 36px;
         width:115px;
         border-top-left-radius: 10px;
@@ -1321,10 +1321,10 @@ input:checked ~ body {
 
     #buttons #revealButton{
       /*  position: absolute; */
-       position: fixed;
-       margin-top: 47rem !important;
+        position: fixed;
+        margin-top: 47rem !important;
         margin-bottom: 10px !important;
-        left: 132px !important;
+        left: 134px !important;
         height: 36px;
         width:116px;
         
@@ -1335,7 +1335,7 @@ input:checked ~ body {
         position: fixed;
         margin-top: 47rem !important;
         margin-bottom: 10px !important;
-        left: 250px !important;
+        left: 252px !important;
         height: 36px;
         width:115px;
         border-top-right-radius: 10px;
