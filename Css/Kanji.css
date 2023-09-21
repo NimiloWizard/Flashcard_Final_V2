@@ -1307,7 +1307,7 @@ input:checked ~ body {
 
    #buttons #prevButton{
      /*   position: absolute; */
-        top:  -0.625rem !important;
+        top:  -0.525rem !important;
         margin-bottom: 10px !important;
         left: 39px !important;
         height: 36px;
@@ -1319,7 +1319,7 @@ input:checked ~ body {
 
     #buttons #revealButton{
       /*  position: absolute; */
-        top:  -0.625rem !important;
+        top:  -0.525rem !important;
         margin-bottom: 10px !important;
         left: 157px !important;
         height: 36px;
@@ -1329,7 +1329,7 @@ input:checked ~ body {
     }
     #buttons #nextButton{
      /*   position: absolute;  */
-        top: -0.625rem !important;
+        top: -0.525rem !important;
         margin-bottom: 10px !important;
         left: 276px !important;
         height: 36px;
