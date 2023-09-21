@@ -1329,7 +1329,7 @@ input:checked ~ body {
     }
     #buttons #nextButton{
      /*   position: absolute;  */
-        top: -11rem !important;
+        top: 2rem !important;
         margin-bottom: 10px !important;
         left: 276px !important;
         height: 36px;
