@@ -60,6 +60,9 @@ body{
     
    margin-bottom: 10px;
 }
+#spacing{
+      height: 20px;
+}
 #home{
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
