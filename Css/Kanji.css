@@ -1311,7 +1311,7 @@ input:checked ~ body {
         position: fixed;
         margin-top: 47rem !important;
         margin-bottom: 10px !important;
-        left: 16px !important;
+        left: 18px !important;
         height: 36px;
         width:115px;
         border-top-left-radius: 10px;
@@ -1324,7 +1324,7 @@ input:checked ~ body {
         position: fixed;
         margin-top: 47rem !important;
         margin-bottom: 10px !important;
-        left: 134px !important;
+        left: 136px !important;
         height: 36px;
         width:116px;
         
@@ -1335,7 +1335,7 @@ input:checked ~ body {
         position: fixed;
         margin-top: 47rem !important;
         margin-bottom: 10px !important;
-        left: 252px !important;
+        left: 254px !important;
         height: 36px;
         width:115px;
         border-top-right-radius: 10px;
