@@ -351,7 +351,7 @@ body{
 #Premium img{
     height: 80px;
     width: 60px;
-    margin-left: -30px; 
+    margin-left: -25px; 
     margin-top: -34px;
     margin-bottom: 25px;
 }
@@ -376,7 +376,7 @@ body{
     border:  1px solid rgb(250, 249, 249);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    margin-left: 20px;
+    margin-left: 15px;
     box-shadow:  0px 0px 6px rgb(249, 250, 248);;
 }
 #socialmedia{
