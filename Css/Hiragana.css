@@ -62,6 +62,19 @@ body{
     
    margin-bottom: 10px;
 }
+#home #homeBgDesign{
+   
+    padding-bottom: 50px;
+    background: linear-gradient(180deg,#9cb3f3,#230bd8);
+    height: 40px;
+    width: 190px;
+    border:  1px solid rgb(250, 249, 249);
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom:5px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 #home{
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
@@ -109,6 +122,7 @@ body{
     font-size: 15px;
     
 }
+
 #English_Flashcards{
     border-top: 1px solid rgb(36, 34, 34);
     border-bottom: 1px solid rgb(36, 34, 34);
@@ -252,7 +266,16 @@ input:checked ~ body {
     z-index: -2;
 }
 
-
+.col-1{
+    width: 400px !important;
+    height: 600px;
+    justify-content: center;
+    align-content: center;
+    margin-left: 10px;
+    
+    margin-top: -10px;
+    
+}
 
 .col-2{
     width:500px !important;
@@ -296,7 +319,21 @@ input:checked ~ body {
     grid-template-rows: 190px 190px;
     grid-gap: -10px;
 }
+/*
+.btn_bg_screen{
+    position: absolute;
+    top: 720px !important;
+    left: 135px !important;
+}
+.btn_bg_screen:hover{
+   cursor: pointer;
+}
 
+ #screen_back_image #screen_background_image:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+*/
 
 .hidden{
     display: none;
@@ -500,7 +537,7 @@ input:checked ~ body {
     margin-top: 00px;
     padding-bottom: 5px;
     padding-top: 5px;
-    font-size: 23px;
+    font-size: 24px;
     font-weight: bold;
     color: rgb(9, 9, 10);
     
@@ -509,25 +546,60 @@ input:checked ~ body {
     -webkit-background-clip: text;
     background-position: 0 0; 
     animation: back 20s linear infinite;
+    text-shadow: 0px 0px 6px rgb(252, 252, 251);
 }
 
 .Details{
     margin-top: 0px;
     width: 100%;
-    display: block;
+    display: flex;
     margin: auto;
     padding-left: 5px;
 }
-
+.reading_container{
+   width: 225px;
+      
+}
 .reading_container p{
-    width: 70px;
-    font-size: 30px;  
-    margin-left: 155px !important;
+    width: 225px;
+    font-size: 15px;  
+    margin-left: 0px !important;
     line-height: 30px;
-    margin-top: 40px;
  }
+#left_container{
+    margin-top: -30px;
+    margin-left: 5px !important;
+    width: 220px !important;
+    font-weight: bold;
+    text-align: center;
+    text-align: center;
+}
+#right_container{
+    margin-top: -30px;
+    margin-left: -10px !important;
+    width: 230px !important;
+    font-weight: bold;
+    text-align: center;  
+    text-align: center;
+}
 
-
+.Onyomi{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid rgb(116, 114, 114);
+    margin-top: 5px;
+    margin-left: -5px;
+    font-size: 17px;
+}
+.Kunyomi{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid rgb(116, 114, 114);
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 17px;
+    
+}
 .hiragana{
     
     margin-left: 10px;
@@ -545,8 +617,7 @@ input:checked ~ body {
 }
 .equivalent p{
    
-     font-size: 25px;
-     font-weight: bold;
+     font-size: 16px;
     
 }
 
@@ -751,7 +822,9 @@ input:checked ~ body {
     
     }
    
-    
+    .col-1{
+        display: none;
+    }
     .col-3{
         display: none;
      /*   height: 100vh; */
@@ -765,7 +838,17 @@ input:checked ~ body {
         padding-right: 10px !important;
         border-radius: 40px;
     }  
-	
+	   /*
+    #card_back_image p{
+        margin-left: 20px !important;
+    }
+	    */
+ /*   div.col-2 {
+	    position: -webkit-sticky;
+	    position: sticky;
+	    top: 0;
+
+     }
 */	 
     .stack
     {
@@ -792,7 +875,7 @@ input:checked ~ body {
         height: 160px;
         margin-bottom: -20px;
         margin-top: -10px;
-        margin-left: 0px !important;
+        margin-left: 0px;
         border-radius: 20px;
     }
     
@@ -804,17 +887,19 @@ input:checked ~ body {
         text-align: center;
         height: 120px;
         width: 120px;
-        margin-left: -10px;
+        margin-left: -30px;
     }
         
      .card
     {
+        position: fixed;
         width: 355px;
         height: 100%;
         border-radius: 20px;  
-        margin-left: -80px;
+        margin-left: 140px;
         background: linear-gradient(245.59deg, #070707 0%, #fcfbfbf7 50.53%, #0f0f0f 90.52%);
-        box-shadow: 0 0px 1px 0 #fdfcfcfe,0 0px 2px 0 #f8f8f8;
+       /*  box-shadow: 0 0px 1px 0 #fdfcfcfe,0 0px 2px 0 #f8f8f8;  */
+       box-shadow: -1px 1px 1px   rgba(131, 131, 131, 0.987);
 	    /*   box-shadow: 0 0px 1px 0 #0a0a0a55,0 0px 2px 0 #42414140; */
         background-size: cover;
         background-attachment: fixed;
@@ -899,7 +984,19 @@ input:checked ~ body {
  
   
     }
-  
+    .reading_container{
+        width: 300px !important;
+        margin-left: 50px;
+           
+     }
+     #left_container{
+        margin-left: 47px;
+        width: 148px;
+        font-weight: bold;
+        text-align: center;
+        text-align: center;
+
+    }
     #right_container{
     
         margin-left: -10px;
@@ -912,13 +1009,31 @@ input:checked ~ body {
         align-content: center;
         text-align: center;
     }
-  
+        
+    .Onyomi
+    {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 15px;
+        margin-left: -5px;
+        font-size: 17px;
+        
+    }
+    .Kunyomi
+    {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    
+        margin-top: 15px;
+        margin-left: 10px;
+        font-size: 17px;
+    }
 
     .hiragana{
         margin-left: -20px;
         width: 180px;         
     }
-    #reading_container #hiragana div.p{
+    #left_container #hiragana div.p{
         margin-left: -40px;
     }
     .hiragana p{
@@ -933,23 +1048,21 @@ input:checked ~ body {
 
     .equivalent p{
    
-        font-size: 25px !;
-        font-weight: bold !;
+     font-size: 14px;
     
    }
 
-    #reading_container .equivalent div.p{
-        font-size: 35px !important;
-        font-weight: bold !important;     
+    #left_container .equivalent div.p{
+        font-size: 13px;      
         margin-right: 10px;
         margin-left: -40px;
    }
-   #reading_container .equivalent{
+   #left_container .equivalent{
         margin-left: -20px;
    }
     #right_container .equivalent div.p{
-        font-size: 25px;
-        font-weight: bold;
+        font-size: 13px;      
+        margin-right: 10px;
         
     }
 
@@ -1124,44 +1237,71 @@ input:checked ~ body {
      }
 
 
-   
-
-    #reading_container{
-        display: block;
-        position: relative;
-        margin-left: 32px !important;
+    .reading_container{
         width: 360px !important;
+        
+            
+    }
+
+    #left_container{
+        margin-left: 32px !important;
+        width: 160px !important;
         font-weight: bold;
         text-align: center;
         text-align: center;
-        display: block;
 
     }
-
+    #right_container{
+    
+        margin-left: -10px;
+        width: 200px !important;
+        font-weight: bold;
+        text-align: center;  
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
 
  
-   #audioButtonHiragana{
+   #audioButtonOnyomi{
         cursor: pointer;
-        width: 35px !important;
-        height: 70px !important;
+        width: 35px;
+        height: 70px;
         margin-bottom: 0px;
-        margin-left: 160px !important;
-        margin-top: 50px;
-     	user-select: none;
+        margin-left: 65px !important;
+        margin-top: 10px;
+	user-select: none;
     }
 
-     #audioButtonHiragana:active {
+     #audioButtonOnyomi:active {
 	  background-color: transparent; /* Remove background color */
 	  outline: none; /* Remove outline */
 	}
-   
+    #audioButtonKunyomi{
+        cursor: pointer;
+        width: 35px;
+        height: 70px;
+        margin-bottom: 0px;
+        margin-left: 80px !important;
+        margin-top: 10px;
+	user-select: none;
+    }
+    #audioButtonKunyomi:active {
+	  background-color: transparent; /* Remove background color */
+	  outline: none; /* Remove outline */
+	}
     
        /* Hide the audio player */
-     #audioPlayerHiragana {
+     #audioPlayerOnyomi {
       display: none;
     }
         
- 
+    #audioPlayerKunyomi {
+        display: none;
+
+    }
     	  
     
      
@@ -1175,38 +1315,42 @@ input:checked ~ body {
     
 
 
-   #buttons #prevButton{
-     /*   position: absolute; */
-        top: -0.225rem !important;
-        margin-bottom: 10px !important;
-        left: 39px !important;
-        height: 36px;
-        width:115px;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-    
-     }
 
-    #buttons #revealButton{
-      /*  position: absolute; */
-        top: -0.225rem !important;
-        margin-bottom: 10px !important;
-        left: 157px !important;
-        height: 36px;
-        width:116px;
-        
-
-    }
-    #buttons #nextButton{
-     /*   position: absolute;  */
-        top: -0.225rem !important;
-        margin-bottom: 10px !important;
-        left: 276px !important;
-        height: 36px;
-        width:115px;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
+    #buttons #prevButton{
+        /*   position: absolute; */
+           position: fixed;
+           margin-top: 47rem !important;
+           margin-bottom: 10px !important;
+           left: 15px !important;
+           height: 36px;
+           width:115px;
+           border-top-left-radius: 10px;
+           border-bottom-left-radius: 10px;
+       
+        }
+   
+       #buttons #revealButton{
+         /*  position: absolute; */
+          position: fixed;
+          margin-top: 47rem !important;
+           margin-bottom: 10px !important;
+           left: 132px !important;
+           height: 36px;
+           width:116px;
+           
+   
+       }
+       #buttons #nextButton{
+        /*   position: absolute;  */
+           position: fixed;
+           margin-top: 47rem !important;
+           margin-bottom: 10px !important;
+           left: 250px !important;
+           height: 36px;
+           width:115px;
+           border-top-right-radius: 10px;
+           border-bottom-right-radius: 10px;
+       }
 
     #prevButton:hover{
         transform: scale(0.9);
@@ -1221,7 +1365,13 @@ input:checked ~ body {
         cursor: pointer;
      }
 
- 
+     .space{
+         height: 20px;
+         width: 300px;
+         margin-top: 100px;
+      }
+  
+  
    
 
     .bg_visible{
