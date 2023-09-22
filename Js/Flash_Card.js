@@ -17,12 +17,15 @@ function w3_close() {
 let Delete = document.querySelector('#reset');
 Delete.addEventListener('click', clear);
 
-function clear() {
+function clear() {                                                       // --------------------------- Clear the LOCAL STORAGE -----------------
     localStorage.clear();
     alert("Data has been cleared.");
 }
 
 
+document.getElementById('home').onclick = function(){
+        w3_close() 
+}
   // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
   document.getElementById('darkmode-toggle').addEventListener('change', function() {
     
