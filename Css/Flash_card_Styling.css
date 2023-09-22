@@ -166,9 +166,10 @@ body{
 }
 
 #settings_caret #fa-caret{
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left: 20px !important;
-    height: 20px;
+    height: 50px;
+    color: rgb(190, 247, 75);
 }
 #settings label{
      margin-bottom: 10px;
@@ -282,6 +283,8 @@ body{
 }
 #Japanese_Flashcards #fa-caret{
     margin-left: 20px;
+    margin-top: 30px;
+    color: rgb(190, 247, 75);
     
 }
 #Japanese_Flashcards{
