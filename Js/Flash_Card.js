@@ -27,13 +27,14 @@ document.getElementById('home').onclick = function(){
         w3_close() 
 }
   // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
+
   document.getElementById('darkmode-toggle').addEventListener('change', function() {
     
     if(this.checked) {
-       
+      
         document.body.style.backgroundColor = 'rgba(36, 36, 36, 0.85)'; // Dark background color with opacity
         document.getElementById("bg_caption").style.color = "white";
-        document.getElementById("background_caption").style.color = "white";
+       
         
        // Create a new style element for the body::before pseudo-element
         var style = document.createElement("style");
@@ -46,7 +47,7 @@ document.getElementById('home').onclick = function(){
         document.body.style.backgroundColor = ''; // Reset background color
         
         document.getElementById("bg_caption").style.color = "black";
-        document.getElementById("background_caption").style.color = "black";
+       
 
             
         // Remove the style element for body::before if it exists
@@ -58,23 +59,6 @@ document.getElementById('home').onclick = function(){
     }
 
  });
-  // ---------------------------------- Toggle for Dark/Light Mode Only/No Image ---------------------//
-  document.getElementById('darkmode-toggle-N0-Image').addEventListener('change', function() {  
-          if(this.checked) {
-            document.body.style.background = "";
-            document.body.style.backgroundColor = '#242424';
-          } else {
-            document.body.style.background = "";
-            document.body.style.backgroundColor =  'white';
-
-            var styleElement = document.querySelector('style');
-            if (styleElement) {
-                styleElement.parentNode.removeChild(styleElement);
-            }
-
-          }
-  });
-
 
 // ----------------- Toggle to Show Image Gallery for screen background change------------------//     
 
