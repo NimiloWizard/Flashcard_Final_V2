@@ -63,9 +63,24 @@ body{
 #spacing{
       height: 20px;
 }
+.menu_options a{
+    font-size: 15px;
+}
+.section{
+    
+    
+    position: relative;
+}
+.Title{
+    align-items: center;
+    text-align: center;
+    margin-left: 18%;
+}
+
+
 #home{
+    padding-top: 50px;
     border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 35px;
@@ -73,7 +88,7 @@ body{
     align-items: center;
     font-weight: bold;
     font-size: 18px;
-    height: 85px;
+    height: 100px;
     line-height: 20px;
 }
 
@@ -87,31 +102,34 @@ body{
     display: flex;
     height: 50px;
     padding-top: 15px !important;
-    padding-bottom: 5px !important;
-    background: linear-gradient(180deg,#9cb3f3,#230bd8);
+    padding-bottom: 10px !important;
+    background: linear-gradient(180deg,#d1dcf9,#1705a3);
     width: 200px;
     border:  1px solid rgb(250, 249, 249);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     align-content: center !important;
     align-items: center !important;
-    margin-top: 5px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 #home #HomeIcon{
+    
     height: 90px; 
     width: 65px; 
     margin-left: -33px;
-    margin-top: -10px;
+    margin-top: -2px;
     margin-bottom: 20px;
+       
 }
 
 #buttonSettings{
     padding-top: -30px;
-    height: 80px; 
+    height: 100px; 
     padding-left: 35px;
     align-content: center !important;
     align-items: center !important;
+    margin-bottom: 10px;
 }
 #settingsBgDesign{
     display: flex;
@@ -124,13 +142,14 @@ body{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   
+
 }
 
 #settings_caret img{
-    height: 130px; 
-    width: 100px; 
-    margin-left: -50px;
-    margin-top: -37px;
+    height: 140px; 
+    width: 110px; 
+    margin-left: -55px;
+    margin-top: -43px;
     padding-bottom: 30px;
 }
 #settings_caret span{
@@ -142,7 +161,7 @@ body{
 }
 #settings_caret #fa-caret{
     margin-top: 20px;
-    margin-left: 10px !important;
+    margin-left: 20px !important;
 }
 #settings label{
      margin-bottom: 10px;
@@ -173,8 +192,22 @@ body{
     border-bottom: 1px solid rgb(36, 34, 34);
     padding-top: 20px;
     padding-bottom: 20px;
-    font-size: 15px;
+    font-size: 15px;    
+}
+
+#Languages{
+    border-top: 1px solid rgb(189, 188, 188);
+    font-size: 20px;
+    background: linear-gradient(180deg,#f9faf8,#494949, #f8faf8);;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    height: 30px;
+    padding-top: 0px;
     
+    color: black;
+    font-weight: bold;
+    text-shadow: 2px 4px 6px rgb(252, 252, 251);
 }
 #English_Flashcards{
     border-top: 1px solid rgb(36, 34, 34);
@@ -184,24 +217,54 @@ body{
     padding-bottom: 20px;
 } 
 #Korean_Flashcards{
-    border-bottom: 1px solid rgb(36, 34, 34);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 70px !important;
+
+   border-bottom: 1px solid rgb(36, 34, 34);  
+ /*   border-left: 4px solid #414040;            */
 }
-#Japanese_caret i{
-    margin-left: 220px;
-   
+#Korean_Flashcards img{
+    margin-top: 0px;
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+    border-radius: 50%;
+}
+#Korean_Flashcards span{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    width: 20px;
+    
+}
+
+#Japanese_Flashcards img{
+    margin-top: 0px;
+    height: 50px;
+    width: 50px !important;
+    margin-left: 30px;
+    border-radius: 50%;
+    
+}
+#Japanese_Flashcards span{
+    margin-left: 17px;
     font-weight: bold;
 }
-#Japanese_Flashcards{
+#Japanese_Flashcards #fa-caret{
+    margin-left: 20px;
     
-    height: 20px;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgb(36, 34, 34);
 }
+#Japanese_Flashcards{
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 70px !important;
 
-
+    border-bottom: 1px solid rgb(36, 34, 34); 
+  /*   border-left: 4px solid #414040;          */
+}
 #Writing #Activate_Wrting_checkbox{
     height: 20px;
     width: 20px;
@@ -235,27 +298,121 @@ body{
 }
 
 #contact{
-   
+    padding-top: 20px;
+    height: 60px;
     border-top: 1px solid gray;
-    margin-top: 200px;
+    margin-top: 10px;
     font-size: 15px;
     color: rgb(245, 169, 6);
 }
-
-
-.menu_options a{
-    font-size: 15px;
+#spacing2{
+    height: 40px;
 }
-.section{
-    
-    
-    position: relative;
-}
-.Title{
+#Premium{
+  
+    display: flex;
     align-items: center;
+    align-content: center;
+    height: 100px;
     text-align: center;
-    margin-left: 18%;
+    
 }
+#Premium img{
+    height: 80px;
+    width: 70px;
+    margin-left: -55px; 
+    margin-top: -35px;
+    margin-bottom: 10px;
+}
+#Premium span{
+    display: inline-block;
+    margin-left: 10px; 
+    font-weight: bold;   
+    width: 105px;
+    height: 50px;
+    word-wrap: break-word;
+    
+}
+#PremiumBgDesign{
+    height: 50px;
+    background: linear-gradient(180deg,#f6f6f5,#d8860b);
+    width: 200px;
+    border:  1px solid rgb(250, 249, 249);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 15px;
+}
+#socialmedia{
+    
+    display: flex;
+    position: relative;   
+    align-items: center;
+    align-content: center;
+    gap: 0px;
+    padding-top: 0px;
+}
+#facebook{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    padding: 0px;
+    border: 2px solid rgb(16, 16, 16);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+#facebook:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(247, 246, 246);
+    transform: rotate(360deg); 
+}
+
+#instagram{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    padding: 0px;
+    border: 2px solid rgb(16, 16, 16);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+#instagram:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(247, 246, 246);
+    transform: rotate(360deg); 
+}
+#twitter{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    padding: 0px;
+    border: 2px solid rgb(16, 16, 16);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+#twitter:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(247, 246, 246);
+    transform: rotate(360deg); 
+}
+#linkedin{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    padding: 0px;
+    border: 2px solid rgb(16, 16, 16);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+#linkedin:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(247, 246, 246);
+    transform: rotate(360deg); 
+}
+
 
 
 
@@ -811,10 +968,6 @@ input:checked ~ body {
        color: rgb(11, 128, 0);
     }
 
-    #settings_caret i{
-        margin-left: 133px;
-        font-weight: bold;
-    }
     #Japanese_caret i{
         margin-left: 125px;
         font-weight: bold;
@@ -884,7 +1037,9 @@ input:checked ~ body {
     }
     .col-3{
         display: none;
-       
+        height: 50vh;
+        margin-top: -100px;
+      
     }
 	 
     #card_back_image img{
@@ -911,7 +1066,7 @@ input:checked ~ body {
         width: 400px;
         height: 550px;
         display: flex;
-        margin-top: 11rem;
+        margin-top: 1rem;
         margin-left: -55px;
         align-content: center;
         align-items: center; 
@@ -943,7 +1098,8 @@ input:checked ~ body {
         width: 120px;
         margin-left: -30px;
     }
-        
+   
+   
      .card
     {
         width: 355px;
