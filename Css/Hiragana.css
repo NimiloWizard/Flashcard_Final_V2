@@ -424,7 +424,7 @@ input:checked ~ body {
     width: 448px;
     height: 620px !important;
     margin: auto;
-    margin-left: 30px;
+    margin-left: 0px;
     margin-top: -25px;
     position: absolute;
     top: 100%px;
@@ -556,50 +556,10 @@ input:checked ~ body {
     margin: auto;
     padding-left: 5px;
 }
-.reading_container{
-   width: 225px;
-      
-}
-.reading_container p{
-    width: 225px;
-    font-size: 15px;  
-    margin-left: 0px !important;
-    line-height: 30px;
- }
-#left_container{
-    margin-top: -30px;
-    margin-left: 5px !important;
-    width: 220px !important;
-    font-weight: bold;
-    text-align: center;
-    text-align: center;
-}
-#right_container{
-    margin-top: -30px;
-    margin-left: -10px !important;
-    width: 230px !important;
-    font-weight: bold;
-    text-align: center;  
-    text-align: center;
-}
 
-.Onyomi{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: 1px solid rgb(116, 114, 114);
-    margin-top: 5px;
-    margin-left: -5px;
-    font-size: 17px;
-}
-.Kunyomi{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border: 1px solid rgb(116, 114, 114);
-    margin-top: 5px;
-    margin-left: 10px;
-    font-size: 17px;
-    
-}
+
+
+
 .hiragana{
     
     margin-left: 10px;
@@ -608,18 +568,6 @@ input:checked ~ body {
     margin-top: 10px;
  }
 
-.equivalent{
-    color: rgb(6, 6, 6);
-    margin-left: 10px;
-    width: 180px;
-    word-wrap: break-word;
-    margin-bottom: -20px;
-}
-.equivalent p{
-   
-     font-size: 16px;
-    
-}
 
 
 .Usage{
@@ -857,7 +805,7 @@ input:checked ~ body {
       /*  height: 90vh;
      /*   display: flex;
       /*  margin-top: 1rem; */
-        margin-left: -55px;
+        margin-left: 0px;
         align-content: center;
         align-items: center; 
         text-align: center;
@@ -896,7 +844,7 @@ input:checked ~ body {
         width: 355px;
         height: 100%;
         border-radius: 20px;  
-        margin-left: 140px;
+        margin-left: 15px;
         background: linear-gradient(245.59deg, #070707 0%, #fcfbfbf7 50.53%, #0f0f0f 90.52%);
        /*  box-shadow: 0 0px 1px 0 #fdfcfcfe,0 0px 2px 0 #f8f8f8;  */
        box-shadow: -1px 1px 1px   rgba(131, 131, 131, 0.987);
@@ -984,50 +932,7 @@ input:checked ~ body {
  
   
     }
-    .reading_container{
-        width: 300px !important;
-        margin-left: 50px;
-           
-     }
-     #left_container{
-        margin-left: 47px;
-        width: 148px;
-        font-weight: bold;
-        text-align: center;
-        text-align: center;
-
-    }
-    #right_container{
     
-        margin-left: -10px;
-        width: 182px;
-        font-weight: bold;
-        text-align: center;  
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        text-align: center;
-    }
-        
-    .Onyomi
-    {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-top: 15px;
-        margin-left: -5px;
-        font-size: 17px;
-        
-    }
-    .Kunyomi
-    {
-        padding-top: 5px;
-        padding-bottom: 5px;
-    
-        margin-top: 15px;
-        margin-left: 10px;
-        font-size: 17px;
-    }
 
     .hiragana{
         margin-left: -20px;
@@ -1042,30 +947,20 @@ input:checked ~ body {
     }
     .equivalent{
         color: rgb(6, 6, 6);
-        margin-left: -20px;
-        width: 180px;              
-    }
-
-    .equivalent p{
+        margin-left: 10px;
+        width: 300px;
+        word-wrap: break-word;
+        margin-bottom: -20px;
    
-     font-size: 14px;
-    
-   }
-
-    #left_container .equivalent div.p{
-        font-size: 13px;      
-        margin-right: 10px;
-        margin-left: -40px;
-   }
-   #left_container .equivalent{
-        margin-left: -20px;
-   }
-    #right_container .equivalent div.p{
-        font-size: 13px;      
-        margin-right: 10px;
+    }
+    .equivalent p{
+         padding-left: 60px;
+         font-size: 40px;
+         font-weight: bold;
         
     }
 
+    
     .Example
     {
         margin-top: -20px;
@@ -1237,72 +1132,40 @@ input:checked ~ body {
      }
 
 
+   
     .reading_container{
-        width: 360px !important;
-        
-            
-    }
-
-    #left_container{
-        margin-left: 32px !important;
-        width: 160px !important;
-        font-weight: bold;
-        text-align: center;
-        text-align: center;
-
-    }
-    #right_container{
+        display: block !important;
+        width: 350px !important;
+        margin-left: 30px;
+           
+     }
     
-        margin-left: -10px;
-        width: 200px !important;
-        font-weight: bold;
-        text-align: center;  
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        text-align: center;
-    }
+     .reading_container p{
+        width: 225px;
+        font-size: 40px;  
+        margin-left: 30px !important;
+        line-height: 30px;
+     }
+    
 
  
-   #audioButtonOnyomi{
+   #audioButtonHiragana{
         cursor: pointer;
         width: 35px;
         height: 70px;
         margin-bottom: 0px;
-        margin-left: 65px !important;
-        margin-top: 10px;
-	user-select: none;
+        margin-left: 160px !important; 
+        margin-top: 40px;
+	   user-select: none;
     }
 
-     #audioButtonOnyomi:active {
-	  background-color: transparent; /* Remove background color */
-	  outline: none; /* Remove outline */
-	}
-    #audioButtonKunyomi{
-        cursor: pointer;
-        width: 35px;
-        height: 70px;
-        margin-bottom: 0px;
-        margin-left: 80px !important;
-        margin-top: 10px;
-	user-select: none;
-    }
-    #audioButtonKunyomi:active {
+     #audioButtonHiragana:active {
 	  background-color: transparent; /* Remove background color */
 	  outline: none; /* Remove outline */
 	}
     
-       /* Hide the audio player */
-     #audioPlayerOnyomi {
-      display: none;
-    }
-        
-    #audioPlayerKunyomi {
-        display: none;
-
-    }
-    	  
+    
+ 
     
      
      .Usage{
