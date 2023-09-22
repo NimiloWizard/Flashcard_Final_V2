@@ -182,7 +182,7 @@ function showNextCard(){
 
 
   // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
-  document.getElementById('darkmode-toggle').addEventListener('change', function() {
+document.getElementById('darkmode-toggle').addEventListener('change', function() {
     
     if(this.checked) {
        
@@ -214,21 +214,7 @@ function showNextCard(){
 
  });
   // ---------------------------------- Toggle for Dark/Light Mode Only/No Image ---------------------//
-  document.getElementById('darkmode-toggle-N0-Image').addEventListener('change', function() {  
-          if(this.checked) {
-            document.body.style.background = "";
-            document.body.style.backgroundColor = '#242424';
-          } else {
-            document.body.style.background = "";
-            document.body.style.backgroundColor =  'white';
 
-            var styleElement = document.querySelector('style');
-            if (styleElement) {
-                styleElement.parentNode.removeChild(styleElement);
-            }
-
-          }
-  });
 
 
    function disableElement() {
