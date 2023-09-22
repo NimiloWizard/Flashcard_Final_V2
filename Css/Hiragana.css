@@ -844,7 +844,7 @@ input:checked ~ body {
         width: 355px;
         height: 100%;
         border-radius: 20px;  
-        margin-left: 25px;
+        margin-left: 35px;
         background: linear-gradient(245.59deg, #070707 0%, #fcfbfbf7 50.53%, #0f0f0f 90.52%);
        /*  box-shadow: 0 0px 1px 0 #fdfcfcfe,0 0px 2px 0 #f8f8f8;  */
        box-shadow: -1px 1px 1px   rgba(131, 131, 131, 0.987);
