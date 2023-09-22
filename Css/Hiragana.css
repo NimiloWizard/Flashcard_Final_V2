@@ -495,7 +495,7 @@ input:checked ~ body {
     height: 220px;
     margin-bottom: -23px;
     margin-top: -10px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .container img{
