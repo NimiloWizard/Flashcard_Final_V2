@@ -182,7 +182,7 @@ function showNextCard(){
 
 
   // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
-document.getElementById('darkmode-toggle').addEventListener('change', function() {
+  document.getElementById('darkmode-toggle').addEventListener('change', function() {
     
     if(this.checked) {
        
