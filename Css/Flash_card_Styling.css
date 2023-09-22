@@ -340,10 +340,11 @@ body{
     height: 40px;
 }
 #Premium{
+    margin-top: 10px;
     display: flex;
     align-items: center;
     align-content: center;
-    height: 100px;
+    height: 80px;
     text-align: center;
     
 }
