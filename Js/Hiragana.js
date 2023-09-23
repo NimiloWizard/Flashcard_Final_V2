@@ -24,7 +24,7 @@ let currentCardIndex = 0;
 
 [...stack.children].reverse().forEach(card => stack.append(card));
 
-// ----------------------------- Home Scree --------------------------------------------//
+// -------------------SAVE & RESTORE LAST PAGE WHERE THE USER LEFT OFF ---------------
 
 
 
@@ -149,36 +149,11 @@ function showNextCard(){
           
             // Add a click event listener to the image
             audioButtonHiragana.addEventListener('click', function() {
-                // Check if the audio is paused, if so, play it; otherwise, pause it
-           //     if (audioPlayerHiragana.paused) {
-            audioPlayerHiragana.play();
-                 // audioButtonHiragana.src = 'pause-button.png'; // Change the image to a pause button
-           //     } else {
-            //      audioPlayerHiragana.pause();
-                 // audioButtonHiragana.src = 'play-button.png'; // Change the image back to a play button
-           //     }
-           
-        
-              });
+              
+            audioPlayerHiragana.play();   
+           });
 
 
-
-
-
-           const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
-           const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
-           // Add a click event listener to the image
-             audioButtonKunyomi.addEventListener('click', function() {
-             // Check if the audio is paused, if so, play it; otherwise, pause it
-           //  if (audioPlayerKunyomi.paused) {
-               audioPlayerKunyomi.play();
-              // audioButtonKunyomi.src = 'pause-button.png'; // Change the image to a pause button
-           //  } else {
-          //     audioPlayerKunyomi.pause();
-              // audioButtonKunyomi.src = 'play-button.png'; // Change the image back to a play button
-        //     }
-
-             });
 
 
   // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
@@ -215,43 +190,6 @@ function showNextCard(){
  });
   // ---------------------------------- Toggle for Dark/Light Mode Only/No Image ---------------------//
 
-
-
-   function disableElement() {
-                    
-          const elementToDisablerevealButton = document.getElementById('revealButton');
-          const elementToDisableprevButton = document.getElementById('prevButton');
-          const elementToDisablenextButton = document.getElementById('nextButton');
-          elementToDisablerevealButton.disabled = true; // Disable the element
-          elementToDisableprevButton.disabled = true; // Disable the element
-          elementToDisablenextButton.disabled = true; // Disable the element
-
-          elementToDisablerevealButton.style.cursor = 'not-allowed'; // Disable the element
-          elementToDisableprevButton.style.cursor = 'not-allowed';  // Disable the element
-          elementToDisablenextButton.style.cursor = 'not-allowed';  // Disable the element
-
-                             
-          const audioButtonHiragana = document.getElementById('audioButtonHiragana');
-          const audioPlayerHiragana = document.getElementById('audioPlayerHiragana');
-           // Add a click event listener to the image
-           audioButtonHiragana.addEventListener('click', function() {
-              audioPlayerHiragana.pause();
-            });
-            audioButtonHiragana.style.cursor = 'not-allowed';
-        
-        
-          const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
-          const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
-          // Add a click event listener to the image
-          audioButtonKunyomi.addEventListener('click', function() {
-            audioPlayerKunyomi.pause();
-          });
-          audioButtonKunyomi.style.cursor = 'not-allowed';
-         
-   } 
-
-  
-   
 
 
 
@@ -524,6 +462,7 @@ document.getElementById('Activate_Wrting_checkbox').addEventListener('change', f
   } else {
       // If the checkbox is checked, show the feature and close the menu
       document.getElementById("Feature_Drawing").style.visibility = "visible";
+      document.getElementById("Feature_Drawing").style.position = "fixed";
       w3_close();
   }
 });
