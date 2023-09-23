@@ -834,7 +834,33 @@ input:checked ~ body {
 	    top: 0;
 
      }
-*/	 
+*/	
+    #numbering{
+        height: 60px;
+        width: 50px;
+        border: 1px solid rgb(231, 230, 230);
+        position: fixed;
+        margin-bottom: 40px;
+        margin-top: -33rem;
+        margin-left: 15px;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        display: block;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0px 0px 6px rgb(251, 223, 122);
+    }
+    #kanji_number{
+       font-size: 35px;
+       font-weight: bold;
+       color: #070707;
+       font-family: 'Garamond', sans-serif;
+       margin-top: -60px !important;
+       text-shadow: 0px 0px 6px rgb(251, 223, 122);
+       
+    }
+	 
 .stack
     {
         margin-top: 8rem;
