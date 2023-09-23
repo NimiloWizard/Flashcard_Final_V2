@@ -165,45 +165,60 @@ function showNextCard(){
 
   // ------------------------------------Audio Playaer ----------------------------------- //
 
-       
-               // Get references to the image and audio elements
+
+const audioButtonOnyomi = document.getElementById('audioButtonOnyomi');
+const audioPlayerOnyomi = document.getElementById('audioPlayerOnyomi');
+
+const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
+const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
+
+// Function to stop both audio players
+function stopBothAudioPlayers() {
+  if (!audioPlayerOnyomi.paused) {
+    audioPlayerOnyomi.pause();
+    audioPlayerOnyomi.currentTime = 0; // Reset audio to the beginning
+  }
+  if (!audioPlayerKunyomi.paused) {
+    audioPlayerKunyomi.pause();
+    audioPlayerKunyomi.currentTime = 0; // Reset audio to the beginning
+  }
+}
+
+// Add a click event listener to the Onyomi audio button
+audioButtonOnyomi.addEventListener('click', function() {
+  stopBothAudioPlayers(); // Stop the other audio if it's playing
+  audioPlayerOnyomi.play();
+});
+
+// Add a click event listener to the Kunyomi audio button
+audioButtonKunyomi.addEventListener('click', function() {
+  stopBothAudioPlayers(); // Stop the other audio if it's playing
+  audioPlayerKunyomi.play();
+});
+
+
+
+/*
            const audioButtonOnyomi = document.getElementById('audioButtonOnyomi');
            const audioPlayerOnyomi = document.getElementById('audioPlayerOnyomi');
           
-            // Add a click event listener to the image
-              audioButtonOnyomi.addEventListener('click', function() {
-                // Check if the audio is paused, if so, play it; otherwise, pause it
-           //     if (audioPlayerOnyomi.paused) {
-                  audioPlayerOnyomi.play();
-                 // audioButtonOnyomi.src = 'pause-button.png'; // Change the image to a pause button
-           //     } else {
-            //      audioPlayerOnyomi.pause();
-                 // audioButtonOnyomi.src = 'play-button.png'; // Change the image back to a play button
-           //     }
            
-        
+              audioButtonOnyomi.addEventListener('click', function() {
+
+                  audioPlayerOnyomi.play();
+         
               });
-
-
-
-
 
            const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
            const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
-           // Add a click event listener to the image
+       
              audioButtonKunyomi.addEventListener('click', function() {
-             // Check if the audio is paused, if so, play it; otherwise, pause it
-           //  if (audioPlayerKunyomi.paused) {
+          
                audioPlayerKunyomi.play();
-              // audioButtonKunyomi.src = 'pause-button.png'; // Change the image to a pause button
-           //  } else {
-          //     audioPlayerKunyomi.pause();
-              // audioButtonKunyomi.src = 'play-button.png'; // Change the image back to a play button
-        //     }
 
              });
 
-
+*/
   // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
   document.getElementById('darkmode-toggle').addEventListener('change', function() {
     
