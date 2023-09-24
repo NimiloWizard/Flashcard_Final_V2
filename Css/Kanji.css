@@ -505,10 +505,7 @@ input:checked ~ body {
 
 
 /* ------------------------- Image Flip----------------------------- */
-.imgbox:hover{
-    cursor: pointer;
-    transition: all ease .5s;   
-}
+
 .imgbox:active .imgbox:focus{
     outline: none !important;
     background-color: transparent;
