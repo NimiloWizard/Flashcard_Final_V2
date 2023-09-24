@@ -349,49 +349,7 @@ input:checked ~ body {
     grid-gap: -10px;
 }
 
-.card_back_image {
- /*   position: absolute;  */
-    display: grid;
-    top: 120px;
-    width: 400px;
-    grid-template-columns: 200px 200px;
-    grid-template-rows: 190px 190px;
-    grid-gap: -10px
-    
-}
 
-#background_caption{
-    position: absolute;
-    top: 80px;
-    left: 1040px;
-    width: 275px; 
-    border: 1px solid gray;
-    margin-bottom: 20px;
-    text-align: center;
-    justify-content: center;
-    display: none;
-
-}
-
-#card_back_image #background_image{
-    cursor: pointer;
-    transition: all ease .5s;
-    display: inline-block; /* Ensure links are treated as blocks */
-    text-align: center; /* Center the content horizontally */
-    padding-bottom: 15px;
-    margin-bottom: -10px;
-    margin-top: -10px;
-}
-
-#card_back_image #background_image:hover{
-    transform: scale(1.1);
-}
-
-.card_back_image #background_image p{
-    margin-top: 15px;
-    padding-left: 10px;
-    font-weight: bold;
-}
 
 .btn_bg{
     position: absolute;
@@ -816,13 +774,54 @@ input:checked ~ body {
      /*   height: 100vh; */
 	   
     }
+
+    .card_back_image {
+        /*   position: absolute;  */
+           display: grid;
+           margin-top: 120px; 
+           width: 400px;
+           
+       }
+       
+       #background_caption{
+           position: absolute;
+           top: 80px;
+           left: 1040px;
+           width: 275px; 
+           border: 1px solid gray;
+           margin-bottom: 20px;
+           text-align: center;
+           justify-content: center;
+           display: none;
+       
+       }
+       
+       #card_back_image #background_image{
+           cursor: pointer;
+           transition: all ease .5s;
+           display: inline-block block; /* Ensure links are treated as blocks */
+           text-align: center; /* Center the content horizontally */
+          
+           
+       }
+       
+       #card_back_image #background_image:hover{
+           transform: scale(1.05);
+       }
+       
+       .card_back_image #background_image p{
+           margin-top: 15px;
+           padding-left: 10px;
+           font-weight: bold;
+       }
 	 
-    #card_back_image img{
+    #background_image {
         width: 150px;
-        height: 170px;
-        margin-left: 15px !important;
-        padding-right: 10px !important;
-        border-radius: 40px;
+        height: 100px;
+        
+        align-content: center;
+        align-items: center;
+        text-align: center;
     }  
 	   /*
     #card_back_image p{
@@ -836,7 +835,7 @@ input:checked ~ body {
 
      }
     */	 
-  #numbering{
+    #numbering{
         height: 35px;
         width: 35px;
         position: fixed;
@@ -863,7 +862,6 @@ input:checked ~ body {
        font-family: 'EB Garamond';
        
     }
-
 
     .stack
     {
@@ -1129,22 +1127,24 @@ input:checked ~ body {
         margin-top: 400px;
         height: 68vh;
         padding-top: 0px;
-	    padding-left: 4px;
+        padding-bottom: 60px;
+	    padding-left: 15px;
         position: absolute !important;
         display: grid !important; 
         width: 350px !important; 
-        grid-template-columns: 150px 150px !important;
-        grid-template-rows: 160px 160px !important;
-        grid-column-gap: 20px !important;
-        margin-left: 28px !important; 
+        grid-template-columns: 160px 160px !important;
+        grid-column-gap: 10px !important;
+        grid-row-gap: -50px !important;
+        margin-left: 35px !important; 
         background: rgba(0, 0, 0, .6);
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+       
     }
       #background_caption{
         position: absolute;
         top: 480px;
-        left: 28px;
+        left: 35px;
         width: 350px; 
         margin-bottom: 20px;
         text-align: center;
@@ -1159,7 +1159,7 @@ input:checked ~ body {
         position: absolute;
         height: 40px;
         width: 150px;
-        top: 35rem !important;
+        top: 37rem !important;
         left: 120px !important;
         padding-left: -100px;
         margin-left: -20px;
@@ -1171,7 +1171,7 @@ input:checked ~ body {
         background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #04194f);
         animation: glowcard_Close_button 8s linear infinite;
         background-size: 400%;
-        margin-bottom: 20px;
+        
     }
     .btn_bg:hover{
         background-size: 400%;
@@ -1292,16 +1292,6 @@ input:checked ~ body {
    #audioButtonOnyomi{
         cursor: pointer;
         width: 30px;
-        height: 39px;
-        margin-bottom: 0px;
-        margin-left: 65px !important;
-        margin-top: 10px;
-	   user-select: none;
-    }
-
-   #audioButtonOnyomi{
-        cursor: pointer;
-        width: 30px;
         height: 20px;
         margin-bottom: 0px;
         margin-left: 65px !important;
@@ -1322,7 +1312,11 @@ input:checked ~ body {
         margin-top: 10px;
 	user-select: none;
     }
-    
+    #audioButtonKunyomi:active  #audioButtonKunyomi:focus {
+	  background-color: transparent; /* Remove background color */
+	  outline: none !important; /* Remove outline */
+	}
+     
        /* Hide the audio player */
      #audioPlayerOnyomi {
       display: none;
@@ -1531,11 +1525,13 @@ input:checked ~ body {
      width: 80;
      border: 1 px solid gray;
 }
-	  
-#eraser:hover{
+
+#eraser:hover  {
   cursor:pointer;
   transform: scale(0.8);
+  
 }
+ 
 #undoLast{
      /*  position: absolute; */
     top: 375px !important;
@@ -1548,7 +1544,6 @@ input:checked ~ body {
 #undoLast:hover{
   cursor:pointer;
   transform: scale(0.8);
-  
 }
 	  
 .color-palette {
