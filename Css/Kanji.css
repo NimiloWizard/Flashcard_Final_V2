@@ -417,7 +417,7 @@ input:checked ~ body {
     transition: transform 200ms;
     justify-content: center;
     outline: none;
-    
+    backface-visibility: hidden;
 }
 .card{
     position: absolute;
@@ -513,6 +513,7 @@ input:checked ~ body {
 
 .imgbox{
     position: relative;
+    backface-visibility: hidden;
 }
 .imgbox img{
     width: 150px;
@@ -522,15 +523,17 @@ input:checked ~ body {
     position: absolute;
     top: 0;
     left: 120px;
-        
+    backface-visibility: hidden;    
 }
 
 .front-image {
     cursor: pointer; /* Add pointer cursor to indicate clickability */
+    backface-visibility: hidden;
    
 }
 .back-image {
     cursor: pointer; /* Add pointer cursor to indicate clickability */
+    backface-visibility: hidden;
   
 }
 
@@ -880,7 +883,7 @@ input:checked ~ body {
         transition: transform 200ms;
         border-radius: 20px;
         outline: none;
-        
+        backface-visibility: hidden;
     }
 
 
@@ -981,6 +984,7 @@ input:checked ~ body {
        #stack {
         animation: none; /* Initially no animation */
         outline: none;
+        backface-visibility: hidden;
       }
 
    
