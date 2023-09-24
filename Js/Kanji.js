@@ -14,7 +14,8 @@ function w3_close() {
   
 }
 
-
+// Initialize an array to keep track of shown cards
+let shownCards = [];
 let previousCard = null;
 let areElementsHidden = true; // Track the elements' hidden state
 
@@ -24,33 +25,53 @@ let currentCardIndex = 0;
 
 [...stack.children].reverse().forEach(card => stack.append(card));
 
-// ----------------------------- Home Scree --------------------------------------------//
+
+// -------------------SAVE & RESTORE LAST PAGE WHERE THE USER LEFT OFF ---------------
+
+function saveLastVisitedPage() {
+  const currentPage = window.location.href;
+  localStorage.setItem("lastVisitedPage", currentPage);
+}
+
+// Function to redirect to the last visited page
+function redirectToLastVisitedPage() {
+  const lastVisitedPage = localStorage.getItem("lastVisitedPage");
+  if (lastVisitedPage) {
+      window.location.href = lastVisitedPage;
+  }
+}
 
 
+/* ------------------------------ Kanji Image Flip -------------------------------- */ 
+
+const frontImage = document.getElementById("front-image");
+const backImage = document.getElementById("back-image");
+const imgbox = document.getElementById("imgbox");
 
 
-
-
-
-/*
-const homebutton = document.getElementById('home');
-homebutton.addEventListener('click', function() {
-
-window.addEventListener('beforeunload', function (e) {
-  e.preventDefault(); // Cancel the event
-  e.returnValue = ''; // Required for modern browsers
-
-  // Prompt the user with a confirmation dialog
-  const confirmationMessage = 'Are you sure you want to leave this page?';
-
-    return confirmationMessage;
-   
+frontImage.addEventListener("hover", function () {
+  frontImage.style.display = "none";
+  backImage.style.display = "block";
+  console.log('front image clicked')
 });
-   w3_close() 
 
+frontImage.addEventListener("click", function () {
+    // Toggle the visibility of the front and back images
+    frontImage.style.display = "none";
+    backImage.style.display = "block";
+    console.log('front image clicked')
 });
 
-*/
+backImage.addEventListener("click", function () {
+
+    // Toggle the visibility of the front and back images
+    frontImage.style.display = "block";
+    backImage.style.display = "none";
+    console.log('back image clicked')
+});
+
+
+
 // -----------------------------  Reveal Element Button --------------------------------//
 
 document.getElementById("revealButton").addEventListener("click", revealElements);
@@ -79,19 +100,10 @@ function revealElements() {
 }
  
 // -----------------------------   Previous Element Button --------------------------------//
-document.addEventListener('DOMContentLoaded', function() {
-  const audioprevButton = document.getElementById('prevButton');
-  const audioPlayerprev = document.getElementById('audioprevButton');
-  // Add a click event listener to the button
-  audioprevButton.addEventListener('click', function() {
-       audioPlayerprev.play();
-  });
-  
-});
 
-let prevButton = document.querySelector("#prevButton");
-prevButton.addEventListener("click", showPreviousCard);
+//------------------------------------------------------------------------------------/
 
+//-------------------------------------------------------------------------------------/
 
 function showPreviousCard() {
 
@@ -114,7 +126,6 @@ function showPreviousCard() {
       areElementsHidden = true;
   }
 }
-
 
 
 // -----------------------------  NExt Element Button --------------------------------//
@@ -154,6 +165,11 @@ function showNextCard(){
 
     }, 500);
 
+        // Function to add a card to the shownCards array
+    function addCardToShownCards(card) {
+      shownCards.push(card);
+    }
+
 }
 
  //  ----------------------------------------Settings ---------------------------------------
@@ -166,59 +182,38 @@ function showNextCard(){
   // ------------------------------------Audio Playaer ----------------------------------- //
 
 
-const audioButtonOnyomi = document.getElementById('audioButtonOnyomi');
-const audioPlayerOnyomi = document.getElementById('audioPlayerOnyomi');
 
-const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
-const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
-
-// Function to stop both audio players
-function stopBothAudioPlayers() {
-  if (!audioPlayerOnyomi.paused) {
-    audioPlayerOnyomi.pause();
-    audioPlayerOnyomi.currentTime = 0; // Reset audio to the beginning
+  const audioButtonOnyomi = document.getElementById('audioButtonOnyomi');
+  const audioPlayerOnyomi = document.getElementById('audioPlayerOnyomi');
+  
+  const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
+  const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
+  
+  // Function to stop both audio players
+  function stopBothAudioPlayers() {
+    if (!audioPlayerOnyomi.paused) {
+      audioPlayerOnyomi.pause();
+      audioPlayerOnyomi.currentTime = 0; // Reset audio to the beginning
+    }
+    if (!audioPlayerKunyomi.paused) {
+      audioPlayerKunyomi.pause();
+      audioPlayerKunyomi.currentTime = 0; // Reset audio to the beginning
+    }
   }
-  if (!audioPlayerKunyomi.paused) {
-    audioPlayerKunyomi.pause();
-    audioPlayerKunyomi.currentTime = 0; // Reset audio to the beginning
-  }
-}
+  
+  // Add a click event listener to the Onyomi audio button
+  audioButtonOnyomi.addEventListener('click', function() {
+    stopBothAudioPlayers(); // Stop the other audio if it's playing
+    audioPlayerOnyomi.play();
+  });
+  
+  // Add a click event listener to the Kunyomi audio button
+  audioButtonKunyomi.addEventListener('click', function() {
+    stopBothAudioPlayers(); // Stop the other audio if it's playing
+    audioPlayerKunyomi.play();
+  });
+  
 
-// Add a click event listener to the Onyomi audio button
-audioButtonOnyomi.addEventListener('click', function() {
-  stopBothAudioPlayers(); // Stop the other audio if it's playing
-  audioPlayerOnyomi.play();
-});
-
-// Add a click event listener to the Kunyomi audio button
-audioButtonKunyomi.addEventListener('click', function() {
-  stopBothAudioPlayers(); // Stop the other audio if it's playing
-  audioPlayerKunyomi.play();
-});
-
-
-
-/*
-           const audioButtonOnyomi = document.getElementById('audioButtonOnyomi');
-           const audioPlayerOnyomi = document.getElementById('audioPlayerOnyomi');
-          
-           
-              audioButtonOnyomi.addEventListener('click', function() {
-
-                  audioPlayerOnyomi.play();
-         
-              });
-
-           const audioButtonKunyomi = document.getElementById('audioButtonKunyomi');
-           const audioPlayerKunyomi = document.getElementById('audioPlayerKunyomi');
-       
-             audioButtonKunyomi.addEventListener('click', function() {
-          
-               audioPlayerKunyomi.play();
-
-             });
-
-*/
   // ---------------------------------- Toggle for Dark/Light Mode ---------------------//
   document.getElementById('darkmode-toggle').addEventListener('change', function() {
     
