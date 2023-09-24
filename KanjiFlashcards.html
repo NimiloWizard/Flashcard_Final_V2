@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https:for practicehomebutton//fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Zilla+Slab:wght@600&display=swap" rel="stylesheet">
     <title>Flash Cards</title>
@@ -30,7 +33,7 @@
             <!-- <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>-->
              <!--  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>  -->
             
-            <a href="#" class="w3-bar-item w3-button" id="home"><img id="HomeIcon" src="Images/Home.png" class="HomeIcon" > <span>  </span>  Home </a> 
+             <a href="#" class="w3-bar-item w3-button" id="home"><div id="homeBgDesign" > <img id="HomeIcon" src="Images/Home.png" class="HomeIcon" >    <span> Home  </span></div>  </a> 
            
             
          
@@ -40,8 +43,7 @@
                      
                     <div id="DarkMode"><h5>Light/Dark Mode Only </h5></div>
                         <input type="checkbox" id="darkmode-toggle-N0-Image">
-                        <label for="darkmode-toggle-N0-Image"></label>
-                                     
+                                                       
                                                      
                     <div id="Card_BG_Option"><a href="#screen_back_image" class="w3-bar-item w3-button" onclick="open_cardGallery('card_back_image')"  id="change_card_background"> Theme Card Background</a></div>
 
@@ -119,12 +121,14 @@
 
 
             <!-- --------------------------------------------------------------  -->
-                      <div id="numbering">
+                    <div id="numbering">
                         <span id="kanji_number">1</span>
                     </div>
                     <div class="imgbox">                               <!-- kanji pictures-->
-                        <img  src="Images/11ushiro.png">
+                        <img id="front-image" src="Images/11ushiro2.png">
+                        <img id="back-image" src="Images/11ushiro.png" alt="Back Image" style="display: none;">
                     </div>
+                 
                         <div class="English_Def" id="English_Def">     <!--english definition-->
                              <p class="element-to-hide"> behind, back, later</p>
                         </div>
@@ -133,11 +137,11 @@
 
                                 <div class="Onyomi" id="Onyomi">Onyomi</div>
                 
-                                <div class = "hiragana" id ="hiragana">                                
-                                        <p class="element-to-hide">ゴ, コウ </p>                                      
+                                <div class = "hiragana" id="hiragana_left" >                                
+                                        <p  class="element-to-hide">ゴ, コウ </p>                                      
                                 </div>
                                 <div class = "equivalent" id ="equivalent">                                
-                                    <p class="element-to-hide"> go, kou</p>                                      
+                                    <p id="equivalent_left" class="element-to-hide"> go, kou</p>                                      
                                 </div>
 
                                <img class="element-to-hide" id="audioButtonOnyomi" src="Images/AudioButtonOnyomi.png" alt="Play Button">
@@ -151,11 +155,11 @@
 
                                 <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
 
-                                <div class = "hiragana" id ="hiragana"> 
+                                <div class = "hiragana" id="hiragana_right" > 
                                     <p class="element-to-hide"> のち 、 <span>    </span>  うし（ろ）、あと</p>  
                                 </div>
                                 <div class = "equivalent" id ="equivalent">                                
-                                    <p class="element-to-hide"> nochi, ushi(ro), ato</p>                                      
+                                    <p id="equivalent_right" class="element-to-hide"> nochi, ushi(ro), ato</p>                                      
                                 </div>
 
                                 
@@ -189,7 +193,7 @@
     
         
         <div class="card backgoundeffect" id="card">
-                
+                            
                         <div id="numbering">
                             <span id="kanji_number">2</span>
                         </div>
@@ -200,28 +204,33 @@
                                     <p class="element-to-hide"> in, inside, middle, mean, center</p>
                             </div>
                         <div class="Details" id="Details">                   <!-- kanji Description-->  
-                                <div class="reading_container" id="left_container">
+                              
+                            <div class="reading_container" id="left_container">
 
                                     <div class="Onyomi" id="Onyomi">Onyomi</div>
                     
-                                    <div class = "hiragana" id ="hiragana">                                
+                                    <div class = "hiragana" id="hiragana_left" >                             
                                             <p class="element-to-hide">チュウ </p>                                      
                                     </div>
+
                                     <div class = "equivalent" id ="equivalent">                                
-                                        <p class="element-to-hide"> chuu</p>                                      
+                                        <p id="equivalent_left" class="element-to-hide"> chuu</p>                                      
                                     </div>
+
                                 </div>
+
                                 <div class="reading_container" id="right_container">
 
                                     <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
 
-                                    <div class = "hiragana" id ="hiragana"> 
+                                    <div class = "hiragana" id="hiragana_right" > 
                                         <p class="element-to-hide">  なか、 うち、 あた(る)</p>  
                                     </div>
                                     <div class = "equivalent" id ="equivalent">                                
-                                        <p class="element-to-hide"> naka, uchi, ata(ru)</p>                                      
+                                        <p id="equivalent_right" class="element-to-hide"> naka, uchi, ata(ru)</p>                                      
                                     </div>
                                 </div>
+
                         </div>
 
                             <div class="Usage" id="Usage">Example Usages</div>
@@ -245,12 +254,13 @@
     
 <!-----------------------------------------Next Card------13Nichi-------------------->
         <div class="card backgoundeffect" id="card">
-                    
-                     <div id="numbering">
+            
+                    <div id="numbering">
                         <span id="kanji_number">3</span>
                     </div>
                     <div class="imgbox">                               <!-- kanji pictures-->
-                        <img  src="Images/13nichi.png">
+                        <img id="front-image" src="Images/13nichi.png">
+                        <img id="back-image" src="Images/13nichi.png"alt="Back Image" style="display: none;">
                     </div>
                         <div class="English_Def" id="English_Def">     <!--english definition-->
                                 <p class="element-to-hide"> day, sun, Japan, counter for days</p>
@@ -260,22 +270,22 @@
     
                                 <div class="Onyomi" id="Onyomi">Onyomi</div>
                 
-                                <div class = "hiragana" id ="hiragana">                                
+                                <div class = "hiragana" id="hiragana_left" >                             
                                         <p class="element-to-hide">ニチ, ジツ </p>                                      
                                 </div>
                                 <div class = "equivalent" id ="equivalent">                                
-                                    <p class="element-to-hide"> nichi, jitsu</p>                                      
+                                    <p id="equivalent_left"  class="element-to-hide"> nichi, jitsu</p>                                      
                                 </div>
                             </div>
                             <div class="reading_container" id="right_container">
     
                                 <div class="Kunyomi" id="Kunyomi">Kunyomi</div>
     
-                                <div class = "hiragana" id ="hiragana"> 
+                                <div class = "hiragana" id="hiragana_right" > 
                                     <p class="element-to-hide">  ひ, -び, -か</p>  
                                 </div>
                                 <div class = "equivalent" id ="equivalent">                                
-                                    <p class="element-to-hide"> hi, -bi, -ka</p>                                      
+                                    <p id="equivalent_right"  class="element-to-hide"> hi, -bi, -ka</p>                                      
                                 </div>
                             </div>
                     </div>
@@ -301,10 +311,10 @@
     
 <!-----------------------------------------Next Card--------Dai------------------->
        <div class="card backgoundeffect" id="card" >
-           
-                     <div id="numbering">
+                    <div id="numbering">
                         <span id="kanji_number">4</span>
-                    </div>   
+                    </div>
+
                     <div class="imgbox">                               <!-- kanji pictures-->
                         <img  src="Images/14dai.png">
                     </div>
@@ -353,13 +363,14 @@
 
 <!-----------------------------------------Next Card----------koku----------------->
         <div class="card backgoundeffect" id="card" >
-                    
-                 <div id="numbering">
+                <div id="numbering">
                     <span id="kanji_number">5</span>
                 </div>
+
                 <div class="imgbox">                               <!-- kanji pictures-->
                     <img  src="Images/15koku.png">
                 </div>
+                
                     <div class="English_Def" id="English_Def">     <!--english definition-->
                         <p class="element-to-hide"> country</p>
                     </div>
@@ -2487,6 +2498,14 @@
             <script>
                 // script.js
 
+            </script>
+
+ </div>        
+</body>
+</html>
+
+<!--
+    
                 const tiles = document.querySelectorAll('.tile');
                 const dropZones = document.querySelectorAll('.drop-zone');
                 const message = document.getElementById('message');
@@ -2589,7 +2608,7 @@
 
                     touchTile = null;
                 }
-                    const shuffleButton = document.getElementById('shuffleButton');
+                    const shuffleButton = document.getElementById('');
                     shuffleButton.addEventListener('click', shuffleTiles);
 
                     function shuffleTiles() {
@@ -2598,8 +2617,4 @@
                         });
                     }
 
-            </script>
-
- </div>        
-</body>
-</html>
+-->
