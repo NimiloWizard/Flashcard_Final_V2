@@ -1162,7 +1162,7 @@ input:checked ~ body {
         padding-top: 5px;
     }
 	  
-    .btn_bg{
+  .btn_bg{
         position: absolute;
         height: 40px;
         width: 150px;
