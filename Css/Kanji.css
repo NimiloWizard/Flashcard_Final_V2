@@ -507,10 +507,12 @@ input:checked ~ body {
 /* ------------------------- Image Flip----------------------------- */
 .imgbox:hover{
     cursor: pointer;
-    transition: all ease .5s;
-   
+    transition: all ease .5s;   
 }
-
+.imgbox:active .imgbox:focus{
+    outline: none !important;
+    background-color: transparent;
+}
 
 .imgbox{
     position: relative;
@@ -1300,23 +1302,29 @@ input:checked ~ body {
 	   user-select: none;
     }
 
-     #audioButtonOnyomi:active {
+   #audioButtonOnyomi{
+        cursor: pointer;
+        width: 30px;
+        height: 20px;
+        margin-bottom: 0px;
+        margin-left: 65px !important;
+        margin-top: 10px;
+	   user-select: none;
+    }
+
+     #audioButtonOnyomi:active #audioButtonOnyomi:focus{
 	  background-color: transparent; /* Remove background color */
-	  outline: none; /* Remove outline */
+	  outline: none !important; /* Remove outline */
 	}
     #audioButtonKunyomi{
         cursor: pointer;
         width: 30px;
-        height: 39px;
+        height: 20px;
         margin-bottom: 0px;
         margin-left: 80px !important;
         margin-top: 10px;
 	user-select: none;
     }
-    #audioButtonKunyomi:active {
-	  background-color: transparent; /* Remove background color */
-	  outline: none; /* Remove outline */
-	}
     
        /* Hide the audio player */
      #audioPlayerOnyomi {
