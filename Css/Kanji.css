@@ -1467,8 +1467,9 @@ input:checked ~ body {
 
 
  #Lefttab{
-      top: -200px !important;
-      left: 20px !important;
+      position: fixed;
+      top: -230px !important;
+      left: -10px !important;
   }
 	  
 #Feature_Drawing img{
@@ -1527,28 +1528,30 @@ input:checked ~ body {
 }
 #eraser{
     /* position: absolute;  */
-     top: 400px !important;
-     left: 230px !important;
-     height: 90px !important;
+     top: 375px !important;
+     left: 180px !important;
+     height: 50px !important;
      width: 80;
      border: 1 px solid gray;
-   }
+}
+	  
 #eraser:hover{
   cursor:pointer;
   transform: scale(0.8);
 }
-  #undoLast{
+#undoLast{
      /*  position: absolute; */
-       top: 402px !important;
-       left: 300px !important;
-       height: 80px !important;
-        width: 50px !important;
-       border: 1 px solid gray;
-       z-index: 5;
-    }
+    top: 375px !important;
+    left: 250px !important;
+    height: 50px !important;
+    width: 50px !important;
+    border: 1 px solid gray;
+    z-index: 5;
+}
 #undoLast:hover{
   cursor:pointer;
   transform: scale(0.8);
+  
 }
 	  
 .color-palette {
