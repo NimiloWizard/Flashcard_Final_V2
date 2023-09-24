@@ -416,7 +416,7 @@ input:checked ~ body {
     position: relative;
     transition: transform 200ms;
     justify-content: center;
-   
+    outline: none;
     
 }
 .card{
@@ -879,7 +879,7 @@ input:checked ~ body {
         position: relative;
         transition: transform 200ms;
         border-radius: 20px;
-       
+        outline: none;
         
     }
 
@@ -980,7 +980,7 @@ input:checked ~ body {
 
        #stack {
         animation: none; /* Initially no animation */
-        /* Other styles for your element */
+        outline: none;
       }
 
    
