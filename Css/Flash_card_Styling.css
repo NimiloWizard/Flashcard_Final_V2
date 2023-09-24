@@ -287,6 +287,7 @@ body{
     color: rgb(190, 247, 75);
     
 }
+
 #Japanese_Flashcards{
     display: flex;
     padding-top: 0px;
@@ -295,6 +296,42 @@ body{
 
     border-bottom: 1px solid rgb(36, 34, 34); 
   /*   border-left: 4px solid #414040;          */
+}
+
+#Hiragana_Flashcards{
+    margin-left: 25px;
+}
+#hiraganaIcon{
+    
+    height: 60px;
+    width: 50px;
+    margin-top: -20px;
+    border-radius: 20px;
+    padding-bottom: 10px;
+}
+
+#Katakana_Flashcard{
+    margin-left: 25px;
+}
+
+#katakanaIcon{
+    height: 50px;
+    width: 50px;
+    margin-top: -20px;
+    border-radius: 20px;
+    padding-bottom: 10px; 
+}
+
+#Kanji_Flashcards{
+    margin-left: 15px;
+}
+#kanjiIcon{
+    height: 50px;
+    width: 40px;
+    margin-top: -20px;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    margin-left: -10px;
 }
 #Writing #Activate_Wrting_checkbox{
     height: 20px;
