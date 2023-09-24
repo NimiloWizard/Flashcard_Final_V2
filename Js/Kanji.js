@@ -44,23 +44,16 @@ function redirectToLastVisitedPage() {
 
 /* ------------------------------ Kanji Image Flip -------------------------------- */ 
 
-const frontImage = document.getElementById("front-image");
-const backImage = document.getElementById("back-image");
-
-
-frontImage.addEventListener("click", function () {
-    // Toggle the visibility of the front and back images
-    frontImage.style.display = "none";
-    backImage.style.display = "block";
-    console.log('front image clicked')
-});
-
-backImage.addEventListener("click", function () {
-
-    // Toggle the visibility of the front and back images
-    frontImage.style.display = "block";
-    backImage.style.display = "none";
-    console.log('back image clicked')
+document.getElementById("stack").addEventListener("click", function (event) {
+  if (event.target.classList.contains("front-image")) {
+      // Toggle the visibility of the clicked front image and its sibling back image
+      event.target.style.display = "none";
+      event.target.nextElementSibling.style.display = "block";
+  } else if (event.target.classList.contains("back-image")) {
+      // Toggle the visibility of the clicked back image and its previous sibling front image
+      event.target.style.display = "none";
+      event.target.previousElementSibling.style.display = "block";
+  }
 });
 
 
@@ -239,22 +232,6 @@ function showNextCard(){
     }
 
  });
-  // ---------------------------------- Toggle for Dark/Light Mode Only/No Image ---------------------//
-  document.getElementById('darkmode-toggle-N0-Image').addEventListener('change', function() {  
-          if(this.checked) {
-            document.body.style.background = "";
-            document.body.style.backgroundColor = '#242424';
-          } else {
-            document.body.style.background = "";
-            document.body.style.backgroundColor =  'white';
-
-            var styleElement = document.querySelector('style');
-            if (styleElement) {
-                styleElement.parentNode.removeChild(styleElement);
-            }
-
-          }
-  });
 
 
    function disableElement() {
