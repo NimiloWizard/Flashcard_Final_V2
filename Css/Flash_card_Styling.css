@@ -203,6 +203,7 @@ body{
     font-size: 15px;    
 }
 
+
 #Languages{
     border-top: 1px solid rgb(189, 188, 188);
     border-bottom: 1px solid rgb(189, 188, 188);
@@ -212,12 +213,12 @@ body{
     align-content: center;
     text-align: center;
     height: 50px;
+    width: 250px;
     padding-top: 10px;
-    
-    color: black;
-    font-weight: bold;
+    color: rgb(122, 4, 4);
     text-shadow: 0px 0px 6px rgb(252, 252, 251);
 }
+
 #English_Flashcards{
     border-top: 1px solid rgb(36, 34, 34);
     border-bottom: 1px solid rgb(36, 34, 34);
