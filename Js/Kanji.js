@@ -57,7 +57,7 @@ document.getElementById("stack").addEventListener("click", function (event) {
       event.target.previousElementSibling.style.display = "block";
     element.blur();
   }
-  element.blur();
+   document.getElementById("stack").blur();
 });
 
 
