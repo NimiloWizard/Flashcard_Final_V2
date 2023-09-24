@@ -230,8 +230,10 @@ body{
     padding-top: 0px;
     padding-bottom: 0px;
     height: 70px !important;
-
-   border-bottom: 1px solid rgb(36, 34, 34);  
+    border-top: 1px solid rgb(52, 52, 52);  
+    border-bottom: 1px solid rgb(52, 52, 52); 
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
  /*   border-left: 4px solid #414040;            */
 }
 #Korean_Flashcards img{
@@ -285,21 +287,27 @@ body{
     margin-left: 20px;
     margin-top: 30px;
     color: rgb(190, 247, 75);
+   
     
 }
-
 #Japanese_Flashcards{
     display: flex;
     padding-top: 0px;
     padding-bottom: 0px;
     height: 70px !important;
-
-    border-bottom: 1px solid rgb(36, 34, 34); 
-  /*   border-left: 4px solid #414040;          */
+    border-top: 1px solid rgb(52, 52, 52);  
+    border-bottom: 1px solid rgb(52, 52, 52); 
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+   
 }
 
 #Hiragana_Flashcards{
     margin-left: 25px;
+}
+#Hiragana_Flashcards span{
+    padding-left: 10px;
+    
 }
 #hiraganaIcon{
     
@@ -313,7 +321,10 @@ body{
 #Katakana_Flashcard{
     margin-left: 25px;
 }
-
+#Katakana_Flashcard span{
+    padding-left: 10px;
+    
+}
 #katakanaIcon{
     height: 50px;
     width: 50px;
@@ -324,6 +335,10 @@ body{
 
 #Kanji_Flashcards{
     margin-left: 15px;
+}
+#Kanji_Flashcards span{
+    padding-left: 10px;
+    word-spacing: 4px;
 }
 #kanjiIcon{
     height: 50px;
