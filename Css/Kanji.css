@@ -1116,7 +1116,7 @@ input:checked ~ body {
            font-weight: bold;
        }
 	 
-    #background_image {
+  #background_image {
         width: 120px;
         height: 100px;
         align-content: center;
@@ -1125,21 +1125,23 @@ input:checked ~ body {
         padding-top: -10px;
         border-radius: 20px;
         margin-left: 15px;
+        margin-bottom: 20px;
        
     }  
+	  
     .visible {
         margin-top: 400px;
         height: 68vh;
         padding-top: 0px;
         padding-bottom: 20px;
-         padding-left: 17px;
+        padding-left: 17px;
         position: absolute !important;
         display: grid !important; 
         width: 350px !important; 
         grid-template-columns: 160px 160px !important;
         grid-column-gap: 5px !important;
         grid-row-gap: -50px !important;
-        margin-left: 30px !important; 
+        margin-left: 27px !important; 
         background: rgba(0, 0, 0, .6);
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
