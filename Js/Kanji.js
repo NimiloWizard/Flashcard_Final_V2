@@ -45,15 +45,19 @@ function redirectToLastVisitedPage() {
 /* ------------------------------ Kanji Image Flip -------------------------------- */ 
 
 document.getElementById("stack").addEventListener("click", function (event) {
+  
   if (event.target.classList.contains("front-image")) {
       // Toggle the visibility of the clicked front image and its sibling back image
       event.target.style.display = "none";
       event.target.nextElementSibling.style.display = "block";
+    element.blur();
   } else if (event.target.classList.contains("back-image")) {
       // Toggle the visibility of the clicked back image and its previous sibling front image
       event.target.style.display = "none";
       event.target.previousElementSibling.style.display = "block";
+    element.blur();
   }
+  element.blur();
 });
 
 
