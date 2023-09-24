@@ -1140,7 +1140,7 @@ input:checked ~ body {
         width: 350px !important; 
         grid-template-columns: 160px 160px !important;
         grid-column-gap: 5px !important;
-        grid-row-gap: -50px !important;
+        grid-row-gap: 0px !important;
         margin-left: 27px !important; 
         background: rgba(0, 0, 0, .6);
         border-bottom-left-radius: 20px;
