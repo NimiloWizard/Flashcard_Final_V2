@@ -45,6 +45,7 @@ function redirectToLastVisitedPage() {
 /* ------------------------------ Kanji Image Flip -------------------------------- */ 
 
 document.getElementById("stack").addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent the default focus behavior
   
   if (event.target.classList.contains("front-image")) {
       // Toggle the visibility of the clicked front image and its sibling back image
