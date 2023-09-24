@@ -46,14 +46,7 @@ function redirectToLastVisitedPage() {
 
 const frontImage = document.getElementById("front-image");
 const backImage = document.getElementById("back-image");
-const imgbox = document.getElementById("imgbox");
 
-
-frontImage.addEventListener("hover", function () {
-  frontImage.style.display = "none";
-  backImage.style.display = "block";
-  console.log('front image clicked')
-});
 
 frontImage.addEventListener("click", function () {
     // Toggle the visibility of the front and back images
