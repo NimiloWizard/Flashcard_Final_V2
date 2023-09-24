@@ -501,13 +501,19 @@ input:checked ~ body {
      
 }
 
- .imgbox:hover{
-    cursor: pointer;
-    transition: all ease .5s;
-}
 
 
 /* ------------------------- Image Flip----------------------------- */
+.imgbox:hover{
+    cursor: pointer;
+    transition: all ease .5s;
+   
+}
+
+
+.imgbox{
+    position: relative;
+}
 .imgbox img{
     width: 150px;
     height: 150px;
@@ -519,11 +525,13 @@ input:checked ~ body {
         
 }
 
-#front-image {
+.front-image {
     cursor: pointer; /* Add pointer cursor to indicate clickability */
+   
 }
-#back-image {
+.back-image {
     cursor: pointer; /* Add pointer cursor to indicate clickability */
+  
 }
 
 
@@ -1110,7 +1118,7 @@ input:checked ~ body {
         width: 200px; /* Set the width of the scrollable element */
         overflow: auto; /* Enable scrolling */
         overflow-x: hidden;
-        z-index: 9; /* Set a high z-index to make it appear over other elements */
+       z-index: 9; /* Set a high z-index to make it appear over other elements */
         margin-top: 0px;
 	height: 700px !important;
     }
@@ -1194,7 +1202,7 @@ input:checked ~ body {
         top: 0 !important;
         position: fixed;
         overflow: hidden;
-        z-index: 1000;
+        z-index: 1000; 
         margin-top: 0px;
         margin-bottom: 100px;
     }
