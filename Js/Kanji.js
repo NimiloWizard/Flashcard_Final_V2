@@ -459,6 +459,7 @@ document.getElementById('Activate_Wrting_checkbox').addEventListener('change', f
   } else {
       // If the checkbox is checked, show the feature and close the menu
       document.getElementById("Feature_Drawing").style.visibility = "visible";
+      document.getElementById("Feature_Drawing").style.position = "fixed";
       w3_close();
   }
 });
