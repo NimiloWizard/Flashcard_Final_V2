@@ -1375,11 +1375,10 @@ input:checked ~ body {
 }
 
 
- #Lefttab{
-      top: -200px !important;
+#Lefttab{
+      top: -220px !important;
       left: 20px !important;
-  }
-	  
+  }  
 #Feature_Drawing img{
    position: absolute; 
     top: -15rem;
@@ -1437,9 +1436,9 @@ input:checked ~ body {
 }
 #eraser{
     /* position: absolute;  */
-     top: 375px !important;
-     left: 180px !important;
-     height: 50px !important;
+     top: 360px !important;
+     left: 210px !important;
+     height: 60px !important;
      width: 80;
      border: 1 px solid gray;
 }
@@ -1452,8 +1451,8 @@ input:checked ~ body {
  
 #undoLast{
      /*  position: absolute; */
-    top: 375px !important;
-    left: 250px !important;
+    top: 365px !important;
+    left: 280px !important;
     height: 50px !important;
     width: 50px !important;
     border: 1 px solid gray;
