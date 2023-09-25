@@ -1076,10 +1076,10 @@ input:checked ~ body {
            
        }
        
-       #card_back_image #background_image:hover{
+    /*   #card_back_image #background_image:hover{
            transform: scale(1.05);
        }
-       
+    */    
        .card_back_image #background_image p{
            margin-top: 15px;
            padding-left: 10px;
