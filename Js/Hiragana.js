@@ -15,6 +15,30 @@ function w3_close() {
 }
 
 
+
+
+document.getElementById("stack").addEventListener("click", function (event) {
+
+  event.preventDefault(); // Prevent the default focus behavior
+
+  if (event.target.classList.contains("front-image")) {
+      // Toggle the visibility of the clicked front image and its sibling back image
+      event.target.style.display = "none";
+      event.target.nextElementSibling.style.display = "block";
+      element.blur();
+  } else if (event.target.classList.contains("back-image")) {
+      // Toggle the visibility of the clicked back image and its previous sibling front image
+      event.target.style.display = "none";
+      event.target.previousElementSibling.style.display = "block";
+      element.blur();
+  }
+  document.getElementById("stack").blur();
+});
+
+
+// ----------------------------- Card Stack setup --------------------
+
+let shownCards = [];
 let previousCard = null;
 let areElementsHidden = true; // Track the elements' hidden state
 
@@ -24,11 +48,7 @@ let currentCardIndex = 0;
 
 [...stack.children].reverse().forEach(card => stack.append(card));
 
-// -------------------SAVE & RESTORE LAST PAGE WHERE THE USER LEFT OFF ---------------
-
-
-
-// -----------------------------  Reveal Element Button --------------------------------//
+// ----------------------------- Reveal Element Button --------------------------------//
 
 document.getElementById("revealButton").addEventListener("click", revealElements);
 
@@ -36,69 +56,61 @@ const audiorevealButton = document.getElementById('revealButton');
 const audioPlayerreveal = document.getElementById('audiorevealButton');
 // Add a click event listener to the button
 audiorevealButton.addEventListener('click', function() {
-     audioPlayerreveal.play();
+  audioPlayerreveal.play();
 });
 
 function revealElements() {
-
   if (areElementsHidden) {
+    let elementsToReveal = document.querySelectorAll(".element-to-hide");
+    elementsToReveal.forEach(element => {
+      element.style.display = "block";
+    });
 
-      let elementsToReveal = document.querySelectorAll(".element-to-hide");
-      elementsToReveal.forEach(element => {
-         
-          element.style.display = "block"; 
-         
-      });
-
-      areElementsHidden = false;
-      
+    areElementsHidden = false;
   }
 }
- 
-// -----------------------------   Previous Element Button --------------------------------//
+
+// ----------------------------- Previous Element Button --------------------------------//
+
 document.addEventListener('DOMContentLoaded', function() {
   const audioprevButton = document.getElementById('prevButton');
   const audioPlayerprev = document.getElementById('audioprevButton');
   // Add a click event listener to the button
   audioprevButton.addEventListener('click', function() {
-       audioPlayerprev.play();
+    audioPlayerprev.play();
   });
-  
+
 });
 
 let prevButton = document.querySelector("#prevButton");
 prevButton.addEventListener("click", showPreviousCard);
 
-
 function showPreviousCard() {
+  if (shownCards.length > 0) {
+    let lastShownCard = shownCards.pop(); // Remove the last card from the shownCards array
+    lastShownCard.style.animation = "slideIn";
 
-  if (previousCard) {
-    
-       previousCard.style.animation = "slideIn";
-      
-      setTimeout(() => {
-        
-          previousCard.style.animation = " ";
-          stack.appendChild(previousCard); // Append the previous card back
-         
-          // Hide the elements after the card swap
-          let elementsToHide = document.querySelectorAll(".element-to-hide");
-          elementsToHide.forEach(element => {
-            element.style.display = "none";
-            });
+    setTimeout(() => {
+      lastShownCard.style.animation = "";
+      stack.appendChild(lastShownCard); // Append the last shown card back
 
-      }, 200);
-      areElementsHidden = true;
+      // Hide the elements after the card swap
+      let elementsToHide = document.querySelectorAll(".element-to-hide");
+      elementsToHide.forEach(element => {
+        element.style.display = "none";
+      });
+
+    }, 200);
+
+    areElementsHidden = true;
   }
 }
 
 
-
-// -----------------------------  NExt Element Button --------------------------------//
+// ----------------------------- Next Element Button --------------------------------//
 
 let nextButton = document.querySelector("#nextButton")
 nextButton.addEventListener("click", showNextCard);
-
 
 const audionextButton = document.getElementById('nextButton');
 const audioPlayernext = document.getElementById('audionextButton');
@@ -107,30 +119,32 @@ audionextButton.addEventListener('click', function() {
   audioPlayernext.play();
 });
 
-function showNextCard(){
+function showNextCard() {
+  let card = document.querySelector(".card:last-child");
 
-    let card = document.querySelector(".card:last-child");
-   
-    let elementsToHide = document.querySelectorAll(".element-to-hide");
-    elementsToHide.forEach(element => {
-      element.style.display = "none";
-    });
+  let elementsToHide = document.querySelectorAll(".element-to-hide");
+  elementsToHide.forEach(element => {
+    element.style.display = "none";
+  });
 
-    card.style.animation = "swap 500ms forwards"; 
-  
-  
-    setTimeout(() => {
-      card.style.animation = "";
-      stack.prepend(card);
+  card.style.animation = "swap 500ms forwards";
 
-     
-       // Hide the elements after the card swap
-      
-       areElementsHidden = true;
-       previousCard = card;
+  setTimeout(() => {
+    card.style.animation = "";
+    stack.prepend(card);
 
-    }, 500);
+    // Hide the elements after the card swap
+    areElementsHidden = true;
+    previousCard = card;
 
+    // Add the card to the shownCards array
+    addCardToShownCards(card);
+  }, 500);
+}
+
+// Function to add a card to the shownCards array
+function addCardToShownCards(card) {
+  shownCards.push(card);
 }
 
  //  ----------------------------------------Settings ---------------------------------------
