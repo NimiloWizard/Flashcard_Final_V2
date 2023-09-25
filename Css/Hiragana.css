@@ -62,6 +62,32 @@ body{
     
    margin-bottom: 10px;
 }
+
+#numbering{
+    height: 35px;
+    width: 35px;
+    border: 1px solid rgb(231, 230, 230);
+    position: fixed;
+    margin-bottom: 34px;
+    margin-top: -35rem;
+    margin-left: 15px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: block;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 6px rgb(251, 223, 122);
+}
+#hiragana_number{
+   font-size: 20px;
+   font-weight: bold;
+   color: #070707;
+   font-family: 'Garamond', sans-serif;
+   margin-top: -60px !important;
+   text-shadow: 0px 0px 6px rgb(251, 223, 122);
+   font-family: 'EB Garamond';
+}
 #home #homeBgDesign{
    
     padding-bottom: 50px;
@@ -491,33 +517,62 @@ input:checked ~ body {
 
 
 .container .imgbox{
-    width: 100%;
+    width: 360px;
     height: 220px;
     margin-bottom: -23px;
     margin-top: -10px;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
-.container img{
-    margin-bottom: 20px;
-    margin-top: -50px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    height: 295px;
-    width: 300px;
-    margin-left: -40px;
+/* ------------------------- Image Flip----------------------------- */
+
+.imgbox:active .imgbox:focus{
+    outline: none !important;
+    background-color: transparent;
 }
+
+.imgbox{
+    position: relative;
+}
+.imgbox img{
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 5px;
+    position: absolute;
+    top: 0;
+    left: 120px;
+        
+}
+
+.front-image {
+    cursor: pointer; /* Add pointer cursor to indicate clickability */
+   
+}
+.back-image {
+    cursor: pointer; /* Add pointer cursor to indicate clickability */
+  
+}
+
+
+/* -------------------------End of Image Flip Code----------------------------- */
+
+.imgbox img {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 5px;
+    position: absolute;
+    top: 0;
+    left: 120px;
+}
+
 
  .imgbox{
     cursor: pointer;
     transition: all ease .5s;
 }
- .imgbox:hover{
-    transform: scale(1.3);
-}
+
 
 .English_Def{
     width: 450px;
@@ -798,6 +853,31 @@ input:checked ~ body {
 
      }
 */	 
+#numbering{
+    height: 35px;
+    width: 35px;
+    border: 1px solid rgb(231, 230, 230);
+    position: fixed;
+    margin-bottom: 34px;
+    margin-top: -35rem;
+    margin-left: 15px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    display: block;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 6px rgb(251, 223, 122);
+}
+#kanji_number{
+   font-size: 20px;
+   font-weight: bold;
+   color: #070707;
+   font-family: 'Garamond', sans-serif;
+   margin-top: -60px !important;
+   text-shadow: 0px 0px 6px rgb(251, 223, 122);
+   font-family: 'EB Garamond';
+}
     .stack
     {
         margin-top: 8rem;
@@ -844,7 +924,7 @@ input:checked ~ body {
         width: 355px;
         height: 100%;
         border-radius: 20px;  
-        margin-left: 35px;
+        margin-left: 10px;
         background: linear-gradient(245.59deg, #070707 0%, #fcfbfbf7 50.53%, #0f0f0f 90.52%);
        /*  box-shadow: 0 0px 1px 0 #fdfcfcfe,0 0px 2px 0 #f8f8f8;  */
        box-shadow: -1px 1px 1px   rgba(131, 131, 131, 0.987);
@@ -1398,7 +1478,7 @@ margin-top: 10px;
 }
     
 
-/* -----------------------------------Enf of simple matching game ------------------------------- */
+/* -----------------------------------End of simple matching game ------------------------------- */
 
 }
 @keyframes swap {
