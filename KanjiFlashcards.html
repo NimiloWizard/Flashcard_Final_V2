@@ -31,7 +31,7 @@
         <div class="menu_options" >
             
             <!-- <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>-->
-             <!--  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>  -->
+             <!--  <a href="#" class="w3-bar-item w3-button"><i ackclass="fa fa-search"></i></a>  -->
             
              <a href="#" class="w3-bar-item w3-button" id="home"><div id="homeBgDesign" > <img id="HomeIcon" src="Images/Home.png" class="HomeIcon" >    <span> Home  </span></div>  </a> 
            
@@ -40,15 +40,13 @@
             <div class="w3-dropdown-hover" id="settings_caret">
                 <button class="w3-button" >Settings <i class="fa fa-caret-down"></i></button>
                  <div class="w3-dropdown-content w3-bar-block" id="settings">
-                     
-                                                                  
+                                                                        
                                                      
                     <div id="Card_BG_Option"><a href="#screen_back_image" class="w3-bar-item w3-button" onclick="open_cardGallery('card_back_image')"  id="change_card_background"> Theme Card Background</a></div>
 
                     <div id="Default_Card_Option"><a href="#Default_cardbackground" class="w3-bar-item w3-button" onclick="open_Defaultbackground()"  id="SetDefaultBackground"> Deafult Card Background</a></div>
 
-                 
-                     
+                                          
                      <div class="Writing" id="Writing"> <input type="checkbox" id="Activate_Wrting_checkbox">   Activate Writing Panel</div>
                     
                      <div class="ClickSound" id="ClickSound"> <input type="checkbox" id="Activate_ClickSound_checkbox">    Activate Click Sound</div>
@@ -59,10 +57,9 @@
            <div class="w3-dropdown-hover" id="Japanese_caret">
                 <button class="w3-button" id="Japanese_Flashcards">Japanese <i class="fa fa-caret-down"></i></button>
                 <div class="w3-dropdown-content w3-bar-block">
-                     <a href="HiraganaFlashcards.html" class="w3-bar-item w3-button" id="Hiragana_Flashcards">  - Hiragana Flashcards</a>
-                    <a href="KatakanaFlashcards.html" class="w3-bar-item w3-button" id="Katakana_Flashcard">- Katakana Flashcards</a>
-            
-
+                    <a href="#" class="w3-bar-item w3-button" id="Hiragana_Flashcards"> Hiragana Flashcards</a>
+                    <a href="#" class="w3-bar-item w3-button" id="Katakana_Flashcard"> Katakana Flashcards</a>
+                       
                 </div>
             </div> 
 
@@ -107,18 +104,18 @@
     
     <div class="col col-2" id="col-2">  <!--------------Start of Col-2----------------------->
         <div class="overlayCardscreen"></div>
-    <div  class="stack" id="stack">       <!-- handles the cards on deck  -->
+    <div type="button" class="stack" id="stack" >       <!-- handles the cards on deck  -->
 
   <!-----------------------------------------Cards Starting Point-------------------->
   
 
-        <div class="card backgoundeffect"  id="card" >
+        <div class="card kanjibackgoundeffect"  id="card" >
        
             
 
 
             <!-- --------------------------------------------------------------  -->
-                   <div id="numbering">
+                    <div id="numbering">
                        <img id="card_counter" src="Images/CardCounter.png">
                        <span id="kanji_number">1</span>
                     </div>
@@ -190,7 +187,7 @@
  <!-----------------------------------------Next Card------Naka-------------------->
     
         
-        <div class="card backgoundeffect" id="card">
+        <div class="card kanjibackgoundeffect" id="card">
                             
                         <div id="numbering">
                             <span id="kanji_number">2</span>
@@ -254,7 +251,7 @@
 
     
 <!-----------------------------------------Next Card------13Nichi-------------------->
-        <div class="card backgoundeffect" id="card">
+        <div class="card kanjibackgoundeffect" id="card">
             
                     <div id="numbering">
                         <span id="kanji_number">3</span>
@@ -314,7 +311,7 @@
        
     
 <!-----------------------------------------Next Card--------Dai------------------->
-       <div class="card backgoundeffect" id="card" >
+       <div class="card kanjibackgoundeffect" id="card" >
                     <div id="numbering">
                         <span id="kanji_number">4</span>
                     </div>
@@ -366,7 +363,7 @@
         </div>
 
 <!-----------------------------------------Next Card----------koku----------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                 <div id="numbering">
                     <span id="kanji_number">5</span>
                 </div>
@@ -419,7 +416,7 @@
         </div>
 
  <!-----------------------------------------Next Card------Jin--------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                 
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -469,7 +466,7 @@
         </div>
 
  <!-----------------------------------------Next Card-------Nen--------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                         
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -519,7 +516,7 @@
         </div> 
  
  <!-----------------------------------------Next Card----hon------------------------>
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                 
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -573,7 +570,7 @@
 
         
  <!-----------------------------------------Next Card--------chou-------------------->
-       <div class="card backgoundeffect" id="card" >
+       <div class="card kanjibackgoundeffect" id="card" >
                                         
 
             <div class="imgbox">                               
@@ -627,7 +624,7 @@
  
        
  <!-----------------------------------------Next Card--------shutsu-------------------->
-      <div class="card backgoundeffect" id="card" >
+      <div class="card kanjibackgoundeffect" id="card" >
                                                 
 
             <div class="imgbox">                              
@@ -681,7 +678,7 @@
     
 
  <!-----------------------------------------Next Card--------Ji-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                         
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -732,7 +729,7 @@
         </div> 
 
  <!-----------------------------------------Next Card--------Kou-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                 
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -786,7 +783,7 @@
         </div> 
 
  <!-----------------------------------------Next Card--------Ken-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                         
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -837,7 +834,7 @@
         </div> 
 
  <!-----------------------------------------Next Card--------Getsu-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                 
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -890,7 +887,7 @@
         </div> 
         
  <!-----------------------------------------Next Card--------25Bun-------------------->
-      <div class="card backgoundeffect" id="card" >
+      <div class="card kanjibackgoundeffect" id="card" >
                                                                                         
 
             <div class="imgbox">                              
@@ -944,7 +941,7 @@
    
       
  <!-----------------------------------------Next Card--------26Zen-------------------->
-      <div class="card backgoundeffect" id="card" >
+      <div class="card kanjibackgoundeffect" id="card" >
                                                                                                 
 
             <div class="imgbox">                               
@@ -1000,7 +997,7 @@
         </div> 
     
  <!-----------------------------------------Next Card--------Sei-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                         
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1055,7 +1052,7 @@
 
 
  <!-----------------------------------------Next Card--------Kan-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                 
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1109,7 +1106,7 @@
         </div>
 
  <!-----------------------------------------Next Card--------Jou-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                         
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1164,7 +1161,7 @@
         </div>
         
  <!-----------------------------------------Next Card--------Kon---------Latest card----------->  
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                 
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1222,7 +1219,7 @@
         </div>
                
  <!-----------------------------------------Next Card--------Kin-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                 
 
             <div class="imgbox">                               
@@ -1281,7 +1278,7 @@
         </div>
               
  <!-----------------------------------------Next Card--------Nyuu-------------------->
-        <div class="card  backgoundeffect" id="card" >
+        <div class="card  kanjibackgoundeffect" id="card" >
                                                                                                                                                         
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1339,7 +1336,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Gaku-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                             
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1397,7 +1394,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------34Takai-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                     
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1454,7 +1451,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------En-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                             
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1511,7 +1508,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Shi-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                     
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1568,7 +1565,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Gai-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                     
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1625,7 +1622,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Ka-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                             
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1678,7 +1675,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------39Rai-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                     
 
             <div class="imgbox">                               
@@ -1733,7 +1730,7 @@
 
         </div>  
 <!-----------------------------------------Next Card--------Ki-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                             
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1788,7 +1785,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Shou-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                             
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1843,7 +1840,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------San-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                                     
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1898,7 +1895,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------43Wa-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                                     
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -1953,7 +1950,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Jo-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                                             
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -2008,7 +2005,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Go-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                                                     
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -2063,7 +2060,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Hyaku-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                                                             
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -2118,7 +2115,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Sho-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                                                             
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -2173,7 +2170,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Sen-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                                                             
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -2228,7 +2225,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Mei-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                                                             
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -2283,7 +2280,7 @@
 
         </div>
 <!-----------------------------------------Next Card--------Kawa-------------------->
-        <div class="card backgoundeffect" id="card" >
+        <div class="card kanjibackgoundeffect" id="card" >
                                                                                                                                                                                                                                                     
 
             <div class="imgbox">                               <!-- kanji pictures-->
@@ -2383,15 +2380,13 @@
        
     
 
-    <div class="col col-1" id="col-3">
-        
-      <div class="arrow" id="arrow">
+    <div class="col col-3" id="col-3">
+       <div class="arrow" id="arrow">
             <img id="arrowUp" src="Images/SwipeUp1.png"> 
             <div class="background_caption " id="background_caption"> Click the Image below to apply the Theme!</div>
        </div> 
-        
         <div id="card_back_image" class="hide_Image hidden">
-    
+                    
                     <div class="background_image " id ="background_image1" onclick="changeCardBackground()">
                         <a href="#card" ><img  id="background_image" src="Images/BACKGROUND1.png"  alt="Background Image"></a>  
                     </div>
@@ -2492,9 +2487,9 @@
 
                   // Retrieve and apply the card background image from local storage on page load
                     document.addEventListener('DOMContentLoaded', function() {
-                        const cardBackgroundImageUrl = localStorage.getItem('cardbackground');
-                        if (cardBackgroundImageUrl) {
-                            changeCardBackground(cardBackgroundImageUrl);
+                        const kanjicardBackgroundImageUrl = localStorage.getItem('Kanjicardbackground');
+                        if (kanjicardBackgroundImageUrl) {
+                            changeCardBackground(kanjicardBackgroundImageUrl);
                                                }
                     });
                     
