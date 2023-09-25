@@ -8,6 +8,7 @@ $(document).ready(function(){
   });
 });
 
+
 function w3_open() {
   
   document.getElementById("mySidebar").style.width = "25%";
@@ -338,16 +339,16 @@ function addCardToShownCards(card) {
 
 // Function to change the background image based on the option clicked
 
-function changeCardBackground(newCardBackgroundImageUrl) {
+function changeCardBackground(KanjinewCardBackgroundImageUrl) {
  
   // Set the background for all cards in the stack
-  const elements = document.querySelectorAll('.backgoundeffect');
+  const elements = document.querySelectorAll('.kanjibackgoundeffect');
   elements.forEach(function(element) {
-      element.style.background = `url("${newCardBackgroundImageUrl}") center center / cover`;
+      element.style.background = `url("${KanjinewCardBackgroundImageUrl}") center center / cover`;
   });
 
   // Store the selected background image URL in local storage
-  localStorage.setItem('cardbackground', newCardBackgroundImageUrl);
+  localStorage.setItem('Kanjicardbackground', KanjinewCardBackgroundImageUrl);
 }
   
 
@@ -635,11 +636,16 @@ function undo() {
         };
   }
   else if (currentStep <= 0){
-        currentStep--;       
-        ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);           
+        currentStep--;
+       
+            ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+           
+        
   }
+
     
 }
+
 
 
 // Event listener for the undo button
