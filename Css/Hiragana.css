@@ -924,7 +924,7 @@ input:checked ~ body {
         width: 355px;
         height: 100%;
         border-radius: 20px;  
-        margin-left: 25px;
+        margin-left: 30px;
         background: linear-gradient(245.59deg, #070707 0%, #fcfbfbf7 50.53%, #0f0f0f 90.52%);
        /*  box-shadow: 0 0px 1px 0 #fdfcfcfe,0 0px 2px 0 #f8f8f8;  */
        box-shadow: -1px 1px 1px   rgba(131, 131, 131, 0.987);
@@ -1437,25 +1437,28 @@ input:checked ~ body {
 }
 #eraser{
     /* position: absolute;  */
-     top: 400px !important;
-     left: 230px !important;
-     height: 90px !important;
+     top: 375px !important;
+     left: 180px !important;
+     height: 50px !important;
      width: 80;
      border: 1 px solid gray;
-   }
-#eraser:hover{
+}
+
+#eraser:hover  {
   cursor:pointer;
   transform: scale(0.8);
+  
 }
-  #undoLast{
+ 
+#undoLast{
      /*  position: absolute; */
-       top: 402px !important;
-       left: 300px !important;
-       height: 80px !important;
-        width: 50px !important;
-       border: 1 px solid gray;
-       z-index: 5;
-    }
+    top: 375px !important;
+    left: 250px !important;
+    height: 50px !important;
+    width: 50px !important;
+    border: 1 px solid gray;
+    z-index: 5;
+}
 #undoLast:hover{
   cursor:pointer;
   transform: scale(0.8);
