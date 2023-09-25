@@ -1,3 +1,12 @@
+$(document).ready(function(){       
+  $(window).scroll(function() {
+      if (this.scrollY > 400) {
+          $('#col-3 #arrow #arrowUp').hide(); // Use hide() method
+      } else { // Show the element if not beyond 100px
+          $('#col-3 #arrow #arrowUp').show();
+      }
+  });
+});
 
 function w3_open() {
   
