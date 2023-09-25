@@ -1118,7 +1118,16 @@ input:checked ~ body {
 	 
   #background_image {
         width: 120px;
-        height: 100px;
+        height: 150px;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: -10px;
+        border-radius: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+       
+    }  
         align-content: center;
         align-items: center;
         text-align: center;
