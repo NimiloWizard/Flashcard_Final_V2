@@ -118,7 +118,7 @@ function changeBackgroundImage(newBackgroundImageUrl) {
   document.body.style.background = `url("${newBackgroundImageUrl}")`;
 
   // Store the new background image URL in localStorage
-  localStorage.setItem('background', newBackgroundImageUrl);
+  localStorage.setItem('Screenbackground', newBackgroundImageUrl);
 
  
 }
