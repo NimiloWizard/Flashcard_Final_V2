@@ -1232,7 +1232,7 @@ input:checked ~ body {
    #audioButtonHiragana{
         cursor: pointer;
         width: 35px;
-        height: 70px;
+        height: 40px;
         margin-bottom: 0px;
         margin-left: 165px !important; 
         margin-top: 40px;
