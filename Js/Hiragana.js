@@ -17,6 +17,9 @@ function w3_close() {
 
 
 
+/* ------------------------------ Hiragana Image Flip -------------------------------- */ 
+
+
 document.getElementById("stack").addEventListener("click", function (event) {
 
   event.preventDefault(); // Prevent the default focus behavior
@@ -325,16 +328,16 @@ function addCardToShownCards(card) {
 
 // Function to change the background image based on the option clicked
 
-function changeCardBackground(newCardBackgroundImageUrl) {
+function changeCardBackground(HiragananewCardBackgroundImageUrl) {
  
   // Set the background for all cards in the stack
-  const elements = document.querySelectorAll('.backgoundeffect');
+  const elements = document.querySelectorAll('.hiraganabackgoundeffect');
   elements.forEach(function(element) {
-      element.style.background = `url("${newCardBackgroundImageUrl}") center center / cover`;
+      element.style.background = `url("${HiragananewCardBackgroundImageUrl}") center center / cover`;
   });
 
   // Store the selected background image URL in local storage
-  localStorage.setItem('cardbackground', newCardBackgroundImageUrl);
+  localStorage.setItem('Hiraganacardbackground', HiragananewCardBackgroundImageUrl);
 }
   
 
@@ -444,7 +447,7 @@ document.getElementById('background_image6').onclick = function() {
      
      function open_Defaultbackground() {
 
-      const elements = document.querySelectorAll('.backgoundeffect');
+      const elements = document.querySelectorAll('.hiraganabackgoundeffect');
       elements.forEach(function(element) {
           element.style.background = 'linear-gradient(245.59deg, #070707 0%, #fcfbfbf7 50.53%, #0f0f0f 90.52%)';
      
