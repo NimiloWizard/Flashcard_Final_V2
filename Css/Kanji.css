@@ -287,6 +287,17 @@ body{
     padding-bottom: 10px; 
 }
 
+#contact{
+    padding-top: 20px;
+    height: 60px;
+    border-top: 1px solid gray;
+    margin-top: 10px;
+    font-size: 15px;
+    color: rgb(245, 169, 6);
+}
+#spacing2{
+    height: 100px;
+}
 
 
 #Writing #Activate_Wrting_checkbox{
