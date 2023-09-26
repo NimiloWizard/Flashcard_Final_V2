@@ -129,8 +129,9 @@ document.getElementById('background_image1').onclick = function() {
   const backgroundOption1 = 'Images/BACKGROUND1.png'; // Replace with the actual URL
   changeBackgroundImage(backgroundOption1);
   body.style.backgroundImage = 'url("Images/BACKGROUND1.png")';
-  body.style.backgroundPosition = 'center center';
-  body.style.backgroundSize = 'cover';
+  document.body.style.backgroundPosition = 'center center';
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundRepeat = 'no-repeat';
 
 };
 
@@ -138,8 +139,9 @@ document.getElementById('background_image2').onclick = function() {
   const backgroundOption2 = 'Images/BACKGROUND2.png'; // Replace with the actual URL
   changeBackgroundImage(backgroundOption2);
   body.style.backgroundImage = 'url("Images/BACKGROUND2.png")';
-  body.style.backgroundPosition = 'center center';
-  body.style.backgroundSize = 'cover';
+  document.body.style.backgroundPosition = 'center center';
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundRepeat = 'no-repeat';
 
 };
 
@@ -147,8 +149,9 @@ document.getElementById('background_image3').onclick = function() {
   const backgroundOption3 = 'Images/BACKGROUND3.png'; // Replace with the actual URL
   changeBackgroundImage(backgroundOption3);
   body.style.backgroundImage = 'url("Images/BACKGROUND3.png")';
-  body.style.backgroundPosition = 'center center';
-  body.style.backgroundSize = 'cover';
+ document.body.style.backgroundPosition = 'center center';
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundRepeat = 'no-repeat';
 
 };
 
@@ -157,9 +160,9 @@ document.getElementById('background_image4').onclick = function() {
   const backgroundOption4 = 'Images/BACKGROUND4.png'; // Replace with the actual URL
   changeBackgroundImage(backgroundOption4);
   body.style.backgroundImage = 'url("Images/BACKGROUND4.png")';
-  body.style.backgroundPosition = 'center center';
-  body.style.backgroundSize = 'cover';
-
+  document.body.style.backgroundPosition = 'center center';
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundRepeat = 'no-repeat';
 }
 
 
@@ -167,8 +170,9 @@ document.getElementById('background_image5').onclick = function() {
   const backgroundOption5 = 'Images/BACKGROUND5.png'; // Replace with the actual URL
   changeBackgroundImage(backgroundOption5);
   body.style.backgroundImage = 'url("Images/BACKGROUND5.png")';
-  body.style.backgroundPosition = 'center center';
-  body.style.backgroundSize = 'cover';
+ document.body.style.backgroundPosition = 'center center';
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundRepeat = 'no-repeat';
 
 };
 
@@ -177,8 +181,9 @@ document.getElementById('background_imag6').onclick = function() {
   const backgroundOption6 = 'Images/BACKGROUND6.png'; // Replace with the actual URL
   changeBackgroundImage(backgroundOption6);
   body.style.backgroundImage = 'url("Images/BACKGROUND6.png")';
-  body.style.backgroundPosition = 'center center';
-  body.style.backgroundSize = 'cover';
+  document.body.style.backgroundPosition = 'center center';
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundRepeat = 'no-repeat';
 
 };
 
