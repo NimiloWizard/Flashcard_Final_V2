@@ -378,25 +378,7 @@ input:checked ~ body {
 
 }
 
-#card_back_image #background_image{
-    cursor: pointer;
-    transition: all ease .5s;
-    display: inline-block; /* Ensure links are treated as blocks */
-    text-align: center; /* Center the content horizontally */
-    padding-bottom: 15px;
-    margin-bottom: -10px;
-    margin-top: -10px;
-}
 
-#card_back_image #background_image:hover{
-    transform: scale(1.1);
-}
-
-.card_back_image #background_image p{
-    margin-top: 15px;
-    padding-left: 10px;
-    font-weight: bold;
-}
 
 .btn_bg{
     position: absolute;
@@ -781,13 +763,7 @@ input:checked ~ body {
 	   
     }
 	 
-    #card_back_image img{
-        width: 150px;
-        height: 170px;
-        margin-left: 15px !important;
-        padding-right: 10px !important;
-        border-radius: 40px;
-    }  
+   
 	   /*
     #card_back_image p{
         margin-left: 20px !important;
@@ -1043,14 +1019,40 @@ input:checked ~ body {
         overflow-x: hidden;
         z-index: 9; /* Set a high z-index to make it appear over other elements */
         margin-top: 0px;
-	height: 700px !important;
+    	height: 700px !important;
     }
-      .visible {
+
+     
+    #card_back_image #cardbackground_image:hover{
+        transform: scale(1.1);
+    }
+    
+    .card_back_image #background_image p{
+        margin-top: 15px;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+
+    #cardbackground_image{
+        width: 120px;
+        height: 150px;
+        padding-top: 0px;
+        margin-top: 20px;
+        border-radius: 20px  !important;
+        margin-left: 22px !important;
+        margin-bottom: 20px;
+        transition: all ease .5s;
+        display: inline-block; /* Ensure links are treated as blocks */
+        text-align: center; /* Center the content horizontally */
+       
+    }  
+
+    .visible {
         margin-top: 400px;
         height: 77vh;
         padding-top: 0px;
         padding-bottom: 20px;
-        padding-left: 10px;
+	    padding-left: 10px;
         position: absolute !important;
         display: grid !important; 
         width: 350px !important; 
@@ -1062,12 +1064,13 @@ input:checked ~ body {
         border-bottom-right-radius: 20px;
               
     }
-        #arrowUp{
+
+    #arrowUp{
         position: absolute;
         height: 50px;
         width: 50px;
         top: 430px;
-        left: 215px;
+        left: 220px;
         z-index: 10;
         animation: bounce 1.5s infinite;
     } 
@@ -1080,7 +1083,7 @@ input:checked ~ body {
           transform: translateY(-20px); /* Adjust the bounce height */
         }
       }
-	  
+
       #background_caption{
         position: absolute;
         top: 480px;
