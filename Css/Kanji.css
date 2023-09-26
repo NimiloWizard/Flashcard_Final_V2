@@ -1157,7 +1157,7 @@ input:checked ~ body {
         background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #04194f);
         animation: glowcard_Close_button 8s linear infinite;
         background-size: 400%;
-        
+        margin-top: 20px;
     }
     .btn_bg:hover{
         background-size: 400%;
