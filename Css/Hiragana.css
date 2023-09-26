@@ -194,7 +194,14 @@ body{
     text-align: center;
     margin-left: 18%;
 }
-
+#Settings{
+    border-bottom: 1px solid rgb(36, 34, 34);   
+    height: 60px;  
+}
+#settings_caret i{
+    margin-left: 133px;
+    font-weight: bold;
+}
 
 #settings h5{
     font-size: 15px;
@@ -687,10 +694,7 @@ input:checked ~ body {
        color: rgb(11, 128, 0);
     }
 
-    #settings_caret i{
-        margin-left: 133px;
-        font-weight: bold;
-    }
+ 
     #Japanese_caret i{
         margin-left: 125px;
         font-weight: bold;
