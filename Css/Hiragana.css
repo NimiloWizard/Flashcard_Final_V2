@@ -201,6 +201,37 @@ body{
    
 }
 
+#Katakana_Flashcard{
+    margin-left: 25px;
+}
+#Katakana_Flashcard span{
+    padding-left: 10px;
+    
+}
+#katakanaIcon{
+    height: 50px;
+    width: 50px;
+    margin-top: -20px;
+    border-radius: 20px;
+    padding-bottom: 10px; 
+}
+
+#Kanji_Flashcards{
+    margin-left: 15px;
+}
+#Kanji_Flashcards span{
+    padding-left: 10px;
+    word-spacing: 4px;
+}
+#kanjiIcon{
+    height: 50px;
+    width: 40px;
+    margin-top: -20px;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    margin-left: -10px;
+}
+
 #Writing #Activate_Wrting_checkbox{
     height: 20px;
     width: 20px;
