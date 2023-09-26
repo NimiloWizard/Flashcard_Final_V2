@@ -1070,7 +1070,7 @@ input:checked ~ body {
         height: 50px;
         width: 50px;
         top: 430px;
-        left: 220px;
+        left: 215px;
         z-index: 10;
         animation: bounce 1.5s infinite;
     } 
