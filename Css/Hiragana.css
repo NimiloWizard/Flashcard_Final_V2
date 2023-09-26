@@ -63,31 +63,7 @@ body{
    margin-bottom: 10px;
 }
 
-#numbering{
-    height: 35px;
-    width: 35px;
-    border: 1px solid rgb(231, 230, 230);
-    position: fixed;
-    margin-bottom: 34px;
-    margin-top: -35rem;
-    margin-left: 15px;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    display: block;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 0px 6px rgb(251, 223, 122);
-}
-#hiragana_number{
-   font-size: 20px;
-   font-weight: bold;
-   color: #070707;
-   font-family: 'Garamond', sans-serif;
-   margin-top: -60px !important;
-   text-shadow: 0px 0px 6px rgb(251, 223, 122);
-   font-family: 'EB Garamond';
-}
+
 #home #homeBgDesign{
    
     padding-bottom: 50px;
@@ -853,31 +829,47 @@ input:checked ~ body {
 
      }
 */	 
+
+
+#numbering #card_counter1{
+   position: absolute;
+    height: 85px;
+    width: 60px;
+    left: 20px;
+    margin-top: -33px;
+    z-index: -1;
+    
+}
+#hiragana_number{
+   font-size: 20px;
+   font-weight: bold;
+   color: #ff8c18;
+   font-family: 'Garamond', sans-serif;
+   text-shadow: 0px 0px 6px rgb(251, 223, 122);
+   font-family: 'EB Garamond';
+   text-align: center;
+   
+}
+
 #numbering{
-    height: 35px;
-    width: 35px;
-    border: 1px solid rgb(231, 230, 230);
+    height: 60px;
+    width: 40px;
     position: fixed;
+    display: flex;
     margin-bottom: 34px;
-    margin-top: -35rem;
-    margin-left: 15px;
+    margin-top: -32rem;
+    margin-left: 24px;
     align-items: center;
     align-content: center;
     text-align: center;
     display: block;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: 0px 0px 6px rgb(251, 223, 122);
+    padding-bottom: 20px;
+    text-align: center;
+  
 }
-#kanji_number{
-   font-size: 20px;
-   font-weight: bold;
-   color: #070707;
-   font-family: 'Garamond', sans-serif;
-   margin-top: -60px !important;
-   text-shadow: 0px 0px 6px rgb(251, 223, 122);
-   font-family: 'EB Garamond';
-}
+
     .stack
     {
         margin-top: 8rem;
@@ -1044,8 +1036,9 @@ input:checked ~ body {
     .Example
     {
         margin-top: -20px;
-        font-size: 15px;
+        font-size: 17px;
         line-height: 34px;
+        text-shadow: 0px 2px 5px rgb(252, 252, 251);
     }
        .Example p::selection {
         
