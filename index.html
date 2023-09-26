@@ -165,6 +165,9 @@
                     console.log('Background Image URL:', backgroundImageUrl);
                     if (backgroundImageUrl) {
                         document.body.style.background = `url("${backgroundImageUrl}")`;
+                        document.body.style.backgroundPosition = 'center center';
+                        document.body.style.backgroundSize = 'cover';
+                        document.body.style.backgroundRepeat = 'no-repeat';
                     }
                    
                 });
