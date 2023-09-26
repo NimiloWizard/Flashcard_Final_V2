@@ -444,7 +444,7 @@ body{
 #facebook{
     height: 50px;
     width: 50px;
-    margin-left: 10px;
+    margin-left: 30px;
     padding: 0px;
     border: 2px solid rgb(16, 16, 16);
     border-radius: 50%;
@@ -460,7 +460,7 @@ body{
 #instagram{
     height: 50px;
     width: 50px;
-    margin-left: 10px;
+    margin-left: -5px;
     padding: 0px;
     border: 2px solid rgb(16, 16, 16);
     border-radius: 50%;
@@ -475,7 +475,7 @@ body{
 #twitter{
     height: 50px;
     width: 50px;
-    margin-left: 10px;
+    margin-left: -5px;
     padding: 0px;
     border: 2px solid rgb(16, 16, 16);
     border-radius: 50%;
@@ -490,7 +490,7 @@ body{
 #linkedin{
     height: 50px;
     width: 50px;
-    margin-left: 10px;
+    margin-left: -5px;
     padding: 0px;
     border: 2px solid rgb(16, 16, 16);
     border-radius: 50%;
