@@ -159,14 +159,50 @@ body{
    
     font-weight: bold;
 }
-#Japanese_Flashcards{
+
+
+#Japanese_Flashcards img{
+    margin-top: -10px;
+    height: 70px;
+    width: 40px !important;
+    margin-left: 0px;
+   /* border-radius: 50%; */
     
-    height: 20px;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgb(36, 34, 34);
 }
 
+#Japanese_Flashcards #japan{
+    
+    margin-top: -10px;
+    height: 70px;
+    width: 40px !important;
+    margin-left: -30px;
+   /* border-radius: 50%; */
+    
+}
+#Japanese_Flashcards span{
+    font-size: 18px;
+    margin-left: 17px;
+    font-weight: bold;
+    text-shadow: 0px 0px 6px rgb(246, 248, 246);
+}
+#Japanese_Flashcards #fa-caret{
+    margin-left: 20px;
+    margin-top: 30px;
+    color: rgb(190, 247, 75);
+   
+    
+}
+#Japanese_Flashcards{
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 70px !important;
+    border-top: 1px solid rgb(52, 52, 52);  
+    border-bottom: 1px solid rgb(52, 52, 52); 
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+   
+}
 
 #Writing #Activate_Wrting_checkbox{
     height: 20px;
