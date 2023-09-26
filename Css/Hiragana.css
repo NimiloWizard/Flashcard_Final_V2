@@ -533,23 +533,6 @@ input:checked ~ body {
 
 /* -------------------------End of Image Flip Code----------------------------- */
 
-.imgbox img {
-    width: 150px;
-    height: 150px;
-    margin-top: 20px;
-    margin-left: 5px;
-    position: absolute;
-    top: 0;
-    left: 120px;
-}
-
-
- .imgbox{
-    cursor: pointer;
-    transition: all ease .5s;
-}
-
-
 .English_Def{
     width: 450px;
     padding-bottom: 5px;
