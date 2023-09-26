@@ -833,7 +833,7 @@ input:checked ~ body {
 
 #numbering #card_counter1{
    position: absolute;
-    height: 85px;
+    height: 80px;
     width: 60px;
     left: 20px;
     margin-top: -33px;
