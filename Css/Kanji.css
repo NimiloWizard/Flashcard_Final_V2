@@ -299,6 +299,117 @@ body{
     height: 100px;
 }
 
+#Premium{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: 80px;
+    text-align: center;
+    
+}
+#Premium img{
+    height: 80px;
+    width: 60px;
+    margin-left: -20px; 
+    margin-top: -30px;
+    margin-bottom: 25px;
+}
+#Premium span{  
+    margin-left: 20px; 
+    font-weight: bold;   
+    width: 110px;
+    height: 80px;
+    padding-top: 8px;
+    padding-bottom: 0px !important;  
+    text-shadow: 0px 0px 6px rgb(8, 8, 8);
+}
+#Premium span:hover{  
+   color: white;
+}
+#PremiumBgDesign{
+    display: flex;
+    height: 40px;
+  /*  background: linear-gradient(180deg,#f6f6f5,#d8860b); */
+    background: linear-gradient(180deg,#f9f9fa,#161616,#f9f9fa);
+    width: 200px;
+    border:  1px solid rgb(250, 249, 249);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: 15px;
+    box-shadow:  0px 0px 6px rgb(249, 250, 248);;
+}
+#socialmedia{
+    
+    display: flex;
+    position: relative;   
+    align-items: center;
+    align-content: center;
+    gap: -5px;
+    padding-top: 0px;
+}
+#facebook{
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+    padding: 0px;
+    border: 2px solid rgb(16, 16, 16);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+#facebook:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(247, 246, 246);
+    transform: rotate(360deg); 
+}
+
+#instagram{
+    height: 50px;
+    width: 50px;
+    margin-left: -5px;
+    padding: 0px;
+    border: 2px solid rgb(16, 16, 16);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+#instagram:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(247, 246, 246);
+    transform: rotate(360deg); 
+}
+#twitter{
+    height: 50px;
+    width: 50px;
+    margin-left: -5px;
+    padding: 0px;
+    border: 2px solid rgb(16, 16, 16);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+#twitter:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(247, 246, 246);
+    transform: rotate(360deg); 
+}
+#linkedin{
+    height: 50px;
+    width: 50px;
+    margin-left: -5px;
+    padding: 0px;
+    border: 2px solid rgb(16, 16, 16);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+#linkedin:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(247, 246, 246);
+    transform: rotate(360deg); 
+}
+
 
 #Writing #Activate_Wrting_checkbox{
     height: 20px;
