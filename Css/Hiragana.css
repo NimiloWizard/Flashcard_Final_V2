@@ -62,41 +62,58 @@ body{
     
    margin-bottom: 10px;
 }
-
-
-#home #homeBgDesign{
-   
-    padding-bottom: 50px;
-    background: linear-gradient(180deg,#9cb3f3,#230bd8);
-    height: 40px;
-    width: 190px;
-    border:  1px solid rgb(250, 249, 249);
-    margin-left: 20px;
-    margin-top: 5px;
-    margin-bottom:5px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+#spacing{
+    height: 20px;
 }
+
 #home{
+   
     border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    padding-top: 60px;
-    padding-bottom: 50px;
+    padding-top: 5px;
+    padding-left: 35px;
     align-content: center;
     align-items: center;
-    
+    font-weight: bold;
+    font-size: 18px;
+    height: 80px;
+    line-height: 20px;
+   
 }
+
+#home span{
+    padding-left: 40px;
+    margin-bottom: 0px;
+    color: black;
+    text-shadow: 0px 0px 6px rgb(252, 252, 251);
+  
+}
+
+#home #homeBgDesign{
+    display: flex;
+    height: 40px;
+    padding-bottom: 10px !important;
+   /* background: linear-gradient(180deg,#d1dcf9,#1705a3); */
+   background: linear-gradient(180deg,#f9f9fa,#161616);
+   box-shadow:  0px 0px 6px rgb(252, 252, 251);
+    width: 200px;
+    border:  1px solid rgb(250, 249, 249);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    align-content: center !important;
+    align-items: center !important;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+
+
 #home #HomeIcon{
     height: 90px; 
     width: 60px; 
-    margin-left: 0px;
-    margin-top: -10px;
+    margin-left: -30px;
+    margin-top: -35px;
 }
 
-#settings_caret i{
-    margin-left: 230px;
-    font-weight: bold;
-}
 #settings label{
      margin-bottom: 10px;
      margin-left: 60px;
@@ -194,18 +211,54 @@ body{
     text-align: center;
     margin-left: 18%;
 }
-#Settings{
-    border-bottom: 1px solid rgb(36, 34, 34);   
-    height: 60px;  
-}
-#settings_caret i{
-    margin-left: 133px;
-    font-weight: bold;
-}
+
 
 #settings h5{
     font-size: 15px;
     margin-left: 20px;
+}
+#buttonSettings{
+    padding-top: -30px;
+    height: 80px; 
+    padding-left: 35px;
+    align-content: center !important;
+    align-items: center !important;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+#settings_caret #settingsBgDesign{
+    display: flex;
+    height: 40px !important;
+    padding-top: -40px !important;
+  /*  background: linear-gradient(180deg,#9cb3f3,#1705a3);  */
+    background: linear-gradient(180deg,#f9f9fa,#161616);
+    box-shadow:  0px 0px 6px rgb(252, 252, 251);
+    width: 200px;
+    border:  1px solid rgb(250, 249, 249);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#settings_caret img{
+    height: 130px; 
+    width: 110px; 
+    margin-left: -55px;
+    margin-top: -43px;
+    padding-bottom: 30px;
+}
+
+#settings_caret span{
+    margin-left: 10px !important;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    text-shadow: 0px 0px 6px rgb(252, 252, 251);
+}
+#settings_caret i{
+    margin-left: 133px;
+    font-weight: bold;
 }
 /* ------------------------------------Dark/light Mode ----------------------------*/ 
 
