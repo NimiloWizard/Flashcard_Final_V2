@@ -1339,7 +1339,7 @@ input:checked ~ body {
         position: absolute;
         height: 40px;
         width: 150px;
-        top: 39rem !important;
+        top: 38.5rem !important;
         left: 120px !important;
         padding-left: -100px;
         margin-left: -20px;
