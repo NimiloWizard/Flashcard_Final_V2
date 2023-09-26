@@ -62,10 +62,10 @@ body{
     
    margin-bottom: 10px;
 }
-
 #spacing{
     height: 20px;
 }
+
 
 #home{
    
@@ -78,7 +78,7 @@ body{
     font-size: 18px;
     height: 80px;
     line-height: 20px;
-   
+    
 }
 
 #home span{
@@ -106,20 +106,77 @@ body{
     margin-bottom: 40px;
 }
 
-#home #HomeIcon{
-    height: 90px; 
-    width: 60px; 
-    margin-left: -30px;
-    margin-top: -35px;
+#home #HomeIcon{ 
+
+    height: 70px; 
+    width: 65px; 
+    margin-left: -33px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+       
+}
+
+#buttonSettings{
+    padding-top: -30px;
+    height: 80px; 
+    padding-left: 35px;
+    align-content: center !important;
+    align-items: center !important;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+#settings_caret #settingsBgDesign{
+    display: flex;
+    height: 40px !important;
+    padding-top: -40px !important;
+  /*  background: linear-gradient(180deg,#9cb3f3,#1705a3);  */
+    background: linear-gradient(180deg,#f9f9fa,#161616);
+    box-shadow:  0px 0px 6px rgb(252, 252, 251);
+    width: 200px;
+    border:  1px solid rgb(250, 249, 249);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#settings_caret img{
+    height: 110px; 
+    width: 110px; 
+    margin-left: -55px;
+    margin-top: -23px;
+    padding-bottom: 30px;
+}
+
+#settings_caret span{
+    margin-left: 10px !important;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    text-shadow: 0px 0px 6px rgb(252, 252, 251);
 }
 #settings_caret i{
-    margin-left: 230px;
+    margin-left: 133px;
     font-weight: bold;
 }
 #settings label{
      margin-bottom: 10px;
      margin-left: 60px;
 }
+#Flashcards{
+    
+    border-bottom: 1px solid rgb(189, 188, 188);
+    font-size: 20px;
+/*   background: linear-gradient(180deg,#f9faf8,#494949, #f8faf8); */
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    height: 60px;
+    width: 250px;
+    padding-top: 10px;
+    color: rgb(10, 10, 10);
+    text-shadow: 0px 2px 3px rgb(252, 252, 251);
+ }
 
 #Screen_BG_Option{
     border-top: 1px solid rgb(189, 188, 188);
@@ -153,17 +210,81 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#Japanese_caret i{
-    margin-left: 220px;
-   
+
+#Japanese_Flashcards img{
+    margin-top: 10px;
+    height: 50px;
+    width: 40px !important;
+    margin-left: 0px;
+   /* border-radius: 50%; */
+    
+}
+
+#Japanese_Flashcards #japan{
+    
+    margin-top: -10px;
+    height: 70px;
+    width: 40px !important;
+    margin-left: -30px;
+   /* border-radius: 50%; */
+    
+}
+#Japanese_Flashcards span{
+    font-size: 18px;
+    margin-left: 17px;
     font-weight: bold;
+    text-shadow: 0px 0px 6px rgb(246, 248, 246);
+}
+#Japanese_Flashcards #fa-caret{
+    margin-left: 20px;
+    margin-top: 30px;
+    color: rgb(190, 247, 75);
+   
+    
 }
 #Japanese_Flashcards{
+    display: flex;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 70px !important;
+    border-top: 1px solid rgb(52, 52, 52);  
+    border-bottom: 1px solid rgb(52, 52, 52); 
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+   
+}
+
+
+#Hiragana_Flashcards{
+    margin-left: 20px;
     
-    height: 20px;
-    padding-top: 20px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgb(36, 34, 34);
+}
+#Hiragana_Flashcards span{
+    padding-left: 10px;
+    
+}
+#hiraganaIcon{
+    height: 50px;
+    width:50px;
+    margin-top: -20px;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    
+}
+#Katakana_Flashcard{
+    margin-left: 25px;
+}
+#Katakana_Flashcard span{
+    padding-left: 10px;
+    
+}
+#katakanaIcon{
+    height: 50px;
+    width: 50px;
+    margin-top: -20px;
+    border-radius: 20px;
+    padding-bottom: 10px; 
 }
 
 
