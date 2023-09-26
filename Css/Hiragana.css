@@ -511,8 +511,8 @@ input:checked ~ body {
     position: relative;
 }
 .imgbox img{
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 130px;
     margin-top: 20px;
     margin-left: 5px;
     position: absolute;
