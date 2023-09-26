@@ -1056,7 +1056,7 @@ input:checked ~ body {
        
    
        
-       #card_back_image #background_image{
+       #card_back_image #cardbackground_image{
            cursor: pointer;
            transition: all ease .5s;
            display: inline-block block; /* Ensure links are treated as blocks */
@@ -1075,7 +1075,7 @@ input:checked ~ body {
            font-weight: bold;
        }
 	 
-    #background_image {
+    #cardbackground_image {
         width: 120px;
         height: 150px;
         align-content: center;
