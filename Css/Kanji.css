@@ -254,9 +254,8 @@ body{
    
 }
 
-
 #Hiragana_Flashcards{
-    margin-left: 20px;
+    margin-left: 0px;
     
 }
 #Hiragana_Flashcards span{
@@ -264,28 +263,30 @@ body{
     
 }
 #hiraganaIcon{
-    height: 50px;
-    width:50px;
-    margin-top: -20px;
+    height: 40px;
+    width:40px;
+    margin-top: 0px;
     border-radius: 20px;
     padding-bottom: 10px;
     padding-left: 10px;
     
 }
+
 #Katakana_Flashcard{
-    margin-left: 25px;
+    margin-left: 10px;
 }
 #Katakana_Flashcard span{
     padding-left: 10px;
     
 }
 #katakanaIcon{
-    height: 50px;
-    width: 50px;
-    margin-top: -20px;
+    height: 30px;
+    width: 30px;
+    margin-top: 0px;
     border-radius: 20px;
     padding-bottom: 10px; 
 }
+
 
 
 #Writing #Activate_Wrting_checkbox{
