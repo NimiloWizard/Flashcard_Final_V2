@@ -142,23 +142,20 @@ body{
     
 }
 
-#English_Flashcards{
-    border-top: 1px solid rgb(36, 34, 34);
-    border-bottom: 1px solid rgb(36, 34, 34);
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-} 
-#Korean_Flashcards{
-    border-bottom: 1px solid rgb(36, 34, 34);
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-#Japanese_caret i{
-    margin-left: 220px;
-   
-    font-weight: bold;
-}
+#Flashcards{
+    border-top: 1px solid rgb(189, 188, 188);
+    border-bottom: 1px solid rgb(189, 188, 188);
+    font-size: 20px;
+/*   background: linear-gradient(180deg,#f9faf8,#494949, #f8faf8); */
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    height: 60px;
+    width: 250px;
+    padding-top: 10px;
+    color: rgb(10, 10, 10);
+    text-shadow: 0px 2px 3px rgb(252, 252, 251);
+ }
 
 
 #Japanese_Flashcards img{
