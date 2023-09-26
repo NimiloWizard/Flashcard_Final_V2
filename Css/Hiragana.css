@@ -496,7 +496,7 @@ input:checked ~ body {
     width: 360px;
     height: 220px;
     margin-bottom: -23px;
-    margin-top: -10px;
+    margin-top: -30px;
     margin-left: 30px;
 }
 
@@ -516,8 +516,8 @@ input:checked ~ body {
     margin-top: 20px;
     margin-left: 5px;
     position: absolute;
-    top: 0;
-    left: 120px;
+    top: 0px;
+    left: 110px;
         
 }
 
@@ -541,14 +541,14 @@ input:checked ~ body {
     margin-left: 0px;
     color: white;
     font-weight: bold;
-    margin-top: -30px !important;
+    margin-top: -130px !important;
     margin-bottom: 0px !important;
 }
 
 .English_Def p{
           
     margin-bottom: 0px;
-    margin-top: 00px;
+    margin-top: -50px;
     padding-bottom: 5px;
     padding-top: 5px;
     font-size: 24px;
@@ -594,19 +594,7 @@ input:checked ~ body {
     color: white;
     font-weight: bold;
 }
-.Example{
-  /*  color: rgb(4, 231, 247); */
-    color: black;
-    margin-top: -35px;
-    padding-bottom: 10px;
-    width: 400px;
-    height: 160px;
-    margin-left: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 36px;
-    font-family: 'Montserrat', sans-serif;
-}
+
 
 .Example span{
    color: red;
@@ -1006,20 +994,25 @@ input:checked ~ body {
         width: 300px;
         word-wrap: break-word;
         margin-bottom: -20px;
+        margin-top: -50px;
    
     }
     .equivalent p{
          padding-left: 60px;
          font-size: 40px;
          font-weight: bold;
+         margin-top: -50px;
         
     }
 
-    
+  
     .Example
     {
-        margin-top: -20px;
+        font-family: 'EB Garamond', sans-serif;
+        color: black;
+        margin-top: -40px;
         font-size: 20px;
+        font-weight: bold;
         line-height: 34px;
         text-shadow: 0px 2px 5px rgb(252, 252, 251);
     }
@@ -1193,14 +1186,16 @@ input:checked ~ body {
         display: block !important;
         width: 350px !important;
         margin-left: 30px;
+        margin-top: -30px;
            
      }
     
      .reading_container p{
         width: 225px;
         font-size: 40px;  
-        margin-left: 30px !important;
+        margin-left: 15px !important;
         line-height: 30px;
+        margin-top: -80px;
      }
     
 
@@ -1210,7 +1205,7 @@ input:checked ~ body {
         width: 35px;
         height: 40px;
         margin-bottom: 0px;
-        margin-left: 165px !important; 
+        margin-left: 150px !important; 
         margin-top: 40px;
 	   user-select: none;
     }
@@ -1221,13 +1216,10 @@ input:checked ~ body {
 	}
     
     
- 
-    
-     
      .Usage{
-        margin-left: 32px !important;
+        margin-left: 17px !important;
         width: 355px !important;
-        margin-top: 0px !important;
+        margin-top: -90px !important;
         margin-bottom: 20px !important;
             
     }
