@@ -1067,7 +1067,7 @@ input:checked ~ body {
         height: 50px;
         width: 50px;
         top: 430px;
-        left: 220px;
+        left: 215px;
         z-index: 10;
         animation: bounce 1.5s infinite;
     } 
@@ -1099,7 +1099,7 @@ input:checked ~ body {
         position: absolute;
         height: 40px;
         width: 150px;
-        top: 38rem !important;
+        top: 37rem !important;
         left: 120px !important;
         padding-left: -100px;
         margin-left: -20px;
