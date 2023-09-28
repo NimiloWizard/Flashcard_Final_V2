@@ -298,6 +298,7 @@ function changeCardBackground(KatakanaCardBackgroundImageUrl) {
   // Store the selected background image URL in local storage
   localStorage.setItem('katakanacardbackground', KatakanaCardBackgroundImageUrl);
 }
+  
 
 // Example usage with onclick events on 6 images
   document.getElementById('background_image1').onclick = function() {
@@ -318,7 +319,7 @@ function changeCardBackground(KatakanaCardBackgroundImageUrl) {
 document.getElementById('background_image2').onclick = function() {
   const backgroundOption2 = 'Images/BACKGROUND2.png'; // Replace with the actual URL
   changeCardBackground(backgroundOption2);
-
+ 
 
     // set the background color of the button
     const revealButton = document.querySelector('#revealButton');
