@@ -171,8 +171,6 @@ function addCardToShownCards(card) {
            });
 
 
-
-
 // ----------------- Toggle to Show Image Gallery for Card background change------------------//     
 
       function open_cardGallery(hide_Image) {
@@ -287,16 +285,16 @@ function addCardToShownCards(card) {
 
 // Function to change the background image based on the option clicked
 
-function changeCardBackground(KatakanaCardBackgroundImageUrl) {
+function changeCardBackground(KatakananewCardBackgroundImageUrl) {
  
   // Set the background for all cards in the stack
   const elements = document.querySelectorAll('.katakanabackgoundeffect');
   elements.forEach(function(element) {
-      element.style.background = `url("${KatakanaCardBackgroundImageUrl}") center center / cover`;
+      element.style.background = `url("${KatakananewCardBackgroundImageUrl}") center center / cover`;
   });
 
   // Store the selected background image URL in local storage
-  localStorage.setItem('katakanacardbackground', KatakanaCardBackgroundImageUrl);
+  localStorage.setItem('Katakanacardbackground', KatakananewCardBackgroundImageUrl);
 }
   
 
@@ -319,7 +317,7 @@ function changeCardBackground(KatakanaCardBackgroundImageUrl) {
 document.getElementById('background_image2').onclick = function() {
   const backgroundOption2 = 'Images/BACKGROUND2.png'; // Replace with the actual URL
   changeCardBackground(backgroundOption2);
- 
+
 
     // set the background color of the button
     const revealButton = document.querySelector('#revealButton');
