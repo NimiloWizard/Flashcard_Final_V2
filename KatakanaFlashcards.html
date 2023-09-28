@@ -222,7 +222,7 @@
             <img id="arrowUp" src="Images/SwipeUp1.png"> 
             <div class="background_caption " id="background_caption"> Click the Image below to apply the Theme!</div>
        </div>  
-        <div id="card_back_image" class="hide_Image hidden">
+        <div id="card_back_image " class="hide_Image hidden">
     
                     <div class="background_image " id ="background_image1" onclick="changeCardBackground()">
                         <a href="#card" ><img  id="cardbackground_image" src="Images/BACKGROUND1.png"  alt="Background Image"></a>  
@@ -281,7 +281,7 @@
    <!-------------------------------------Scripting------------------------------------>
        <!--      <script src="vanilla-tilt.min.js"></script>   -->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="Js/Hiragana.js"></script>
+            <script src="Js/Katakana.js"></script>
             <script src="Js/leave-message.js"></script>
             
             <script>
@@ -317,7 +317,7 @@
                    });
 
                   // Retrieve and apply the card background image from local storage on page load
-                  document.addEventListener('DOMContentLoaded', function() {
+                    document.addEventListener('DOMContentLoaded', function() {
                         const katakanacardBackgroundImageUrl = localStorage.getItem('katakanacardbackground');
                         if (katakanacardBackgroundImageUrl) {
                             changeCardBackground(katakanacardBackgroundImageUrl);
