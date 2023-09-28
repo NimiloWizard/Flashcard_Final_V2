@@ -1113,7 +1113,9 @@ input:checked ~ body {
         margin-top: 100px;
         margin-bottom: 5rem;
     }
-    
+    .hide_Image{
+        display: none;
+    }
      .katakanabackgoundeffect{
         margin-top: -30px !important;
     }
