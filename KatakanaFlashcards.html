@@ -317,10 +317,11 @@
                    });
 
                   // Retrieve and apply the card background image from local storage on page load
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const cardBackgroundImageUrl = localStorage.getItem('Hiraganacardbackground');
-                        if (cardBackgroundImageUrl) {
-                            changeCardBackground(cardBackgroundImageUrl);
+                  document.addEventListener('DOMContentLoaded', function() {
+                        const katakanacardBackgroundImageUrl = localStorage.getItem('katakanacardbackground');
+                        if (katakanacardBackgroundImageUrl) {
+                            changeCardBackground(katakanacardBackgroundImageUrl);
+                          
                         }
                     });
                     
