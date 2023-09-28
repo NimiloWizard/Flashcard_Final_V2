@@ -287,18 +287,17 @@ function addCardToShownCards(card) {
 
 // Function to change the background image based on the option clicked
 
-function changeCardBackground(HiragananewCardBackgroundImageUrl) {
+function changeCardBackground(KatakanaCardBackgroundImageUrl) {
  
   // Set the background for all cards in the stack
-  const elements = document.querySelectorAll('.hiraganabackgoundeffect');
+  const elements = document.querySelectorAll('.katakanabackgoundeffect');
   elements.forEach(function(element) {
-      element.style.background = `url("${HiragananewCardBackgroundImageUrl}") center center / cover`;
+      element.style.background = `url("${KatakanaCardBackgroundImageUrl}") center center / cover`;
   });
 
   // Store the selected background image URL in local storage
-  localStorage.setItem('Hiraganacardbackground', HiragananewCardBackgroundImageUrl);
+  localStorage.setItem('katakanacardbackground', KatakanaCardBackgroundImageUrl);
 }
-  
 
 // Example usage with onclick events on 6 images
   document.getElementById('background_image1').onclick = function() {
