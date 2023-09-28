@@ -1485,16 +1485,13 @@ input:checked ~ body {
         margin-bottom: 20px !important;
             
     }
-    
-
-
-
+       
     #buttons #prevButton{
         /*   position: absolute; */
            position: fixed;
            margin-top: 47rem !important;
            margin-bottom: 10px !important;
-           left: 20px !important;
+           left: 25px !important;
            height: 36px;
            width:115px;
            border-top-left-radius: 10px;
@@ -1507,7 +1504,7 @@ input:checked ~ body {
           position: fixed;
           margin-top: 47rem !important;
            margin-bottom: 10px !important;
-           left: 137px !important;
+           left: 138px !important;
            height: 36px;
            width:116px;
            
@@ -1518,7 +1515,7 @@ input:checked ~ body {
            position: fixed;
            margin-top: 47rem !important;
            margin-bottom: 10px !important;
-           left: 255px !important;
+           left: 252px !important;
            height: 36px;
            width:115px;
            border-top-right-radius: 10px;
