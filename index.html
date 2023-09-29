@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="Css/Flash_card_Styling.css">
+   
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
@@ -22,16 +23,16 @@
     <div class="w3-sidebar w3-bar-block w3-card w3-animate-left  w3-black w3-xlarge" 
          style="display:none" id="mySidebar">
 
-        <button class="w3-bar-item w3-button "
-                onclick="w3_close()" id="button">X</button>
+        <button class="w3-bar-item w3-button " onclick="setupLeaveMessage()" id="exit">X</button>
 
         <div class="menu_options" >
             
             <!-- <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>-->
              <!--  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>  -->
              <div id="spacing"></div>
-              <a href="#" class="w3-bar-item w3-button" id="home"><div id="homeBgDesign" ><img id="HomeIcon" src="Images/Home.png" class="HomeIcon" > <span>Home</span>  </div>  </a> 
-          <div class="w3-dropdown-hover" id="settings_caret">
+              <a href="#" class="w3-bar-item w3-button" onclick="w3_close()" id="home"><div id="homeBgDesign" ><img id="HomeIcon" src="Images/Home.png" class="HomeIcon" > <span>Home</span>  </div>  </a> 
+                              
+            <div class="w3-dropdown-hover" id="settings_caret">
                  <button class="w3-button" id="buttonSettings"><div id="settingsBgDesign" style="height:30px;"> <img src="Images/Settings1.png" id="fa-gear"> </i><span> Settings </span> <i class="fa fa-caret-down" id="fa-caret"></i></div></button>
                  <div class="w3-dropdown-content w3-bar-block" id="settings">
                      
@@ -48,24 +49,29 @@
             </div>  
           
             <div id="Languages">Select a Language </div>
-
+           
          <!--  <a href="#" class="w3-bar-item w3-button" id="English_Flashcards"> English Flashcards</a> -->
-           <a href="#" class="w3-bar-item w3-button" id="Korean_Flashcards"> <img src="Images/Korea.jfif"><img src="Images/Korean1.jfif" id="korean"><span>Korean</span> </a>                                  
-                   
-           <div class="w3-dropdown-hover" id="Japanese_caret">
+         <button class="dropdown-btn" id="Korean_Flashcards"><img src="Images/Korea.jfif"  id="koreanimg"> <img src="Images/Korean1.jfif" id="koreanbanner"><span>Korean</span><i class="fa fa-caret-down" id="koreanfa-caret"></i></button>  <!---->
+              <div class="dropdown-container">
+                <a href="Korean_BasicAndCompoundConsonants.html" class="w3-bar-item w3-button" id="Consonant_Flashcards"> <img id="ConsonantIcon" src="Images/HiraganaIcon.png"><span> - Consonant Flashcards</span></a>
+                <a href="Korean_BasicAndCompoundVowels.html" class="w3-bar-item w3-button" id="Vowel_Flashcards"> <img id="VowelIcon" src="Images/HiraganaIcon.png"><span> - Vowel Flashcards</span></a>
+              </div>   
+         
+                               
+      <!-- <div class="w3-dropdown-hover" id="Japanese_caret"> --> 
 
-                <button class="w3-button" id="Japanese_Flashcards"><img src="Images/Japan.jfif"  id="japanimg"> <img src="Images/Japan1.jfif"><span>Japanese</span><i class="fa fa-caret-down" id="fa-caret"></i></button>  <!---->
+        <button class="dropdown-btn" id="Japanese_Flashcards"><img src="Images/Japan.jfif"  id="japanimg"> <img src="Images/Japan1.jfif"><span>Japanese</span><i class="fa fa-caret-down" id="fa-caret"></i></button>  <!---->
                
-                <div class="w3-dropdown-content w3-bar-block">
+             <!--  <div class="w3-dropdown-content w3-bar-block"> -->
+                <div class="dropdown-container">
                     <a href="HiraganaFlashcards.html" class="w3-bar-item w3-button" id="Hiragana_Flashcards"> <img id="hiraganaIcon" src="Images/HiraganaIcon.png"><span> - Hiragana Flashcards</span></a>
                     <a href="KatakanaFlashcards.html" class="w3-bar-item w3-button" id="Katakana_Flashcard"><img id="katakanaIcon" src="Images/KatakanaIcon.png"> <span>- Katakana Flashcards</span></a>
-                    <a href="KanjiFlashcards.html" class="w3-bar-item w3-button"  id="Kanji_Flashcards"> <img id="kanjiIcon" src="Images/KanjiCharacter.png">  <span> - Kanji Flashcards</span></a>
-
+                    <a href="KanjiFlashcards.html" class="w3-bar-item w3-button"  id="Kanji_Flashcards"> <img id="kanjiIcon" src="Images/KanjiCharacter.png">  <span>- Kanji Flashcards</span></a>
                 
                 </div>
-            </div> 
+          <!--  </div> -->
             <div id="spacing2"></div>
-              
+                    
             <a href="#" class="w3-bar-item w3-button" id="contact"><i class="fa fa-envelope"></i>  businessEmail@gmail.com</a> 
             
             <div id="socialmedia">
@@ -76,8 +82,7 @@
             </div>
           
             <a href="#" class="w3-bar-item w3-button" id="Premium"><div id="PremiumBgDesign"><img src="Images/Premium.png"><span>Get Premium</span></div></a> 
-      
-          
+
 
         </div>       
 
@@ -91,12 +96,24 @@
                             onclick="w3_open()" id="button" >&#9776;</button>
 
                     <div class="w3-container">
-                        <h1> Welcome to <span>E-Flascards</span> e-Flash Card Reviewer</h1>
+                        <h1> Welcome to <span>E-Flascards</span> Reviewer</h1>
                     </div>
 
                 </div>
     </div>  
    
+    <!----------------------------------EXIT APPLICATION -------------------------------->
+      
+            <div class="leaveMessage" id="leaveMessage" style="display: none;">
+                   <p id="messageText">Do you want to Exit this APP?</p>
+                    <div class="button-container">
+                        <button class="button" id="leaveButton">Leave</button>
+                        <button class="button" id="stayButton">Stay</button>
+                    </div>
+             </div>
+    <!--------------------------------------- End ------ -------------------------------->
+
+
 <section class="container">
         
   <div class="row">          <!--------------------start of Row------------------------->
@@ -152,13 +169,31 @@
        <!--      <script src="vanilla-tilt.min.js"></script>   -->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="Js/Flash_Card.js" defer></script>
+            
 
             <script>
+
+                
                 // Disable pull-to-refresh
                 document.addEventListener('touchmove', function(event) {
                     event.preventDefault();
                 }, { passive: false });
+                 
+                //Korean Language Dropdown
+                var dropdown = document.getElementsByClassName("dropdown-btn");
+                    var i;
 
+                    for (i = 0; i < dropdown.length; i++) {
+                    dropdown[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var dropdownContent = this.nextElementSibling;
+                        if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                        } else {
+                        dropdownContent.style.display = "block";
+                        }
+                    });
+                    }
 
                  document.addEventListener('DOMContentLoaded', function() {
                     const backgroundImageUrl = localStorage.getItem('background');
@@ -171,6 +206,21 @@
                     }
                    
                 });
+
+
+                    function saveLastVisitedPage() {
+                    const currentPage = window.location.href;
+                    localStorage.setItem("lastVisitedPage", currentPage);
+                    }
+
+                    // Function to redirect to the last visited page
+                    function redirectToLastVisitedPage() {
+                    const lastVisitedPage = localStorage.getItem("lastVisitedPage");
+                    if (lastVisitedPage) {
+                        window.location.href = lastVisitedPage;
+                    }
+                    }
+
             </script>
      
 </body>
