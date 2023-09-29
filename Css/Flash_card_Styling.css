@@ -269,11 +269,19 @@ body{
 #Vowel_Flashcards{
     background: white;
     color: black;
+    margin-left: -10px;
+    background: white;
+    color: black;
+    width: 255px;
 }
 #Consonant_Flashcards
 {
     background: white;
     color: black;
+    margin-left: -10px;
+    background: white;
+    color: black;
+    width: 255px;
 }
 #Consonant_Flashcards #ConsonantIcon{
     margin-top: -25px;
@@ -298,7 +306,7 @@ body{
     border-top-right-radius: 45px;
     border-bottom-right-radius: 45px;
     margin-left: 0px;
-    width: 250px; 
+    width: 260px; 
     background: black;
     border-left: none;
     border-right: none;
@@ -308,11 +316,13 @@ body{
     margin-top: -10px;
     height: 70px;
     width: 40px !important;
-    margin-left: 0px;
+    margin-left: 10px;
    /* border-radius: 50%; */
   
 }
-
+#Japanese_Flashcards #japanBanner{
+    margin-left: 0px;
+}
 #Japanese_Flashcards #japan{
     
     margin-top: -10px;
@@ -348,15 +358,16 @@ body{
 }
 
 #Hiragana_Flashcards{
-    margin-left: -5px;
+    margin-left: -10px;
     background: white;
     color: black;
-    width: 250px;
+    width: 255px;
 }
 #Hiragana_Flashcards span{
     padding-left: 0px;
     
 }
+
 #hiraganaIcon{
   
     height: 50px;
@@ -368,10 +379,10 @@ body{
 }
 
 #Katakana_Flashcard{
-    margin-left: -5px;
+    margin-left: -10px;
     background: white;
     color: black;
-    width: 250px;
+    width: 255px;
 }
 #Katakana_Flashcard span{
     padding-left: 0px;
@@ -387,10 +398,10 @@ body{
 }
 
 #Kanji_Flashcards{
-    margin-left: -5px;
+    margin-left: -10px;
     background: white;
     color: black;
-    width: 250px;
+    width: 255px;
 }
 #Kanji_Flashcards span{
     padding-left: 0px;
@@ -558,6 +569,7 @@ body{
     box-shadow: 0px 0px 10px rgb(247, 246, 246);
     transform: rotate(360deg); 
 }
+
 
 
 
@@ -1112,7 +1124,10 @@ input:checked ~ body {
        font-weight: bold ;
        color: rgb(11, 128, 0);
     }
-
+    #korean_caret{
+        margin-left: 125px;
+        font-weight: bold;
+    }
     #Japanese_caret i{
         margin-left: 125px;
         font-weight: bold;
@@ -1253,7 +1268,7 @@ input:checked ~ body {
         margin-left: 140px;
         background: linear-gradient(245.59deg, #070707 0%, #fcfbfbf7 50.53%, #0f0f0f 90.52%);
         box-shadow: 0 0px 1px 0 #fdfcfcfe,0 0px 2px 0 #f8f8f8;
-	 box-shadow: 0 0px 1px 0 #fdfcfcfe,0 0px 2px 0 #f8f8f8;
+	    box-shadow: 0 0px 1px 0 #fdfcfcfe,0 0px 2px 0 #f8f8f8;
 	 /*   box-shadow: 0 0px 1px 0 #0a0a0a55,0 0px 2px 0 #42414140; */
         background-size: cover;
         background-attachment: fixed;
