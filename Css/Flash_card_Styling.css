@@ -263,25 +263,27 @@ body{
 }
 #koreanfa-caret {
     float: right;
-    padding-left: 75px;
+    padding-left: 70px;
 
 }
 #Vowel_Flashcards{
-    background: white;
-    color: black;
     margin-left: -10px;
     background: white;
     color: black;
-    width: 255px;
+    width: 251px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top: 1px solid rgb(220, 218, 218);
+    border-bottom: 1px solid rgb(220, 218, 218);
 }
 #Consonant_Flashcards
 {
-    background: white;
-    color: black;
     margin-left: -10px;
     background: white;
     color: black;
-    width: 255px;
+    width: 251px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 #Consonant_Flashcards #ConsonantIcon{
     margin-top: -25px;
@@ -321,7 +323,7 @@ body{
   
 }
 #Japanese_Flashcards #japanBanner{
-    margin-left: 0px;
+    margin-left: -5px;
 }
 #Japanese_Flashcards #japan{
     
@@ -361,7 +363,9 @@ body{
     margin-left: -10px;
     background: white;
     color: black;
-    width: 255px;
+    width: 251px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 #Hiragana_Flashcards span{
     padding-left: 0px;
@@ -382,7 +386,11 @@ body{
     margin-left: -10px;
     background: white;
     color: black;
-    width: 255px;
+    width: 251px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top: 1px solid rgb(220, 218, 218);
+    border-bottom: 1px solid rgb(220, 218, 218);
 }
 #Katakana_Flashcard span{
     padding-left: 0px;
@@ -401,7 +409,9 @@ body{
     margin-left: -10px;
     background: white;
     color: black;
-    width: 255px;
+    width: 251px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 #Kanji_Flashcards span{
     padding-left: 0px;
@@ -569,8 +579,6 @@ body{
     box-shadow: 0px 0px 10px rgb(247, 246, 246);
     transform: rotate(360deg); 
 }
-
-
 
 
 /* ------------------------------------Dark/light Mode ----------------------------*/ 
