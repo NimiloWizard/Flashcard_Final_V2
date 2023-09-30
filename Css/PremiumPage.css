@@ -32,7 +32,7 @@ body{
     font-size: 35px;
 }
 #Premium_Category{
-    margin-top: 70px;
+    margin-top: 40px;
 }
 #Premium_Inclusions{
     font-size: 25px;
@@ -63,7 +63,7 @@ body{
     margin-bottom: 20px;
 }
 #Get_Premium{
-    margin-top: 10px;
+    margin-top: -10px;
     border-radius: 40px;
     height: 40px;
     width: 200px;
