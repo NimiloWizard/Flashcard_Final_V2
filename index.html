@@ -12,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,400;1,700&display=swap" rel="stylesheet">
-    <title>Flash Cards</title>
+
+<title>Flash Cards</title>
 
    
 
@@ -41,21 +42,21 @@
                     <label id="line" for="darkmode-toggle"></label>
 
                     <div id="Screen_BG_Option"><a href="#" class="w3-bar-item w3-button" onclick="open_screenGallery('screen_back_image')"  id="change_screen_background">Screen Background Theme </a></div>
-                                      
-              
                      
-                        <a href="#" class="w3-bar-item w3-button" id="reset">Reset (Clear Data)</a>                    
+                    <a href="#" class="w3-bar-item w3-button" id="reset">Reset (Clear Data)</a>                    
                 </div>
             </div>  
           
             <div id="Languages">Select a Language </div>
            
          <!--  <a href="#" class="w3-bar-item w3-button" id="English_Flashcards"> English Flashcards</a> -->
-       <button class="dropdown-btn" id="Korean_Flashcards"><img src="Images/Korea.jfif"  id="koreanimg"> <img src="Images/Korean1.jfif" id="koreanbanner"><span>Korean</span><i class="fa fa-caret-down" id="koreanfa-caret"></i></button>  <!---->
+         <button class="dropdown-btn" id="Korean_Flashcards"><img src="Images/Korea.jfif"  id="koreanimg"> <img src="Images/Korean1.jfif" id="koreanbanner"><span>Korean</span><i class="fa fa-caret-down" id="koreanfa-caret"></i></button>  <!---->
               <div class="dropdown-container">
-              <a href="KoreanHowtoRead.html" class="w3-bar-item w3-button" id="HowToReadKorean"> <img id="HowToReadKoreanIcon" src="Images/HiraganaIcon.png"><span> - Learn How To Read</span></a>                    <a href="Korean_BasicAndCompoundConsonants.html" class="w3-bar-item w3-button" id="Consonant_Flashcards"> <img id="ConsonantIcon" src="Images/HiraganaIcon.png"><span> - Consonant Flashcards</span></a>
-                    <a href="Korean_BasicAndCompoundVowels.html" class="w3-bar-item w3-button" id="Vowel_Flashcards"> <img id="VowelIcon" src="Images/HiraganaIcon.png"><span> - Vowel Flashcards</span></a>
-               </div>   
+                <a href="KoreanHowtoRead.html" class="w3-bar-item w3-button" id="HowToReadKorean"> <img id="HowToReadKoreanIcon" src="Images/HiraganaIcon2.png"><span> - Learn How To Read</span></a>
+                <a href="Korean_BasicAndCompoundConsonants.html" class="w3-bar-item w3-button" id="Consonant_Flashcards"> <img id="ConsonantIcon" src="Images/HiraganaIcon2.png"><span> - Consonant Flashcards</span></a>
+                <a href="Korean_BasicAndCompoundVowels.html" class="w3-bar-item w3-button" id="Vowel_Flashcards"> <img id="VowelIcon" src="Images/HiraganaIcon2.png"><span> - Vowel Flashcards</span></a>
+             
+            </div>   
          
                                
       <!-- <div class="w3-dropdown-hover" id="Japanese_caret"> --> 
@@ -63,12 +64,13 @@
         <button class="dropdown-btn" id="Japanese_Flashcards"><img src="Images/Japan.jfif"  id="japanimg"> <img src="Images/Japan1.jfif" id="japanBanner"><span>Japanese</span><i class="fa fa-caret-down" id="fa-caret"></i></button>  <!---->
                
              <!--  <div class="w3-dropdown-content w3-bar-block"> -->
-                   <div class="dropdown-container">
-                        <a href="JapaneseHowToRead.html" class="w3-bar-item w3-button" id="Hiragana_Flashcards"> <img id="hiraganaIcon" src="Images/HiraganaIcon.png"><span> - Learn How To Read</span></a>
-                        <a href="HiraganaFlashcards.html" class="w3-bar-item w3-button" id="Hiragana_Flashcards"> <img id="hiraganaIcon" src="Images/HiraganaIcon.png"><span> - Hiragana Flashcards</span></a>
-                        <a href="KatakanaFlashcards.html" class="w3-bar-item w3-button" id="Katakana_Flashcard"><img id="katakanaIcon" src="Images/KatakanaIcon.png"> <span>- Katakana Flashcards</span></a>
-                        <a href="KanjiFlashcards.html" class="w3-bar-item w3-button"  id="Kanji_Flashcards"> <img id="kanjiIcon" src="Images/KanjiCharacter.png">  <span>- Kanji Flashcards</span></a>  
-                   </div>
+                <div class="dropdown-container">
+                    <a href="JapaneseHowToRead.html" class="w3-bar-item w3-button" id="Hiragana_Flashcards"> <img id="hiraganaIcon" src="Images/HiraganaIcon2.png"><span> - Learn How To Read</span></a>
+                    <a href="HiraganaFlashcards.html" class="w3-bar-item w3-button" id="Hiragana_Flashcards"> <img id="hiraganaIcon" src="Images/HiraganaIcon2.png"><span> - Hiragana Flashcards</span></a>
+                    <a href="KatakanaFlashcards.html" class="w3-bar-item w3-button" id="Katakana_Flashcard"><img id="katakanaIcon" src="Images/KatakanaIcon2.png"> <span>- Katakana Flashcards</span></a>
+                    <a href="KanjiFlashcards.html" class="w3-bar-item w3-button"  id="Kanji_Flashcards"> <img id="kanjiIcon" src="Images/KanjiCharacter2.png">  <span>- Kanji Flashcards</span></a>
+                    
+                </div>
           <!--  </div> -->
             <div id="spacing2"></div>
                     
@@ -179,7 +181,7 @@
                     event.preventDefault();
                 }, { passive: false });
                  
-                //Korean Language Dropdown
+                //Korean/japanese Language Dropdown
                 var dropdown = document.getElementsByClassName("dropdown-btn");
                     var i;
 
