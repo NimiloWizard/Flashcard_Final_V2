@@ -143,7 +143,7 @@ body{
 }
 
 #Flashcards{
-  
+    
     border-bottom: 1px solid rgb(189, 188, 188);
     font-size: 20px;
 /*   background: linear-gradient(180deg,#f9faf8,#494949, #f8faf8); */
@@ -156,7 +156,6 @@ body{
     color: rgb(10, 10, 10);
     text-shadow: 0px 2px 3px rgb(252, 252, 251);
  }
-
 
 #Japanese_Flashcards img{
     margin-top: -10px;
@@ -194,15 +193,31 @@ body{
     padding-top: 0px;
     padding-bottom: 0px;
     height: 70px !important;
-    border-top: 1px solid rgb(52, 52, 52);  
-    border-bottom: 1px solid rgb(52, 52, 52); 
+    border-top: 1px solid rgb(89, 89, 89);  
+    border-bottom: 1px solid  rgb(89, 89, 89); 
     border-top-right-radius: 45px;
     border-bottom-right-radius: 45px;
+    margin-left: 0px;
+    width: 250px; 
+    background: black;
+    border-left: none;
+    border-right: none;
+    color: white;
    
 }
-
+#HowToReadJapaneseIcon{
+    height: 50px;
+    width: 50px;
+    margin-top: -20px;
+    border-radius: 20px;
+    padding-bottom: 10px; 
+    margin-left: 0px;
+}
+#HowToReadJapanese{
+    margin-left: 0px;
+}
 #Katakana_Flashcard{
-    margin-left: 25px;
+    margin-left: 0px;
 }
 #Katakana_Flashcard span{
     padding-left: 10px;
@@ -214,10 +229,11 @@ body{
     margin-top: -20px;
     border-radius: 20px;
     padding-bottom: 10px; 
+    margin-left: 0px;
 }
 
 #Kanji_Flashcards{
-    margin-left: 15px;
+    margin-left: 0px;
 }
 #Kanji_Flashcards span{
     padding-left: 10px;
@@ -229,7 +245,7 @@ body{
     margin-top: -20px;
     border-radius: 20px;
     padding-bottom: 10px;
-    margin-left: -10px;
+    margin-left: 0px;
 }
 
 #Writing #Activate_Wrting_checkbox{
@@ -262,9 +278,6 @@ body{
     margin-top: 10px;
     font-size: 15px;
     color: rgb(245, 169, 6);
-}
-#spacing2{
-    height: 170px;
 }
 
 
@@ -330,23 +343,9 @@ body{
     margin-left: 133px;
     font-weight: bold;
 }
-
-#facebook{
-    height: 50px;
-    width: 50px;
-    margin-left: 30px;
-    padding: 0px;
-    border: 2px solid rgb(16, 16, 16);
-    border-radius: 50%;
-    transition: transform 0.5s ease;
+#spacing2{
+    height: 200px;
 }
-#facebook:hover{
-    cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgb(247, 246, 246);
-    transform: rotate(360deg); 
-}
-
 #Premium{
     margin-top: 10px;
     display: flex;
@@ -396,6 +395,22 @@ body{
     gap: -5px;
     padding-top: 0px;
 }
+#facebook{
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+    padding: 0px;
+    border: 2px solid rgb(16, 16, 16);
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+#facebook:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(247, 246, 246);
+    transform: rotate(360deg); 
+}
+
 #instagram{
     height: 50px;
     width: 50px;
@@ -587,7 +602,7 @@ input:checked ~ body {
 }
 
 
-.visible {
+.Hiraganavisible {
     display: grid; 
     top: 120px;
     width: 400px; 
@@ -596,7 +611,7 @@ input:checked ~ body {
     grid-gap: -10px;
 }
 
-.card_back_image {
+.Hiragana_card_back_image {
  /*   position: absolute;  */
     display: grid;
     top: 120px;
@@ -928,9 +943,8 @@ input:checked ~ body {
        font-weight: bold ;
        color: rgb(11, 128, 0);
     }
-
- 
-    #Japanese_caret i{
+   
+    Japanese_caret i{
         margin-left: 125px;
         font-weight: bold;
     }
@@ -1263,11 +1277,11 @@ input:checked ~ body {
     }
 
      
-    #card_back_image #cardbackground_image:hover{
+    #Hiragana_card_back_image #cardbackground_image:hover{
         transform: scale(1.1);
     }
     
-    .card_back_image #background_image p{
+    .Hiragana_card_back_image #background_image p{
         margin-top: 15px;
         padding-left: 10px;
         font-weight: bold;
@@ -1287,12 +1301,12 @@ input:checked ~ body {
        
     }  
 
-    .visible {
+    .Hiraganavisible {
         margin-top: 400px;
         height: 80vh;
         padding-top: 0px;
         padding-bottom: 20px;
-	padding-left: 10px;
+	    padding-left: 10px;
         position: absolute !important;
         display: grid !important; 
         width: 350px !important; 
@@ -1342,7 +1356,7 @@ input:checked ~ body {
         position: absolute;
         height: 40px;
         width: 150px;
-        top: 38.5rem !important;
+        top: 39rem !important;
         left: 120px !important;
         padding-left: -100px;
         margin-left: -20px;
@@ -1490,7 +1504,7 @@ input:checked ~ body {
 
 
 
-   
+ 
     #buttons #prevButton{
         /*   position: absolute; */
            position: fixed;
