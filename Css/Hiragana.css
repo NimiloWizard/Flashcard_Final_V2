@@ -156,7 +156,10 @@ body{
     color: rgb(10, 10, 10);
     text-shadow: 0px 2px 3px rgb(252, 252, 251);
  }
-
+.dropdown-container {
+    display: none;
+    padding-left: 8px;
+}
 #Japanese_Flashcards img{
     margin-top: -10px;
     height: 70px;
