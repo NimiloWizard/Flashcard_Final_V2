@@ -156,7 +156,104 @@ body{
     color: rgb(10, 10, 10);
     text-shadow: 0px 2px 3px rgb(252, 252, 251);
  }
+ 
+ #Korean_Flashcards{
+    display: flex;
+    margin-bottom: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 70px !important;
+    border-top: 1px solid rgb(89, 89, 89);  
+    border-bottom: 1px solid  rgb(89, 89, 89); 
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    margin-left: 0px;
+    width: 250px; 
+    background: black;
+    border-left: none;
+    border-right: none;
+    color: white;
+    
+ /*   border-left: 4px solid #414040;            */
+}
+#HowToReadKorean{
+    margin-left: -10px;
+    background: rgb(36, 36, 36);
+    color: rgb(250, 250, 250);
+    width: 251px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom: 1px solid  rgb(89, 89, 89);
+    margin-bottom: 2px;
+}
+#HowToReadKoreanIcon{
+    margin-top: -25px;
+    margin-left: 5px;
+    height: 50px;
+    width: 40px;
+}
+#Korean_Flashcards img{
+    margin-top: -10px;
+    height: 70px;
+    width: 40px !important;
+    margin-left: 13px;
+  /*  border-radius: 50%;50 */
+}
+#Korean_Flashcards #koreanbanner{
+    margin-left: -3px;
+}
+.dropdown-container {
+    display: none;
+    padding-left: 8px;
+}
 
+#Korean_Flashcards span{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    width: 20px;
+    text-shadow: 0px 0px 6px rgb(246, 248, 246);
+    
+}
+#koreanfa-caret {
+    float: right;
+    padding-left: 70px;
+    color: rgb(190, 247, 75);
+
+}
+#Vowel_Flashcards{
+    margin-left: -10px;
+    background: rgb(36, 36, 36);
+    color: rgb(250, 250, 250);
+    width: 251px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    
+}
+#Consonant_Flashcards
+{
+    margin-bottom: 2px;
+    margin-left: -10px;
+    background: rgb(36, 36, 36);
+    color: rgb(250, 250, 250);
+    width: 251px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom: 1px solid  rgb(84, 84, 84);
+}
+#Consonant_Flashcards #ConsonantIcon{
+    margin-top: -25px;
+    margin-left: 5px;
+    height: 50px;
+    width: 40px;
+}
+
+#Vowel_Flashcards #VowelIcon{
+    margin-top: -25px;
+    margin-left: 5px;
+    height: 50px;
+    width: 40px;
+}
 #Japanese_Flashcards img{
     margin-top: -10px;
     height: 70px;
