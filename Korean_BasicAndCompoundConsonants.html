@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="Css/Korean_BasicAndCompoundConsonants.css">
+    <link rel="stylesheet" href="Css/MessageAlert.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Zilla+Slab:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https:for practicehomebutton//fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Flash Cards</title>
+
+   
+
+</head>
+
+<body >
+ 
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left  w3-black w3-xlarge" 
+         style="display:none" id="mySidebar">
+
+        <button class="w3-bar-item w3-button "  onclick="w3_close()" id="button">X</button>
+
+        <div class="menu_options" >
+            
+            <!-- <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>-->
+             <!--  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>  -->
+            
+             <div id="spacing"></div>
+             <a href="#" class="w3-bar-item w3-button" onclick="w3_close()" id="home"><div id="homeBgDesign" ><img id="HomeIcon" src="Images/Home.png" class="HomeIcon" > <span>Home</span>  </div>  </a> 
+           
+            
+         
+            <div class="w3-dropdown-hover" id="settings_caret">
+              <button class="w3-button" id="buttonSettings"><div id="settingsBgDesign" style="height:30px;"> <img src="Images/Settings1.png" id="fa-gear"> </i><span> Settings </span> <i class="fa fa-caret-down" id="fa-caret"></i></div></button>
+                 <div class="w3-dropdown-content w3-bar-block" id="settings">                                              
+                                                     
+                    <div id="Card_BG_Option"><a href="#screen_back_image" class="w3-bar-item w3-button" onclick="open_cardGallery('card_back_image')"  id="change_card_background"> Theme Card Background</a></div>
+
+                    <div id="Default_Card_Option"><a href="#Default_cardbackground" class="w3-bar-item w3-button" onclick="open_Defaultbackground()"  id="SetDefaultBackground"> Deafult Card Background</a></div>
+                     
+                     <div class="Writing" id="Writing"> <input type="checkbox" id="Activate_Wrting_checkbox">   Activate Writing Panel</div>
+                    
+                     <div class="ClickSound" id="ClickSound"> <input type="checkbox" id="Activate_ClickSound_checkbox">    Activate Click Sound</div>
+                    
+                </div>
+            </div>  
+
+             <div id="Flashcards">Select a Flashcard </div>
+            
+           <div class="w3-dropdown-hover" id="korean_caret">
+                   
+               <button class="w3-button" id="Korean_Flashcards"><img src="Images/Japan.jfif"  id="japanimg"> <img src="Images/Japan1.jfif"><span>Japanese</span><i class="fa fa-caret-down" id="fa-caret"></i></button>  <!---->
+ 
+               <div class="w3-dropdown-content w3-bar-block">
+   
+                <a href="Korean_BasicAndCompoundVowels.html" class="w3-bar-item w3-button"  id="Korean_Consonant_Flashcards"> <img id="ConsonantIcon" src="Images/KanjiCharacter.png">  <span>- Consonants Flashcards</span></a>
+            
+                </div>
+               
+            </div> 
+     
+           <div id="spacing2"></div>
+           <a href="#" class="w3-bar-item w3-button" id="contact"><i class="fa fa-envelope"></i>  businessEmail@gmail.com</a> 
+            
+             <div id="socialmedia">
+                <img id="facebook" src="Images/fb.png"> 
+                <img id="instagram" src="Images/Instagram.png">  
+                <img id="twitter" src="Images/Twitter.png">  
+                <img id="linkedin" src="Images/LinkedIn.png">   
+             </div>
+          
+            <a href="#" class="w3-bar-item w3-button" id="Premium"><div id="PremiumBgDesign"><img src="Images/Premium.png"><span>Get Premium</span></div></a> 
+
+  
+        </div>      
+
+    </div>
+        
+    <div id="main">
+        
+                <div class="intro w3-gray" id="intro">
+
+                    <button id="openNav" class="w3-button  w3-xlarge" 
+                            onclick="w3_open()" id="button" >&#9776;</button>
+
+                    <div class="w3-container">
+                        <h1>  <span>Basic And Compound Consonants</span>  </h1>
+                    </div>
+
+                </div>
+    </div>  
+ 
+    <!------------------------------leave message ------------------>
+    
+        <div id="leaveMessage">
+            <p id="messageText">Do you want to leave this page?</p>
+            <div class="button-container">
+                <button class="button" id="leaveButton">Leave</button>
+                <button class="button" id="stayButton">Stay</button>
+            </div>
+        </div>
+    
+   <!---------------------------------------------------------------->
+
+<section class="container">
+        
+  <div class="row">          <!--------------------start of Row------------------------->
+
+    
+    <div class="col col-2" id="col-2">  <!--------------Start of Col-2----------------------->
+        <div class="overlayCardscreen"></div>
+    <div class="stack" id="stack">       <!-- handles the cards on deck  -->
+
+  <!-----------------------------------------Cards Starting Point-------------------->
+  
+
+        <div class="card ConsonantsBackgroundeffect"  id="card" >
+       
+             <!-- --------------------------------------------------------------  -->
+          
+                     <div id="numbering">
+                        <img id="card_counter1" src="Images/KatakanaCounter.png">
+                        <span id="consonants_number">1</span>
+                    </div>
+                    
+                    <div class="imgbox">                               <!-- kanji pictures-->
+                        <img class="front-image" src="Images/HiraganaIcon.png"> 
+                        <img class="back-image" src="Images/11ushiro.png" alt="Back Image" style="display: none;" >
+                    </div>
+            
+                        <div class="English_Def" id="English_Def">     <!--english definition-->
+                        </div>
+                    <div class="Details" id="Details">                   <!-- kanji Description-->  
+                         <div class="reading_container" id="reading_container">
+                                
+                                <div class = "equivalent" id ="equivalent">                                
+                                    <p class="element-to-hide" > ga</p>                                      
+                                </div>
+
+                               <img class="element-to-hide" id="audioButtonConsonants" src="Images/AudioButtonOnyomi.png" alt="Play Button   "  >
+                            
+                               <audio id="audioPlayerConsonants">
+                                   <source src="MP3/Ushiro_go_kou.mp3" type="audio/mpeg">
+                                   Your browser does not support the audio element.
+                               </audio>
+                             
+                             
+                         </div>
+                  
+                    </div>
+
+                     <div class="Usage" id="Usage">Example Usages</div>
+
+                     <div class="Example" id="Example">     <!-- Example sentence-->
+                        <div > 
+                          <p class="element-to-hide"> 午 <span>後</span> [ ごご ]    afternoon, p.m.</p>
+                        </div> 
+                      
+                        <div > 
+                           <p class="element-to-hide"> <span>後</span>ろ  [うしろ] back, behind </p>
+                         </div> 
+                    </div>
+                    
+            
+        </div>
+
+
+
+
+    </div> 
+          
+            <section class="buttons" id="buttons">    
+
+               
+                <audio id="audiorevealButton">
+                    <source src="MP3/Rifle_Reveal.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+                <audio id="audioprevButton">
+                    <source src="MP3/Rifle_Prev.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+             
+                <audio id="audionextButton">
+                    <source src="MP3/Rifle_Next.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+                
+                <button class="function_button"   onclick="revealElements()"   id="revealButton"><i  id="eyeIcon" class="fa fa-eye-slash fa-1x "></i></button>  <!-- Closed eye icon -->                        
+                <button class="function_button"   onclick="showPreviousCard()" id="prevButton"> <i class="fa fa-chevron-left fa-2x " ></i> </button>
+                <button class="function_button"   onclick="showNextCard()"     id="nextButton"> <i class="fa fa-chevron-right fa-2x "></i> </button>
+                
+                <div class="custom-alert" id="customAlert">
+                    PLEASE CLOSE THE GALLERY FIRST
+                    Swipe your card down and
+                     Click the Close Button
+                     <button id="ok">Ok</button>
+                </div>
+                
+            </section> 
+        
+
+    </div>  <!--------------End of Col-2----------------------->
+    
+       
+    
+
+    <div class="col col-1" id="col-3">
+        
+        <div class="arrow" id="arrow">
+                <img id="arrowUp" src="Images/SwipeUp1.png"> 
+                <div class="background_caption " id="background_caption"> Click the Image below to apply the Theme!</div>
+        </div> 
+        
+        <div id="card_back_image" class="hide_Image hidden">
+    
+                     <div class="background_image " id ="background_image1" onclick="changeCardBackground()">
+                        <a href="#card" ><img  id="cardbackground_image" src="Images/BACKGROUND1.png"  alt="Background Image"></a>  
+                    </div>
+                    <div class="background_image " id ="background_image2" onclick="changeCardBackground()">
+                        <a href="#card" >  <img  id="cardbackground_image" src="Images/BACKGROUND2.png"  alt="Background Image"></a> 
+                    </div> 
+                    <div class="background_image " id ="background_image3" onclick="changeCardBackground()">
+                        <a href="#card" >   <img  id="cardbackground_image" src="Images/BACKGROUND3.png"  alt="Background Image"></a>
+                    </div>  
+                    <div class="background_image " id ="background_image4" onclick="changeCardBackground()">
+                        <a href="#card" >   <img id="cardbackground_image" src="Images/BACKGROUND4.png"  alt="Ba3kground Image"></a>
+                    </div>
+                    <div class="background_image " id ="background_image5" onclick="changeCardBackground()">
+                        <a href="#card" >   <img id="cardbackground_image" src="Images/BACKGROUND5.png"  alt="Background Image"></a> 
+                    </div>
+                    <div class="background_image " id ="background_image6" onclick="changeCardBackground()">
+                        <a href="#card" >    <img id="cardbackground_image" src="Images/BACKGROUND6.png"  alt="Background Image"></a>
+                    </div>
+            
+                    
+          <button  class="btn_bg hidden" onclick="hide_card_gallery()" id="hide_Image">Close Gallery</button> 
+               
+        </div>
+        
+
+  
+    </div>  <!--------------End of Col-3----------------------->
+    
+  </div>  <!--end of row -->
+
+    
+  <!---------------------------------------------------Practice Drawing feature-------------------------------------------------> 
+    
+  <div class="Feature_Drawing" id="Feature_Drawing">
+
+    <img  id="Lefttab" src="Images/LeftTab.png"  onclick="SlideOpen()">   <!-- Left Tab Folder-->
+
+    <div class= "hideDrawing" class= "DrawingContainer" id="DrawingContainer">
+               
+         <canvas class= "hideDrawing"  id="drawing-area" width="300" height="350"> </canvas>
+    
+         <img class= "hideDrawing"  id="eraser" src="Images/eraser.png" onclick="EraseAll()">
+
+         <img class= "hideDrawing"  id="undoLast" src="Images/Undo.png" onclick="EraseLastAction()">     
+
+         <div class="color-palette">
+                  <input class= "hideDrawing"  type="color" id="color-picker" value="#000000">
+        </div>
+    </div>  
+    
+        
+</section>   
+
+  
+   <!-------------------------------------Scripting------------------------------------>
+       <!--      <script src="vanilla-tilt.min.js"></script>   -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="Js/Korean_BasicAndCompoundConosonants.js"></script>
+            <script src="Js/leave-message.js"></script>
+            
+            <script>
+                                
+                const homebutton = document.getElementById('home');
+                homebutton.addEventListener('click', function() {
+                    w3_close();
+                    leaveMessage.style.display = 'block';
+                    setupLeaveMessage();
+                });
+  
+                const backgroundImageUrl = localStorage.getItem('background');
+
+                // Check if backgroundImageUrl is not null or undefined
+                if (backgroundImageUrl) {
+                    // Format the background property with center center / cover
+                    document.body.style.background = `url("${backgroundImageUrl}") center center / cover`;
+                }
+                         
+                  // Retrieve the background image URL from localStorage
+                    document.addEventListener('DOMContentLoaded', function() {
+                    // Retrieve the background image URL from localStorage
+                    const backgroundImageUrl = localStorage.getItem('background');
+
+                    // Check if backgroundImageUrl is not null or undefined
+                    if (backgroundImageUrl) {
+                        // Apply background image using individual properties
+                        document.body.style.backgroundImage = `url("${backgroundImageUrl}")`;
+                        document.body.style.backgroundPosition = 'center center';
+                        document.body.style.backgroundSize = 'cover';
+                        document.body.style.backgroundRepeat = 'no-repeat';
+                    }
+                   });
+
+                  // Retrieve and apply the card background image from local storage on page load
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const katakanacardBackgroundImageUrl = localStorage.getItem('ConsonantsBackground');
+                        if (katakanacardBackgroundImageUrl) {
+                            changeCardBackground(katakanacardBackgroundImageUrl);
+                        }
+                    });
+                    
+
+            </script>
+
+
+   
+
+ </div>        
+</body>
+</html>
