@@ -223,6 +223,7 @@ body{
     color: rgb(250, 250, 250);
     width: 251px;
     border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 #Katakana_Flashcard{
     margin-left: 0px;
