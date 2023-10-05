@@ -317,13 +317,15 @@ body{
     height: 50px;
     width: 40px;
 }
+
 #Japanese_Flashcards{
     display: flex;
+    margin-bottom: 4px;
     padding-top: 0px;
     padding-bottom: 0px;
     height: 70px !important;
-    border-top: 1px solid rgb(89, 89, 89);  
-    border-bottom: 1px solid  rgb(89, 89, 89); 
+    border-top: 1px solid rgb(52, 52, 52);  
+    border-bottom: 1px solid rgb(52, 52, 52); 
     border-top-right-radius: 45px;
     border-bottom-right-radius: 45px;
     margin-left: 0px;
@@ -332,6 +334,7 @@ body{
     border-left: none;
     border-right: none;
     color: white;
+   
 }
 #Japanese_Flashcards img{
     margin-top: -10px;
@@ -366,18 +369,7 @@ body{
    
     
 }
-#Japanese_Flashcards{
-    display: flex;
-    margin-bottom: 4px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    height: 70px !important;
-    border-top: 1px solid rgb(52, 52, 52);  
-    border-bottom: 1px solid rgb(52, 52, 52); 
-    border-top-right-radius: 45px;
-    border-bottom-right-radius: 45px;
-   
-}
+
 
 #Hiragana_Flashcards{
     margin-bottom: 2px;
@@ -1939,4 +1931,3 @@ margin-top: 10px;
         transform: translateX(100%);
     }
 }
-
