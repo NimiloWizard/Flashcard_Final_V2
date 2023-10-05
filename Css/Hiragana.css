@@ -217,7 +217,12 @@ body{
     margin-left: 0px;
 }
 #HowToReadJapanese{
-    margin-left: 0px;
+    margin-bottom: 2px;
+    margin-left: -10px;
+    background: rgb(36, 36, 36);
+    color: rgb(250, 250, 250);
+    width: 251px;
+    border-top-right-radius: 50px;
 }
 #Katakana_Flashcard{
     margin-left: 0px;
