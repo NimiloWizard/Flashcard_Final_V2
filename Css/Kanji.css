@@ -198,17 +198,9 @@ body{
     
 }
 
-#English_Flashcards{
-    border-top: 1px solid rgb(36, 34, 34);
-    border-bottom: 1px solid rgb(36, 34, 34);
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-} 
-#Korean_Flashcards{
-    border-bottom: 1px solid rgb(36, 34, 34);
-    padding-top: 20px;
-    padding-bottom: 20px;
+.dropdown-container {
+    display: none;
+    padding-left: 8px;
 }
 
 #Japanese_Flashcards img{
@@ -236,14 +228,14 @@ body{
     text-shadow: 0px 0px 6px rgb(246, 248, 246);
 }
 #Japanese_Flashcards #fa-caret{
-    margin-left: 20px;
+    margin-left: 17px;
     margin-top: 30px;
-    color: rgb(190, 247, 75);
-   
-    
+    color: rgb(190, 247, 75);    
 }
+
 #Japanese_Flashcards{
     display: flex;
+    margin-bottom: 4px;
     padding-top: 0px;
     padding-bottom: 0px;
     height: 70px !important;
@@ -251,12 +243,31 @@ body{
     border-bottom: 1px solid rgb(52, 52, 52); 
     border-top-right-radius: 45px;
     border-bottom-right-radius: 45px;
-   
-}
-
-#Hiragana_Flashcards{
     margin-left: 0px;
-    
+    width: 250px; 
+    background: black;
+    border-left: none;
+    border-right: none;
+    color: white;
+}   
+
+#howtoHowToReadJapanese{
+    margin-bottom: 2px;
+    margin-left: -10px;
+    background: rgb(36, 36, 36);
+    color: rgb(250, 250, 250);
+    width: 251px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+#Hiragana_Flashcards{
+    margin-bottom: 2px;
+    margin-left: -10px;
+    background: rgb(36, 36, 36);
+    color: rgb(250, 250, 250);
+    width: 251px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 #Hiragana_Flashcards span{
     padding-left: 10px;
@@ -272,8 +283,16 @@ body{
     
 }
 
-#Katakana_Flashcard{
-    margin-left: 10px;
+#Katakana_Flashcards{
+    margin-bottom: 2px;
+    margin-left: -10px;
+    background: rgb(36, 36, 36);
+    color: rgb(250, 250, 250);
+    width: 251px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top: 1px solid rgb(57, 56, 56);
+    border-bottom: 1px solid rgb(53, 53, 53);
 }
 #Katakana_Flashcard span{
     padding-left: 10px;
