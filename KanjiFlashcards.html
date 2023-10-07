@@ -32,18 +32,15 @@
             
             <!-- <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>-->
              <!--  <a href="#" class="w3-bar-item w3-button"><i ackclass="fa fa-search"></i></a>  -->
-            <div id="spacing"></div>
-            <a href="#" class="w3-bar-item w3-button" onclick="w3_close()" id="home"><div id="homeBgDesign" ><img id="HomeIcon" src="Images/Home.png" class="HomeIcon" > <span>Home</span>  </div>  </a> 
-           
-            
-         
+             <div id="spacing"></div>
+             <a href="#" class="w3-bar-item w3-button" onclick="w3_close()" id="home"><div id="homeBgDesign" ><img id="HomeIcon" src="Images/Home.png" class="HomeIcon" > <span>Home</span>  </div>  </a> 
+                   
             <div class="w3-dropdown-hover" id="settings_caret">
-                 <button class="w3-button" id="buttonSettings"><div id="settingsBgDesign" style="height:30px;"> <img src="Images/Settings1.png" id="fa-gear"> </i><span> Settings </span> <i class="fa fa-caret-down" id="fa-caret"></i></div></button>
-  
-                 <div class="w3-dropdown-content w3-bar-block" id="settings">
+                <button class="w3-button" id="buttonSettings"><div id="settingsBgDesign" style="height:30px;"> <img src="Images/Settings1.png" id="fa-gear"> </i><span> Settings </span> <i class="fa fa-caret-down" id="fa-caret"></i></div></button>
+                <div class="w3-dropdown-content w3-bar-block" id="settings">
                                                                         
                                                      
-                    <div id="Card_BG_Option"><a href="#screen_back_image" class="w3-bar-item w3-button" onclick="open_cardGallery('card_back_image')"  id="change_card_background"> Theme Card Background</a></div>
+                    <div id="Card_BG_Option"><a  class="w3-bar-item w3-button" onclick="open_cardGallery('card_back_image')"  id="change_card_background"> Theme Card Background</a></div>
 
                     <div id="Default_Card_Option"><a href="#Default_cardbackground" class="w3-bar-item w3-button" onclick="open_Defaultbackground()"  id="SetDefaultBackground"> Deafult Card Background</a></div>
 
@@ -54,32 +51,33 @@
                     
                 </div>
             </div>  
+             
+            <div id="Flashcards">Select a Flashcard </div>
+
+            <button class="dropdown-btn" id="Japanese_Flashcards"><img src="Images/Japan.jfif"  id="japanimg"> <img src="Images/Japan1.jfif" id="japanBanner"><span>Japanese</span><i class="fa fa-caret-down" id="fa-caret"></i></button>  <!---->
+               
+     
+               <div class="dropdown-container">
+                   <a href="JapaneseHowToRead.html" class="w3-bar-item w3-button" id="howtoHowToReadJapanese"> <img id="hiraganaIcon" src="Images/HiraganaIcon2.png"><span> - Learn How To Read</span></a>
+                   <a href="HiraganaFlashcards.html" class="w3-bar-item w3-button" id="Hiragana_Flashcards"> <img id="hiraganaIcon" src="Images/HiraganaIcon2.png"><span> - Hiragana Flashcards</span></a>
+                   <a href="KatakanaFlashcards.html" class="w3-bar-item w3-button" id="Katakana_Flashcards"><img id="katakanaIcon" src="Images/KatakanaIcon2.png"> <span>- Katakana Flashcards</span></a>
+                                    
+               </div>
+
+           <div id="spacing2"></div>
                     
-         <div id="Flashcards">Select a Flashcard </div>
+            <a href="#" class="w3-bar-item w3-button" id="contact"><i class="fa fa-envelope"></i>  businessEmail@gmail.com</a> 
+            
+            <div id="socialmedia">
+                <img id="facebook" src="Images/fb.png"> 
+                <img id="instagram" src="Images/Instagram.png">  
+                <img id="twitter" src="Images/Twitter.png">  
+                <img id="linkedin" src="Images/LinkedIn.png">   
+            </div>
+          
+            <a href="#" class="w3-bar-item w3-button" id="Premium"><div id="PremiumBgDesign"><img src="Images/Premium.png"><span>Get Premium</span></div></a> 
 
-           <div class="w3-dropdown-hover" id="Japanese_caret">
-            <button class="w3-button" id="Japanese_Flashcards"><img src="Images/Japan.jfif"  id="japanimg"> <img src="Images/Japan1.jfif"><span>Japanese</span><i class="fa fa-caret-down" id="fa-caret"></i></button>  <!---->
-        
-                <div class="w3-dropdown-content w3-bar-block">
-                    <a href="HiraganaFlashcards.html"  class="w3-bar-item w3-button"  id="Hiragana_Flashcards"> <img id="hiraganaIcon" src="Images/HiraganaIcon.png">  <span>- Hiragana Flashcards</span></a>   
-                    <a href="KatakanaFlashcards.html" class="w3-bar-item w3-button" id="Katakana_Flashcard"><img id="katakanaIcon" src="Images/KatakanaIcon.png"> <span>- Katakana Flashcards</span></a>                       
-                </div>
-              
-            </div> 
-
-                <div id="spacing2"></div>
-                        
-                <a href="#" class="w3-bar-item w3-button" id="contact"><i class="fa fa-envelope"></i>  businessEmail@gmail.com</a> 
-                
-                <div id="socialmedia">
-                    <img id="facebook" src="Images/fb.png"> 
-                    <img id="instagram" src="Images/Instagram.png">  
-                    <img id="twitter" src="Images/Twitter.png">  
-                    <img id="linkedin" src="Images/LinkedIn.png">   
-                </div>
-              
-                <a href="#" class="w3-bar-item w3-button" id="Premium"><div id="PremiumBgDesign"><img src="Images/Premium.png"><span>Get Premium</span></div></a> 
-
+   
         </div>      
 
     </div>
@@ -2400,28 +2398,39 @@
        </div> 
         <div id="card_back_image" class="hide_Image hidden">
                     
-                    <div class="background_image " id ="background_image1" onclick="changeCardBackground()">
+                    <div class="background_image " id ="background_image1" onclick="changeCardBackground()" >
                         <a href="#card" ><img  id="cardbackground_image" src="Images/BACKGROUND1.png"  alt="Background Image"></a>  
                     </div>
                     <div class="background_image " id ="background_image2" onclick="changeCardBackground()">
                         <a href="#card" >  <img  id="cardbackground_image" src="Images/BACKGROUND2.png"  alt="Background Image"></a> 
                     </div> 
-                    <div class="background_image " id ="background_image3" onclick="changeCardBackground()">
+                    <div class="background_image " id ="background_image3" style="pointer-events: none;" onclick="changeCardBackground()" >
                         <a href="#card" >   <img  id="cardbackground_image" src="Images/BACKGROUND3.png"  alt="Background Image"></a>
                     </div>  
-                    <div class="background_image " id ="background_image4" onclick="changeCardBackground()">
+                    <div class="background_image " id ="background_image4" style="pointer-events: none;" onclick="changeCardBackground()" >
                         <a href="#card" >   <img id="cardbackground_image" src="Images/BACKGROUND4.png"  alt="Ba3kground Image"></a>
                     </div>
-                    <div class="background_image " id ="background_image5" onclick="changeCardBackground()">
+                    <div class="background_image " id ="background_image5" style="pointer-events: none;" onclick="changeCardBackground()" >
                         <a href="#card" >   <img id="cardbackground_image" src="Images/BACKGROUND5.png"  alt="Background Image"></a> 
                     </div>
-                    <div class="background_image " id ="background_image6" onclick="changeCardBackground()">
+                    <div class="background_image " id ="background_image6" style="pointer-events: none;" onclick="changeCardBackground()" >
                         <a href="#card" >    <img id="cardbackground_image" src="Images/BACKGROUND6.png"  alt="Background Image"></a>
                     </div>
             
                     
           <button  class="btn_bg hidden" onclick="hide_card_gallery()" id="hide_Image">Close Gallery</button> 
                
+                    
+                    <button id="Get_Premium" onclick="Get_PremiumAccess()">Grab Privilege</button>
+
+                    <!------------------------------------------------------------------------>
+                    
+                <div id="Code_placeholder">
+                    <input id="input_code" type="text" placeholder="input_code" >
+                    <button id="Premium_Access" onclick="Submit_Code()">Ok</button>
+                </div>
+                <div id="message" style="display: none;">Correct code entered!</div>
+
         </div>
         
 
@@ -2450,6 +2459,7 @@
         </div>
     </div>  
     
+    <!------------------------------------------------------------------------>
     
 
 
@@ -2466,6 +2476,7 @@
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script src="Js/Kanji.js"></script>
             <script src="Js/leave-message.js"></script>
+            <script src="Js/Premium.js"></script>
             <script>
                                 
                 const homebutton = document.getElementById('home');
@@ -2503,18 +2514,31 @@
                         const kanjicardBackgroundImageUrl = localStorage.getItem('Kanjicardbackground');
                         if (kanjicardBackgroundImageUrl) {
                             changeCardBackground(kanjicardBackgroundImageUrl);
-                                               }
+                          
+                            
+                         }
+                            
                     });
                     
 
+                    var dropdown = document.getElementsByClassName("dropdown-btn");
+                    var i;
+
+                    for (i = 0; i < dropdown.length; i++) {
+                    dropdown[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var dropdownContent = this.nextElementSibling;
+                        if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                        } else {
+                        dropdownContent.style.display = "block";
+                        }
+                    });
+                    }
             </script>
 
 
-            <script>
-                // script.js
-
-            </script>
-
+         
  </div>        
 </body>
 </html>
