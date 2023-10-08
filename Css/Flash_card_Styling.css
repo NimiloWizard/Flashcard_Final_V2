@@ -596,6 +596,15 @@ body{
 }
 
 
+#settings #About{
+    border-top: 1px solid rgb(189, 188, 188);
+}
+
+#settings #PrivacyPolicy{
+    border-top: 1px solid rgb(189, 188, 188);
+    border-bottom: 1px solid rgb(189, 188, 188);
+}
+
 
 
 
